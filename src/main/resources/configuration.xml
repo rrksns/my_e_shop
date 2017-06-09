@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	
+	<typeAliases>
+		<typeAlias alias="test2" type="test2.model.Test2" />
+		
+	</typeAliases>
+	
+	<mappers>
+		<mapper resource="Test2.xml" />
+		
+	</mappers>
+	
+</configuration>
