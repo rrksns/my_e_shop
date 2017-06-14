@@ -1,4 +1,4 @@
-package aroudu.dao;
+package aroundu.dao;
 
 public interface SellerDao {
 
