@@ -13,7 +13,10 @@ s_mobile varchar(30),
 s_regDate date,
 s_reg_conf boolean
 );
+
 alter table seller add numOfbiz int;
+alter table seller add s_gender varchar(10);
+alter table seller add s_birth date;
 
 create table user(
 u_id  varchar(20) primary key,

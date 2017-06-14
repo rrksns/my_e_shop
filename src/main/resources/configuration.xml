@@ -4,13 +4,13 @@
 <configuration>
 	
 	<typeAliases>
-		<typeAlias alias="test2" type="test2.model.Test2" />
-		
+		<typeAlias alias="admin" type="aroundu.model.Admin" />
+		<typeAlias alias="seller" type="aroundu.model.Seller" />
 	</typeAliases>
 	
 	<mappers>
-		<mapper resource="Test2.xml" />
-		
+		<mapper resource="Seller.xml" />
+		<mapper resource="Admin.xml" />
 	</mappers>
 	
 </configuration>
