@@ -13,8 +13,12 @@ public class SellerDaoImpl implements SellerDao {
 
 	@Override
 	public int insert(Seller seller) {
-		// TODO Auto-generated method stub
 		return st.insert("Sellerns.insert", seller);
+	}
+
+	@Override
+	public Seller select(String id) {
+		return st.selectOne("Sellerns.select", id);
 	}
 
 }

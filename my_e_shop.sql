@@ -4,6 +4,8 @@ create table admin(
 admin_id varchar(20) primary key,
 admin_pw varchar(20) );
 
+drop table seller;
+
 create table seller(
 s_id varchar(20) primary key,
 s_pw varchar(20) not null,
@@ -34,6 +36,8 @@ u_img varchar(50),
 u_email varchar(40) not null,
 u_joinDate date not null
 );
+
+drop table shop;
 
 create table shop(
 sh_id varchar(20) primary key,
@@ -84,7 +88,7 @@ alter table board add foreign key (sh_id) references shop(sh_id);
 alter table board add foreign key (u_id) references user(u_id);
 
 show tables;
-
+drop table menu;
 create table menu(
 it_id varchar(20) primary key,
 it_name varchar(40),

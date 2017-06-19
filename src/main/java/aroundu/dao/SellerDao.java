@@ -6,4 +6,6 @@ public interface SellerDao {
 
 	int insert(Seller seller);
 
+	Seller select(String id);
+
 }
