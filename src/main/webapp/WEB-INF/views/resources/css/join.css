@@ -1,0 +1,268 @@
+@CHARSET "UTF-8";/* 회원가입 */
+.universe{width:800px}p{color:#9E9C9C}h4{margin:0}label{cursor:pointer}.not_cursor{cursor:default}
+/* 회원유형 선택 */
+header {
+	height:140px;
+	background-color:#FFFBE2;
+}
+	.logoWrap {
+		height:100px;
+		line-height:100px;
+		text-align:center;
+	}
+		.home_logo {
+			font-family:impact;
+			font-size:50px;
+			font-weight:bold;
+			color:#ff7d43;
+		}
+		
+	.titleWrap_H {
+		width:700px;
+		height:50px;
+		line-height:50px;
+		margin:0 auto;
+	}
+		.title {
+			margin:0;
+		}
+		.steb_list {
+			float:right;
+			font-size:15px;
+			color:#9E9C9C;
+			margin:0;
+		}
+		.steb_list li {
+			display:inline-block;
+			margin-left:10px;
+			padding:0 10px;
+		}
+		
+section {
+	width:700px;
+	margin:0 auto;
+}
+	.select_container {
+		width:530px;
+		height:300px;
+		margin:50px auto 0 auto;
+	}
+		.titleWrap_C {
+			text-align:center;
+			border-bottom:2px solid #ff7d43;
+		}
+		.txt {
+			font-size:20px;
+			margin-bottom:0;
+		}
+		.small {
+			font-size:15px;
+		}
+		
+		.selectWrap {
+			width:415px;
+			height:230px;
+			margin:0 auto; margin-top:15px;
+		}
+			.selBtnWrap {
+				width:415px;
+				height:115px;
+			}
+				.sel_btn {
+					width:200px;
+					height:110px;
+					border:2px solid #ff7d43;
+					border-radius:20px;
+				}
+					.sel_btn label {
+						display:block;
+						width:200px;
+						height:110px;
+						line-height:100px;
+						text-align:center;
+						cursor:pointer;
+						font-size:30px;
+						font-weight:bold;
+						background-color:#FDCAB3;
+					}
+					input[type="radio"] {
+						display:none;
+					}
+					
+			.btn_container {
+				width:100%;
+				text-align:center;
+				margin-top:40px;
+			}
+				.btn_container button {
+					font-size:20px;
+					font-weight:bold;
+					color:white;
+					border:none;
+					border-radius:20px;
+					outline:none;
+				}
+				.nxt_btn {
+					width:200px;
+					height:60px;
+					background-color:#ff7d43;
+				}
+				.bkb_btn {
+					width:110px;
+					height:60px;
+					background-color:#CBCBCB;
+				}
+				
+/* 일반회원가입 약관동의 */
+.terms_container {
+	width:696px;
+	border:2px solid #ff7d43;
+	margin-bottom:20px;
+}
+	dl {
+		margin:0; padding:0;
+	}
+		dt {
+			height:45px;
+			line-height:45px;
+			font-weight:bold;
+			padding:0 15px;
+			border-bottom:1px solid #ff7d43;
+		}
+		.allAgr_btn {
+			float:right;
+			border:none;
+			border-top-right-radius:20px;
+			font-size:16px;
+			color:white;
+			background-color:#ff7d43;
+			outline:none;
+			margin-top:11px;
+		}
+			dd {
+				overflow:hidden;
+				margin:0; padding:0 15px;
+				height:45px;
+				line-height:45px;
+				border-top:1px solid #ff7d43;
+			}
+				.titleWrap {
+					float:left;
+				}
+					.txt_color {
+						color:#ff7d43;
+					}
+					.detail_btn {
+						margin-left:30px;
+						border:0;
+						border-radius:20px;
+						color:white;
+						background-color:#ff7d43;
+						outline:none;
+					}
+					.open {
+						position:relative;
+						top:2px;
+						display:inline-block;
+						width:20px;
+						height:10px;
+						background:url(../img/check.png) 0 -20px no-repeat;
+					}
+					.add_margin {
+						margin-left:56px;
+					}
+					
+				.agrBtnWrap {
+					float:right;
+					font-weight:bold;
+				}	
+					.chk_btn {
+						position:relative;
+						top:1px;
+						cursor:pointer;
+						width:20px;
+						height:20px;
+						background:url(../img/check.png) 0 0 no-repeat;
+					}
+					input[type="checkbox"] {
+						visibility:hidden;
+					}
+					
+/* 일반회원가입 정보입력 */
+.info_container {
+	border-top:1px solid #ff7d43;
+	border-bottom:1px solid #ff7d43;
+	padding:20px 40px 10px 40px;
+	margin-bottom:20px;
+}
+	.infoBox {
+		line-height:33px;
+		margin-bottom:10px;
+	}
+		.infoBox input {
+			float:right;
+			width:450px;
+			height:30px;
+			font-size:15px;
+			padding-left:10px;
+		}
+			.nameWrap {
+				float:right;
+				width:464px;
+			}
+				.nameWrap input {
+					float:left;
+				}
+				#name {
+					width:200px;
+				}
+				.gender_btn {
+					float:right;
+					display:inline-block;
+					width:120px;
+					height:36px;
+					line-height:36px;
+					color:white;
+					text-align:center;
+					background-color:#a9a9a9;
+				}
+					.margin {
+						border-right:1px solid white;
+					}
+			.birthdayBox {
+				line-height:33px;
+				margin-bottom:10px;
+			}
+				.birthdayWrap {
+					float:right;
+					width:464px;
+				}
+					.birthdayBox input {
+						height:30px;
+					}
+					.year {
+						padding-left:10px;
+						width:160px;
+					}
+					.month, .day {
+						width:110px;
+					}
+					
+/* 가입완료 */
+#welcome a {
+	color:#ff7d43;
+	font-weight:bold;
+	text-decoration:underline;
+}
+.msg_container {
+	width:560px;
+	height:210px;
+	margin:0 auto;
+	border:2px solid #ff7d43;
+	border-radius:20px;
+	text-align:center;
+}
+	.txt_welcome {
+		font-size:25px;
+		color:black;
+	}

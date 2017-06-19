@@ -1,0 +1,23 @@
+@CHARSET "UTF-8";
+body{margin:0;background-color:#FFFBE2}header{overflow:hidden}div{overflow:hidden}section{overflow:hidden}fieldset{border:none;margin:0;padding:0}
+button{cursor:pointer}a{text-decoration:none}
+.universe {
+	overflow:hidden;
+	margin:0 auto;
+	background-color:white;
+}
+
+.box {
+	display:block;
+	float:left;
+}
+
+.hide {
+	display:none;
+}
+
+.txt_small{font-size:small}
+.txt_big{font-size:x-large}
+
+.fl_L{float:left}
+.fl_R{float:right}
