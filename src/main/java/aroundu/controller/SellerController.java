@@ -19,6 +19,10 @@ public class SellerController {
 	return "main";
 	}
 	
+	@RequestMapping("commonLogin")
+	public String commonLogin(){
+		return "commonLogin";
+	}
 	@RequestMapping("sellerLoginForm")
 	public String sellerLoginForm(){
 		return "seller/sellerLoginForm";
@@ -36,5 +40,9 @@ public class SellerController {
 	@RequestMapping("sellerLogin")
 	public String sellerLogin(){
 		return "seller/sellerLogin";
+	}
+	@RequestMapping("sellerMain")
+	public String sellerMain(){
+		return "sellerMain";
 	}
 }
