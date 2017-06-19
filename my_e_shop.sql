@@ -11,12 +11,20 @@ s_email varchar(40),
 s_addr varchar(255),
 s_mobile varchar(30),
 s_regDate date,
-s_reg_conf boolean
+s_reg_conf VARCHAR(1),
+s_gender VARCHAR(10),
+s_birthdate DATE,
+s_name VARCHAR(20),
+s_mob_conf INT,
+s_tel varchar(30)
 );
 
 alter table seller add numOfbiz int;
 alter table seller add s_gender varchar(10);
 alter table seller add s_birth date;
+alter table seller add s_name varchar(20);
+alter table seller add s_tc_conf varchar(1);
+select * from seller;
 
 create table user(
 u_id  varchar(20) primary key,

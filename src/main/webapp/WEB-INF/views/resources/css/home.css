@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+.universe {
+	width:1100px;
+}
+header {
+	width:1000px;
+	margin:15px auto;
+	border:1px solid #f6f4e8;
+}
+
+.mainMenu {
+	background-color:#f6f4e8;
+}

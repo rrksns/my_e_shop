@@ -22,8 +22,10 @@
 	
 	<delete id="delete" parameterType="int">
 		delete from dept where deptno=#{deptno}
-	</delete>
-	<insert id="insert" parameterType="dept">
-		insert into dept values(#{deptno},#{dname},#{loc})
-	</insert> -->
+	</delete>-->
+	<insert id="insert" parameterType="seller">
+		insert into seller values(#{s_id}, #{s_pw}, #{s_email}, #{s_addr},
+			#{s_mobile}, #{s_regDate}, #{s_reg_conf}, #{s_gender}, #{s_birthdate},
+			#{s_name}, #{s_mob_conf}, #{s_tel}, #{s_tc_conf})
+	</insert>
 </mapper>
