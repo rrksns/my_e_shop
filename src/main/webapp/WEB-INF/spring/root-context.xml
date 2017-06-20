@@ -21,4 +21,8 @@
 		<property name="password" value="${jdbc.password}" />
 		<property name="maxPoolSize" value="${jdbc.maxPoolSize}" />
 	</bean>
+	<!-- ajax설정 -->
+	<bean id="jsonView" class="org.springframework.web.servlet.view.json.MappingJackson2JsonView" />
+	
+	
 </beans>

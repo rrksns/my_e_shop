@@ -11,8 +11,11 @@ public class SellerServiceImpl implements SellerService{
 	@Autowired
 	private SellerDao sd;
 	public int insert(Seller seller) {
-		// TODO Auto-generated method stub
 		return sd.insert(seller);
+	}
+	@Override
+	public Seller select(String id) {
+		return sd.select(id);
 	}
 
 }

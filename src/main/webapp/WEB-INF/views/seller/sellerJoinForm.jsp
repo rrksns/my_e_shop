@@ -1,7 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
+<%@ include file="../header.jsp" %>
 <!DOCTYPE html>
 <html><head>
 <script type="text/javascript">
+	
+	
 	function chk() {	var s_id = form.s_id.value;
 		if (!form.s_id.value) {
 			alert('아이디를 입력하세요');

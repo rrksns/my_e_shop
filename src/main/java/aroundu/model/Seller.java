@@ -8,50 +8,13 @@ public class Seller {
 	private String s_email;
 	private String s_addr;
 	private String s_mobile;
-	private String s_tel;
-	private String s_name;
-	private String s_birthdate;
-	private String s_gender;
-	private String s_tc_conf;
-	private int s_mob_conf;
-	public String getS_tc_conf() {
-		return s_tc_conf;
-	}
-	public void setS_tc_conf(String s_tc_conf) {
-		this.s_tc_conf = s_tc_conf;
-	}
-	public int getS_mob_conf() {
-		return s_mob_conf;
-	}
-	public void setS_mob_conf(int s_mob_conf) {
-		this.s_mob_conf = s_mob_conf;
-	}
-	public String getS_tel() {
-		return s_tel;
-	}
-	public void setS_tel(String s_tel) {
-		this.s_tel = s_tel;
-	}
-	public String getS_name() {
-		return s_name;
-	}
-	public void setS_name(String s_name) {
-		this.s_name = s_name;
-	}
-	public String getS_birthdate() {
-		return s_birthdate;
-	}
-	public void setS_birthdate(String s_birthdate) {
-		this.s_birthdate = s_birthdate;
-	}
-	public String getS_gender() {
-		return s_gender;
-	}
-	public void setS_gender(String s_gender) {
-		this.s_gender = s_gender;
-	}
 	private Date s_regDate;
-	private boolean s_reg_conf;
+	private String s_reg_conf;
+	private String s_gender;
+	private Date s_birthdate;
+	private String s_name;
+	private int s_mob_conf;
+	private String s_tel;
 	
 	public String getS_id() {
 		return s_id;
@@ -89,12 +52,44 @@ public class Seller {
 	public void setS_regDate(Date s_regDate) {
 		this.s_regDate = s_regDate;
 	}
-	public boolean isS_reg_conf() {
+	public String getS_reg_conf() {
 		return s_reg_conf;
 	}
-	public void setS_reg_conf(boolean s_reg_conf) {
+	public void setS_reg_conf(String s_reg_conf) {
 		this.s_reg_conf = s_reg_conf;
 	}
+	public String getS_gender() {
+		return s_gender;
+	}
+	public void setS_gender(String s_gender) {
+		this.s_gender = s_gender;
+	}
+	public Date getS_birthdate() {
+		return s_birthdate;
+	}
+	public void setS_birthdate(Date s_birthdate) {
+		this.s_birthdate = s_birthdate;
+	}
+	public String getS_name() {
+		return s_name;
+	}
+	public void setS_name(String s_name) {
+		this.s_name = s_name;
+	}
+	public int getS_mob_conf() {
+		return s_mob_conf;
+	}
+	public void setS_mob_conf(int s_mob_conf) {
+		this.s_mob_conf = s_mob_conf;
+	}
+	public String getS_tel() {
+		return s_tel;
+	}
+	public void setS_tel(String s_tel) {
+		this.s_tel = s_tel;
+	}	
+	
+	
 
 
 }

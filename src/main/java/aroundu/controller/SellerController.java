@@ -9,38 +9,89 @@ import aroundu.dao.SellerDao;
 import aroundu.model.Seller;
 import aroundu.service.SellerService;
 
+
 @Controller
 public class SellerController {
 	@Autowired 
 	SellerService ss;
 	
+	/*메인화면 호출*/
 	@RequestMapping("main")
 	public String main(){
 	return "main";
 	}
 	
+<<<<<<< HEAD
+	/*일반회원가입  or 샵등록 선택*/
+	@RequestMapping("s_Join")
+	public String s_Join(){
+	return "seller/s_Join";
+	}
+	
+	/*정보 동의 약관*/
+	@RequestMapping("s_joinForm")
+	public String s_joinForm(){
+		return "seller/s_joinForm";
+	}
+	/*회원가입 폼*/
+	@RequestMapping("s_joinForm2")
+	public String s_joinForm2(){
+		return "seller/s_joinForm2";
+	}
+	/*회원가입 정보 저장*/
+	@RequestMapping("sellerJoin")
+	public String sellerJoin(Seller seller, Model model){
+		int result =ss.insert(seller);
+		model.addAttribute("result", result);
+		return "seller/sellerJoin";
+	}
+	
+	/*가입환영화면*/
+	@RequestMapping("s_join_fin")
+	public String s_join_fin(Seller seller, Model model){
+		int result = ss.insert(seller);
+		model.addAttribute("result", result);		
+		return "seller/s_join_fin";
+	}
+	/*로그인페이지선택화면*/
+=======
+>>>>>>> 634196dec9d405368076e0c7642736f0caa38d9f
 	@RequestMapping("commonLogin")
 	public String commonLogin(){
 		return "commonLogin";
 	}
+<<<<<<< HEAD
+	/*로그인 페이지*/
+=======
+>>>>>>> 634196dec9d405368076e0c7642736f0caa38d9f
 	@RequestMapping("sellerLoginForm")
 	public String sellerLoginForm(){
 		return "seller/sellerLoginForm";
 	}
+	/*아이디 중복 체크*/
+	@RequestMapping("idChk")
+	public String idChk(String id, Model model){
+		Seller seller = ss.select(id);
+		System.out.println("중복체크도니?");
+		if(seller == null) model.addAttribute("msg","사용가능한 ID입니다");
+		else model.addAttribute("msg","이미 사용중인ID입니다");
+		return "seller/idChk";
+	}	
+
 	@RequestMapping("sellerJoinForm")
 	public String sellerJoinForm(){
 		return "seller/sellerJoinForm";
 	}
-	@RequestMapping("sellerJoin")
-	public String sellerJoin(Seller seller, Model model){
-		int result = ss.insert(seller);
-		model.addAttribute("result", result);
-		return "seller/sellerJoin";
-	}
+	
+	/*로그인실행*/
 	@RequestMapping("sellerLogin")
 	public String sellerLogin(){
 		return "seller/sellerLogin";
 	}
+<<<<<<< HEAD
+	/*셀러메인호출*/
+=======
+>>>>>>> 634196dec9d405368076e0c7642736f0caa38d9f
 	@RequestMapping("sellerMain")
 	public String sellerMain(){
 		return "sellerMain";

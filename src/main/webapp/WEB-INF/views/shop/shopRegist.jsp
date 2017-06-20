@@ -8,11 +8,26 @@
 <title>Insert title here</title>
 </head>
 <body>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8fa4551d1f62f22723753ca5d359329bd3c945bd
 	<ol>
   	  	<li><a href = "restaurantBasic.go">음식점 카페 템플릿</a></li>
   	  	<li><a href = "">학원</a></li>
   	  	<li><a href = "">옷 가계</a></li>
   	  	<li><a href= "">시설</a></li>
 	</ol>
+<<<<<<< HEAD
+=======
+=======
+ <ol>
+  	  	<li><a href = "shopBasic">기본정보</a></li>
+  	  	<li><a href = "shopPicture">사진등록</a></li>
+  	  	<li><a href = "shopMenu">메뉴등록</a></li>
+  	  	<li><a href= "shopDetail">부가정보</a></li>
+  	  </ol>
+>>>>>>> 634196dec9d405368076e0c7642736f0caa38d9f
+>>>>>>> 8fa4551d1f62f22723753ca5d359329bd3c945bd
 </body>
 </html>
