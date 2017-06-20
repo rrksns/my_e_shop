@@ -142,7 +142,7 @@ public class Shop {
 	}
 	public void setS_id(String s_id) {
 		this.s_id = s_id;
-	}
+	} 
 	
 	
 
