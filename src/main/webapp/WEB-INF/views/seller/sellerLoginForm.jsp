@@ -20,7 +20,7 @@
   	  <h2 class="title box">로그인</h2>
   	</div>
   	<div class="userInfoWrap">
-  	  <form action="" method="post">
+  	  <form action="sellerLogin.go" method="post">
   	  	<fieldset><legend class="hide">아이디, 비밀번호 로그인 정보 입력 폼</legend>
   	  	  <div class="inputWrap">
   	  	  	<label>아이디</label>

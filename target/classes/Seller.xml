@@ -8,12 +8,15 @@
 		<result property="s_pw" 	column="s_pw" />
 		<result property="s_addr"	column="s_addr" /> 
 		<result property="s_email" 	column="s_email" />
-		<result property="numOfbiz" 	column="numOfbiz" />
+		<result property="s_name" 	column="s_name" />
 		<result property="s_mobile"	column="s_mobile" /> 
 		<result property="s_regDate"	column="s_regDate" /> 
 		<result property="s_Reg_Conf" 	column="s_Reg_Conf" />
 		<result property="s_gender" 	column="s_gender" />
-		<result property="s_birthdate"	column="s_birthdate" /> 
+		<result property="s_birthdate"	column="s_birthdate" />
+		<result property="s_mob_conf" 	column="s_mob_conf" />
+		<result property="s_tel" 	column="s_tel" />
+
 	</resultMap>
 	
 	<!-- <select id="list" resultMap="sellerResult">

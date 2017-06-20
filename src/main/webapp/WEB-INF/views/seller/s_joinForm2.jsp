@@ -23,19 +23,19 @@
 
 	
 	function chk() {
-		if (frm.id.value.length < 6 || form.s_id.value.length > 20 ) {
+		if (frm.s_id.value.length >= 6 || frm.s_id.value.length <= 20 ) {
 			alert("아이디는 6 - 20의 영문,숫자조합입니다");
 			form.id.focus();
 			return false;
 		}
 		
 		var reg_pw = /^.*(?=.{4,8})(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[@!#$*()_&]).*$/; 
-		if(!reg_pw.test(frm.pw.value)) { 
+		if(!reg_pw.test(frm.s_pw.value)) { 
 			alert("4~8자 영문 대 소문자, 숫자, 특수문자를 사용하세요."); 
-			frm.pw.focus(); 
+			frm.s_pw.focus(); 
 			return false;		
 		
-		if(frm.pw.value != frm.re_pw.value){ 
+		if(frm.s_pw.value != frm.re_pw.value){ 
 			alert("비밀번호가 일치하지 않습니다. 확인하세요"); 
 			frm.pw.focus(); 
 			return false;			
@@ -63,7 +63,7 @@
   	</div>
   </header>
   <section id="userInfo">
-  	<form action="sellerJoin.go" name=frm method="post">
+  	<form action="sellerJoin.go" name="frm" method="post">
   	  <fieldset><legend class="hide">필수 정보 입력</legend>
   	  	<p class="small">기본 정보를 입력해 주세요.</p>
   	  	<div class="info_container">

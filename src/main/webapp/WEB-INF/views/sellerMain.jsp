@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="header.jsp" %>
 <!DOCTYPE html >
 <html>
 <head>
@@ -8,12 +9,11 @@
 </head>
 <body>
 <div>
-메인페이지
-	<a href="commonLogin.go">로그인</a><!-- sellerLoginForm.go -->
-	<a href ="s_Join.go">회원가입</a>
-	<a href ="sellerJoinForm.go">my page</a>
-	<a href ="sellerJoinForm.go">my e-shop</a>
-	<a href ="sellerJoinForm.go">게시판</a>
+<h2>메인페이지</h2><p>
+	<a href="">로그아웃</a>
+	<a href ="">my page</a>
+	<a href ="shopMain.go">my e-shop</a>
+	<a href ="">게시판</a>
 </div>
 
 

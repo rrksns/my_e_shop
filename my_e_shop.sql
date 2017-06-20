@@ -21,6 +21,7 @@ s_mob_conf INT,
 s_tel varchar(30)
 );
 
+insert into seller (s_id,s_pw) values('leelee','leelee**');
 alter table seller add numOfbiz int;
 alter table seller add s_gender varchar(10);
 alter table seller add s_birth date;

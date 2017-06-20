@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Shopns">
+	<!-- Use type aliases to avoid typing the full classname every time. -->
+	<resultMap id="shopResult" 		type="shop">
+	<!-- 	<result property="a" 	column="a" />
+		<result property="b" 	column="b" />
+		<result property="c"		column="c" /> -->
+	</resultMap>
+	
+	<!-- <select id="list" resultMap="sellerResult">
+		select * from test 
+		</select> -->
+<!-- 	
+	<select id="select" parameterType="int" resultType="dept"> 데이터한건일때 resultType
+		select * from dept where deptno=#{deptno}
+	</select>
+	<update id="update" parameterType="dept">
+		update dept set dname=#{dname}, loc=#{loc} where deptno=#{deptno}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete from dept where deptno=#{deptno}
+	</delete>-->
+	<insert id="insert" parameterType="shop">
+	<selectKey keyProperty="sh_id" order="BEFORE" resultType="int">
+		select ifnull(max(sh_id), 0)+1 from shop
+	</selectKey>
+		insert into shop values(#{sh_id}, #{sh_name}, #{sh_addr}, #{sh_web},
+			#{sh_tel}, #{sh_cate}, #{sh_content}, #{sh_summary}, #{sh_operTime},
+			#{sh_brTime}, #{sh_img1}, #{sh_img2}, #{sh_img3} , #{sh_img4},
+			#{sh_img5} , #{recru_sub} , #{recru_con} , #{sh_count}, #{sh_pick},
+			#{s_id} )
+	</insert>
+</mapper>
