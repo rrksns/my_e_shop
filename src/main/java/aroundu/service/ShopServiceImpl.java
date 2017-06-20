@@ -13,7 +13,7 @@ public class ShopServiceImpl implements ShopService{
 	@Autowired
 	private ShopDao sd;
 	public int insert(Shop shop) {
-		// TODO Auto-generated method stub
+		
 		return sd.insert(shop);
 	}
 
