@@ -4,10 +4,15 @@ import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+<<<<<<< HEAD
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import aroundu.model.Shop;
+=======
+import org.springframework.web.bind.annotation.RequestMapping;
+
+>>>>>>> 634196dec9d405368076e0c7642736f0caa38d9f
 import aroundu.service.ShopService;
 
 @Controller
@@ -17,6 +22,7 @@ public class ShopController {
 	
 	@RequestMapping("shopMain")
 	public String shopMain() {
+<<<<<<< HEAD
 		return "shop/shopMain";
 	}
 	
@@ -36,4 +42,10 @@ public class ShopController {
 	}
 	
 	
+=======
+		System.out.println("확인");
+
+		return "shop/shopMain";
+	}
+>>>>>>> 634196dec9d405368076e0c7642736f0caa38d9f
 }

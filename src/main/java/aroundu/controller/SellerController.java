@@ -21,6 +21,7 @@ public class SellerController {
 	return "main";
 	}
 	
+<<<<<<< HEAD
 	/*일반회원가입  or 샵등록 선택*/
 	@RequestMapping("s_Join")
 	public String s_Join(){
@@ -53,11 +54,16 @@ public class SellerController {
 		return "seller/s_join_fin";
 	}
 	/*로그인페이지선택화면*/
+=======
+>>>>>>> 634196dec9d405368076e0c7642736f0caa38d9f
 	@RequestMapping("commonLogin")
 	public String commonLogin(){
 		return "commonLogin";
 	}
+<<<<<<< HEAD
 	/*로그인 페이지*/
+=======
+>>>>>>> 634196dec9d405368076e0c7642736f0caa38d9f
 	@RequestMapping("sellerLoginForm")
 	public String sellerLoginForm(){
 		return "seller/sellerLoginForm";
@@ -82,7 +88,10 @@ public class SellerController {
 	public String sellerLogin(){
 		return "seller/sellerLogin";
 	}
+<<<<<<< HEAD
 	/*셀러메인호출*/
+=======
+>>>>>>> 634196dec9d405368076e0c7642736f0caa38d9f
 	@RequestMapping("sellerMain")
 	public String sellerMain(){
 		return "sellerMain";
