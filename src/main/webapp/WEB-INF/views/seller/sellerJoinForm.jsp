@@ -74,12 +74,11 @@
 			<tr><th scope="row">생년월일</th>
 				<td><input type="text" name="s_birthdate" required="required"></td>
 			</tr>
-			</tr>
 			<tr><th scope="row">성별</th>
 				<td><input type="text" name="s_gender" required="required"></td>
 			</tr>
 		</table>			
-		<div id="h">
+		<div>
 			<p><input type="submit" value="등록">&nbsp;
 			<input type="reset" value="취소">&nbsp;<a href="main.go">돌아가기</a></p>		
 		</div>			
