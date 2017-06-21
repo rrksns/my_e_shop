@@ -1,11 +1,14 @@
 package aroundu.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.ModelAndView;
 
-import aroundu.dao.SellerDao;
 import aroundu.model.Seller;
 import aroundu.service.SellerService;
 
@@ -19,9 +22,8 @@ public class SellerController {
 	@RequestMapping("main")
 	public String main(){
 	return "main";
-	}
-	
-<<<<<<< HEAD
+	}	
+
 	/*일반회원가입  or 샵등록 선택*/
 	@RequestMapping("s_Join")
 	public String s_Join(){
@@ -39,7 +41,7 @@ public class SellerController {
 		return "seller/s_joinForm2";
 	}
 	/*회원가입 정보 저장*/
-	@RequestMapping("sellerJoin")
+	@RequestMapping(value="sellerJoin", method=RequestMethod.POST)
 	public String sellerJoin(Seller seller, Model model){
 		int result =ss.insert(seller);
 		model.addAttribute("result", result);
@@ -48,22 +50,17 @@ public class SellerController {
 	
 	/*가입환영화면*/
 	@RequestMapping("s_join_fin")
-	public String s_join_fin(Seller seller, Model model){
-		int result = ss.insert(seller);
-		model.addAttribute("result", result);		
+	public String s_join_fin(Seller seller){		
 		return "seller/s_join_fin";
 	}
 	/*로그인페이지선택화면*/
-=======
->>>>>>> 634196dec9d405368076e0c7642736f0caa38d9f
+
 	@RequestMapping("commonLogin")
 	public String commonLogin(){
 		return "commonLogin";
 	}
-<<<<<<< HEAD
+
 	/*로그인 페이지*/
-=======
->>>>>>> 634196dec9d405368076e0c7642736f0caa38d9f
 	@RequestMapping("sellerLoginForm")
 	public String sellerLoginForm(){
 		return "seller/sellerLoginForm";
@@ -72,7 +69,6 @@ public class SellerController {
 	@RequestMapping("idChk")
 	public String idChk(String id, Model model){
 		Seller seller = ss.select(id);
-		System.out.println("중복체크도니?");
 		if(seller == null) model.addAttribute("msg","사용가능한 ID입니다");
 		else model.addAttribute("msg","이미 사용중인ID입니다");
 		return "seller/idChk";
@@ -85,15 +81,27 @@ public class SellerController {
 	
 	/*로그인실행*/
 	@RequestMapping("sellerLogin")
-	public String sellerLogin(){
-		return "seller/sellerLogin";
+	public String sellerLogin(String s_id, String s_pw,Model model,HttpSession session){	
+		int result=ss.loginChk(s_id,s_pw);
+		if(result>0){
+			session.setAttribute("s_id",s_id);
+			return "sellerMain";
+		}else if(result==0){model.addAttribute("msg","암호가 일치하지 않습니다");
+		}else model.addAttribute("msg","ID가 존재하지 않습니다");
+		model.addAttribute("s_id",s_id);
+		return "seller/sellerLoginForm";
 	}
-<<<<<<< HEAD
+
 	/*셀러메인호출*/
-=======
->>>>>>> 634196dec9d405368076e0c7642736f0caa38d9f
 	@RequestMapping("sellerMain")
 	public String sellerMain(){
 		return "sellerMain";
+	}
+	/*로그아웃*/
+	@RequestMapping("s_logout")
+	public String s_logout(HttpSession session){
+		System.out.println("여기까지오나?");
+		session.invalidate();
+		return "seller/s_logout";
 	}
 }

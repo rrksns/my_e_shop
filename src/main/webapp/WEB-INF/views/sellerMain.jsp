@@ -10,7 +10,7 @@
 <body>
 <div>
 <h2>메인페이지</h2><p>
-	<a href="">로그아웃</a>
+	<a href="s_logout.go">로그아웃</a>
 	<a href ="">my page</a>
 	<a href ="shopMain.go">my e-shop</a>
 	<a href ="">게시판</a>

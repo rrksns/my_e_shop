@@ -8,4 +8,6 @@ public interface SellerDao {
 
 	Seller select(String id);
 
+	int loginChk(String s_id, String s_pw);
+
 }

@@ -20,7 +20,7 @@ s_name VARCHAR(20),
 s_mob_conf INT,
 s_tel varchar(30)
 );
-
+select * from seller ;
 insert into seller (s_id,s_pw) values('leelee','leelee**');
 alter table seller add numOfbiz int;
 alter table seller add s_gender varchar(10);
@@ -105,5 +105,6 @@ sh_id varchar(20)
 alter table menu add foreign key (sh_id) references shop(sh_id);
 
 
-
+insert into seller (s_id,s_pw,s_email,s_mobile,s_regDate,s_gender,s_birthdate,s_name) 
+values('ee', 'ee', 'e@gmail.com', '01041001111','20170202','m', '20120909','ee')
 

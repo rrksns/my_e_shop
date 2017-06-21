@@ -5,4 +5,6 @@ public interface SellerService {
 
 	Seller select(String id);
 
+	int loginChk(String s_id, String s_pw);
+
 }

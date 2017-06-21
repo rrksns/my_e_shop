@@ -17,5 +17,9 @@ public class SellerServiceImpl implements SellerService{
 	public Seller select(String id) {
 		return sd.select(id);
 	}
+	@Override
+	public int loginChk(String s_id, String s_pw) {
+		return sd.loginChk(s_id,s_pw);
+	}
 
 }

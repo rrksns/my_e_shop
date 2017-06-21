@@ -3,26 +3,27 @@
 <%@ include file="../header.jsp" %>    
 <!DOCTYPE html>
 <html>
-<meta charset="UTF-8">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" > 
 <title>Around U 회원가입</title>
 <link rel="stylesheet" href="${path}/resources/css/all.css">
 <link rel="stylesheet" href="${path}/resources/css/join.css">
 
-<script type="text/javascript">
+<script type="text/javascript" charset="utf-8">
+
 	/* 중복체크 */
 	$(function(){
-		$('#idChk').click(function(){
+		 $('#idChk').click(function(){
 			var id = $('#id').val();
 			if(id==""){alert('아이디 입력하고 체크하세요!')
 				$('#id').focus(); return false;	}
 			$.post("idChk.go","id="+id, function(msg){
 				alert(msg);
 			});
-		});
+		}); 
 	});
-
 	
-	function chk() {
+	/* function chk() {
 		if (frm.s_id.value.length >= 6 || frm.s_id.value.length <= 20 ) {
 			alert("아이디는 6 - 20의 영문,숫자조합입니다");
 			form.id.focus();
@@ -42,8 +43,10 @@
 		}
 		return true;
 		}		
-	}
+	}  */
 </script>
+
+
 
 </head>
 <body>
@@ -69,16 +72,16 @@
   	  	<div class="info_container">
   	  	  <div class="infoBox">
   	  	  	<span>아이디</span>
-  	  	  	<input type="text" id="id" name="s_id" placeholder="아이디" min="6" max="20"required="required"> * 6~20자 &nbsp;
+  	  	  	<input type="text" id="id" name="s_id" placeholder="아이디" required="required">&nbsp;
   	  	  	<input type="button" value="중복확인" id="idChk" >
   	  	  </div>
   	  	  <div class="infoBox">
   	  	  	<span>비밀번호</span>
-  	  	  	<input type="password" id="pw" name="s_pw" placeholder="비밀번호" required max="20" min="8">* 8~20자의 영문, 숫자, 특수문자( ! # $ * ( ) _ = |)<span></span>
+  	  	  	<input type="password" id="pw" name="s_pw" placeholder="비밀번호" required ><span></span>
   	  	  </div>
   	  	  <div class="infoBox">
   	  	  	<span>비밀번호 확인</span>
-  	  	  	<input type="password" id="re_pw" name="re_pw" placeholder="비밀번호 확인" required >  <span></span>
+  	  	  	<input type="password" id="re_pw" placeholder="비밀번호 확인" required >  <span></span>
   	  	  </div>
   	  	</div>
   	  	<div class="info_container">
@@ -86,14 +89,16 @@
   	  	  	<span>이름, 성별</span>
   	  	  	<div class="nameWrap">
   	  	  	  <input type="text" id="name" name="s_name" placeholder="이름" required>
-  	  	  	  <input type="radio" id="gender_w" name="s_gender"><label class="gender_btn" for="f">여자</label>
-  	  	  	  <input type="radio" id="gender_m" name="s_gender"><label class="gender_btn margin" for="m">남자</label>
+  	  	  	  <input type="radio" id="gender_w" name="s_gender" checked="checked" value="f">
+  	  	  	  <label class="gender_btn" for="f">여자</label>
+  	  	  	  <input type="radio" id="gender_m" name="s_gender" value="m">
+  	  	  	  <label class="gender_btn margin" for="m">남자</label>
   	  	  	</div>
   	  	  </div>
   	  	  <div class="birthdayBox">
   	  	  	<span>생년월일</span> <!-- 생년월일 따로따로 설정 하나로 조합해야함 -->
   	  	  	<div class="birthdayWrap">
-  	  	  	<input type="text" name="s_birthdate" placeholder="20170707" required="required">
+  	  	  	<input type="text" name="s_birthdate" placeholder="2017-07-07" required="required">
   	  	  	  <!-- <input class="year" type="text" placeholder="연도 ex)1989" required><span class="">년</span>
   	  	  	  <input class="month" type="text" required><span>월</span>
   	  	  	  <input class="day" type="text" required><span>일</span>  --> 	  	  	  

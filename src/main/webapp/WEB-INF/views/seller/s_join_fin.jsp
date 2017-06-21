@@ -13,7 +13,7 @@
 <div class="universe">
   <header>
   	<div class="logoWrap">
-  	  <a class="home_logo" href="#" title="메인화면으로">AROUND U</a>
+  	  <a class="home_logo" href="main.go" title="메인화면으로">AROUND U</a>
   	</div>
   	<div class="titleWrap_H">
   	  <h2 class="title box">회원 가입</h2>
@@ -33,7 +33,7 @@
   	  <p class="txt_welcome">Around U에서 주변 샵의 정보와 다양한 서비스 혜택을 누리시기 바랍니다.</p>
   	</div>
   	<div class="btn_container">
-  	  <button type="submit" class="nxt_btn">확인</button>
+  	  <button type="submit" class="nxt_btn"><a href="main.go">확인</a></button>
   	</div>
   </section>
 </div>
