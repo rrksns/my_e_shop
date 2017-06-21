@@ -100,7 +100,6 @@ public class SellerController {
 	/*로그아웃*/
 	@RequestMapping("s_logout")
 	public String s_logout(HttpSession session){
-		System.out.println("여기까지오나?");
 		session.invalidate();
 		return "seller/s_logout";
 	}
