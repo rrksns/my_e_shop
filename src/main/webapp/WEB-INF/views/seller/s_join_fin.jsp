@@ -13,13 +13,13 @@
 <div class="universe">
   <header>
   	<div class="logoWrap">
-  	  <a class="home_logo" href="main.go" title="메인화면으로">AROUND U</a>
+  	  <a class="home_logo" href="sellerMain.go" title="메인화면으로">AROUND U</a>
   	</div>
   	<div class="titleWrap_H">
   	  <h2 class="title box">회원 가입</h2>
   	  <ol class="steb_list box">
   	  	<li>가입유형</li>
-  	  	<li>약관동의</li>
+  	  	<li>약관동의</li> 
   	  	<li>정보입력</li>
   	  	<li>가입완료</li>
   	  </ol>
@@ -33,7 +33,7 @@
   	  <p class="txt_welcome">Around U에서 주변 샵의 정보와 다양한 서비스 혜택을 누리시기 바랍니다.</p>
   	</div>
   	<div class="btn_container">
-  	  <button type="submit" class="nxt_btn" onclick="location.href='main.go'">메인으로</button>
+  	  <button type="submit" class="nxt_btn" onclick="location.href='sellerMain.go'">메인으로</button>
   	</div>
   </section>
 </div>
