@@ -33,7 +33,7 @@
   	  <p class="txt_welcome">Around U에서 주변 샵의 정보와 다양한 서비스 혜택을 누리시기 바랍니다.</p>
   	</div>
   	<div class="btn_container">
-  	  <button type="submit" class="nxt_btn"><a href="main.go">메인으로</a></button>
+  	  <button type="submit" class="nxt_btn" onclick="location.href='main.go'">메인으로</button>
   	</div>
   </section>
 </div>

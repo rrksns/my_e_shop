@@ -1,5 +1,6 @@
 package aroundu.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,16 +42,19 @@ public class SellerController {
 		return "seller/s_joinForm2";
 	}
 	/*회원가입 정보 저장*/
-	@RequestMapping(value="sellerJoin", method=RequestMethod.POST)
-	public String sellerJoin(Seller seller, Model model){
+	@RequestMapping("sellerJoin")
+	public String sellerJoin(Seller seller, Model model,HttpSession session){
 		int result =ss.insert(seller);
-		model.addAttribute("result", result);
+		String s_id = seller.getS_id();
+		session.setAttribute("s_id",s_id);
+		model.addAttribute("result", result);		
 		return "seller/sellerJoin";
 	}
 	
 	/*가입환영화면*/
 	@RequestMapping("s_join_fin")
-	public String s_join_fin(Seller seller){		
+	public String s_join_fin(Seller seller){	
+		
 		return "seller/s_join_fin";
 	}
 	/*로그인페이지선택화면*/
