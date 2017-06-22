@@ -1,7 +1,7 @@
 package aroundu.model;
 
 public class Shop {
-	private int sh_id;
+	private String sh_id;
 	private String sh_name;
 	private String sh_addr;
 	private String sh_web;
@@ -22,11 +22,10 @@ public class Shop {
 	private String sh_pick;
 	private String s_id;
 	
-
-	public int getSh_id() {
+	public String getSh_id() {
 		return sh_id;
 	}
-	public void setSh_id(int sh_id) {
+	public void setSh_id(String sh_id) {
 		this.sh_id = sh_id;
 	}
 	public String getSh_name() {
@@ -142,7 +141,7 @@ public class Shop {
 	}
 	public void setS_id(String s_id) {
 		this.s_id = s_id;
-	} 
+	}
 	
 	
 

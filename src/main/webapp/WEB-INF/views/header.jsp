@@ -4,6 +4,7 @@
 <c:set var="path" value="${pageContext.request.contextPath }"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" > 
 <link href="${path}/css/bootstrap.min.css" rel="stylesheet">
 <script src="${path}/js/jquery.js"></script>
 <script src="${path}/js/bootstrap.min..js"></script>

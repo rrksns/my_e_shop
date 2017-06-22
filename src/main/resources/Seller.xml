@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="Sellerns">
+<mapper namespace="sellerns">
 	<!-- Use type aliases to avoid typing the full classname every time. -->
 	<resultMap id="sellerResult" 		type="seller">
 		<result property="s_id" 	column="s_id" />
@@ -18,6 +18,7 @@
 		<result property="s_tel" 	column="s_tel" />
 
 	</resultMap>
+
 	
 	<!-- <select id="list" resultMap="sellerResult">
 		select * from test 
@@ -37,8 +38,10 @@
 		delete from dept where deptno=#{deptno}
 	</delete>-->
 	<insert id="insert" parameterType="seller">
-		insert into seller values(#{s_id}, #{s_pw}, #{s_email}, #{s_addr},
-			#{s_mobile}, #{s_regDate}, #{s_reg_conf}, #{s_gender}, #{s_birthdate},
-			#{s_name}, #{s_mob_conf}, #{s_tel}, #{s_tc_conf})
+		insert into seller (s_id, s_pw, s_email, s_mobile, s_regDate, s_gender, s_birthdate,s_name) 
+		values(#{s_id}, #{s_pw}, #{s_email},#{s_mobile}, now(), #{s_gender}, date_format(#{s_birthdate},'%y-%m-%d'),#{s_name})
 	</insert>
+	
+		
 </mapper>
+	

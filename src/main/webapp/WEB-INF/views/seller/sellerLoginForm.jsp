@@ -9,7 +9,8 @@
 <title>Around U 로그인</title>
 <link rel="stylesheet" href="${path}/resources/css/all.css">
 <link rel="stylesheet" href="${path}/resources/css/login.css">
-</head>
+</head><body>
+  		
 <div class="universe">
   <section class="login">
   	<header>
@@ -24,15 +25,16 @@
   	  	<fieldset><legend class="hide">아이디, 비밀번호 로그인 정보 입력 폼</legend>
   	  	  <div class="inputWrap">
   	  	  	<label>아이디</label>
-  	  	  	<input id="id" type="text" title="아이디 입력">
+  	  	  	<input id="id" name="s_id" type="text" title="아이디 입력">
   	  	  	<label>비밀번호</label>
-  	  	  	<input id="pw" type="password" maxlength="32" autocomplete="off" title="비밀번호 입력">
+  	  	  	<input id="pw" name="s_pw"type="password" maxlength="32" autocomplete="off" title="비밀번호 입력">
   	  	  </div>
   	  	  <button class="log_btn" type="submit">로그인</button>
   	  	  <div class="saveIdWrap">
   	  	  	<input id="saveId" type="checkbox">
   	  	  	<label class="chk_btn" for="saveId">아이디 저장</label>
   	  	  </div>
+  	  	
   	  	</fieldset>
   	  </form>
   	</div>
@@ -42,6 +44,13 @@
   	  <a href="">아이디 찾기</a>
   	  <span class="txt_bar">|</span>
   	  <a href="">비밀번호 찾기</a>
+  	</div>
+  	
+  	<!-- 로그인에러메세지 -->
+  	<div>
+  	   <c:if test="${not empty msg}">
+  	 	<span>${msg}</span>
+  	    </c:if>
   	</div>
   </section>
 </div>

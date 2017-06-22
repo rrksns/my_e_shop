@@ -8,10 +8,10 @@ public class Seller {
 	private String s_email;
 	private String s_addr;
 	private String s_mobile;
-	private Date s_regDate;
+	private String s_regDate;
 	private String s_reg_conf;
 	private String s_gender;
-	private Date s_birthdate;
+	private String s_birthdate;
 	private String s_name;
 	private int s_mob_conf;
 	private String s_tel;
@@ -46,12 +46,7 @@ public class Seller {
 	public void setS_mobile(String s_mobile) {
 		this.s_mobile = s_mobile;
 	}
-	public Date getS_regDate() {
-		return s_regDate;
-	}
-	public void setS_regDate(Date s_regDate) {
-		this.s_regDate = s_regDate;
-	}
+	
 	public String getS_reg_conf() {
 		return s_reg_conf;
 	}
@@ -64,10 +59,17 @@ public class Seller {
 	public void setS_gender(String s_gender) {
 		this.s_gender = s_gender;
 	}
-	public Date getS_birthdate() {
+	
+	public String getS_regDate() {
+		return s_regDate;
+	}
+	public void setS_regDate(String s_regDate) {
+		this.s_regDate = s_regDate;
+	}
+	public String getS_birthdate() {
 		return s_birthdate;
 	}
-	public void setS_birthdate(Date s_birthdate) {
+	public void setS_birthdate(String s_birthdate) {
 		this.s_birthdate = s_birthdate;
 	}
 	public String getS_name() {
