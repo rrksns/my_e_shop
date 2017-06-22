@@ -13,7 +13,7 @@ import aroundu.service.ShopService;
 @Controller
 public class ShopController {
 	@Autowired 
-	ShopService ss;
+	ShopService sv;
 	
 	@RequestMapping("shopMain")
 	public String shopMain() {
@@ -26,13 +26,13 @@ public class ShopController {
 	}
 	@RequestMapping("restaurantBasic")
 	public String restaurantBasic(Shop shop, Model model) {
-		int result = ss.insert(shop);
+		int result = sv.insert(shop);
 		model.addAttribute("result", result);
 		return "shop/restaurantBasic";
 	}
 	@RequestMapping("restaurantPicture")
 	public String restaurantPicture(Shop shop, Model model) {
-		int result = ss.update(shop);
+		int result = sv.update(shop);
 		model.addAttribute("result", result);
 		return "shop/restaurantPicture";
 	}
