@@ -16,16 +16,12 @@
 		select * from dept where deptno=#{deptno}
 	</select> -->
 	
-<!-- 	<update id="update" parameterType="shop">
-		update shop set sh_addr= #{sh_addr}, sh_web= #{sh_web},
-			sh_tel= #{sh_tel},sh_cate= #{sh_cate},sh_content= #{sh_content}, 
-			sh_summary= #{sh_summary},sh_operTime= #{sh_operTime},
-			sh_brTime= #{sh_brTime}, sh_img1= #{sh_img1}, sh_img2=#{sh_img2}, 
-			sh_img3=#{sh_img3} ,sh_img4= #{sh_img4},
-			sh_img5= #{sh_img5} , recru_sub=#{recru_sub} ,recru_con=  #{recru_con},
-			sh_count= #{sh_count},sh_pick= #{sh_pick}, s_id= #{s_id} 
+	<update id="update" parameterType="shop">
+		update shop set sh_img1= #{sh_img1}, sh_img2=#{sh_img2}, 
+			sh_img3=#{sh_img3},sh_img4= #{sh_img4},
+			sh_img5= #{sh_img5}, sh_img6= #{sh_img6}
 			where sh_id=#{sh_id}
-	</update> -->
+	</update> 
 	
 	<!-- <delete id="delete" parameterType="int">
 		delete from dept where deptno=#{deptno}
