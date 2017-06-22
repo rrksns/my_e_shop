@@ -66,25 +66,23 @@ s_id varchar(20)
 alter table shop add foreign key (s_id) references seller(s_id);
 
 drop table board;
+select * from board;
 create table board(
 bd_num int primary key,
 bd_subject varchar(40),
 bd_content varchar(255),
-bd_good int,
-bd_warn int,
-taste int,
-service int,
-price_adv int,
 bd_regDate date,
 bd_count int,
 ref int,
 re_step int,
 re_level int,
-start_row int,
-end_row int,
-sh_id varchar(20),
-u_id  varchar(20)
+
+s_id  varchar(20),
+del varchar(2)
 );
+alter table board drop column start_row;
+alter table board drop column end_row;
+alter table board add(del varchar(2));
 alter table board add foreign key (sh_id) references shop(sh_id);
 alter table board add foreign key (u_id) references user(u_id);
 

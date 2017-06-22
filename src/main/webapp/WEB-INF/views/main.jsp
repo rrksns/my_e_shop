@@ -13,8 +13,8 @@
 	<a href="commonLogin.go">로그인</a>
 	<a href ="s_Join.go">회원가입</a>
 	<a href ="sellerJoinForm.go">my page</a>
-	<a href ="sellerJoinForm.go">my e-shop</a>
-	<a href ="sellerJoinForm.go">게시판</a>
+	<a href ="shopMain.go">my e-shop</a>
+	<a href ="boardList.go">Q&A</a>
 </div>
 <div id="map" style="width:750px;height:350px;"></div>
 

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="boardns">
+	<!-- Use type aliases to avoid typing the full classname every time. -->
+	<resultMap id="boardResult" 		type="board">
+		<result property="bd_num" 		column="bd_num" />
+		<result property="bd_subject" 	column="bd_subject" />
+		<result property="bd_content"	column="bd_content" /> 
+		<result property="bd_regDate" 	column="bd_regDate" />
+		<result property="bd_count" 	column="bd_count" />
+		<result property="ref"			column="ref" /> 
+		<result property="re_step"		column="re_step" /> 
+		<result property="re_level" 	column="re_level" />
+		<result property="start_row" 	column="start_row" />
+		<result property="end_row"		column="end_row" />
+		<result property="s_id" 		column="s_id" />
+		<result property="search" 		column="search" />
+		<result property="keyword" 		column="keyword" />
+	</resultMap>
+
+	
+	<select id="getMaxNum" resultType="int">
+	select nvl(max(num),0)+1 from board	
+	</select>
+	
+	<select id="select" parameterType="int" resultType="board">
+	select * from board where bd_num=#{bd_num}
+	</select>
+	
+	<select id="getTotal" parameterType="board" resultType="int">
+	select count(*) from board
+		<where>
+			<if test="keyword != null and search != 'subcon'">
+				${search} like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != null and search =='subcon'">
+				bd_subject like '%' || #{keyword} || '%' or
+				bd_content like '%' || #{keyword} || '%'
+			</if>
+		</where>
+	</select>
+	
+	<select id="list" parameterType="board" resultMap="boardResult">
+	select * from (select a.*,rowNum rn from(select * from board
+		<where>
+			<if test="keyword != null and search !='subcon'">
+				${search} like '%' || #{keyword} || '%'
+			</if>
+			<if test="keyword != null and search =='subcon'" >
+			bd_subject like '%' || #{keyword} || '%' or
+			bd_content like '%' || #{keyword} || '%'
+			</if>
+		</where>
+		order by ref desc, re_step) a)
+		where rn between #{startRow} and #{endRow}	
+	</select>
+	
+	<update id="updateRe" parameterType="board" >
+	update board set re_step = re_step+1
+		where ref=#{ref} and re_step >#{re_step}
+	</update>
+	
+	<insert id="insert" parameterType="board">		
+	insert into (bd_num,bd_subject,bd_content,bd_regDate,bd_count,ref,re_step,re_level,s_id,del) 
+	board values(#{bd_num},#{bd_subject},#{bd_content},now(),#{bd_count},#{ref}
+	,#{re_step},#{re_level},#{s_id},'n')
+	</insert>
+		
+</mapper>
+	

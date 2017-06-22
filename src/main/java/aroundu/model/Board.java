@@ -2,25 +2,57 @@ package aroundu.model;
 
 import java.sql.Date;
 
-public class Board {
+public class Board {					
 	private int bd_num;
 	private String bd_subject;
-	private String bd_content;
-	private int bd_good;
-	private int bd_warn;
-	private int taste;
-	private int service;
-	private int price_adv;
-	private Date bd_regDate;
+	private String bd_content;	
+	private String bd_regDate;
 	private int bd_count;
 	private int ref;
 	private int re_step;
-	private int re_level;
-	private int start_row;
-	private int end_row;
-	private String sh_id;
-	private String u_id;
+	private int re_level;	
+	private String s_id;
 	
+	//page작업
+	private int startRow;
+	private int endRow;
+	
+	//search작업
+	private String search;
+	private String keyword;	
+	
+	
+	
+	public String getBd_regDate() {
+		return bd_regDate;
+	}
+	public void setBd_regDate(String bd_regDate) {
+		this.bd_regDate = bd_regDate;
+	}
+	public int getStartRow() {
+		return startRow;
+	}
+	public void setStartRow(int startRow) {
+		this.startRow = startRow;
+	}
+	public int getEndRow() {
+		return endRow;
+	}
+	public void setEndRow(int endRow) {
+		this.endRow = endRow;
+	}
+	public String getSearch() {
+		return search;
+	}
+	public void setSearch(String search) {
+		this.search = search;
+	}
+	public String getKeyword() {
+		return keyword;
+	}
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
 	public int getBd_num() {
 		return bd_num;
 	}
@@ -39,42 +71,7 @@ public class Board {
 	public void setBd_content(String bd_content) {
 		this.bd_content = bd_content;
 	}
-	public int getBd_good() {
-		return bd_good;
-	}
-	public void setBd_good(int bd_good) {
-		this.bd_good = bd_good;
-	}
-	public int getBd_warn() {
-		return bd_warn;
-	}
-	public void setBd_warn(int bd_warn) {
-		this.bd_warn = bd_warn;
-	}
-	public int getTaste() {
-		return taste;
-	}
-	public void setTaste(int taste) {
-		this.taste = taste;
-	}
-	public int getService() {
-		return service;
-	}
-	public void setService(int service) {
-		this.service = service;
-	}
-	public int getPrice_adv() {
-		return price_adv;
-	}
-	public void setPrice_adv(int price_adv) {
-		this.price_adv = price_adv;
-	}
-	public Date getBd_regDate() {
-		return bd_regDate;
-	}
-	public void setBd_regDate(Date bd_regDate) {
-		this.bd_regDate = bd_regDate;
-	}
+	
 	public int getBd_count() {
 		return bd_count;
 	}
@@ -99,30 +96,18 @@ public class Board {
 	public void setRe_level(int re_level) {
 		this.re_level = re_level;
 	}
-	public int getStart_row() {
-		return start_row;
+	
+	public String getS_id() {
+		return s_id;
 	}
-	public void setStart_row(int start_row) {
-		this.start_row = start_row;
+	public void setS_id(String s_id) {
+		this.s_id = s_id;
 	}
-	public int getEnd_row() {
-		return end_row;
-	}
-	public void setEnd_row(int end_row) {
-		this.end_row = end_row;
-	}
-	public String getSh_id() {
-		return sh_id;
-	}
-	public void setSh_id(String sh_id) {
-		this.sh_id = sh_id;
-	}
-	public String getU_id() {
-		return u_id;
-	}
-	public void setU_id(String u_id) {
-		this.u_id = u_id;
-	}
+	
+	
+
+	
+	
 
 	
 
