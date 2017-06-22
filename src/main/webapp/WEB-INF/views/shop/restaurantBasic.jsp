@@ -38,6 +38,12 @@
 			<tr><th scope="row">가계 전화번호</th>
 				<td><input type="text" name="sh_tel" required="required"></td>
 			</tr>
+			<tr><th scope="row">운영 time</th>
+				<td><input type="text" name="sh_operTime" required="required"></td>
+			</tr>
+			<tr><th scope="row">브레이크 time</th>
+				<td><input type="text" name="sh_brTime" required="required"></td>
+			</tr>
 		</table>
 		 <div>
 			<p><input type="submit" value="등록">&nbsp;
