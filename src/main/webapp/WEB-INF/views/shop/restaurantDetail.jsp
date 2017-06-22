@@ -7,9 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2>나의 e-shop 등록하기</h2><p>
-	 <a href="sellerMain.go">메인으로</a><p>
-
-  	 <a href="shopRegist.go">시작하기</a>
+상세정보 입력하기
 </body>
 </html>

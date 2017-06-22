@@ -9,9 +9,16 @@ public class Menu {
 	private String it_img1;
 	private String it_img2;
 	private String it_img3;
+	private String it_top;
 	private String sh_id;
 	
 	
+	public String getIt_top() {
+		return it_top;
+	}
+	public void setIt_top(String it_top) {
+		this.it_top = it_top;
+	}
 	public String getIt_id() {
 		return it_id;
 	}

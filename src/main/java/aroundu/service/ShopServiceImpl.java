@@ -16,5 +16,10 @@ public class ShopServiceImpl implements ShopService{
 		// TODO Auto-generated method stub
 		return sd.insert(shop);
 	}
+	@Override
+	public int update(Shop shop) {
+		// TODO Auto-generated method stub
+		return sd.update(shop);
+	}
 
 }

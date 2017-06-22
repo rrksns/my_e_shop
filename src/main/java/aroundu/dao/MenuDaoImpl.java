@@ -4,23 +4,18 @@ import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import aroundu.model.Shop;
+import aroundu.model.Menu;
 
 @Repository
-public class ShopDaoImpl implements ShopDao{
+public class MenuDaoImpl implements MenuDao{
+	
 	@Autowired 
 	private SqlSessionTemplate st;
 	
 	@Override
-	public int insert(Shop shop) {
+	public int insert(Menu menu) {
 		// TODO Auto-generated method stub
-		return st.insert("Shopns.insert", shop);
-	}
-
-	@Override
-	public int update(Shop shop) {
-		// TODO Auto-generated method stub
-		return st.update("Shopns.update",shop);
+		return st.insert("Menuns.insert",menu);
 	}
 
 }
