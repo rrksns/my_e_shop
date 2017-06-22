@@ -42,7 +42,7 @@
 		</table>
 		 <div>
 			<p><input type="submit" value="등록">&nbsp;
-			<input type="reset" value="취소">&nbsp;<a href="sellerMain.go">돌아가기</a></p>		
+			<input type="reset" value="취소">&nbsp;<a href="sellerMain.go">메인으로</a></p>		
 		</div>			
 </form> 
 </body>
