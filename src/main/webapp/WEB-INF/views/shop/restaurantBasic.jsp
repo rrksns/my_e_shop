@@ -9,12 +9,12 @@
 <body>
 <h2>기본 정보 입력</h2>
 <form action="restaurantPicture.go" method="post" name="form">
-	<input type="hidden" name="sh_id" value="${sh_id}">
+	<input type="hidden" name="sh_id" value="${shop.sh_id}">
 	<ol>
-  	  	<li><a href = "shopBasic">기본정보</a></li>
-  	  	<li><a href = "shopPicture">사진등록</a></li>
-  	  	<li><a href = "shopMenu">메뉴등록</a></li>
-  	  	<li><a href= "shopDetail">부가정보</a></li>
+  	  	<li><a href = "restaurantBasic.go">기본정보</a></li>
+  	  	<li><a href = "restaurantPicture.go">사진등록</a></li>
+  	  	<li><a href = "restaurantMenu">메뉴등록</a></li>
+  	  	<li><a href= "restaurantDetail">부가정보</a></li>
 	</ol>
 		<span>가계설명</span>
 		<div>
@@ -29,7 +29,6 @@
   	  	  	</div>
   	  	 
   	  	 <table>
-
   	  	 	<tr><th scope="row">샵 이름</th>
 				<td><input type="text" name="sh_name" required="required"></td>
 			</tr>
@@ -42,7 +41,7 @@
 		</table>
 		 <div>
 			<p><input type="submit" value="등록">&nbsp;
-			<input type="reset" value="취소">&nbsp;<a href="sellerMain.go">메인으로</a></p>		
+			<input type="reset" value="취소">&nbsp;<a href="sellerMain.go">돌아가기</a></p>		
 		</div>			
 </form> 
 </body>
