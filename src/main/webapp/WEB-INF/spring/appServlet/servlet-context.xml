@@ -24,4 +24,16 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>	
 	<context:component-scan base-package="aroundu" />	
+	
+	<!-- 인터셉터설정 -->
+	<interceptors>
+		<interceptor>
+			<mapping path="/sellerMain.go"/>
+			<beans:ref bean="sessionChk"/>
+		</interceptor>
+	</interceptors>
+	
+	<beans:bean id="sessioniChk" class="aroundu.controller.SessionCheckInter">
+	</beans:bean>
+	
 </beans:beans>

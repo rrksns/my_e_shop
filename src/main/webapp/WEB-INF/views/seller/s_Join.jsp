@@ -45,7 +45,7 @@
   	  	  	</div>
   	  	  </div>
   	  	  <div class="btn_container">
-  	  	  	<button type="button" class="bkb_btn">이전으로</button>
+  	  	  	<button type="button" class="bkb_btn" onclick="javascript:history.back()">이전으로</button>
   	  	  	<button type="submit" class="nxt_btn">가입하기</button>
   	  	  </div>
   	  	</form>
