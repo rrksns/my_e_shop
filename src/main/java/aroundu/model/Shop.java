@@ -3,26 +3,27 @@ package aroundu.model;
 public class Shop {
 	private int sh_id;
 	private String sh_name;
-	private String sh_addr;
-	private String sh_web;
+	private String sh_addr;	
+	private String sh_web1;
+	private String sh_web2;
+	private String sh_web3;
+	private String sh_web4;
 	private String sh_tel;
 	private String sh_cate;
+	private String sh_subcate;
 	private String sh_content;
-	private String sh_summary;
 	private String sh_operTime;
 	private String sh_brTime;
+	private String sh_hashtag;
 	private String sh_img1;
 	private String sh_img2;
 	private String sh_img3;
 	private String sh_img4;
 	private String sh_img5;
-	private String recru_sub;
-	private String recru_con;
+	private String sh_img6;
 	private int sh_count;
-	private String sh_pick;
+	private int sh_pickcount;
 	private String s_id;
-	
-
 	public int getSh_id() {
 		return sh_id;
 	}
@@ -41,11 +42,29 @@ public class Shop {
 	public void setSh_addr(String sh_addr) {
 		this.sh_addr = sh_addr;
 	}
-	public String getSh_web() {
-		return sh_web;
+	public String getSh_web1() {
+		return sh_web1;
 	}
-	public void setSh_web(String sh_web) {
-		this.sh_web = sh_web;
+	public void setSh_web1(String sh_web1) {
+		this.sh_web1 = sh_web1;
+	}
+	public String getSh_web2() {
+		return sh_web2;
+	}
+	public void setSh_web2(String sh_web2) {
+		this.sh_web2 = sh_web2;
+	}
+	public String getSh_web3() {
+		return sh_web3;
+	}
+	public void setSh_web3(String sh_web3) {
+		this.sh_web3 = sh_web3;
+	}
+	public String getSh_web4() {
+		return sh_web4;
+	}
+	public void setSh_web4(String sh_web4) {
+		this.sh_web4 = sh_web4;
 	}
 	public String getSh_tel() {
 		return sh_tel;
@@ -59,17 +78,17 @@ public class Shop {
 	public void setSh_cate(String sh_cate) {
 		this.sh_cate = sh_cate;
 	}
+	public String getSh_subcate() {
+		return sh_subcate;
+	}
+	public void setSh_subcate(String sh_subcate) {
+		this.sh_subcate = sh_subcate;
+	}
 	public String getSh_content() {
 		return sh_content;
 	}
 	public void setSh_content(String sh_content) {
 		this.sh_content = sh_content;
-	}
-	public String getSh_summary() {
-		return sh_summary;
-	}
-	public void setSh_summary(String sh_summary) {
-		this.sh_summary = sh_summary;
 	}
 	public String getSh_operTime() {
 		return sh_operTime;
@@ -82,6 +101,12 @@ public class Shop {
 	}
 	public void setSh_brTime(String sh_brTime) {
 		this.sh_brTime = sh_brTime;
+	}
+	public String getSh_hashtag() {
+		return sh_hashtag;
+	}
+	public void setSh_hashtag(String sh_hashtag) {
+		this.sh_hashtag = sh_hashtag;
 	}
 	public String getSh_img1() {
 		return sh_img1;
@@ -113,17 +138,11 @@ public class Shop {
 	public void setSh_img5(String sh_img5) {
 		this.sh_img5 = sh_img5;
 	}
-	public String getRecru_sub() {
-		return recru_sub;
+	public String getSh_img6() {
+		return sh_img6;
 	}
-	public void setRecru_sub(String recru_sub) {
-		this.recru_sub = recru_sub;
-	}
-	public String getRecru_con() {
-		return recru_con;
-	}
-	public void setRecru_con(String recru_con) {
-		this.recru_con = recru_con;
+	public void setSh_img6(String sh_img6) {
+		this.sh_img6 = sh_img6;
 	}
 	public int getSh_count() {
 		return sh_count;
@@ -131,20 +150,19 @@ public class Shop {
 	public void setSh_count(int sh_count) {
 		this.sh_count = sh_count;
 	}
-	public String getSh_pick() {
-		return sh_pick;
+	public int getSh_pickcount() {
+		return sh_pickcount;
 	}
-	public void setSh_pick(String sh_pick) {
-		this.sh_pick = sh_pick;
+	public void setSh_pickcount(int sh_pickcount) {
+		this.sh_pickcount = sh_pickcount;
 	}
 	public String getS_id() {
 		return s_id;
 	}
 	public void setS_id(String s_id) {
 		this.s_id = s_id;
-	} 
+	}
 	
 	
-
 
 }

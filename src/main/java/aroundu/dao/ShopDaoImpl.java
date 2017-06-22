@@ -14,6 +14,9 @@ public class ShopDaoImpl implements ShopDao{
 	@Override
 	public int insert(Shop shop) {
 		// TODO Auto-generated method stub
+		System.out.println("확인중"+shop.getS_id());
+		System.out.println("확인중"+shop.getSh_addr());
+
 		return st.insert("Shopns.insert", shop);
 	}
 

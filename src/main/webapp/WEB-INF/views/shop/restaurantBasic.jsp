@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>기본 정보 입력</h2>
-<form action="restaurantPicture.go" method="post" name="form">
+<form action="restaurantBasic.go" method="post" name="form">
 	<input type="hidden" name="sh_id" value="${shop.sh_id}">
 	<ol>
   	  	<li><a href = "restaurantBasic.go">기본정보</a></li>
@@ -24,8 +24,8 @@
   	  	  	<span>운영형태</span>
   	  	  	<div > 
 	  	  	  	<button id="dinein" name="dinein">매장식사</button>
-	  	  	  	<button type="button" id="takeout" name="takeout">테이크아웃</button>
-	  	  	  	<button type="button" id="delivery" name="delivery">배달</button>	
+	  	  	  	<button  id="takeout" name="takeout">테이크아웃</button>
+	  	  	  	<button  id="delivery" name="delivery">배달</button>	
   	  	  	</div>
   	  	 
   	  	 <table>
