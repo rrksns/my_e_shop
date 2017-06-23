@@ -7,12 +7,14 @@
 		<typeAlias alias="admin" type="aroundu.model.Admin" />
 		<typeAlias alias="seller" type="aroundu.model.Seller" />
 		<typeAlias alias="shop" type="aroundu.model.Shop" />
+		<typeAlias alias="menu" type="aroundu.model.Menu" />
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="Seller.xml" />
 		<mapper resource="Admin.xml" />
 		<mapper resource="Shop.xml" />
+		<mapper resource="Menu.xml" />
 	</mappers>
 	
 </configuration>

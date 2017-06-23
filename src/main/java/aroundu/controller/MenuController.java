@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import aroundu.model.Menu;
 import aroundu.service.MenuService;
@@ -21,11 +22,19 @@ public class MenuController {
 		return "shop/menuRegist";
 	}
 	
-	@RequestMapping("restuarantMenu")
+	@RequestMapping(value="restaurantMenu", method = RequestMethod.GET)
 	public String restuarantMenu(Menu menu, Model model) {
+//		int result = ms.insert(menu);
+//		model.addAttribute("result", result);
+		return "shop/restaurantMenu";
+	}
+	@RequestMapping(value="restaurantMenu", method = RequestMethod.POST)
+	public String restuarantMenu(Menu menu, Model model, HttpSession session) {
+		int sh_id = Integer.parseInt(session.getAttribute("sh_id").toString());
+		menu.setSh_id(sh_id);
 		int result = ms.insert(menu);
 		model.addAttribute("result", result);
-		return "shop/restuarantMenu";
+		return "shop/restaurantDetail";
 	}
 	
 	@RequestMapping("restaurantDetail")

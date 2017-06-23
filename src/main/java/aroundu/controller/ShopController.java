@@ -47,5 +47,4 @@ public class ShopController {
 		return "shop/restaurantPicture";
 	}
 	
-	
 }

@@ -8,6 +8,6 @@
 </head>
 <body>
 	<a href="">자동등록</a>
-	<a href ="restuarantMenu.go">수동등록</a>
+	<a href ="restaurantMenu.go">수동등록</a>
 </body>
 </html>
