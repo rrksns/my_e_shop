@@ -11,7 +11,7 @@ public class SessionCheckInter extends HandlerInterceptorAdapter{
 		HttpSession session = request.getSession();
 		String s_id = (String)session.getAttribute("s_id");
 		if(s_id==null || s_id.equals("")){
-			response.sendRedirect("seller/sellerLoginForm");
+			response.sendRedirect("sellerLoginForm.go");
 			return false;
 		}
 		return true;

@@ -21,31 +21,33 @@
 				alert(msg);
 			});
 		}); 
-	});
+	});	
 	
-	/* function chk() {
-		if (frm.s_id.value.length >= 6 || frm.s_id.value.length <= 20 ) {
-			alert("아이디는 6 - 20의 영문,숫자조합입니다");
-			form.id.focus();
-			return false;
+</script>
+<script type="text/javascript">
+ function chkPw(){
+		
+		var pw1 = frm.s_pw.value;
+		var pw2 = frm.pwCk.value;
+		if(pw1 != pw2){
+			document.getElementById('checkPwd').style.color = "red";
+			document.getElementById('checkPwd').innerHTML = "동일한 암호를 입력하세요";
+		}else{
+			document.getElementById('checkPwd').style.color = "black";
+			document.getElementById('checkPwd').innerHTML = "암호가 확인 되었습니다"
 		}
-		
-		var reg_pw = /^.*(?=.{4,8})(?=.*[0-9])(?=.*[a-zA-Z])(?=.*[@!#$*()_&]).*$/; 
-		if(!reg_pw.test(frm.s_pw.value)) { 
-			alert("4~8자 영문 대 소문자, 숫자, 특수문자를 사용하세요."); 
-			frm.s_pw.focus(); 
-			return false;		
-		
+	 }
+	 
+	 function chk() {				
 		if(frm.s_pw.value != frm.re_pw.value){ 
 			alert("비밀번호가 일치하지 않습니다. 확인하세요"); 
-			frm.pw.focus(); 
+			frm.pwCk.focus(); 
 			return false;			
 		}
 		return true;
-		}		
-	}  */
-</script>
-
+	}		
+	
+	</script>
 
 
 </head>
@@ -66,7 +68,7 @@
   	</div>
   </header>
   <section id="userInfo">
-  	<form action="sellerJoin.go" name="frm" method="post">
+  	<form action="sellerJoin.go" name="frm" method="post" onsubmit="return chk()">
   	  <fieldset><legend class="hide">필수 정보 입력</legend>
   	  	<p class="small">기본 정보를 입력해 주세요.</p>
   	  	<div class="info_container">
@@ -81,7 +83,10 @@
   	  	  </div>
   	  	  <div class="infoBox">
   	  	  	<span>비밀번호 확인</span>
-  	  	  	<input type="password" id="re_pw" placeholder="비밀번호 확인" required >  <span></span>
+  	  	  	<input type="password" id="re_pw" name="pwCk"placeholder="비밀번호 확인" required onkeyup="chkPw()">  <span></span>
+  	  	  </div>
+  	  	  <div>
+  	  	  	<div id="checkPwd">동일한 암호를 입력하세요</div>
   	  	  </div>
   	  	</div>
   	  	<div class="info_container">
