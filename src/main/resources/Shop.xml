@@ -35,5 +35,8 @@
 			values(#{sh_id}, #{sh_name}, #{sh_addr}, #{sh_tel}, #{sh_operTime}, 
 			#{sh_brTime}, #{s_id} )
 	</insert>
-
+	<select id="select" resultType="shop">
+		select * from shop where sh_id = 
+		(select ifnull(max(sh_id), 0) from shop)
+	</select>
 </mapper>

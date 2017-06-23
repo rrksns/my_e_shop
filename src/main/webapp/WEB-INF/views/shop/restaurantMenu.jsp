@@ -39,7 +39,7 @@
 </head>
 <body>
 	<h2>메뉴 등록</h2>
-	<form action="restaurantDetail.go" method="post" name="form">
+	<form action="restaurantMenu.go" method="post" name="form">
 		<input type="hidden" name="it_id" value="${menu.it_id}">
 		<div class="tab">
 			<ul>
@@ -54,15 +54,15 @@
 				<table>
 					<tr>
 						<th scope="row">메뉴</th>
-						<td><input type="text" name="it_name" id="it_name" required="required"></td>
+						<td><input type="text" name="it_name"  required="required"></td>
 					</tr>
 					<tr>
 						<th scope="row">가격</th>
-						<td><input type="text" name="it_price" id="it_price" required="required"></td>
+						<td><input type="text" name="it_price"  required="required"></td>
 					</tr>
 					<tr>
 						<th scope="row">메뉴설명</th>
-						<td><input type="text" name="it_cont" id="it_cont" required="required"></td>
+						<td><input type="text" name="it_cont"  required="required"></td>
 					</tr>
 					<tr>
 						<th scope="row">사진 추가</th>
@@ -70,68 +70,22 @@
 					</tr>
 					<tr>
 						<th scope="row">top3</th>
-						<td><input type="checkbox" name="it_top3"  id="it_top3" value="y">
+						<td><input type="checkbox" name="it_top3" id="it_top3" value="y">
 						<label for="it_top3">선택</label></td>
 					</tr>
 				</table>
 			</div>
 			<div class="contents" id="con2" style="display: none;">
-				<table>
-					<tr>
-						<th scope="row">메뉴</th>
-						<td><input type="text" name="it_name" id="it_name" required="required"></td>
-					</tr>
-					<tr>
-						<th scope="row">가격</th>
-						<td><input type="text" name="it_price" id="it_price"required="required"></td>
-					</tr>
-					<tr>
-						<th scope="row">메뉴설명</th>
-						<td><input type="text" name="it_cont" id="it_cont" required="required"></td>
-					</tr>
-					<tr>
-						<th scope="row">사진 추가</th>
-						<td><input type="file" name="it_img1"></td>
-					</tr>
-					<tr>
-						<th scope="row">top3</th>
-						<td><input type="checkbox" name="it_top3" id="it_top3" value="y">
-						<label for="it_top3">선택</label></td>
-					</tr>
-				</table>
+				
 			</div>
 			<div class="contents" id="con3" style="display: none;">
-				<table>
-					<tr>
-						<th scope="row">메뉴</th>
-						<td><input type="text" name="it_name" id="it_name" required="required"></td>
-					</tr>
-					<tr>
-						<th scope="row">가격</th>
-						<td><input type="text" name="it_price" id="it_price" required="required"></td>
-					</tr>
-					<tr>
-						<th scope="row">메뉴설명</th>
-						<td><input type="text" name="it_cont" id="it_cont" required="required"></td>
-					</tr>
-					<tr>
-						<th scope="row">사진 추가</th>
-						<td><input type="file" name="it_img1"></td>
-					</tr>
-					<tr>
-						<th scope="row">top3</th>
-						<td><input type="checkbox" name="it_top3" id="it_top3" value="y">
-						<label for="it_top3">선택</label></td>
-					</tr>
-				</table>
+				
 			</div>
 		</div>
 		<div>
-			<p>
-				<input type="submit" value="등록">&nbsp; <input type="reset"
-					value="취소">&nbsp;<a href="sellerMain.go">돌아가기</a>
-			</p>
-			<input type="submit" value="등록" onclick="location.href='restaurantDetail.go'">
+				<input type="submit" value="등록">&nbsp; 
+				<input type="reset"	value="취소">&nbsp;
+				<a href="sellerMain.go">돌아가기</a>		
 		</div>
 	</form>
 </body>

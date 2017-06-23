@@ -9,16 +9,23 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import aroundu.model.Seller;
 import aroundu.model.Shop;
+import aroundu.service.SellerService;
 import aroundu.service.ShopService;
  
 @Controller
 public class ShopController {
 	@Autowired 
 	ShopService sv;
+	@Autowired 
+	SellerService ss;
 	
 	@RequestMapping("shopMain")
-	public String shopMain() {
+	public String shopMain(HttpSession session, Model model) {
+		String s_id = (String)session.getAttribute("s_id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
 		return "shop/shopMain";
 	}
 	
@@ -27,9 +34,11 @@ public class ShopController {
 		return "shop/shopRegist";
 	}
 	@RequestMapping(value= "restaurantBasic", method = RequestMethod.GET)
-	public String restaurantBasicForm(Shop shop, Model model) {
+	public String restaurantBasicForm(Model model) {
 		//int result = sv.insert(shop);
 		// model.addAttribute("result", result);
+		Shop shop =  sv.select();
+		model.addAttribute("shop", shop);
 		return "shop/restaurantBasic";
 	}
 	@RequestMapping(value= "restaurantBasic", method = RequestMethod.POST)
@@ -38,6 +47,7 @@ public class ShopController {
 		shop.setS_id(s_id);
 		int result = sv.insert(shop);
 		model.addAttribute("result", result);
+
 		return "shop/restaurantPicture";
 	}
 	@RequestMapping("restaurantPicture")

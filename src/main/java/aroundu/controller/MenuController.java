@@ -30,11 +30,11 @@ public class MenuController {
 	}
 	@RequestMapping(value="restaurantMenu", method = RequestMethod.POST)
 	public String restuarantMenu(Menu menu, Model model, HttpSession session) {
-		int sh_id = Integer.parseInt(session.getAttribute("sh_id").toString());
-		menu.setSh_id(sh_id);
+
 		int result = ms.insert(menu);
 		model.addAttribute("result", result);
-		return "shop/restaurantDetail";
+		System.out.println("result=" +result);
+		return "shop/restaurantMenuResult";
 	}
 	
 	@RequestMapping("restaurantDetail")

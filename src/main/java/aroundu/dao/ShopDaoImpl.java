@@ -26,4 +26,10 @@ public class ShopDaoImpl implements ShopDao{
 		return st.update("Shopns.update",shop);
 	}
 
+	@Override
+	public Shop select() {
+		// TODO Auto-generated method stub
+		return st.selectOne("Shopns.select");
+	}
+
 }

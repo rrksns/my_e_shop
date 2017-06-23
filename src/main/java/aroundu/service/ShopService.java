@@ -6,4 +6,6 @@ public interface ShopService {
 	int insert (Shop shop);
 
 	int update(Shop shop);
+
+	Shop select();
 }
