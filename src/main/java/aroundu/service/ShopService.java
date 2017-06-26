@@ -7,5 +7,7 @@ public interface ShopService {
 
 	int update(Shop shop);
 
-	Shop select();
+	Shop select(String s_id);
+
+	Shop select(int sh_id);
 }

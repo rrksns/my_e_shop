@@ -18,4 +18,10 @@ public class MenuDaoImpl implements MenuDao{
 		return st.insert("Menuns.insert",menu);
 	}
 
+	@Override
+	public Menu select() {
+		// TODO Auto-generated method stub
+		return st.selectOne("Menuns.select");
+	}
+
 }

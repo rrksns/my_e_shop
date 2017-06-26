@@ -11,7 +11,7 @@
 <c:if test="${result >0 }">
 	<script type="text/javascript">
 		alert("입력성공");
-		location.href="restaurantDetail.go";
+		location.href="restaurantMenu.go";
 	</script>
 </c:if>
 <c:if test="${result <=0 }">

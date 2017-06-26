@@ -6,4 +6,6 @@ public interface MenuService {
 
 	int insert(Menu menu);
 
+	Menu select();
+
 }

@@ -32,11 +32,14 @@
 	</delete> -->
 	<insert id="insert" parameterType="menu">
 	<selectKey keyProperty="it_id" order="BEFORE" resultType="int">
-		select ifnull(max(it_id), 0)+1 from menu
+		select ifnull(max(it_id), 0)+1  it_id from menu
 	</selectKey>
-			insert into menu values(it_id= #{it_id}, it_name = #{it_name}, 
-			it_group = #{it_group}, it_price= #{it_price}, it_cont= #{it_cont}, 
-			it_img3= #{it_img3},it_img2= #{it_img2},it_img1= #{it_img1},
-			it_top3= #{it_top3}, sh_id= #{sh_id})
+			insert into menu values(#{it_id}, #{it_name}, #{it_group}, 
+			#{it_price}, #{it_cont},  #{it_img3}, #{it_img2}, #{it_img1},
+			#{it_top3},  #{sh_id})
 	</insert>
+	<select id="select" resultType="menu">
+		select * from menu where it_id = 
+		(select ifnull(max(it_id), 0) from shop)
+	</select>
 </mapper>
