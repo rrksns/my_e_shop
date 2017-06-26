@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="../header.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -7,7 +8,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="">자동등록</a>
-	<a href ="restaurantMenu.go">수동등록</a>
+<c:if test="${result >0 }">
+	<script type="text/javascript">
+		alert("입력성공");
+		location.href="restaurantDetail.go";
+	</script>
+</c:if>
+<c:if test="${result <=0 }">
+	<script type="text/javascript">
+		alert("실패");
+		history.go(-1);
+	</script>
+</c:if>
 </body>
 </html>

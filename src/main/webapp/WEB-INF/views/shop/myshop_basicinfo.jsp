@@ -1,10 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../header.jsp"%>
+<%@ include file="../header.jsp" %>  
 <!DOCTYPE html>
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
 <title>My Shop 등록 : 로드 샵</title>
 <link rel="stylesheet" href="${path}/resources/css/all.css">
 <link rel="stylesheet" href="${path}/resources/css/join.css">
@@ -12,9 +12,9 @@
 <body>
 <div class="universe">
   <aside>
-  	<h2 class="home_logo"><a href="sellerMain.go">Around U</a></h2>
+  	<h2 class="home_logo"><a href="sellerMain">Around U</a></h2>
   	<div class="shopNameWrap">
-  	  <p>${seller.s_name}님</p>
+  	  <p>님</p>
   	</div>
   	<ul class="phase">
   	  <li><p>기본 정보</p></li>
@@ -36,8 +36,7 @@
   	</header>
   	<section id="shopInfo_register">
   	  <article class="basic_shopInfo">
-  	  	<form action="restaurantBasic.go" method="post">
-  	  	<input type="text" name="sh_id" value="${shop.sh_id+1}">
+  	  	<form action="" method="post">
   	  	  <fieldset><legend class="hide">기본 정보</legend>
   	  	  	<h2>샵 기본 정보</h2>
   	  	  	<h4>샵에 대한 설명</h4>
@@ -68,13 +67,13 @@
   	  	  	  	<div class="timeBox">
   	  	  	  	  <div class="timeWrap">
   	  	  	  	  	<h4>운영 시간</h4>
-  	  	  	  	  	<input type="time" name="sh_operTime">
+  	  	  	  	  	<input type="time">
   	  	  	  	  	<span>~</span>
-  	  	  	  	  	<input type="time" >
+  	  	  	  	  	<input type="time">
   	  	  	  	  </div>
   	  	  	  	  <div class="timeWrap">
   	  	  	  	  	<h4>브레이크 타임</h4>
-  	  	  	  	  	<input type="time" name="sh_brTime">
+  	  	  	  	  	<input type="time">
   	  	  	  	  	<span>~</span>
   	  	  	  	  	<input type="time">
   	  	  	  	  </div>
@@ -87,14 +86,12 @@
   	  	  	  	</div>
   	  	  	  </div>
   	  	  	  <div class="infoContainer fl_R">
-  	  	  	  	 <div class="inputWrap">
-  	  	  			<label>가계 이름</label>
-  	  	  			<input id="id" name="sh_name" type="text" title="사업자등록증과 동일하게 입력" required="required">
-  	  	  			<label>가계 전화번호</label>
-  	  	  			<input id="pw" name="sh_tel" type="text" autocomplete="off" title="-없이 입력하세요">
-  	  	  			<label>주소</label>
-  	  	  			<input id="pw" name="sh_addr" type="text" title="사업장 주소를 정확히 기입하세요">
-  	  	 		 </div>
+  	  	  	  	<div>
+  	  	  	  	  <h4>전화번호</h4>
+  	  	  	  	</div>
+  	  	  	  	<div>
+  	  	  	  	  <h4>주소</h4>
+  	  	  	  	</div>
   	  	  	  	<div>
   	  	  	  	  <h4>찾아가는 길</h4>
   	  	  	  	</div>

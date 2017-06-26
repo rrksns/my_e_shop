@@ -1,7 +1,7 @@
 package aroundu.model;
 
 public class Menu {
-	private String it_id;
+	private int it_id;
 	private String it_name;
 	private String it_group;
 	private int it_price;
@@ -9,21 +9,27 @@ public class Menu {
 	private String it_img1;
 	private String it_img2;
 	private String it_img3;
-	private String it_top;
-	private String sh_id;
+	private String it_top3;
+	private int sh_id;
+
 	
-	
-	public String getIt_top() {
-		return it_top;
+	public int getSh_id() {
+		return sh_id;
 	}
-	public void setIt_top(String it_top) {
-		this.it_top = it_top;
+	public void setSh_id(int sh_id) {
+		this.sh_id = sh_id;
 	}
-	public String getIt_id() {
+	public int getIt_id() {
 		return it_id;
 	}
-	public void setIt_id(String it_id) {
+	public void setIt_id(int it_id) {
 		this.it_id = it_id;
+	}
+	public String getIt_top3() {
+		return it_top3;
+	}
+	public void setIt_top3(String it_top3) {
+		this.it_top3 = it_top3;
 	}
 	public String getIt_name() {
 		return it_name;
@@ -67,13 +73,5 @@ public class Menu {
 	public void setIt_img3(String it_img3) {
 		this.it_img3 = it_img3;
 	}
-	public String getSh_id() {
-		return sh_id;
-	}
-	public void setSh_id(String sh_id) {
-		this.sh_id = sh_id;
-	}
-	
-	
 
 }
