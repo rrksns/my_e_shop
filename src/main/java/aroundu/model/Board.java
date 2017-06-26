@@ -1,6 +1,5 @@
 package aroundu.model;
 
-import java.sql.Date;
 
 public class Board {					
 	private int bd_num;
@@ -12,6 +11,7 @@ public class Board {
 	private int re_step;
 	private int re_level;	
 	private String s_id;
+	private String del;
 	
 	//page작업
 	private int startRow;
@@ -23,6 +23,13 @@ public class Board {
 	
 	
 	
+	
+	public String getDel() {
+		return del;
+	}
+	public void setDel(String del) {
+		this.del = del;
+	}
 	public String getBd_regDate() {
 		return bd_regDate;
 	}
