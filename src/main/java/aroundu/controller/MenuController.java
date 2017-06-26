@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import aroundu.model.Menu;
+import aroundu.model.Seller;
 import aroundu.model.Shop;
 import aroundu.service.MenuService;
 import aroundu.service.ShopService;
