@@ -13,7 +13,7 @@
 <body>
 <div class="universe">
   <aside>
-  	<h2 class="home_logo"><a href="">Around U</a></h2>
+  	<h2 class="home_logo"><a href="sellerMain.go">Around U</a></h2>
   	<div class="shopNameWrap">
   	  <p>님</p>
   	</div>
@@ -42,10 +42,10 @@
   	  	  	<h2>메뉴 등록 방식 선택</h2>
   	  	  	<div class="typeBox">
   	  	  	  <div class="typeWrap">
-  	  	  	  	<input type="image" src="${path}/resources/img/auto.png" onclick="this.form.action='';">
+  	  	  	  	<input type="image" src="${path}/resources/img/auto.png" onclick="this.form.action=''">
   	  	  	  </div>
   	  	  	  <div class="typeWrap" style="float:right">
-  	  	  	  	<input type="image" src="${path}/resources/img/manual.png" onclick="this.form.action='restaurantMenu.go';">
+  	  	  	  	<input type="image" src="${path}/resources/img/manual.png" onclick="this.form.action='restaurantMenu.go'">
   	  	  	  </div>
   	  	  	</div>
   	  	  </fieldset>

@@ -22,9 +22,14 @@ public class ShopServiceImpl implements ShopService{
 		return sd.update(shop);
 	}
 	@Override
-	public Shop select() {
+	public Shop select(String s_id) {
 		// TODO Auto-generated method stub
-		return sd.select();
+		return sd.select(s_id);
+	}
+	@Override
+	public Shop select(int sh_id) {
+		// TODO Auto-generated method stub
+		return sd.select(sh_id);
 	}
 
 }

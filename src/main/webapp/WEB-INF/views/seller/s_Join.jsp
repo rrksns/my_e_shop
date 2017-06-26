@@ -40,8 +40,8 @@
   	  	  	  <label for="basic">일반회원가입</label>
   	  	  	</div>
   	  	  	<div class="sel_btn fl_R">
-  	  	  	  <input type="radio" id="shop" name="select" title="샵 등록">
-  	  	  	  <label for="shop">샵 등록</label>
+  	  	  	  <input type="radio" id="shop" name="select" title="판매회원 가입">
+  	  	  	  <label for="shop">판매회원 가입</label>
   	  	  	</div>
   	  	  </div>
   	  	  <div class="btn_container">

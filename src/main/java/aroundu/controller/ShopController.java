@@ -21,6 +21,7 @@ public class ShopController {
 	@Autowired 
 	SellerService ss;
 	
+	/*샵 메인실행*/
 	@RequestMapping("shopMain")
 	public String shopMain(HttpSession session, Model model) {
 		String s_id = (String)session.getAttribute("s_id");
@@ -28,28 +29,31 @@ public class ShopController {
 		model.addAttribute("seller", seller);
 		return "shop/shopMain";
 	}
-	
+	/*샵 템플릿 선택*/
 	@RequestMapping("shopRegist")
 	public String shopRegist() {
 		return "shop/shopRegist";
 	}
+	/*샵 기본정보 받기 */
 	@RequestMapping(value= "restaurantBasic", method = RequestMethod.GET)
-	public String restaurantBasicForm(Model model) {
+	public String restaurantBasic(Model model, HttpSession session) {
 		//int result = sv.insert(shop);
 		// model.addAttribute("result", result);
-		Shop shop =  sv.select();
+		String s_id = (String)session.getAttribute("s_id");
+		Shop shop =  sv.select(s_id);	
 		model.addAttribute("shop", shop);
 		return "shop/restaurantBasic";
 	}
+	/*샵 기본정보 등록 */
 	@RequestMapping(value= "restaurantBasic", method = RequestMethod.POST)
 	public String restaurantBasic(Shop shop, Model model,HttpSession session) {
 		String s_id = (String)session.getAttribute("s_id");
 		shop.setS_id(s_id);
 		int result = sv.insert(shop);
-		model.addAttribute("result", result);
-
+		model.addAttribute("result", result);		
 		return "shop/restaurantPicture";
 	}
+	/*샵 사진 등록 */
 	@RequestMapping("restaurantPicture")
 	public String restaurantPicture(Shop shop, Model model) {
 		int result = sv.update(shop);
