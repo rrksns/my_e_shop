@@ -12,10 +12,10 @@
 <h2 class="text-primary">게시글 작성</h2>
 <form action="bd_insert.go" method="post">
 	<input type="hidden" name="bd_num" value="${bd_num}">
-	<input type="hidden" name="ref" value="ref">
-	<input type="hidden" name="re_step" value="re_step">
-	<input type="hidden" name="re_level" value="re_level">
-	<input type="hidden" name="pageNum" value="pageNum">
+	<input type="hidden" name="ref" value="${ref}">
+	<input type="hidden" name="re_step" value="${re_step}">
+	<input type="hidden" name="re_level" value="${re_level}">
+	<input type="hidden" name="pageNum" value="${pageNum}">
 		
 	<div>
  	제목 :<input type="text" name="bd_subject" required><br><br>

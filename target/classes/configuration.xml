@@ -7,14 +7,22 @@
 		<typeAlias alias="admin" type="aroundu.model.Admin" />
 		<typeAlias alias="seller" type="aroundu.model.Seller" />
 		<typeAlias alias="shop" type="aroundu.model.Shop" />
+<<<<<<< HEAD
+			<typeAlias alias="board" type="aroundu.model.Board" />
+=======
 		<typeAlias alias="menu" type="aroundu.model.Menu" />
+>>>>>>> 82d953224bad5a93392c699c08fbe3a769d05bdc
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="Seller.xml" />
 		<mapper resource="Admin.xml" />
 		<mapper resource="Shop.xml" />
+<<<<<<< HEAD
+		<mapper resource="Board.xml" />
+=======
 		<mapper resource="Menu.xml" />
+>>>>>>> 82d953224bad5a93392c699c08fbe3a769d05bdc
 	</mappers>
 	
 </configuration>

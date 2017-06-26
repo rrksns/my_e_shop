@@ -26,19 +26,19 @@
 		<td colspan="4">삭제된 데이터 입니다</td>
 	</c:if>
 	<c:if test="${board.del !='y' }"> 
-		<td><a href="${path }/view/num/${board.bd_num}/pageNum/${pp.currentPage}" >
+		<td><a href="bd_view.go?bd_num=${board.bd_num}&pageNum=${pp.currentPage}" >
 			<c:if test="${board.re_level >0 }">
-				<img alt="" src="${path }/images/level.gif" height="2" 
+				<img alt="" src="resources/img/level.gif" height="2" 
 						width="${board.re_level *5 }">
-				<img alt="" src="${path }/images/re.gif">
+				<img alt="" src="resources/img/re.gif">
 			</c:if>
-			${board.subject}
-			<c:if test="${board.count > 30 }">
-				<img alt="" src="${path }/images/hot.gif">
+			${board.bd_subject}
+			<c:if test="${board.bd_count > 30 }">
+				<img alt="" src="resources/img/hot.gif">
 			</c:if></a>
 		</td>
 		<td>${board.s_id}</td><td>${board.bd_regDate}</td>
-		<td>${board.count}</td>
+		<td>${board.bd_count}</td>
 	</c:if></tr>
 	<c:set var="no1" value="${no1-1}"></c:set>
 </c:forEach>
@@ -46,14 +46,13 @@
 </table>
 
 <!-- 검색기능 -->
-<form action="${path}/list/pageNum/1" >
-	
+<form action="boardList.go" >
 		<select name="search">
-		<option value="subject" <c:if test="${search =='bd_subject'}">
+		<option value="bd_subject" <c:if test="${search =='bd_subject'}">
 		selected="selected"</c:if>>제목</option>
-		<option value="content"<c:if test="${search =='bd_content'}">
+		<option value="bd_content"<c:if test="${search =='bd_content'}">
 		selected="selected"</c:if>>내용</option>
-		<option value="writer" <c:if test="${search =='s_id'}">
+		<option value="s_id" <c:if test="${search =='s_id'}">
 		selected="selected"</c:if>>작성자</option>
 		<option value="subcon" <c:if test="${search =='subcon'}">
 		selected="selected"</c:if>>제목+내용</option>
@@ -64,32 +63,37 @@
 
 
 
-	<ul class="pagination" align="center">
-	<c:if test="${not empty keyword}">
-		<c:if test="${pp.startPage > pp.pagePerBlk }">
-			<li><a href="${path }/list/pageNum/${pp.startPage - 1}?search=${search}&keyword=${keyword}">이전</a></li>
-		</c:if>
-		<c:forEach var="i" begin="${pp.startPage}" end="${pp.endPage}">
-			<li <c:if test="${pp.currentPage==i}">class="active"</c:if>>
-				<a href="${path }/list/pageNum/${i}?search=${search}&keyword=${keyword}">${i}</a></li>
-		</c:forEach>
-		<c:if test="${pp.endPage < pp.totalPage}">
-			<li><a href="${path }/list/pageNum/${pp.endPage + 1}?search=${search}&keyword=${keyword}">다음</a></li>
-		</c:if>		
-	</c:if>
+<ul class="pagination" align="center">
 	<c:if test="${empty keyword}">
 		<c:if test="${pp.startPage > pp.pagePerBlk }">
-			<li><a href="${path }/list/pageNum/${pp.startPage - 1}">이전</a></li>
+			<li><a href="boardList.go?pageNum=${pp.startPage - 1}">이전</a></li>
 		</c:if>
 		<c:forEach var="i" begin="${pp.startPage}" end="${pp.endPage}">
 			<li <c:if test="${pp.currentPage==i}">class="active"</c:if>>
-				<a href="${path }/list/pageNum/${i}">${i}</a></li>
+			<a href="boardList.go?pageNum=${i}">${i}</a></li>
 		</c:forEach>
 		<c:if test="${pp.endPage < pp.totalPage}">
-			<li><a href="${path }/list/pageNum/${pp.endPage + 1}">다음</a></li>
+			<li><a href="boardList.go?pageNum=${pp.endPage+1}">다음</a></li>
+		</c:if>		
+	</c:if>
+	<c:if test="${not empty keyword}">
+		<c:if test="${pp.startPage > pp.pagePerBlk }">
+			<li><a href="boardList.go?pageNum=${pp.startPage - 1}&search=${search}&keyword=${keyword}">이전</a></li>
+		</c:if>
+		<c:forEach var="i" begin="${pp.startPage}" end="${pp.endPage}">
+			<li <c:if test="${pp.currentPage==i}">class="active"</c:if>>
+			<a href="boardList.go?pageNum=${i}&search=${search}&keyword=${keyword}">${i}</a></li>
+		</c:forEach>
+		<c:if test="${pp.endPage < pp.totalPage}">
+			<li><a href="boardList.go?pageNum=${pp.endPage+1}&search=${search}&keyword=${keyword}">다음</a></li>
 		</c:if>		
 	</c:if>
 </ul>
+
+
+
+
+
 </div>
 
 <div align="center"><a href="bd_insertForm.go" class="btn btn-info">게시글 작성</a></div>

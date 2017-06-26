@@ -106,3 +106,6 @@ alter table menu add foreign key (sh_id) references shop(sh_id);
 insert into seller (s_id,s_pw,s_email,s_mobile,s_regDate,s_gender,s_birthdate,s_name) 
 values('ee', 'ee', 'e@gmail.com', '01041001111','20170202','m', '20120909','ee')
 
+select count(*) from board;
+select count(*) from board;
+select * from board;

@@ -18,4 +18,10 @@ public interface BoardDao {
 
 	List<Board> list(Board board);
 
+	void selectUpdate(int bd_num);
+
+	int update(Board board);
+
+	int delete(int bd_num);
+
 }
