@@ -109,3 +109,22 @@ values('ee', 'ee', 'e@gmail.com', '01041001111','20170202','m', '20120909','ee')
 select count(*) from board;
 select count(*) from board;
 select * from board;
+
+create table shopDetail (
+sh_detailId	int(20) primary key,
+24h_open	VARCHAR(1),
+driveThru		VARCHAR(1),
+takeOut		VARCHAR(1),
+dineIn		VARCHAR(1),
+delivery		VARCHAR(1),
+aloneMeal		VARCHAR(1),
+parking		VARCHAR(1),
+parkingSpace		int(20),
+toilet		VARCHAR(1),
+smoking		VARCHAR(1),
+mobileCharge	VARCHAR(1),
+blanket		VARCHAR(1),
+kidsroom		VARCHAR(1),
+freeWifi		VARCHAR(1),
+sh_id int(20), foreign key (sh_id) references shop(sh_id)
+);

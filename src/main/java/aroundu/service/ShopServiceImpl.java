@@ -31,5 +31,6 @@ public class ShopServiceImpl implements ShopService{
 		// TODO Auto-generated method stub
 		return sd.select(sh_id);
 	}
+	
 
 }

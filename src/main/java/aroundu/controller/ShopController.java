@@ -31,7 +31,10 @@ public class ShopController {
 	}
 	/*샵 템플릿 선택*/
 	@RequestMapping("shopRegist")
-	public String shopRegist() {
+	public String shopRegist(HttpSession session, Model model) {
+		String s_id = (String)session.getAttribute("s_id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
 		return "shop/shopRegist";
 	}
 	/*샵 기본정보 받기 */
@@ -55,7 +58,10 @@ public class ShopController {
 	}
 	/*샵 사진 등록 */
 	@RequestMapping("restaurantPicture")
-	public String restaurantPicture(Shop shop, Model model) {
+	public String restaurantPicture(Shop shop, Model model, HttpSession session) {
+		String s_id = (String)session.getAttribute("s_id");
+		shop = sv.select(s_id);
+		int sh_id = shop.getSh_id();		
 		int result = sv.update(shop);
 		model.addAttribute("result", result);
 		return "shop/restaurantPicture";

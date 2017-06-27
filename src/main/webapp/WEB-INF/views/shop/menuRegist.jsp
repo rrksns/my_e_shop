@@ -15,7 +15,7 @@
   <aside>
   	<h2 class="home_logo"><a href="sellerMain.go">Around U</a></h2>
   	<div class="shopNameWrap">
-  	  <p>님</p>
+  	  <p>${shop.sh_name}</p>
   	</div>
   	<ul class="phase">
   	  <li><p>기본 정보</p></li>

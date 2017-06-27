@@ -1,20 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ include file="../header.jsp"%>
+    pageEncoding="UTF-8"%>
+<%@ include file="../header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>My Shop 등록 : 로드 샵</title>
 <link rel="stylesheet" href="${path}/resources/css/all.css">
-<link rel="stylesheet" href="${path}/resources/css/join.css">
+<link rel="stylesheet" href="${path}/resources/css/myshop.css">
 </head>
 <body>
 <div class="universe">
   <aside>
   	<h2 class="home_logo"><a href="sellerMain.go">Around U</a></h2>
   	<div class="shopNameWrap">
-  	  <p>${seller.s_name}님</p>
+  	  <p>${seller.s_name}님 안녕하세요</p>
   	</div>
   	<ul class="phase">
   	  <li><p>기본 정보</p></li>
@@ -27,17 +27,17 @@
   	<header>
   	  <div class="setWrap">
   	  	<button class="set_btn" type="button">
-  	  	  <img src="${path}resources/img/set.png" width="36" height="25" alt="설정">
+  	  	  <img src="${path}/resources/img/set.png" width="36" height="25" alt="설정">
   	  	</button>
   	  </div>
   	  <div class="titleWrap">
-  	  	<h3 class="title"><img src="${path}resources/img/home.png" width="25" height="25" alt=""> My e-Shop</h3>
+  	  	<h3 class="title"><img src="${path}/resources/img/home.png" width="25" height="25" alt=""> My e-Shop</h3>
   	  </div>
   	</header>
   	<section id="shopInfo_register">
   	  <article class="basic_shopInfo">
   	  	<form action="restaurantBasic.go" method="post">
-  	  	<input type="text" name="sh_id" value="${shop.sh_id+1}">
+  	  	<input type="hidden" name="sh_id" value="${shop.sh_id+1}">
   	  	  <fieldset><legend class="hide">기본 정보</legend>
   	  	  	<h2>샵 기본 정보</h2>
   	  	  	<h4>샵에 대한 설명</h4>
@@ -101,7 +101,7 @@
   	  	  	  </div>
   	  	  	</div>
   	  	  	<div class="nextBtnWrap">
-  	  	  	  <button class="prev_btn" type="button">이전으로</button>
+  	  	  	  <button class="prev_btn" type="button" location.href="'history.go(-1)'">이전으로</button>
   	  	  	  <button class="next_btn" type="submit">다음</button>
   	  	  	</div>
   	  	  </fieldset>
