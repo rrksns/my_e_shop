@@ -40,7 +40,7 @@
 <body>
 	<h2>메뉴 등록</h2>
 	<form action="restaurantMenu.go" method="post" name="form">
-		<input type="hidden" name="it_id" value="${menu.it_id}">
+		<input type="text" name="it_id" value="${menu.it_id+1}">
 		<div class="tab">
 			<ul>
 				<li><a href="javascript_:showTabMenu(1)">메뉴1</a></li>
@@ -75,6 +75,7 @@
 					</tr>
 				</table>
 			</div>
+
 			<div class="contents" id="con2" style="display: none;">
 				
 			</div>

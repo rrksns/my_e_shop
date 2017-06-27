@@ -18,9 +18,11 @@ public class MenuServiceImpl implements MenuService{
 	}
 
 	@Override
-	public Menu select() {
+	public Menu select(int sh_id) {
 		// TODO Auto-generated method stub
-		return md.select();
+		return md.select(sh_id);
 	}
+
+
 
 }

@@ -37,19 +37,17 @@
   	</header>
   	<section id="shopInfo_register">
   	  <article class="menu_shopInfo">
-  	  	<form action="restaurantMenu.go" method="post">
   	  	  <fieldset><legend class="hide">메뉴 등록</legend>
   	  	  	<h2>메뉴 등록 방식 선택</h2>
   	  	  	<div class="typeBox">
   	  	  	  <div class="typeWrap">
-  	  	  	  	<input type="image" src="${path}/resources/img/auto.png" onclick="this.form.action=''">
+  	  	  	  	<a href="#"><img src="${path}/resources/img/auto.png"></a>
   	  	  	  </div>
   	  	  	  <div class="typeWrap" style="float:right">
-  	  	  	  	<input type="image" src="${path}/resources/img/manual.png" onclick="this.form.action='restaurantMenu.go'">
+  	  	  	  	<a href="restaurantMenu.go"><img src="${path}/resources/img/manual.png"></a>
   	  	  	  </div>
   	  	  	</div>
   	  	  </fieldset>
-  	  	</form>
   	  </article>
   	</section>
   </main>

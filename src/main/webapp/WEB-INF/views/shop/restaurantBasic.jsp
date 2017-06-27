@@ -37,7 +37,7 @@
   	<section id="shopInfo_register">
   	  <article class="basic_shopInfo">
   	  	<form action="restaurantBasic.go" method="post">
-  	  	<input type="hidden" name="sh_id" value="${shop.sh_id+1}">
+  	  	<input type="text" name="sh_id" value="${shop.sh_id+1}">
   	  	  <fieldset><legend class="hide">기본 정보</legend>
   	  	  	<h2>샵 기본 정보</h2>
   	  	  	<h4>샵에 대한 설명</h4>
@@ -101,7 +101,7 @@
   	  	  	  </div>
   	  	  	</div>
   	  	  	<div class="nextBtnWrap">
-  	  	  	  <button class="prev_btn" type="button" location.href="'history.go(-1)'">이전으로</button>
+  	  	  	  <button class="prev_btn" type="button" location.href="history.go(-1)">이전으로</button>
   	  	  	  <button class="next_btn" type="submit">다음</button>
   	  	  	</div>
   	  	  </fieldset>

@@ -19,9 +19,9 @@ public class MenuDaoImpl implements MenuDao{
 	}
 
 	@Override
-	public Menu select() {
+	public Menu select(int sh_id) {
 		// TODO Auto-generated method stub
-		return st.selectOne("Menuns.select");
+		return st.selectOne("Menuns.select", sh_id);
 	}
 
 }

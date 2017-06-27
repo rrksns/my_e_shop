@@ -6,6 +6,6 @@ public interface MenuDao {
 
 	int insert(Menu menu);
 
-	Menu select();
+	Menu select(int sh_id);
 
 }

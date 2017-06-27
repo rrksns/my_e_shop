@@ -43,7 +43,9 @@ public class ShopController {
 		//int result = sv.insert(shop);
 		// model.addAttribute("result", result);
 		String s_id = (String)session.getAttribute("s_id");
-		Shop shop =  sv.select(s_id);	
+		Shop shop =  sv.select(s_id);
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
 		model.addAttribute("shop", shop);
 		return "shop/restaurantBasic";
 	}

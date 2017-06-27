@@ -12,6 +12,7 @@ import aroundu.model.Menu;
 import aroundu.model.Seller;
 import aroundu.model.Shop;
 import aroundu.service.MenuService;
+import aroundu.service.SellerService;
 import aroundu.service.ShopService;
 
 
@@ -23,12 +24,14 @@ public class MenuController {
 	@Autowired
 	ShopService sv;
 	
+	
+	
 	/*수동 or 자동 등록 선택 */
 	@RequestMapping("menuRegist")
-	public String menuRegist(HttpSession session) {
-		String s_id = (String)session.getAttribute("s_id");
-		Shop shop = sv.select(s_id);
-		int sh_id = shop.getSh_id();
+	public String menuRegist(Model model, HttpSession session) {
+		String s_id = (String)session.getAttribute("s_id"); //세션 가져오기
+		Shop shop = sv.select(s_id); // s_id로 샵정보 가져오기		
+		model.addAttribute("shop", shop); // 가져온 샵에 정보 기입하기
 		return "shop/menuRegist";
 	}
 	/*메뉴 정보 받기 */
@@ -36,7 +39,10 @@ public class MenuController {
 	public String restuarantMenu(Menu menu, HttpSession session, Model model) {
 		String s_id = (String)session.getAttribute("s_id");
 		Shop shop = sv.select(s_id);
-		model.addAttribute("shop", shop);
+		int sh_id = shop.getSh_id();
+		menu.setSh_id(sh_id);
+		menu= ms.select(sh_id);		
+		model.addAttribute("menu", menu);		
 		return "shop/restaurantMenu";
 	}
 	/*메뉴 정보 기입 */
@@ -44,8 +50,11 @@ public class MenuController {
 	public String restuarantMenu(Shop shop, Menu menu, Model model, HttpSession session) {
 		String s_id = (String)session.getAttribute("s_id");
 		shop = sv.select(s_id);
-		int sh_id = shop.getSh_id();	
+		int sh_id = shop.getSh_id();
+		menu= ms.select(sh_id);
+		menu.setSh_id(sh_id);
 		int result = ms.insert(menu);
+		model.addAttribute("menu", menu);
 		model.addAttribute("result", result);
 		System.out.println("result=" +result);
 		return "shop/restaurantMenuResult";

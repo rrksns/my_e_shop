@@ -27,7 +27,6 @@
   	  	<h3 class="title">회원 유형을 선택하세요</h3>
   	  </div>
   	  <div class="selectWrap">
-  	  	<form action="sellerLoginForm.go" method="post">
   	  	  <div class="selBtnWrap">
   	  	  	<div class="sel_btn fl_L">
   	  	  	  <input type="radio" id="basic" name="select" title="일반회원가입">
@@ -40,9 +39,7 @@
   	  	  </div>
   	  	  <div class="btn_container">
   	  	  	<button type="button" class="bkb_btn" onclick="javascript:history.back()">이전으로</button>
-  	  	  	<button type="submit" class="nxt_btn">로그인</button>
   	  	  </div>
-  	  	</form>
   	  </div>
   	</div>
   </section>
