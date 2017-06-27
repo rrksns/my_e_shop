@@ -54,6 +54,7 @@ public class ShopController {
 	public String restaurantBasic(Shop shop, Model model,HttpSession session) {
 		String s_id = (String)session.getAttribute("s_id");
 		shop.setS_id(s_id);
+		if (shop.getDineIn() ==null) shop.setDineIn("n");
 		int result = sv.insert(shop);
 		model.addAttribute("result", result);		
 		return "shop/restaurantPicture";

@@ -33,7 +33,8 @@
 			insert into shop (sh_id, sh_name, sh_addr, sh_tel, sh_operTimeS, sh_operTimeE,
 			sh_brTimeS, sh_brTimeE, s_id, allday_open, driveThru, takeOut, dineIn, delivery) 
 			values(#{sh_id}, #{sh_name}, #{sh_addr}, #{sh_tel}, #{sh_operTimeS}, #{sh_operTimeE}, 
-			#{sh_brTimeS}, #{sh_brTimeE}, #{allday_open}, #{driveThru}, #{takeOut}, #{dineIn}, #{delivery})
+			#{sh_brTimeS}, #{sh_brTimeE}, #{s_id}, #{allday_open}, 
+			#{driveThru}, #{takeOut}, #{dineIn}, #{delivery})
 	</insert>
 	<select id="select" parameterType="string" resultType="shop">
 		select * from shop where sh_id = 

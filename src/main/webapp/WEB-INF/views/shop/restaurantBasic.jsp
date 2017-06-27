@@ -48,8 +48,8 @@
   	  	  	  	<div class="serviceTypeBox">
   	  	  	  	  <div class="typeWrap">
   	  	  	  	  	<p>매장 식사</p>
-  	  	  	  	  	<span class="type_icon in"></span>
-  	  	  	  	  	<input id="in" type="checkbox">
+  	  	  	  	  	<span class="type_icon in" ></span>
+  	  	  	  	  	<input name= "dineIn" id="in" type="checkbox" value="y">
   	  	  	  	  	<label class="chk_btn" for="in"></label>
   	  	  	  	  </div>
   	  	  	  	  <div class="typeWrap mg_add">
@@ -68,15 +68,15 @@
   	  	  	  	<div class="timeBox">
   	  	  	  	  <div class="timeWrap">
   	  	  	  	  	<h4>운영 시간</h4>
-  	  	  	  	  	<input type="time" name="sh_operTime">
+  	  	  	  	  	<input type="time" name="sh_operTimeS">
   	  	  	  	  	<span>~</span>
-  	  	  	  	  	<input type="time" >
+  	  	  	  	  	<input type="time" name="sh_operTimeE" >
   	  	  	  	  </div>
   	  	  	  	  <div class="timeWrap">
   	  	  	  	  	<h4>브레이크 타임</h4>
-  	  	  	  	  	<input type="time" name="sh_brTime">
+  	  	  	  	  	<input type="time" name="sh_brTimeS">
   	  	  	  	  	<span>~</span>
-  	  	  	  	  	<input type="time">
+  	  	  	  	  	<input type="time" name="sh_brTimeE">
   	  	  	  	  </div>
   	  	  	  	</div>
   	  	  	  	<div class="alltimeWrap">
@@ -101,7 +101,7 @@
   	  	  	  </div>
   	  	  	</div>
   	  	  	<div class="nextBtnWrap">
-  	  	  	  <button class="prev_btn" type="button" location.href="history.go(-1)">이전으로</button>
+  	  	  	  <button class="prev_btn" type="button"><a href="sellerMain.go">이전으로</a></button>
   	  	  	  <button class="next_btn" type="submit">다음</button>
   	  	  	</div>
   	  	  </fieldset>
