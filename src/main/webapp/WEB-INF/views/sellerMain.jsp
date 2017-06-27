@@ -17,8 +17,11 @@
 	<a href ="boardList.go">게시판</a>
 </div>
 
+
+<div id="map" style="width:750px;height:350px;"></div>
+<div>
 <script src="//apis.daum.net/maps/maps3.js?apikey=f6eed7143332943349595b742f572fde"></script>
-	<script type="text/javascript">
+<script type="text/javascript">
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 mapOption = { 
     center: new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -83,7 +86,7 @@ var zoomControl = new daum.maps.ZoomControl();
 map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
 }    
 </script>
-
+</div>
 
 </body>
 </html>

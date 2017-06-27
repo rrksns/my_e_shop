@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
+
 
 import aroundu.model.Seller;
 import aroundu.service.SellerService;
@@ -64,11 +64,6 @@ public class SellerController {
 		return "commonLogin";
 	}
 
-	/*로그인 페이지*/
-	@RequestMapping("sellerLoginForm")
-	public String sellerLoginForm(){
-		return "seller/sellerLoginForm";
-	}
 	/*아이디 중복 체크*/
 	@RequestMapping("idChk")
 	public String idChk(String id, Model model){
@@ -77,13 +72,18 @@ public class SellerController {
 		else model.addAttribute("msg","이미 사용중인ID입니다");
 		return "seller/idChk";
 	}	
-
+	/*회원가입*/
 	@RequestMapping("sellerJoinForm")
 	public String sellerJoinForm(){
 		return "seller/sellerJoinForm";
 	}
 	
-	/*로그인실행*/
+	/*로그인 페이지*/
+	@RequestMapping("sellerLoginForm")
+	public String sellerLoginForm(){
+		return "seller/sellerLoginForm";
+	}
+	/*로그인체크 실행*/
 	@RequestMapping("sellerLogin")
 	public String sellerLogin(String s_id, String s_pw,Model model,HttpSession session){	
 		int result=ss.loginChk(s_id,s_pw);
