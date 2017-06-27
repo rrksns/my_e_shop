@@ -2,11 +2,6 @@ package aroundu.model;
 
 public class ShopDetail {
 	public int sh_detailId;
-	public String allday_open;
-	public String driveThru;
-	public String takeOut;
-	public String dineIn;
-	public String delivery;
 	public String aloneMeal;
 	public String parking;
 	public int parkingSpace;
@@ -22,36 +17,6 @@ public class ShopDetail {
 	}
 	public void setSh_detailId(int sh_detailId) {
 		this.sh_detailId = sh_detailId;
-	}
-	public String getAllday_open() {
-		return allday_open;
-	}
-	public void setAllday_open(String allday_open) {
-		this.allday_open = allday_open;
-	}
-	public String getDriveThru() {
-		return driveThru;
-	}
-	public void setDriveThru(String driveThru) {
-		this.driveThru = driveThru;
-	}
-	public String getTakeOut() {
-		return takeOut;
-	}
-	public void setTakeOut(String takeOut) {
-		this.takeOut = takeOut;
-	}
-	public String getDineIn() {
-		return dineIn;
-	}
-	public void setDineIn(String dineIn) {
-		this.dineIn = dineIn;
-	}
-	public String getDelivery() {
-		return delivery;
-	}
-	public void setDelivery(String delivery) {
-		this.delivery = delivery;
 	}
 	public String getAloneMeal() {
 		return aloneMeal;

@@ -12,8 +12,10 @@ public class Shop {
 	private String sh_cate;
 	private String sh_subcate;
 	private String sh_content;
-	private String sh_operTime;
-	private String sh_brTime;
+	private String sh_operTimeS;
+	private String sh_operTimeE;
+	private String sh_brTimeS;
+	private String sh_brTimeE;
 	private String sh_hashtag;
 	private String sh_img1;
 	private String sh_img2;
@@ -24,6 +26,11 @@ public class Shop {
 	private int sh_count;
 	private int sh_pickcount;
 	private String s_id;
+	public String allday_open;
+	public String driveThru;
+	public String takeOut;
+	public String dineIn;
+	public String delivery;
 	public int getSh_id() {
 		return sh_id;
 	}
@@ -90,17 +97,29 @@ public class Shop {
 	public void setSh_content(String sh_content) {
 		this.sh_content = sh_content;
 	}
-	public String getSh_operTime() {
-		return sh_operTime;
+	public String getSh_operTimeS() {
+		return sh_operTimeS;
 	}
-	public void setSh_operTime(String sh_operTime) {
-		this.sh_operTime = sh_operTime;
+	public void setSh_operTimeS(String sh_operTimeS) {
+		this.sh_operTimeS = sh_operTimeS;
 	}
-	public String getSh_brTime() {
-		return sh_brTime;
+	public String getSh_operTimeE() {
+		return sh_operTimeE;
 	}
-	public void setSh_brTime(String sh_brTime) {
-		this.sh_brTime = sh_brTime;
+	public void setSh_operTimeE(String sh_operTimeE) {
+		this.sh_operTimeE = sh_operTimeE;
+	}
+	public String getSh_brTimeS() {
+		return sh_brTimeS;
+	}
+	public void setSh_brTimeS(String sh_brTimeS) {
+		this.sh_brTimeS = sh_brTimeS;
+	}
+	public String getSh_brTimeE() {
+		return sh_brTimeE;
+	}
+	public void setSh_brTimeE(String sh_brTimeE) {
+		this.sh_brTimeE = sh_brTimeE;
 	}
 	public String getSh_hashtag() {
 		return sh_hashtag;
@@ -162,7 +181,35 @@ public class Shop {
 	public void setS_id(String s_id) {
 		this.s_id = s_id;
 	}
-	
-	
+	public String getAllday_open() {
+		return allday_open;
+	}
+	public void setAllday_open(String allday_open) {
+		this.allday_open = allday_open;
+	}
+	public String getDriveThru() {
+		return driveThru;
+	}
+	public void setDriveThru(String driveThru) {
+		this.driveThru = driveThru;
+	}
+	public String getTakeOut() {
+		return takeOut;
+	}
+	public void setTakeOut(String takeOut) {
+		this.takeOut = takeOut;
+	}
+	public String getDineIn() {
+		return dineIn;
+	}
+	public void setDineIn(String dineIn) {
+		this.dineIn = dineIn;
+	}
+	public String getDelivery() {
+		return delivery;
+	}
+	public void setDelivery(String delivery) {
+		this.delivery = delivery;
+	}
 
 }

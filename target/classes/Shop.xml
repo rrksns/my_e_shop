@@ -30,10 +30,10 @@
 	<selectKey keyProperty="sh_id" order="BEFORE" resultType="int">
 		select ifnull(max(sh_id), 0)+1 sh_id from shop
 	</selectKey>
-			insert into shop (sh_id, sh_name, sh_addr, sh_tel,sh_operTime,
-			sh_brTime, s_id) 
-			values(#{sh_id}, #{sh_name}, #{sh_addr}, #{sh_tel}, #{sh_operTime}, 
-			#{sh_brTime}, #{s_id} )
+			insert into shop (sh_id, sh_name, sh_addr, sh_tel, sh_operTimeS, sh_operTimeE,
+			sh_brTimeS, sh_brTimeE, s_id, allday_open, driveThru, takeOut, dineIn, delivery) 
+			values(#{sh_id}, #{sh_name}, #{sh_addr}, #{sh_tel}, #{sh_operTimeS}, #{sh_operTimeE}, 
+			#{sh_brTimeS}, #{sh_brTimeE}, #{allday_open}, #{driveThru}, #{takeOut}, #{dineIn}, #{delivery})
 	</insert>
 	<select id="select" parameterType="string" resultType="shop">
 		select * from shop where sh_id = 

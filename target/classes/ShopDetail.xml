@@ -30,11 +30,9 @@
 	<selectKey keyProperty="sh_detailId" order="BEFORE" resultType="int">
 		select ifnull(max(sh_detailId), 0)+1 sh_detailId from shop
 	</selectKey>
-			insert into shop (sh_detailId, allday_open, driveThru, takeOut, dineIn,
-			delivery, aloneMeal, parking, parkingSpace, toilet, smoking, mobileCharge,
-			blanket, kidsroom, freeWifi) 
-			values(#{sh_detailId}, #{allday_open}, #{driveThru}, #{takeOut}, #{dineIn}, 
-			#{delivery}, #{aloneMeal}, #{parking}, #{parkingSpace}, #{toilet}, 
+			insert into shop (sh_detailId, aloneMeal, parking, parkingSpace, toilet, 
+			smoking, mobileCharge,blanket, kidsroom, freeWifi) 
+			values(#{sh_detailId}, #{aloneMeal}, #{parking}, #{parkingSpace}, #{toilet}, 
 			#{smoking}, #{mobileCharge}, #{blanket}, #{kidsroom}, #{freeWifi}, #{sh_id} )
 	</insert>
 	<select id="select" parameterType="string" resultType="shop">
