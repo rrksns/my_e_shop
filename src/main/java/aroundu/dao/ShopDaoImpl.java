@@ -37,5 +37,6 @@ public class ShopDaoImpl implements ShopDao{
 		// TODO Auto-generated method stub
 		return st.selectOne("Shopns.select", sh_id);
 	}
+	
 
 }
