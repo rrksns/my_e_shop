@@ -18,69 +18,8 @@
 </div>
 <div id="map" style="width:750px;height:350px;"></div>
 
-	<script src="//apis.daum.net/maps/maps3.js?apikey=f6eed7143332943349595b742f572fde"></script>
-<!-- 	<script>
-	//GPS정보 가져오기
-	var x = document.getElementByid("demo");
-	function getLocation(){
-		if(navigator.geolocation){
-			navigator.geolocation.getCurrentPosition(showPosition);
-		}else{
-			x.innerHTML="Geolocation is not support by this browser";
-		}
-	}
-	function showPosition(position){
-		var lation=position.coords.latitude
-		var longitude=position.coords.longitude	
-		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-	    mapOption = {
-	        center: new daum.maps.LatLng(lation, longitude), // 지도의 중심좌표
-	        /* center: new daum.maps.LatLng(37.499525, 127.030471), // 지도의 중심좌표 */
-	        level: 2, // 지도의 확대 레벨
-	        mapTypeId : daum.maps.MapTypeId.ROADMAP // 지도종류
-	    }; 
-	}
-	
-		// 지도를 생성한다 
-		var map = new daum.maps.Map(mapContainer, mapOption); 
-
-		// 지도에 확대 축소 컨트롤을 생성한다
-		var zoomControl = new daum.maps.ZoomControl();
-
-		// 지도의 우측에 확대 축소 컨트롤을 추가한다
-		map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
-
-		// 지도에 마커를 생성하고 표시한다
-		var marker = new daum.maps.Marker({
-		    position: new daum.maps.LatLng(37.499525, 127.030471), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		});
-
-	</script> -->
-	<!--  <script>
-		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
-		    mapOption = {
-		        center: new daum.maps.LatLng(37.499525, 127.030471), // 지도의 중심좌표
-		        level: 2, // 지도의 확대 레벨
-		        mapTypeId : daum.maps.MapTypeId.ROADMAP // 지도종류
-		    }; 
-
-		// 지도를 생성한다 
-		var map = new daum.maps.Map(mapContainer, mapOption); 
-
-		// 지도에 확대 축소 컨트롤을 생성한다
-		var zoomControl = new daum.maps.ZoomControl();
-
-		// 지도의 우측에 확대 축소 컨트롤을 추가한다
-		map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
-
-		// 지도에 마커를 생성하고 표시한다
-		var marker = new daum.maps.Marker({
-		    position: new daum.maps.LatLng(37.499525, 127.030471), // 마커의 좌표
-		    map: map // 마커를 표시할 지도 객체
-		});
-
-	</script>  -->
+<div>
+<script src="//apis.daum.net/maps/maps3.js?apikey=f6eed7143332943349595b742f572fde"></script>
 <script type="text/javascript">
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 mapOption = { 
@@ -146,6 +85,8 @@ var zoomControl = new daum.maps.ZoomControl();
 map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
 }    
 </script>
+</div>
+
 
 </body>
 </html>
