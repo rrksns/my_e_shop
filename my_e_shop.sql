@@ -114,8 +114,11 @@ it_cont varchar(255),
 it_img1 varchar(100),
 it_img2 varchar(100),
 it_img3 varchar(100),
+top3 varchar(1);
 sh_id varchar(20) 
 );
+select * from menu;
+alter table board add top3 varchar(1);
 
 alter table menu add foreign key (sh_id) references shop(sh_id);
 
