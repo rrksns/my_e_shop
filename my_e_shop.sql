@@ -115,8 +115,7 @@ it_img1 varchar(100),
 it_img2 varchar(100),
 it_img3 varchar(100),
 top3 varchar(1);
-sh_id varchar(20) 
-);
+sh_id int(20) 
 select * from menu;
 alter table board add top3 varchar(1);
 
