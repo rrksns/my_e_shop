@@ -48,13 +48,14 @@ public class MenuController {
 	public String restuarantMenu(int sh_id, Menu menu, Model model) {
 		menu.setSh_id(sh_id);
 		int result = ms.insert(menu);
-		model.addAttribute("menu", menu);
-		model.addAttribute("result", result);		
+		model.addAttribute("result", result);
+		model.addAttribute("sh_id", sh_id);
 		return "shop/restaurantMenuResult";
 	}
 	
 	@RequestMapping("restaurantMenuResult")
-	public String restaurantMenuResult() {
+	public String restaurantMenuResult(int sh_id, Model model) {
+		model.addAttribute("sh_id", sh_id);
 		return "shop/restaurantDetail";
 	}
 	

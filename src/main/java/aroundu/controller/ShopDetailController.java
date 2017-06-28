@@ -10,15 +10,12 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import aroundu.model.Shop;
 import aroundu.model.ShopDetail;
-import aroundu.service.SellerService;
 import aroundu.service.ShopDetailService;
 import aroundu.service.ShopService;
 
 @Controller
 public class ShopDetailController {
-	@Autowired
-	SellerService ss;
-	
+
 	@Autowired 
 	ShopService sv;
 	
@@ -39,6 +36,7 @@ public class ShopDetailController {
 	@RequestMapping(value= "restaurantDetail", method = RequestMethod.POST)
 	public String restaurantBasic(int sh_id, ShopDetail shopDetail, Model model) {
 		shopDetail.setSh_id(sh_id);
+		System.out.println("불러온 sh_id="+ sh_id);
 		int result = sd.insert(shopDetail);
 		model.addAttribute("shopDetail", shopDetail);	
 		model.addAttribute("result", result);		
