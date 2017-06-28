@@ -12,6 +12,7 @@ public class ShopDetail {
 	public String kidsroom;
 	public String freeWifi;
 	public int sh_id;
+	
 	public int getSh_detailId() {
 		return sh_detailId;
 	}

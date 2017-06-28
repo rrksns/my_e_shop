@@ -40,7 +40,8 @@
 <body>
 	<h2>메뉴 등록</h2>
 	<form action="restaurantMenu.go" method="post" name="form">
-		<input type="text" name="it_id" value="${menu.it_id+1}">
+	<!-- encoding="multipart/form-data" -->
+		<input type="text" name="sh_id" value= "${sh_id}">
 		<div class="tab">
 			<ul>
 				<li><a href="javascript_:showTabMenu(1)">메뉴1</a></li>
@@ -64,10 +65,10 @@
 						<th scope="row">메뉴설명</th>
 						<td><input type="text" name="it_cont"  required="required"></td>
 					</tr>
-					<tr>
+				<!-- 	<tr>
 						<th scope="row">사진 추가</th>
 						<td><input type="file" name="it_img1"></td>
-					</tr>
+					</tr> -->
 					<tr>
 						<th scope="row">top3</th>
 						<td><input type="checkbox" name="it_top3" id="it_top3" value="y">

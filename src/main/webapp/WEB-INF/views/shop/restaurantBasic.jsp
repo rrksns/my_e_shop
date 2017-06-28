@@ -55,13 +55,13 @@
   	  	  	  	  <div class="typeWrap mg_add">
   	  	  	  	  	<p>테이크 아웃</p>
   	  	  	  	  	<span class="type_icon take"></span>
-  	  	  	  	  	<input id="take" type="checkbox">
+  	  	  	  	  	<input name ="takeOut" id="take" type="checkbox" value="y">
   	  	  	  	  	<label class="chk_btn" for="take"></label>
   	  	  	  	  </div>
   	  	  	  	  <div class="typeWrap">
   	  	  	  	  	<p>배달</p>
   	  	  	  	  	<span class="type_icon delivery"></span>
-  	  	  	  	  	<input id="delivery" type="checkbox">
+  	  	  	  	  	<input name ="delivery" id="delivery" type="checkbox" value="y">
   	  	  	  	  	<label class="chk_btn" for="delivery"></label>
   	  	  	  	  </div>
   	  	  	  	</div>
@@ -82,7 +82,7 @@
   	  	  	  	<div class="alltimeWrap">
   	  	  	  	  <p>24시간 운영</p>
   	  	  	  	  <span class="type_icon alltime"></span>
-  	  	  	  	  <input id="alltime" type="checkbox">
+  	  	  	  	  <input name="allday_open "id="alltime" type="checkbox" value="y">
   	  	  	  	  <label class="chk_btn" for="alltime"></label>
   	  	  	  	</div>
   	  	  	  </div>
@@ -101,7 +101,7 @@
   	  	  	  </div>
   	  	  	</div>
   	  	  	<div class="nextBtnWrap">
-  	  	  	  <button class="prev_btn" type="button"><a href="sellerMain.go">이전으로</a></button>
+  	  	  	  <button class="prev_btn" type="button" onclick="location.href='shopRegist.go'">이전으로</button>
   	  	  	  <button class="next_btn" type="submit">다음</button>
   	  	  	</div>
   	  	  </fieldset>

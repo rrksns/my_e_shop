@@ -13,7 +13,6 @@ public class MenuServiceImpl implements MenuService{
 	
 	@Override
 	public int insert(Menu menu) {
-		// TODO Auto-generated method stub
 		return md.insert(menu);
 	}
 

@@ -55,6 +55,9 @@ public class ShopController {
 		String s_id = (String)session.getAttribute("s_id");
 		shop.setS_id(s_id);
 		if (shop.getDineIn() ==null) shop.setDineIn("n");
+		if (shop.getTakeOut() ==null) shop.setTakeOut("n");
+		if (shop.getDelivery() ==null) shop.setDelivery("n");
+		if (shop.getAllday_open() ==null) shop.setAllday_open("n");
 		int result = sv.insert(shop);
 		model.addAttribute("result", result);		
 		return "shop/restaurantPicture";

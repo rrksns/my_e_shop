@@ -14,7 +14,6 @@ public class MenuDaoImpl implements MenuDao{
 	
 	@Override
 	public int insert(Menu menu) {
-		// TODO Auto-generated method stub
 		return st.insert("Menuns.insert",menu);
 	}
 

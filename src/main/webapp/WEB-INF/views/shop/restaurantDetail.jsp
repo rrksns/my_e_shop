@@ -14,7 +14,7 @@
   <aside>
   	<h2 class="home_logo"><a href="sellerMain.go">Around U</a></h2>
   	<div class="shopNameWrap">
-  	  <p>님</p>
+  	  <p>${shop.sh_name}</p>
   	</div>
   	<ul class="phase">
   	  <li><p>기본 정보</p></li>
@@ -37,48 +37,50 @@
   	<section id="shopInfo_register">
   	  <article class="misc_shopInfo">
   	  	<form action="restaurantDetail.go" method="post">
+  	  	<input type="text" name="sh_id" value= "${sh_id}">
+  	  	
   	  	  <fieldset><legend class="hide">부가 정보</legend>
   	  	  	<h2>부가 정보 선택</h2>
   	  	  	<div class="selectBox">
   	  	  	  <div class="selectWrap">
   	  	  	  	<h4>흡연실</h4>
   	  	  	  	<span class="service_icon smoke"></span>
-  	  	  	  	<input id="smoke" type="checkbox">
+  	  	  	  	<input name="smoking" id="smoke" type="checkbox" value="y">
   	  	  	  	<label class="chk_btn" for="smoke"></label>
   	  	  	  </div>
   	  	  	  <div class="selectWrap">
   	  	  	  	<h4>와이파이</h4>
   	  	  	  	<span class="service_icon wifi"></span>
-  	  	  	  	<input id="wifi" type="checkbox">
+  	  	  	  	<input name="freeWifi"id="wifi" type="checkbox" value="y">
   	  	  	  	<label class="chk_btn" for="wifi"></label>
   	  	  	  </div>
   	  	  	  <div class="selectWrap">
   	  	  	  	<h4>화장실</h4>
   	  	  	  	<span class="service_icon bathroom"></span>
-  	  	  	  	<input id="bathroom" type="checkbox">
+  	  	  	  	<input name="toilet" id="bathroom" type="checkbox" value="y">
   	  	  	  	<label class="chk_btn" for="bathroom"></label>
   	  	  	  </div>
   	  	  	  <div class="selectWrap">
   	  	  	  	<h4>주차장</h4>
   	  	  	  	<span class="service_icon parking"></span>
-  	  	  	  	<input id="parking" type="checkbox">
+  	  	  	  	<input name="parking" id="parking" type="checkbox" value="y">
   	  	  	  	<label class="chk_btn" for="parking"></label>
   	  	  	  </div>
   	  	  	  <div class="selectWrap">
   	  	  	  	<h4>담요제공</h4>
   	  	  	  	<span class="service_icon blanket"></span>
-  	  	  	  	<input id="blanket" type="checkbox">
+  	  	  	  	<input name="blanket"id="blanket" type="checkbox" value="y">
   	  	  	  	<label class="chk_btn" for="blanket"></label>
   	  	  	  </div>
   	  	  	  <div class="selectWrap">
   	  	  	  	<h4>핸드폰 충전</h4>
   	  	  	  	<span class="service_icon charge"></span>
-  	  	  	  	<input id="charge" type="checkbox">
+  	  	  	  	<input name="mobileCharge" id="charge" type="checkbox" value="y">
   	  	  	  	<label class="chk_btn" for="charge"></label>
   	  	  	  </div>
   	  	  	</div>
   	  	  	<div class="nextBtnWrap">
-  	  	  	  <button class="prev_btn" type="button">이전으로</button>
+  	  	  	  <button class="prev_btn" type="button" onclick="location.href='restaurantMenu.go'">이전으로</button>
   	  	  	  <button class="next_btn" type="submit">저장</button>
   	  	  	</div>
   	  	  </fieldset>

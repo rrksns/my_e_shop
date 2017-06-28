@@ -34,29 +34,22 @@ public class MenuController {
 		model.addAttribute("shop", shop); // 가져온 샵에 정보 기입하기
 		return "shop/menuRegist";
 	}
-	/*메뉴 정보 받기 */
+	/*메뉴 정보 및 샵 아이디 받기 */
 	@RequestMapping(value="restaurantMenu", method = RequestMethod.GET)
 	public String restuarantMenu(Menu menu, HttpSession session, Model model) {
 		String s_id = (String)session.getAttribute("s_id");
 		Shop shop = sv.select(s_id);
 		int sh_id = shop.getSh_id();
-		menu.setSh_id(sh_id);
-		menu= ms.select(sh_id);		
-		model.addAttribute("menu", menu);		
+		model.addAttribute("sh_id", sh_id);		
 		return "shop/restaurantMenu";
 	}
-	/*메뉴 정보 기입 */
+	/*메뉴 정보 및 샵 아이디 기입 */
 	@RequestMapping(value="restaurantMenu", method = RequestMethod.POST)
-	public String restuarantMenu(Shop shop, Menu menu, Model model, HttpSession session) {
-		String s_id = (String)session.getAttribute("s_id");
-		shop = sv.select(s_id);
-		int sh_id = shop.getSh_id();
-		menu= ms.select(sh_id);
+	public String restuarantMenu(int sh_id, Menu menu, Model model) {
 		menu.setSh_id(sh_id);
 		int result = ms.insert(menu);
 		model.addAttribute("menu", menu);
-		model.addAttribute("result", result);
-		System.out.println("result=" +result);
+		model.addAttribute("result", result);		
 		return "shop/restaurantMenuResult";
 	}
 	
@@ -65,8 +58,4 @@ public class MenuController {
 		return "shop/restaurantDetail";
 	}
 	
-	@RequestMapping("restaurantDetail")
-	public String restaurantDetail() {
-		return "shop/restaurantDetail";
-	}
 }
