@@ -24,6 +24,7 @@
   	  <li><p>부가 정보</p></li>
   	</ul>
   </aside>
+  
   <main role="main">
   	<header>
   	  <div class="setWrap">

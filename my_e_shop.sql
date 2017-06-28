@@ -106,7 +106,7 @@ alter table board add foreign key (u_id) references user(u_id);
 show tables;
 drop table menu;
 create table menu(
-it_id varchar(20) primary key,
+it_id int(20) primary key,
 it_name varchar(40),
 it_group varchar(30),
 it_price int,
@@ -114,7 +114,7 @@ it_cont varchar(255),
 it_img1 varchar(100),
 it_img2 varchar(100),
 it_img3 varchar(100),
-sh_id varchar(20) 
+sh_id int(20) 
 );
 
 alter table menu add foreign key (sh_id) references shop(sh_id);
