@@ -67,10 +67,18 @@ alter table shop add sh_operTimeS varchar(50);
 alter table shop add sh_operTimeE varchar(50);
 alter table shop add sh_brTimeS varchar(50);
 alter table shop add sh_brTimeE varchar(50);
-
+alter table shop add sh_addr1 varchar(255);
+alter table shop add sh_addr2 varchar(255);
+alter table shop drop sh_addr;
 alter table shop drop sh_operTime;
 alter table shop drop sh_brTime;
 
+
+alter table shop add allday_open VARCHAR(1);
+alter table shop add driveThru VARCHAR(1);
+alter table shop add takeOut VARCHAR(1);
+alter table shop add dineIn VARCHAR(1);
+alter table shop add delivery VARCHAR(1);
 
 alter table shop add foreign key (s_id) references seller(s_id);
 
