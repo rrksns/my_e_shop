@@ -76,7 +76,6 @@ bd_count int,
 ref int,
 re_step int,
 re_level int,
-
 s_id  varchar(20),
 del varchar(2)
 );
