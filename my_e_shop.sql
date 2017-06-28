@@ -67,7 +67,6 @@ alter table shop add sh_operTimeS varchar(50);
 alter table shop add sh_operTimeE varchar(50);
 alter table shop add sh_brTimeS varchar(50);
 alter table shop add sh_brTimeE varchar(50);
-
 alter table shop drop sh_operTime;
 alter table shop drop sh_brTime;
 
