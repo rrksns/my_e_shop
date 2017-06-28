@@ -41,7 +41,7 @@ u_joinDate date not null
 drop table shop;
 
 create table shop(
-sh_id varchar(20) primary key,
+sh_id int(20) primary key,
 sh_name varchar(50) not null,
 sh_addr varchar(255) not null,
 sh_web varchar(255),
@@ -67,9 +67,19 @@ alter table shop add sh_operTimeS varchar(50);
 alter table shop add sh_operTimeE varchar(50);
 alter table shop add sh_brTimeS varchar(50);
 alter table shop add sh_brTimeE varchar(50);
+alter table shop add sh_addr1 varchar(255);
+alter table shop add sh_addr2 varchar(255);
+alter table shop drop sh_addr;
+
 alter table shop drop sh_operTime;
 alter table shop drop sh_brTime;
 
+
+alter table shop add allday_open VARCHAR(1);
+alter table shop add driveThru VARCHAR(1);
+alter table shop add takeOut VARCHAR(1);
+alter table shop add dineIn VARCHAR(1);
+alter table shop add delivery VARCHAR(1);
 
 alter table shop add foreign key (s_id) references seller(s_id);
 
@@ -96,7 +106,7 @@ alter table board add foreign key (u_id) references user(u_id);
 show tables;
 drop table menu;
 create table menu(
-it_id varchar(20) primary key,
+it_id int(20) primary key,
 it_name varchar(40),
 it_group varchar(30),
 it_price int,
@@ -119,11 +129,6 @@ select * from board;
 
 create table shopDetail (
 sh_detailId	int(20) primary key,
-allday_open	VARCHAR(1),
-driveThru		VARCHAR(1),
-takeOut		VARCHAR(1),
-dineIn		VARCHAR(1),
-delivery		VARCHAR(1),
 aloneMeal		VARCHAR(1),
 parking		VARCHAR(1),
 parkingSpace		int(20),

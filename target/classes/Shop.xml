@@ -3,19 +3,37 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Shopns">
 	<resultMap id="shopResult" 		type="shop">
-	<!-- 	<result property="a" 	column="a" />
-		<result property="b" 	column="b" />
-		<result property="c"		column="c" /> -->
+		<result property="sh_name" 		column="sh_name" />
+		<result property="sh_id" 		column="sh_id" />
+		<result property="sh_addr1"		column="sh_addr1" />
+		<result property="sh_addr2" 	column="sh_addr2" />
+		<result property="sh_web" 		column="sh_web" />
+		<result property="sh_tel"		column="sh_tel" />
+		<result property="sh_cate" 		column="sh_cate" />
+		<result property="sh_content" 	column="sh_content" />
+		<result property="sh_summary"	column="sh_summary" />
+		<result property="sh_operTimeS" column="sh_operTimeS" />
+		<result property="sh_operTimeE" column="sh_operTimeE" />
+		<result property="sh_brTimeS"	column="sh_brTimeS" />
+		<result property="sh_brTimeE" 	column="sh_brTimeE" />
+		<result property="sh_img1" 		column="sh_img1" />
+		<result property="sh_img2"		column="sh_img2" />
+		<result property="sh_img3" 		column="sh_img3" />
+		<result property="sh_img4" 		column="sh_img4" />
+		<result property="sh_img5"		column="sh_img5" />
+		<result property="recru_sub" 	column="recru_sub" />
+		<result property="recru_con" 	column="recru_con" />
+		<result property="sh_pick"		column="sh_pick" />
+		<result property="s_id"			column="s_id" />
+		<result property="allday_open"	column="allday_open" />
+		<result property="driveThru" 	column="driveThru" />
+		<result property="takeOut" 		column="takeOut" />
+		<result property="dineIn"		column="dineIn" />
+		<result property="delivery"		column="delivery" />
+
 	</resultMap>
 	
-	<!-- <select id="list" resultMap="sellerResult">
-		select * from test 
-		</select> -->
-	
-<!-- 	<select id="select" parameterType="int" resultType="dept"> 데이터한건일때 resultType
-		select * from dept where deptno=#{deptno}
-	</select> -->
-	
+
 	<update id="update" parameterType="shop">
 		update shop set sh_img1= #{sh_img1}, sh_img2=#{sh_img2}, 
 			sh_img3=#{sh_img3},sh_img4= #{sh_img4},
@@ -30,12 +48,12 @@
 	<selectKey keyProperty="sh_id" order="BEFORE" resultType="int">
 		select ifnull(max(sh_id), 0)+1 sh_id from shop
 	</selectKey>
-			insert into shop (sh_id, sh_name, sh_addr, sh_tel, sh_operTimeS, sh_operTimeE,
+			insert into shop (sh_id, sh_name,sh_content,sh_addr1,sh_addr2, sh_tel, sh_operTimeS, sh_operTimeE,
 			sh_brTimeS, sh_brTimeE, s_id, allday_open, driveThru, takeOut, dineIn, delivery) 
-			values(#{sh_id}, #{sh_name}, #{sh_addr}, #{sh_tel}, #{sh_operTimeS}, #{sh_operTimeE}, 
-			#{sh_brTimeS}, #{sh_brTimeE}, #{s_id}, #{allday_open}, 
-			#{driveThru}, #{takeOut}, #{dineIn}, #{delivery})
+			values(#{sh_id}, #{sh_name},#{sh_content}, #{sh_addr1},#{sh_addr2}, #{sh_tel}, #{sh_operTimeS}, #{sh_operTimeE}, 
+			#{sh_brTimeS}, #{sh_brTimeE}, #{s_id}, #{allday_open},#{driveThru}, #{takeOut}, #{dineIn}, #{delivery})
 	</insert>
+	
 	<select id="select" parameterType="string" resultType="shop">
 		select * from shop where sh_id = 
 		(select ifnull(max(sh_id), 0) from shop where s_id=#{s_id})

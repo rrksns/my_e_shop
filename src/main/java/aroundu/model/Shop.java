@@ -3,7 +3,8 @@ package aroundu.model;
 public class Shop {
 	private int sh_id;
 	private String sh_name;
-	private String sh_addr;	
+	private String sh_addr1;
+	private String sh_addr2;
 	private String sh_web1;
 	private String sh_web2;
 	private String sh_web3;
@@ -43,11 +44,17 @@ public class Shop {
 	public void setSh_name(String sh_name) {
 		this.sh_name = sh_name;
 	}
-	public String getSh_addr() {
-		return sh_addr;
+	public String getSh_addr1() {
+		return sh_addr1;
 	}
-	public void setSh_addr(String sh_addr) {
-		this.sh_addr = sh_addr;
+	public void setSh_addr1(String sh_addr) {
+		this.sh_addr1 = sh_addr;
+	}
+	public String getSh_addr2() {
+		return sh_addr2;
+	}
+	public void setSh_addr2(String sh_addr) {
+		this.sh_addr2 = sh_addr;
 	}
 	public String getSh_web1() {
 		return sh_web1;
