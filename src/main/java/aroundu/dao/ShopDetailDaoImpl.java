@@ -20,7 +20,7 @@ public class ShopDetailDaoImpl implements ShopDetailDao {
 	@Override
 	public int insert(ShopDetail shopDetail) {
 		// TODO Auto-generated method stub
-		return st.insert("shopDetailns.insert", shopDetail);
+		return st.insert("ShopDetailns.insert", shopDetail);
 	}
 	
 }

@@ -66,7 +66,7 @@ s_id varchar(20)
 alter table shop add foreign key (s_id) references seller(s_id);
 
 drop table board;
-select * from board;
+select *from board;
 create table board(
 bd_num int primary key,
 bd_subject varchar(40),
