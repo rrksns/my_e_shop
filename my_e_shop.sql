@@ -129,11 +129,6 @@ select * from board;
 
 create table shopDetail (
 sh_detailId	int(20) primary key,
-allday_open	VARCHAR(1),
-driveThru		VARCHAR(1),
-takeOut		VARCHAR(1),
-dineIn		VARCHAR(1),
-delivery		VARCHAR(1),
 aloneMeal		VARCHAR(1),
 parking		VARCHAR(1),
 parkingSpace		int(20),
