@@ -63,6 +63,15 @@ sh_pick varchar(30),
 s_id varchar(20)
 );
 
+alter table shop add sh_operTimeS varchar(50);
+alter table shop add sh_operTimeE varchar(50);
+alter table shop add sh_brTimeS varchar(50);
+alter table shop add sh_brTimeE varchar(50);
+
+alter table shop drop sh_operTime;
+alter table shop drop sh_brTime;
+
+
 alter table shop add foreign key (s_id) references seller(s_id);
 
 drop table board;
@@ -111,7 +120,7 @@ select * from board;
 
 create table shopDetail (
 sh_detailId	int(20) primary key,
-24h_open	VARCHAR(1),
+allday_open	VARCHAR(1),
 driveThru		VARCHAR(1),
 takeOut		VARCHAR(1),
 dineIn		VARCHAR(1),
