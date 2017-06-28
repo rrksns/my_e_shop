@@ -10,4 +10,6 @@ public interface SellerDao {
 
 	int loginChk(String s_id, String s_pw);
 
+	int update(Seller seller);
+
 }

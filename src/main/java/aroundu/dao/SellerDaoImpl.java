@@ -33,4 +33,9 @@ public class SellerDaoImpl implements SellerDao {
 		return result;
 	}
 
+	@Override
+	public int update(Seller seller) {
+		return st.update("sellerns.update",seller);
+	}
+
 }
