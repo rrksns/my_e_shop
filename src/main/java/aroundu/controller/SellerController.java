@@ -27,10 +27,10 @@ public class SellerController {
 	return "main";
 	}	
 
-	/*일반회원가입  or 샵등록 선택*/
-	@RequestMapping("s_Join")
+	//일반회원가입  or 샵등록 선택
+	@RequestMapping("commonJoin")
 	public String s_Join(){
-	return "seller/s_Join";
+	return "commonJoin";
 	}
 	
 	/*정보 동의 약관*/
@@ -48,7 +48,7 @@ public class SellerController {
 	public String sellerJoin(Seller seller, Model model,HttpSession session){
 		int result =ss.insert(seller);
 		String s_id = seller.getS_id();
-		session.setAttribute("s_id",s_id);
+		session.setAttribute("id",s_id);//세션에 ID값저장
 		model.addAttribute("result", result);		
 		return "seller/sellerJoin";
 	}
@@ -90,7 +90,7 @@ public class SellerController {
 	public String sellerLogin(String s_id, String s_pw,Model model,HttpSession session){	
 		int result=ss.loginChk(s_id,s_pw);
 		if(result>0){
-			session.setAttribute("s_id",s_id);
+			session.setAttribute("id",s_id);
 			return "sellerMain";
 		}else if(result==0){model.addAttribute("msg","암호가 일치하지 않습니다");
 		}else model.addAttribute("msg","ID가 존재하지 않습니다");

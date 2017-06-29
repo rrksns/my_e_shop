@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="userns">
+	<!-- Use type aliases to avoid typing the full classname every time. -->
+	<resultMap id="userResult" 		type="user">
+		<result property="u_id" 	column="u_id" />
+		<result property="u_pw" 	column="u_pw" />
+		<result property="u_addr1"	column="u_addr1" /> 
+		<result property="u_addr2"	column="u_addr2" /> 
+		<result property="u_email" 	column="u_email" />
+		<result property="u_name" 	column="u_name" />
+		<result property="u_mobile"	column="u_mobile" /> 
+		<result property="u_joinDate"	column="u_joinDate" /> 		
+		<result property="u_gender" 	column="u_gender" />
+		<result property="u_birthdate"	column="u_birthdate" />		
+
+	</resultMap>
+
+	<insert id="insert" parameterType="user">
+		insert into user (u_id, u_pw, u_email, u_mobile, u_joinDate, u_gender, u_birthdate,u_name) 
+		values(#{u_id}, #{u_pw}, #{u_email},#{u_mobile}, now(), #{u_gender}, date_format(#{u_birthdate},'%y-%m-%d'),#{u_name})
+	</insert>
+	<select id="select" parameterType="string" resultType="user"> 
+		select * from user where u_id=#{u_id}
+	</select>
+	
+	<update id="update" parameterType="user">
+	  update user set u_pw=#{u_pw}, u_name=#{u_name}, u_gender=#{u_gender},
+	  u_birthdate =#{u_birthdate},u_email=#{u_email}, u_mobile=#{u_mobile} where u_id=#{u_id}
+	</update>
+<!-- 	
+	
+	
+		
+	<insert id="insert" parameterType="seller">
+		insert into seller (s_id, s_pw, s_email, s_mobile, s_regDate, s_gender, s_birthdate,s_name) 
+		values(#{s_id}, #{s_pw}, #{s_email},#{s_mobile}, now(), #{s_gender}, date_format(#{s_birthdate},'%y-%m-%d'),#{s_name})
+	</insert> -->
+	
+		
+</mapper>
+	

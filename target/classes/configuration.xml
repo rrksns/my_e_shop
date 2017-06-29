@@ -10,10 +10,12 @@
 		<typeAlias alias="board" type="aroundu.model.Board" />
 		<typeAlias alias="menu" type="aroundu.model.Menu" />
 		<typeAlias alias="shopDetail" type="aroundu.model.ShopDetail" />
+		<typeAlias alias="user" type="aroundu.model.User" />
 
 	</typeAliases>
 	
 	<mappers>
+		<mapper resource="User.xml" />
 		<mapper resource="Seller.xml" />
 		<mapper resource="Admin.xml" />
 		<mapper resource="Shop.xml" />

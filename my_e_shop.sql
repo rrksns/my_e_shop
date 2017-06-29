@@ -29,14 +29,22 @@ alter table seller add s_name varchar(20);
 alter table seller add s_tc_conf varchar(1);
 select * from seller;
 
+
+drop table user;
+
 create table user(
 u_id  varchar(20) primary key,
 u_pw varchar(20) not null,
-u_mobile varchar(30) not null,
-u_img varchar(50),
-u_email varchar(40) not null,
-u_joinDate date not null
-);
+u_name VARCHAR(20),
+u_addr1 varchar(255),
+u_addr2 varchar(255),
+u_gender VARCHAR(10),
+u_mobile varchar(30),
+u_birthdate DATE,
+u_email varchar(40),
+u_joinDate date 
+);		
+select * from user;
 
 drop table shop;
 

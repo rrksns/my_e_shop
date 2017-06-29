@@ -20,10 +20,6 @@
 	</resultMap>
 
 	
-	<!-- <select id="list" resultMap="sellerResult">
-		select * from test 
-		</select> -->
-	
 	<select id="select" parameterType="string" resultType="seller"> 
 		select * from seller where s_id=#{s_id}
 	</select>
@@ -32,15 +28,7 @@
 	  update seller set s_pw=#{s_pw}, s_name=#{s_name}, s_gender=#{s_gender},
 	  s_birthdate =#{s_birthdate},s_email=#{s_email}, s_mobile=#{s_mobile} where s_id=#{s_id}
 	</update>
-	
-	<!-- 
-	<update id="update" parameterType="dept">
-		update dept set dname=#{dname}, loc=#{loc} where deptno=#{deptno}
-	</update>
-	
-	<delete id="delete" parameterType="int">
-		delete from dept where deptno=#{deptno}
-	</delete>-->
+		
 	<insert id="insert" parameterType="seller">
 		insert into seller (s_id, s_pw, s_email, s_mobile, s_regDate, s_gender, s_birthdate,s_name) 
 		values(#{s_id}, #{s_pw}, #{s_email},#{s_mobile}, now(), #{s_gender}, date_format(#{s_birthdate},'%y-%m-%d'),#{s_name})
