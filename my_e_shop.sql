@@ -64,13 +64,14 @@ sh_img2 varchar(100),
 sh_img3 varchar(100),
 sh_img4 varchar(100),
 sh_img5 varchar(100),
+sh_img6 varchar(100),
 recru_sub varchar(50),
 recru_con varchar(255),
 sh_count int(100),
 sh_pick varchar(30),
 s_id varchar(20)
 );
-
+alter table shop add sh_img6 varchar(100);
 alter table shop add sh_operTimeS varchar(50);
 alter table shop add sh_operTimeE varchar(50);
 alter table shop add sh_brTimeS varchar(50);
@@ -78,11 +79,8 @@ alter table shop add sh_brTimeE varchar(50);
 alter table shop add sh_addr1 varchar(255);
 alter table shop add sh_addr2 varchar(255);
 alter table shop drop sh_addr;
-
 alter table shop drop sh_operTime;
 alter table shop drop sh_brTime;
-
-
 alter table shop add allday_open VARCHAR(1);
 alter table shop add driveThru VARCHAR(1);
 alter table shop add takeOut VARCHAR(1);
@@ -122,8 +120,12 @@ it_cont varchar(255),
 it_img1 varchar(100),
 it_img2 varchar(100),
 it_img3 varchar(100),
-top3 varchar(1);
+top3 varchar(1),
 sh_id int(20) 
+)
+
+alter table menu add foreign key(sh_id) references shop(sh_id);
+
 select * from menu;
 alter table board add top3 varchar(1);
 
@@ -149,4 +151,13 @@ blanket		VARCHAR(1),
 kidsroom		VARCHAR(1),
 freeWifi		VARCHAR(1),
 sh_id int(20), foreign key (sh_id) references shop(sh_id)
+);
+drop table replyBoard;
+create table replyBoard (
+rno int(20) primary key,
+replytext varchar(500),
+replyer varchar(50),
+regdate date,
+updatedate date,
+writerId varchar(20)
 );
