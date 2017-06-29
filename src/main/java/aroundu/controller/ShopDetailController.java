@@ -36,7 +36,14 @@ public class ShopDetailController {
 	@RequestMapping(value= "restaurantDetail", method = RequestMethod.POST)
 	public String restaurantBasic(int sh_id, ShopDetail shopDetail, Model model) {
 		shopDetail.setSh_id(sh_id);
-		System.out.println("불러온 sh_id="+ sh_id);
+		if (shopDetail.getAloneMeal() ==null) shopDetail.setAloneMeal("n");
+		if (shopDetail.getBlanket() ==null) shopDetail.setBlanket("n");
+		if (shopDetail.getFreeWifi() ==null) shopDetail.setFreeWifi("n");
+		if (shopDetail.getKidsroom() ==null) shopDetail.setKidsroom("n");
+		if (shopDetail.getMobileCharge() ==null) shopDetail.setMobileCharge("n");
+		if (shopDetail.getParking() ==null) shopDetail.setParking("n");
+		if (shopDetail.getSmoking() ==null) shopDetail.setSmoking("n");
+		if (shopDetail.getToilet() ==null) shopDetail.setToilet("n");	
 		int result = sd.insert(shopDetail);
 		model.addAttribute("shopDetail", shopDetail);	
 		model.addAttribute("result", result);		

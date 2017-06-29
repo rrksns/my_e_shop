@@ -1,5 +1,10 @@
 package aroundu.controller; 
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Date;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -32,19 +37,17 @@ public class ShopController {
 	/*샵 템플릿 선택*/
 	@RequestMapping("shopRegist")
 	public String shopRegist(HttpSession session, Model model) {
-		String s_id = (String)session.getAttribute("s_id");
-		Seller seller = ss.select(s_id);
-		model.addAttribute("seller", seller);
+		String s_id = (String)session.getAttribute("s_id"); //세션의의 s_id를 가져와서
+		Seller seller = ss.select(s_id); // s_id를 추출해서 seller의 정보를 가져오고
+		model.addAttribute("seller", seller); //가져온 정보를 화면에 보내줌
 		return "shop/shopRegist";
 	}
 	/*샵 기본정보 받기 */
 	@RequestMapping(value= "restaurantBasic", method = RequestMethod.GET)
 	public String restaurantBasic(Model model, HttpSession session) {
-		//int result = sv.insert(shop);
-		// model.addAttribute("result", result);
 		String s_id = (String)session.getAttribute("s_id");
-		Shop shop =  sv.select(s_id);
 		Seller seller = ss.select(s_id);
+		Shop shop =  sv.select(s_id);
 		model.addAttribute("seller", seller);
 		model.addAttribute("shop", shop);
 		return "shop/restaurantBasic";
@@ -53,24 +56,104 @@ public class ShopController {
 	@RequestMapping(value= "restaurantBasic", method = RequestMethod.POST)
 	public String restaurantBasic(Shop shop, Model model,HttpSession session) {
 		String s_id = (String)session.getAttribute("s_id");
+		shop =  sv.select(s_id);
 		shop.setS_id(s_id);
 		if (shop.getDineIn() ==null) shop.setDineIn("n");
 		if (shop.getTakeOut() ==null) shop.setTakeOut("n");
 		if (shop.getDelivery() ==null) shop.setDelivery("n");
 		if (shop.getAllday_open() ==null) shop.setAllday_open("n");
 		int result = sv.insert(shop);
-		model.addAttribute("result", result);		
+		model.addAttribute("result", result);
+		int sh_id = shop.getSh_id();
+		model.addAttribute("sh_id", sh_id);	
 		return "shop/restaurantPicture";
 	}
 	/*샵 사진 등록 */
-	@RequestMapping("restaurantPicture")
-	public String restaurantPicture(Shop shop, Model model, HttpSession session) {
+	@RequestMapping(value= "restaurantPicture", method = RequestMethod.GET)
+	public String restaurantPicture(Model model, HttpSession session) {
 		String s_id = (String)session.getAttribute("s_id");
-		shop = sv.select(s_id);
-		int sh_id = shop.getSh_id();		
+		Shop shop = sv.select(s_id);
+		int sh_id = shop.getSh_id();
+		model.addAttribute("sh_id", sh_id);			
+		return "shop/restaurantPicture";		
+		}	
+	
+	
+	@RequestMapping(value="restaurantPicture", method = RequestMethod.POST)
+	public String restaurantPicture(int sh_id, Model model, Shop shop, HttpSession session,
+			HttpServletRequest request) throws IOException {
+		shop.setSh_id(sh_id);
+		if(!shop.getFile1().isEmpty()){	
+			long date = new Date().getTime();
+			String fname = date+"-"+shop.getFile1().getOriginalFilename();			
+			String path = request.getSession().getServletContext().getRealPath("/shopPic/upload");
+			String fpath = path + "\\" + fname;			
+			FileOutputStream fs = new FileOutputStream(fpath);
+			fs.write(shop.getFile1().getBytes());
+			fs.close();
+			shop.setSh_img1(fname);				
+		}
+		if(!shop.getFile2().isEmpty()){	
+			long date = new Date().getTime();
+			String fname = date+"-"+shop.getFile2().getOriginalFilename();			
+			String path = request.getSession().getServletContext().getRealPath("/shopPic/upload");
+			String fpath = path + "\\" + fname;			
+			FileOutputStream fs = new FileOutputStream(fpath);
+			fs.write(shop.getFile2().getBytes());
+			fs.close();
+			shop.setSh_img2(fname);				
+		}
+		if(!shop.getFile3().isEmpty()){	
+			long date = new Date().getTime();
+			String fname = date+"-"+shop.getFile3().getOriginalFilename();			
+			String path = request.getSession().getServletContext().getRealPath("/shopPic/upload");
+			String fpath = path + "\\" + fname;			
+			FileOutputStream fs = new FileOutputStream(fpath);
+			fs.write(shop.getFile3().getBytes());
+			fs.close();
+			shop.setSh_img3(fname);				
+		}
+		if(!shop.getFile4().isEmpty()){	
+			long date = new Date().getTime();
+			String fname = date+"-"+shop.getFile4().getOriginalFilename();			
+			String path = request.getSession().getServletContext().getRealPath("/shopPic/upload");
+			String fpath = path + "\\" + fname;			
+			FileOutputStream fs = new FileOutputStream(fpath);
+			fs.write(shop.getFile4().getBytes());
+			fs.close();
+			shop.setSh_img4(fname);				
+		}
+		if(!shop.getFile5().isEmpty()){	
+			long date = new Date().getTime();
+			String fname = date+"-"+shop.getFile5().getOriginalFilename();			
+			String path = request.getSession().getServletContext().getRealPath("/shopPic/upload");
+			String fpath = path + "\\" + fname;			
+			FileOutputStream fs = new FileOutputStream(fpath);
+			fs.write(shop.getFile5().getBytes());
+			fs.close();
+			shop.setSh_img5(fname);				
+		}
+		if(!shop.getFile6().isEmpty()){	
+			long date = new Date().getTime();
+			String fname = date+"-"+shop.getFile6().getOriginalFilename();			
+			String path = request.getSession().getServletContext().getRealPath("/shopPic/upload");
+			String fpath = path + "\\" + fname;			
+			FileOutputStream fs = new FileOutputStream(fpath);
+			fs.write(shop.getFile6().getBytes());
+			fs.close();
+			shop.setSh_img6(fname);				
+		}
+		
+		sv.update(shop);		
 		int result = sv.update(shop);
+		Shop shop1 = sv.select(shop.getSh_id());
+		System.out.println("sh_id1="+shop.getSh_id());
+		System.out.println("sh_id2="+sh_id);
+		if (shop1==null) System.out.println("못읽음");
+		else System.out.println("sh_name = " + shop1.getSh_name());
 		model.addAttribute("result", result);
-		return "shop/restaurantPicture";
+		model.addAttribute("shop", shop1);
+		return "shop/menuRegist";
 	}
 	
 }

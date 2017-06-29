@@ -27,13 +27,13 @@ public class ShopDaoImpl implements ShopDao{
 
 	@Override
 	public Shop select(String s_id) {
-		return st.selectOne("Shopns.select", s_id);
+		return st.selectOne("Shopns.select1", s_id);
 	}
 
 	@Override
 	public Shop select(int sh_id) {
 		// TODO Auto-generated method stub
-		return st.selectOne("Shopns.select", sh_id);
+		return st.selectOne("Shopns.select2", sh_id);
 	}
 	
 

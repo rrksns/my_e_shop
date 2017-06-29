@@ -54,8 +54,11 @@
 			#{sh_brTimeS}, #{sh_brTimeE}, #{s_id}, #{allday_open},#{driveThru}, #{takeOut}, #{dineIn}, #{delivery})
 	</insert>
 	
-	<select id="select" parameterType="string" resultType="shop">
+	<select id="select1" parameterType="string" resultType="shop">
 		select * from shop where sh_id = 
 		(select ifnull(max(sh_id), 0) from shop where s_id=#{s_id})
+	</select>
+	<select id="select2" parameterType="int" resultType="shop">
+		select * from shop where sh_id = #{sh_id}
 	</select>
 </mapper>

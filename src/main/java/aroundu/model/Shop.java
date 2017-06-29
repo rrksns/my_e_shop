@@ -1,5 +1,7 @@
 package aroundu.model;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Shop {
 	private int sh_id;
 	private String sh_name;
@@ -32,6 +34,48 @@ public class Shop {
 	public String takeOut;
 	public String dineIn;
 	public String delivery;
+	
+	private MultipartFile file1; private MultipartFile file2;
+	private MultipartFile file3; private MultipartFile file4;
+	private MultipartFile file5; private MultipartFile file6;
+
+	public MultipartFile getFile1() {
+		return file1;
+	}
+	public void setFile1(MultipartFile file1) {
+		this.file1 = file1;
+	}
+	public MultipartFile getFile2() {
+		return file2;
+	}
+	public void setFile2(MultipartFile file2) {
+		this.file2 = file2;
+	}
+	public MultipartFile getFile3() {
+		return file3;
+	}
+	public void setFile3(MultipartFile file3) {
+		this.file3 = file3;
+	}
+	public MultipartFile getFile4() {
+		return file4;
+	}
+	public void setFile4(MultipartFile file4) {
+		this.file4 = file4;
+	}
+	public MultipartFile getFile5() {
+		return file5;
+	}
+	public void setFile5(MultipartFile file5) {
+		this.file5 = file5;
+	}
+	public MultipartFile getFile6() {
+		return file6;
+	}
+	public void setFile6(MultipartFile file6) {
+		this.file6 = file6;
+	}
+	
 	public int getSh_id() {
 		return sh_id;
 	}

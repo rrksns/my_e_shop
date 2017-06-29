@@ -31,7 +31,7 @@ public class MenuController {
 	public String menuRegist(Model model, HttpSession session) {
 		String s_id = (String)session.getAttribute("s_id"); //세션 가져오기
 		Shop shop = sv.select(s_id); // s_id로 샵정보 가져오기		
-		model.addAttribute("shop", shop); // 가져온 샵에 정보 기입하기
+		model.addAttribute("shop", shop);// 샵의 정보를 모델에 넣어서 뿌리기
 		return "shop/menuRegist";
 	}
 	/*메뉴 정보 및 샵 아이디 받기 */
