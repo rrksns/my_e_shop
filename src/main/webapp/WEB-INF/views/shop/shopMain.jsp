@@ -16,7 +16,8 @@
 				<a href="sellerMain.go">Around U</a>
 			</h2>
 			<div class="shopNameWrap">
-				<p>${seller.s_name}님 안녕하세요</p>
+				<p>${seller.s_name}님의</p>
+				<p>e-shop을 꾸며보세요!</p>
 			</div>
 			<ul class="phase">
 				<li><p>기본 정보</p></li>

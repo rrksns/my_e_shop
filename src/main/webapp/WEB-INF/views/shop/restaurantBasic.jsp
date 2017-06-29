@@ -15,7 +15,8 @@
   <aside>
   	<h2 class="home_logo"><a href="sellerMain.go">Around U</a></h2>
   	<div class="shopNameWrap">
-  	  <p>${seller.s_name}님 안녕하세요</p>
+  	  	<p>${seller.s_name}님의</p>
+		<p>e-shop을 꾸며보세요!</p>
   	</div>
   	<ul class="phase">
   	  <li><p>기본 정보</p></li>
@@ -189,7 +190,7 @@
   	  	  	
   	  	  	</div>  	  	  		
   	  		<div class="nextBtnWrap">
-  	  	  	  <button class="prev_btn" type="button" onclick="location.href='shopRegist.go'">이전으로</button>
+  	  	  	  <button class="prev_btn" type="button" onclick="history.go(-1)">이전으로</button>
   	  	  	  <button class="next_btn" type="submit">다음</button>
   	  		</div>
   	  	  </fieldset>
