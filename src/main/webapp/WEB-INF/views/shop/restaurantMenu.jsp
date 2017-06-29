@@ -39,8 +39,7 @@
 </head>
 <body>
 	<h2>메뉴 등록</h2>
-	<form action="restaurantMenu.go" method="post" name="form">
-	<!-- encoding="multipart/form-data" -->
+	<form action="restaurantMenu.go" method="post" name="form" enctype="multipart/form-data">
 		<input type="text" name="sh_id" value= "${sh_id}">
 		<div class="tab">
 			<ul>
@@ -65,10 +64,18 @@
 						<th scope="row">메뉴설명</th>
 						<td><input type="text" name="it_cont"  required="required"></td>
 					</tr>
-				<!-- 	<tr>
+					<tr>
+						<th scope="row">사진 등록</th>
+						<td><input type="file" name="menu1"></td>
+					</tr>
+					<tr>
 						<th scope="row">사진 추가</th>
-						<td><input type="file" name="it_img1"></td>
-					</tr> -->
+						<td><input type="file" name="menu2"></td>
+					</tr>
+					<tr>
+						<th scope="row">사진 추가</th>
+						<td><input type="file" name="menu3"></td>
+					</tr> 
 					<tr>
 						<th scope="row">top3</th>
 						<td><input type="checkbox" name="it_top3" id="it_top3" value="y">

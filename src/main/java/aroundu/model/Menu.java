@@ -1,5 +1,7 @@
 package aroundu.model;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class Menu {
 	private int it_id;
 	private String it_name;
@@ -11,8 +13,29 @@ public class Menu {
 	private String it_img3;
 	private String it_top3;
 	private int sh_id;
-
 	
+	private MultipartFile menu1; private MultipartFile menu2;
+	private MultipartFile menu3;
+	
+	
+	public MultipartFile getMenu1() {
+		return menu1;
+	}
+	public void setMenu1(MultipartFile menu1) {
+		this.menu1 = menu1;
+	}
+	public MultipartFile getMenu2() {
+		return menu2;
+	}
+	public void setMenu2(MultipartFile menu2) {
+		this.menu2 = menu2;
+	}
+	public MultipartFile getMenu3() {
+		return menu3;
+	}
+	public void setMenu3(MultipartFile menu3) {
+		this.menu3 = menu3;
+	}
 	public int getSh_id() {
 		return sh_id;
 	}

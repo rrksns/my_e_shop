@@ -1,5 +1,11 @@
 package aroundu.controller; 
 
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,8 +51,38 @@ public class MenuController {
 	}
 	/*메뉴 정보 및 샵 아이디 기입 */
 	@RequestMapping(value="restaurantMenu", method = RequestMethod.POST)
-	public String restuarantMenu(int sh_id, Menu menu, Model model) {
+	public String restuarantMenu(int sh_id, Menu menu, Model model, HttpServletRequest request) throws IOException {
 		menu.setSh_id(sh_id);
+		if(!menu.getMenu1().isEmpty()){	
+			long date = new Date().getTime();
+			String fname = date+"-"+menu.getMenu1().getOriginalFilename();			
+			String path = request.getSession().getServletContext().getRealPath("/menuPic/upload");
+			String fpath = path + "\\" + fname;			
+			FileOutputStream fs = new FileOutputStream(fpath);
+			fs.write(menu.getMenu1().getBytes());
+			fs.close();
+			menu.setIt_img1(fname);				
+		}
+		if(!menu.getMenu2().isEmpty()){	
+			long date = new Date().getTime();
+			String fname = date+"-"+menu.getMenu2().getOriginalFilename();			
+			String path = request.getSession().getServletContext().getRealPath("/menuPic/upload");
+			String fpath = path + "\\" + fname;			
+			FileOutputStream fs = new FileOutputStream(fpath);
+			fs.write(menu.getMenu2().getBytes());
+			fs.close();
+			menu.setIt_img2(fname);				
+		}
+		if(!menu.getMenu3().isEmpty()){	
+			long date = new Date().getTime();
+			String fname = date+"-"+menu.getMenu3().getOriginalFilename();			
+			String path = request.getSession().getServletContext().getRealPath("/menuPic/upload");
+			String fpath = path + "\\" + fname;			
+			FileOutputStream fs = new FileOutputStream(fpath);
+			fs.write(menu.getMenu3().getBytes());
+			fs.close();
+			menu.setIt_img3(fname);				
+		}	
 		int result = ms.insert(menu);
 		model.addAttribute("result", result);
 		model.addAttribute("sh_id", sh_id);
