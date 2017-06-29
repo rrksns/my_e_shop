@@ -37,7 +37,7 @@ public class ShopController {
 	/*샵 템플릿 선택*/
 	@RequestMapping("shopRegist")
 	public String shopRegist(HttpSession session, Model model) {
-		String s_id = (String)session.getAttribute("s_id"); //세션의의 s_id를 가져와서
+		String s_id = (String)session.getAttribute("id"); //세션의의 s_id를 가져와서
 		Seller seller = ss.select(s_id); // s_id를 추출해서 seller의 정보를 가져오고
 		model.addAttribute("seller", seller); //가져온 정보를 화면에 보내줌
 		return "shop/shopRegist";
@@ -45,7 +45,7 @@ public class ShopController {
 	/*샵 기본정보 받기 */
 	@RequestMapping(value= "restaurantBasic", method = RequestMethod.GET)
 	public String restaurantBasic(Model model, HttpSession session) {
-		String s_id = (String)session.getAttribute("s_id");
+		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
 		Shop shop =  sv.select(s_id);
 		model.addAttribute("seller", seller);
@@ -55,7 +55,7 @@ public class ShopController {
 	/*샵 기본정보 등록 */
 	@RequestMapping(value= "restaurantBasic", method = RequestMethod.POST)
 	public String restaurantBasic(Shop shop, Model model,HttpSession session) {
-		String s_id = (String)session.getAttribute("s_id");
+		String s_id = (String)session.getAttribute("id");
 		shop =  sv.select(s_id);
 		shop.setS_id(s_id);
 		if (shop.getDineIn() ==null) shop.setDineIn("n");
@@ -71,7 +71,7 @@ public class ShopController {
 	/*샵 사진 등록 */
 	@RequestMapping(value= "restaurantPicture", method = RequestMethod.GET)
 	public String restaurantPicture(Model model, HttpSession session) {
-		String s_id = (String)session.getAttribute("s_id");
+		String s_id = (String)session.getAttribute("id");
 		Shop shop = sv.select(s_id);
 		int sh_id = shop.getSh_id();
 		model.addAttribute("sh_id", sh_id);			

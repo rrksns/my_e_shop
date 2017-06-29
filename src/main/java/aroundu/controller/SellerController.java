@@ -113,14 +113,14 @@ public class SellerController {
 	/*나의 정보 수정*/
 	@RequestMapping("s_page")
 	public String s_page(Model model, HttpSession session){
-		String s_id = (String)session.getAttribute("s_id");
+		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller",seller);
 		return "seller/s_page";
 	}
 	//나의 정보 수정
 	@RequestMapping("sellerUpdate")
-	public String sellerUpdate(Seller seller,Model model){
+	public String sellerUpdate(Seller seller, Model model){
 		int result = ss.update(seller);
 		model.addAttribute("result",result);
 		return "seller/s_update";
