@@ -27,13 +27,12 @@
   </header>
   <section id="welcome">
   	<p class="small"><a href="">상세정보</a>를 입력하시면 회원정보에 따른 맞춤 서비스가 제공됩니다.</p>
-  	<p class="small">로드샵 서비스를 이용하시려면 <a href="shopMain.go">샵 등록</a>이 필요합니다.</p>
   	<div class="msg_container">
   	  <p class="txt_welcome">Around U 회원 가입이 완료되었습니다.</p>
   	  <p class="txt_welcome">Around U에서 주변 샵의 정보와 다양한 서비스 혜택을 누리시기 바랍니다.</p>
   	</div>
   	<div class="btn_container">
-  	  <button type="submit" class="nxt_btn" onclick="location.href='sellerMain.go'">메인으로</button>
+  	  <button type="submit" class="nxt_btn" onclick="location.href='userMain.go'">메인으로</button>
   	</div>
   </section>
 </div>

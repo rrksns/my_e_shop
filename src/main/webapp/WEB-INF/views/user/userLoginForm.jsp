@@ -14,7 +14,7 @@
 <div class="universe">
   <section class="login">
   	<header>
-  	  <a class="home_logo" href="#" title="메인화면으로">Around U</a>
+  	  <a class="home_logo" href="main.go" title="메인화면으로">Around U</a>
   	</header>
   	<div class="titleWrap">
   	  <img class="box" src=resources/img/enter.png width="45" height="45">
@@ -39,11 +39,11 @@
   	  </form>
   	</div>
   	<div class="miscWrap">
-  	  <a href="u_joinForm">회원 가입</a>
+  	  <a href="u_joinForm.go">회원 가입</a>
   	  <span class="txt_bar">|</span>
-  	  <a href="">아이디 찾기</a>
+  	  <a href="#">아이디 찾기</a>
   	  <span class="txt_bar">|</span>
-  	  <a href="">비밀번호 찾기</a>
+  	  <a href="#">비밀번호 찾기</a>
   	</div>
   	
   	<!-- 로그인에러메세지 -->
