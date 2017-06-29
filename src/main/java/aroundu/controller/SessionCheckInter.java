@@ -9,9 +9,9 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 public class SessionCheckInter extends HandlerInterceptorAdapter{
 	public boolean preHandle(HttpServletRequest request,HttpServletResponse response,Object arg2)throws Exception{
 		HttpSession session = request.getSession();
-		String s_id = (String)session.getAttribute("s_id");
-		if(s_id==null || s_id.equals("")){
-			response.sendRedirect("sellerLoginForm.go");
+		String id = (String)session.getAttribute("id");
+		if(id==null || id.equals("") ){
+			response.sendRedirect("main.go");
 			return false;
 		}
 		return true;

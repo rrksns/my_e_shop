@@ -1,23 +1,24 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="header.jsp" %>
 <!DOCTYPE html >
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>메인페이지</title>
+
 </head>
 <body>
 <div>
-
 <h2>메인페이지</h2><p>
-	<a href="commonLogin.go">로그인</a>
-	<a href ="commonJoin.go">회원가입</a>
-	<a href ="sellerJoinForm.go">my page</a>
-	<a href ="shopMain.go">my e-shop</a>
-	<a href ="boardList.go">Q&A</a>
+	<a href="u_logout.go">로그아웃</a>
+	<a href ="u_page.go">my page</a>
+	<a href ="U_shopMain.go">my e-shop</a>
+	<a href ="boardList.go">게시판</a>
 </div>
-<div id="map" style="width:750px;height:350px;"></div>
 
+
+<div id="map" style="width:750px;height:350px;"></div>
 <div>
 <script src="//apis.daum.net/maps/maps3.js?apikey=f6eed7143332943349595b742f572fde"></script>
 <script type="text/javascript">
@@ -86,7 +87,6 @@ map.addControl(zoomControl, daum.maps.ControlPosition.RIGHT);
 }    
 </script>
 </div>
-
 
 </body>
 </html>

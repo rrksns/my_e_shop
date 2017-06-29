@@ -3,33 +3,21 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="Menuns">
 	<resultMap id="menuResult" 		type="menu">
-	<!-- 	<result property="a" 	column="a" />
-		<result property="b" 	column="b" />
-		<result property="c"		column="c" /> -->
+		<result property="it_name" 		column="it_name" />
+		<result property="it_id" 		column="it_id" />
+		<result property="it_group"		column="it_group" /> 
+		<result property="it_price" 	column="it_price" />
+		<result property="it_cont" 		column="it_cont" />
+		<result property="it_img1"		column="it_img1" /> 
+		<result property="it_img1" 		column="it_img1" />
+		<result property="it_img1" 		column="it_img1" />
+		<result property="top3"			column="top3" /> 
+		<result property="sh_id"		column="sh_id" /> 		
+
 	</resultMap>
 	
-	<!-- <select id="list" resultMap="sellerResult">
-		select * from test 
-		</select> -->
-	
-<!-- 	<select id="select" parameterType="int" resultType="dept"> 데이터한건일때 resultType
-		select * from dept where deptno=#{deptno}
-	</select> -->
-	
-<!-- 	<update id="update" parameterType="shop">
-		update shop set sh_addr= #{sh_addr}, sh_web= #{sh_web},
-			sh_tel= #{sh_tel},sh_cate= #{sh_cate},sh_content= #{sh_content}, 
-			sh_summary= #{sh_summary},sh_operTime= #{sh_operTime},
-			sh_brTime= #{sh_brTime}, sh_img1= #{sh_img1}, sh_img2=#{sh_img2}, 
-			sh_img3=#{sh_img3} ,sh_img4= #{sh_img4},
-			sh_img5= #{sh_img5} , recru_sub=#{recru_sub} ,recru_con=  #{recru_con},
-			sh_count= #{sh_count},sh_pick= #{sh_pick}, s_id= #{s_id} 
-			where sh_id=#{sh_id}
-	</update> -->
-	
-	<!-- <delete id="delete" parameterType="int">
-		delete from dept where deptno=#{deptno}
-	</delete> -->
+		
+
 	<insert id="insert" parameterType="menu">
 		<selectKey keyProperty="it_id" order="BEFORE" resultType="int">
 			select ifnull(max(it_id), 0)+1  it_id from menu

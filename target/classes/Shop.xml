@@ -39,11 +39,8 @@
 			sh_img3=#{sh_img3},sh_img4= #{sh_img4},
 			sh_img5= #{sh_img5}, sh_img6= #{sh_img6}
 			where sh_id=#{sh_id}
-	</update> 
+	</update> 	
 	
-	<!-- <delete id="delete" parameterType="int">
-		delete from dept where deptno=#{deptno}
-	</delete> -->
 	<insert id="insert" parameterType="shop">
 	<selectKey keyProperty="sh_id" order="BEFORE" resultType="int">
 		select ifnull(max(sh_id), 0)+1 sh_id from shop

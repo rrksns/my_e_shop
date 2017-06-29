@@ -30,11 +30,11 @@
   	  	  <div class="selBtnWrap">
   	  	  	<div class="sel_btn fl_L">
   	  	  	  <input type="radio" id="basic" name="select" title="일반회원가입">
-  	  	  	  <label for="basic"><a href="userLoginForm.go">일반회원</a></label>
+  	  	  	  <label for="basic"><a href="u_joinForm.go">일반회원</a></label>
   	  	  	</div>
   	  	  	<div class="sel_btn fl_R">
   	  	  	  <input type="radio" id="shop" name="select" title="판매회원 가입">
-  	  	  	  <label for="shop"><a href ="sellerLoginForm.go">판매회원</a></label>
+  	  	  	  <label for="shop"><a href ="s_joinForm.go">판매회원</a></label>
   	  	  	</div>
   	  	  </div>
   	  	  <div class="btn_container">
