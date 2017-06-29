@@ -91,11 +91,10 @@
 				
 			</div>
 		</div>
-		<div>
-				<input type="submit" value="등록">&nbsp; 
-				<input type="reset"	value="취소">&nbsp;
-				<a href="sellerMain.go">돌아가기</a>		
-		</div>
+		<div class="nextBtnWrap">
+  	  	  	  <button class="prev_btn" type="button" onclick="history.go(-1)">이전으로</button>
+  	  	  	  <button class="next_btn" type="submit">다음으로</button>
+  	  	</div>
 	</form>
 </body>
 </html>

@@ -38,10 +38,10 @@
 			<td><input type="file" name="file6"></td>
 		</tr>
 		</table>		
-		<div>
-			<p><input type="submit" value="등록">&nbsp;
-			<a href="restaurantBasic.go">이전으로</a></p>		
-		</div>	
+		<div class="nextBtnWrap">
+  	  	  	  <button class="prev_btn" type="button" onclick="history.go(-1)">이전으로</button>
+  	  	  	  <button class="next_btn" type="submit">다음으로</button>
+  	  	</div>	
 	</form>
 </section>
 </body>

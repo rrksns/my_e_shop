@@ -30,12 +30,15 @@ public class MenuController {
 	@Autowired
 	ShopService sv;
 	
-	
+	@Autowired
+	SellerService ss;
 	
 	/*수동 or 자동 등록 선택 */
 	@RequestMapping("menuRegist")
 	public String menuRegist(Model model, HttpSession session) {
-		String s_id = (String)session.getAttribute("id"); //세션 가져오기
+		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);//세션 가져오기
 		Shop shop = sv.select(s_id); // s_id로 샵정보 가져오기		
 		model.addAttribute("shop", shop);// 샵의 정보를 모델에 넣어서 뿌리기
 		return "shop/menuRegist";
@@ -44,6 +47,8 @@ public class MenuController {
 	@RequestMapping(value="restaurantMenu", method = RequestMethod.GET)
 	public String restuarantMenu(Menu menu, HttpSession session, Model model) {
 		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
 		Shop shop = sv.select(s_id);
 		int sh_id = shop.getSh_id();
 		model.addAttribute("sh_id", sh_id);		
@@ -90,7 +95,10 @@ public class MenuController {
 	}
 	
 	@RequestMapping("restaurantMenuResult")
-	public String restaurantMenuResult(int sh_id, Model model) {
+	public String restaurantMenuResult(int sh_id, Model model, HttpSession session) {
+		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
 		model.addAttribute("sh_id", sh_id);
 		return "shop/restaurantDetail";
 	}

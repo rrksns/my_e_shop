@@ -29,7 +29,7 @@ public class ShopController {
 	/*샵 메인실행*/
 	@RequestMapping("shopMain")
 	public String shopMain(HttpSession session, Model model) {
-		String s_id = (String)session.getAttribute("s_id");
+		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
 		return "shop/shopMain";
@@ -72,6 +72,8 @@ public class ShopController {
 	@RequestMapping(value= "restaurantPicture", method = RequestMethod.GET)
 	public String restaurantPicture(Model model, HttpSession session) {
 		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);	
 		Shop shop = sv.select(s_id);
 		int sh_id = shop.getSh_id();
 		model.addAttribute("sh_id", sh_id);			
@@ -146,13 +148,14 @@ public class ShopController {
 		
 		sv.update(shop);		
 		int result = sv.update(shop);
-		Shop shop1 = sv.select(shop.getSh_id());
-		System.out.println("sh_id1="+shop.getSh_id());
-		System.out.println("sh_id2="+sh_id);
-		if (shop1==null) System.out.println("못읽음");
-		else System.out.println("sh_name = " + shop1.getSh_name());
+//		Shop shop1 = sv.select(shop.getSh_id());
+//		System.out.println("sh_id1="+shop.getSh_id());
+//		System.out.println("sh_id2="+sh_id);
+//		if (shop1==null) System.out.println("못읽음");
+//		else System.out.println("sh_name = " + shop1.getSh_name());
 		model.addAttribute("result", result);
-		model.addAttribute("shop", shop1);
+		model.addAttribute("sh_id", sh_id);	
+//		model.addAttribute("shop", shop1);
 		return "shop/menuRegist";
 	}
 	
