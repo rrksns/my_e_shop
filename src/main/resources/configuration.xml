@@ -11,6 +11,7 @@
 		<typeAlias alias="menu" type="aroundu.model.Menu" />
 		<typeAlias alias="shopDetail" type="aroundu.model.ShopDetail" />
 		<typeAlias alias="user" type="aroundu.model.User" />
+		<typeAlias alias="rb" type="aroundu.model.ReplyBoard"/>
 
 	</typeAliases>
 	
@@ -22,6 +23,7 @@
 		<mapper resource="Board.xml" />
 		<mapper resource="Menu.xml" />
 		<mapper resource="ShopDetail.xml" />
+		<mapper resource="ReplyBoard.xml"/>
 	</mappers>
 	
 </configuration>

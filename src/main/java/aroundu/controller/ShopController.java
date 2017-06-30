@@ -31,8 +31,8 @@ public class ShopController {
 	@Autowired 
 	ShopService sv;
 	
-	@Autowired
-	ShopDetailService sd;
+//	@Autowired
+//	ShopDetailService sd;
 	
 	@Autowired 
 	MenuService ms;
