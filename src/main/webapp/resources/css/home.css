@@ -1,13 +1,116 @@
 @CHARSET "UTF-8";
-.universe {
-	width:1100px;
-}
-header {
-	width:1000px;
-	margin:15px auto;
-	border:1px solid #f6f4e8;
-}
+/* 프레임 */
+.universe{width:1100px;background-color:white}
+.site-header{margin-bottom:10px}
+.contents{padding:0 30px}
+/* 전역 */
+section{border:1px solid #FF7D43;}
+.nav-list{display:inline-block}
 
-.mainMenu {
-	background-color:#f6f4e8;
+/* 헤더 스타일 */
+.top-cover {
+	height:45px;
+	line-height:45px;
+	color:white;
+	font-weight:bold;
+	padding:0 30px;
+	background-color:#FF7D43;
+}
+	.home-logo {
+		float:left;
+		width:150;
+		font-size:25px;
+	}
+	.user-nav {
+		float:right;
+		width:500px;
+		text-align:right;
+	}
+		.user-nav .nav-list {
+			line-height:25px;
+			margin-left:15px;
+		}
+			.user-nav .nav-list:hover{
+				color:black;
+				border-radius:10px;
+				background-color:#FFFBE2;
+			}
+.search {
+	width:500px;
+	margin:30px auto 50px auto;
+}
+	.sch-inp {
+		float:left;
+		width:460px;
+		height:40px;
+		font-size:18px;
+		font-weight:bold;
+		padding-left:10px;
+		border:2px solid #FF7D43;
+	}
+	.sch-btn {
+		width:40px;
+		height:40px;
+		border:none;
+		background:url(../img/search.png) no-repeat;
+	}
+.site-nav {
+	padding:0 30px;
+}
+	.site-nav ul {
+		height:45px;
+		line-height:45px;
+		border-bottom:2px solid #FF7D43;
+		background-color:#FFFBE2;
+	}
+		.site-nav .nav-list {
+			color:#FF7D43;
+			font-size:18px;
+			font-weight:bold;
+			text-align:center;
+			margin-right:20px;
+		}
+			.category {
+				display:block;
+				width:180px;
+				font-size:20px;
+				font-weight:bold;
+				color:white;
+				background-color:#FF7D43;
+			}
+				.category:visited {
+					color:white;
+				}
+				.cate-icon {
+					position:relative;
+					top:2px;
+					display:inline-block;
+					width:20px;
+					height:20px;
+					opacity:0.5;
+					background-image:url(../img/cate-icon.png);
+					background-size:contain;
+				}
+					.category:hover > .cate-icon {
+						opacity:1;
+					}
+/* 콘텐츠 스타일*/
+.a{
+	border:1px solid #FF7D43;
+	margin-bottom:10px;
+}
+.mapStyle {
+	float:left;
+	width:740px;
+	height:400px;
+	background:yellow;
+}
+.b {
+	padding:10px;
+}
+.shop {
+	display:inline-block;
+	width:196.5px;
+	height:150px;
+	border:1px solid #FF7D43;
 }
