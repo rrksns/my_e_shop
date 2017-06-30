@@ -158,6 +158,7 @@ rno int(20) primary key,
 replytext varchar(500),
 replyer varchar(50),
 regdate date,
-updatedate date,
-writerId varchar(20)
+updatedate date
 );
+
+select * from replyBoard;
