@@ -24,4 +24,16 @@ public class ReplyBoardDaoImpl implements ReplyBoardDao{
 		
 	}
 
+	@Override
+	public void update(ReplyBoard rb) {
+		rst.update("rbns.update",rb);
+		
+	}
+
+	@Override
+	public void delete(int rno) {
+		rst.delete("rbns.delete",rno);
+		
+	}
+
 }

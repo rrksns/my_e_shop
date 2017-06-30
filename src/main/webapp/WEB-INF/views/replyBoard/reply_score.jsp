@@ -17,12 +17,15 @@
 			var frmData = $('#frm').serialize(); 
 			$.post('sInsert.go',frmData,function(data){
 				$('#slist').html(data);
-				$('#textarea').val("");
+				$('#textarea').val("");		
 				
-			});
-				
+				/* function lst(){
+					$('#slist').load('slist.go'); */
+				}
+			});				
 		}); 
 	});
+	
 	
 
 	</script>

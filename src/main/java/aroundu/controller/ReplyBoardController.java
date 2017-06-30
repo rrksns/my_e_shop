@@ -23,21 +23,41 @@ public class ReplyBoardController {
 		return "replyBoard/reply_score";
 	}
 	@RequestMapping("slist")
-	public String slist(Model model){
+	public String slist(HttpSession session,Model model){
+		String r_id = (String)session.getAttribute("id");
 		List<ReplyBoard> slist = rbs.list();
 		model.addAttribute("slist", slist);
+		model.addAttribute("r_id",r_id);
 		return "replyBoard/slist";
 	}
 	@RequestMapping("sInsert")
-	public String sInsert(ReplyBoard rb, Model model) {
-		System.out.println(" ㅂㅂㅂ헐 ~");
+	public String sInsert(ReplyBoard rb,HttpSession session, Model model) {		
 		rbs.insert(rb);
+		String r_id = (String)session.getAttribute("id");
+		List<ReplyBoard> slist = rbs.list();
+		model.addAttribute("slist", slist);	
+		model.addAttribute("r_id",r_id);
+		return "replyBoard/slist";
+	}
+	@RequestMapping("repUpdate")
+	public String repUpdate(ReplyBoard rb,HttpSession session, Model model){
+		rbs.update(rb); //업데이트 함 
+		String r_id = (String)session.getAttribute("id");
 		List<ReplyBoard> slist = rbs.list();
 		model.addAttribute("slist", slist);
-		System.out.println(" 헐 ~"+slist.size());
+		model.addAttribute("r_id",r_id);	
 		return "replyBoard/slist";
 	}
 	
+	@RequestMapping("repDelete")
+	public String repDelete(ReplyBoard rb,HttpSession session, Model model){
+		rbs.delete(rb.getRno()); 
+		String r_id = (String)session.getAttribute("id");
+		List<ReplyBoard> slist = rbs.list();
+		model.addAttribute("slist", slist);
+		model.addAttribute("r_id",r_id);
+		return "replyBoard/slist";
+	}
 	
 
 		

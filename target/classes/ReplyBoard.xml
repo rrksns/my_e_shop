@@ -20,6 +20,15 @@
 		</selectKey>
 		insert into replyBoard values(#{rno},#{replytext},#{replyer},now(),now())
 	</insert>
+	
+	<update id="update" parameterType="rb">
+		update replyBoard set replytext=#{replytext},
+			updatedate=now() where rno=#{rno}
+	</update>
+	
+	<delete id="delete" parameterType="int">
+		delete from replyBoard where rno=#{rno}
+	</delete>
 
 <!-- <select id="list" parameterType="int" resultMap="rbResult">
 		select * from replyBoard where bno=#{bno} order by rno
@@ -33,13 +42,9 @@
 			#{replytext},#{replyer},sysdate,sysdate)
 	</insert>
 	
-	<delete id="delete" parameterType="int">
-		delete from replyBoard where rno=#{rno}
-	</delete>
 	
-	<update id="update" parameterType="rb">
-		update replyBoard set replytext=#{replytext},
-			updatedate=sysdate where rno=#{rno} 
+	
+	 
 			
 	</update> -->
 	
