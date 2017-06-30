@@ -26,12 +26,16 @@ public class ReplyBoardController {
 	public String slist(Model model){
 		List<ReplyBoard> slist = rbs.list();
 		model.addAttribute("slist", slist);
-		return "slist";
+		return "replyBoard/slist";
 	}
 	@RequestMapping("sInsert")
 	public String sInsert(ReplyBoard rb, Model model) {
+		System.out.println(" ㅂㅂㅂ헐 ~");
 		rbs.insert(rb);
-		return "redirect:slist";
+		List<ReplyBoard> slist = rbs.list();
+		model.addAttribute("slist", slist);
+		System.out.println(" 헐 ~"+slist.size());
+		return "replyBoard/slist";
 	}
 	
 	

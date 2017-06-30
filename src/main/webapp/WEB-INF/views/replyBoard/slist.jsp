@@ -6,8 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<!-- <script type="text/javascript">
-$(function() {
+<script type="text/javascript">
+/* $(function() {
 	$('.edit1').click(function() {
 		var id  = $(this).attr('id'); //수정할 rno
 		var txt = $('#td_'+id).text();
@@ -24,17 +24,17 @@ function up(id){
 	$.post('${path}/repUpdate',formData,function(data){
 		$('#slist').html(data);
 	});
-}
+} */
 function lst(){
-	$('#slist').load('${path}/slist/num/${board.num}');
+	$('#slist').load('slist.go');
 }
-function del(rno,bno) {
+/* function del(rno,bno) {
 	var formData="rno="+rno+"&bno="+bno;
-	$.post("${path}/repDelete",formData, function(data) {
+	$.post("repDelete.go",formData, function(data) {
 		$('#slist').html(data);
-	});
-}
-</script> -->
+	}); 
+}*/
+</script>
 </head>
 <body>
 <div class="container" align="center">
@@ -45,10 +45,10 @@ function del(rno,bno) {
 <c:forEach var="rb" items="${slist}">
 	<tr><td>${rb.replyer}</td><td id="td_${rb.rno}">${rb.replytext}</td>
 		<td>${rb.updatedate }</td><td id="btn_${rb.rno}">
-	<c:if test="${rb.replyer==board.writer }">
+	<%-- <c:if test="${rb.replyer==board.writer }">
 		<input type="button" value="수정" class="edit1" id="${rb.rno}">
-		<input type="button" value="삭제" onclick="del(${rb.rno},${rb.bno})">
-	</c:if></td></tr>
+		<input type="button" value="삭제" onclick="del(${rb.rno})">
+	</c:if> --%></td></tr>
 </c:forEach>
 </table>
 </div>

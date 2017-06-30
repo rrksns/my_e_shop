@@ -162,3 +162,4 @@ updatedate date
 );
 
 select * from replyBoard;
+delete from replyBoard ;

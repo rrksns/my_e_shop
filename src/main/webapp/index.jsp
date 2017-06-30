@@ -8,7 +8,8 @@
 </head>
 <body>
 	<script type="text/javascript">
-	location.href="main.go"
+		location.href="main.go"; 
+		//location.href="slist.go";
 	</script>
 </body>
 </html>
