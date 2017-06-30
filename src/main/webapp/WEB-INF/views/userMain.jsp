@@ -14,7 +14,8 @@
 	<a href="u_logout.go">로그아웃</a>
 	<a href ="u_page.go">my page</a>
 	<a href ="U_shopMain.go">my e-shop</a>
-	<a href ="boardList.go">게시판</a>
+	<a href ="reply_score.go">댓글 및 평가</a>	
+	<a href ="boardList.go">Q&A</a>
 </div>
 
 
