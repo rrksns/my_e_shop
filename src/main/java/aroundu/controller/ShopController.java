@@ -14,17 +14,29 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import aroundu.model.Menu;
 import aroundu.model.Seller;
 import aroundu.model.Shop;
+import aroundu.model.ShopDetail;
+import aroundu.service.MenuService;
 import aroundu.service.SellerService;
+import aroundu.service.ShopDetailService;
 import aroundu.service.ShopService;
  
 @Controller
 public class ShopController {
 	@Autowired 
-	ShopService sv;
-	@Autowired 
 	SellerService ss;
+	
+	@Autowired 
+	ShopService sv;
+	
+	@Autowired
+	ShopDetailService sd;
+	
+	@Autowired 
+	MenuService ms;
+	
 	
 	/*샵 메인실행*/
 	@RequestMapping("shopMain")
@@ -47,8 +59,8 @@ public class ShopController {
 	public String restaurantBasic(Model model, HttpSession session) {
 		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
-		Shop shop =  sv.select(s_id);
 		model.addAttribute("seller", seller);
+		Shop shop =  sv.select(s_id);
 		model.addAttribute("shop", shop);
 		return "shop/restaurantBasic";
 	}
@@ -56,18 +68,20 @@ public class ShopController {
 	@RequestMapping(value= "restaurantBasic", method = RequestMethod.POST)
 	public String restaurantBasic(Shop shop, Model model,HttpSession session) {
 		String s_id = (String)session.getAttribute("id");
-		shop =  sv.select(s_id);
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
 		shop.setS_id(s_id);
 		if (shop.getDineIn() ==null) shop.setDineIn("n");
 		if (shop.getTakeOut() ==null) shop.setTakeOut("n");
 		if (shop.getDelivery() ==null) shop.setDelivery("n");
 		if (shop.getAllday_open() ==null) shop.setAllday_open("n");
+		System.out.println("con sh_name="+shop.getSh_name());
 		int result = sv.insert(shop);
 		model.addAttribute("result", result);
 		int sh_id = shop.getSh_id();
 		model.addAttribute("sh_id", sh_id);
-		Seller seller = ss.select(s_id);
-		model.addAttribute("seller", seller);
+		
+//		model.addAttribute("shop", shop);
 		return "shop/restaurantPicture";
 	}
 	/*샵 사진 등록 */
@@ -155,20 +169,24 @@ public class ShopController {
 		model.addAttribute("seller", seller);
 		model.addAttribute("result", result);
 		model.addAttribute("sh_id", sh_id);	
+		model.addAttribute("shop", shop);
 		return "shop/menuRegist";
 	}
 	
 	/*샵 View */
 	@RequestMapping(value= "shopView", method = RequestMethod.GET)
-	public String shopView(Model model, HttpSession session) {
-		String s_id = (String)session.getAttribute("id"); //세션 가져오기
+	public String shopView(Shop shop, Menu menu, ShopDetail shopDetail,
+			Model model, HttpSession session) {
+		String s_id = (String)session.getAttribute("id"); 
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
-		Shop shop = sv.select(s_id); //shopService에서 s_id가져오고 shop을 부르기
-		int sh_id = shop.getSh_id(); //shop의 sh_id 가져오기
+		shop = sv.select(s_id);	
+		int sh_id = shop.getSh_id(); 
 		String sh_name=shop.getSh_name();
 		model.addAttribute("sh_id", sh_id);	
 		model.addAttribute("sh_name", sh_name);
+//		model.addAttribute("shop", shop);
+//		System.out.println("가계 설명은"+shop.getSh_content());
 		return "shop/shopView";
 	}
 	/*샵 View */

@@ -13,8 +13,8 @@ body{background-color:#E6E6E6}
 </style>
 </head>
 <body>
-<input type="text" name="sh_id" value= "${sh_id}">
-<input type="text" name="sh_id" value= "${sh_name}">
+<input type="hidden" name="sh_id" value= "${sh_id}">
+<input type="hidden" name="sh_name" value= "${shop.sh_name}">
 <div class="universe">
   <div class="top-cover">
   	<span>
@@ -28,7 +28,7 @@ body{background-color:#E6E6E6}
   	  <div class="summary">
   	  	<div class="entry">
   	  	  <div class="shop-name">
-  	  	  	가계 이름${sh_name}
+  	  	  	${shop.sh_name}
   	  	  </div>
   	  	  <div class="grade">
   	  	  	<span class="gpa"></span>
@@ -40,7 +40,7 @@ body{background-color:#E6E6E6}
   	  	</div>
   	  	<div class="misc">
   	  	  <div class="misc-info">1.카테고리</div>
-  	  	  <div class="misc-info">2.운영시간</div>
+  	  	  <div class="misc-info">2.운영시간${shop.sh_operTimeS}~${shop.sh_operTimeE}</div>
   	  	  <div class="misc-info">3.해시태그</div>
   	  	</div>
   	  	<div class="service-type">
@@ -143,7 +143,7 @@ body{background-color:#E6E6E6}
   	  	  <span class="ad-info-icon"></span>
   	  	</div>
   	  	<div class="description">
-  	  	  <pre>가계 설명${sh_content}</pre>
+  	  	  <pre>${shop.sh_content}</pre>
   	  	</div>
   	  </div>
   	  <div class="employment">

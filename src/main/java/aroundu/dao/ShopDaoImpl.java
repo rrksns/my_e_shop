@@ -14,8 +14,7 @@ public class ShopDaoImpl implements ShopDao{
 	@Override
 	public int insert(Shop shop) {
 		// TODO Auto-generated method stub
-	
-
+		
 		return st.insert("Shopns.insert", shop);
 	}
 

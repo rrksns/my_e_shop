@@ -50,8 +50,9 @@ public class MenuController {
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
 		Shop shop = sv.select(s_id);
-		int sh_id = shop.getSh_id();
-		model.addAttribute("sh_id", sh_id);		
+		model.addAttribute("shop", shop);
+//		int sh_id = shop.getSh_id();
+//		model.addAttribute("sh_id", sh_id);	
 		return "shop/restaurantMenu";
 	}
 	/*메뉴 정보 및 샵 아이디 기입 */
@@ -100,6 +101,8 @@ public class MenuController {
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
 		model.addAttribute("sh_id", sh_id);
+		Shop shop = sv.select(s_id);
+		model.addAttribute("shop", shop);
 		return "shop/restaurantDetail";
 	}
 	

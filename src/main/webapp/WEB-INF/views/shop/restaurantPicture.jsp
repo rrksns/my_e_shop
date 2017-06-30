@@ -47,6 +47,7 @@
 			<form action="restaurantPicture.go" method="post"
 				enctype="multipart/form-data">
 				<input type="text" name="sh_id" value="${sh_id}">
+				<input type="text" name="sh_name" value="${shop.sh_name}">
 				<table>
 					<tr>
 						<th scope="row">메인사진</th>

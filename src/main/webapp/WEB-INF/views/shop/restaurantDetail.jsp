@@ -39,6 +39,7 @@
   	  <article class="misc_shopInfo">
   	  	<form action="restaurantDetail.go" method="post">
   	  	<input type="text" name="sh_id" value= "${sh_id}">
+  	  	<input type="text" name="sh_name" value="${shop.sh_name}">
   	  	
   	  	  <fieldset><legend class="hide">부가 정보</legend>
   	  	  	<h2>부가 정보 선택</h2>

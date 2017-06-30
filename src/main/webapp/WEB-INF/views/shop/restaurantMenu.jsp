@@ -74,7 +74,8 @@
 		<section>
 			<h2>메뉴 등록</h2>
 	<form action="restaurantMenu.go" method="post" name="form" enctype="multipart/form-data">
-		<input type="text" name="sh_id" value= "${sh_id}">
+		<input type="text" name="sh_id" value= "${shop.sh_id}">
+		<input type="text" name="sh_name" value="${shop.sh_name}">
 		<div class="tab">
 			<ul>
 				<li><a href="javascript_:showTabMenu(1)">메뉴그룹1</a></li>

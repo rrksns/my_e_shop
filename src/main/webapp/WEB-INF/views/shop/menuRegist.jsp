@@ -37,6 +37,8 @@
   	  	<h3 class="title"><img src="${path}/resources/img/home.png" width="25" height="25" alt=""> My e-Shop</h3>
   	  </div>
   	</header>
+  		<input type="text" name="sh_id" value= "${sh_id}">
+  	  	<input type="text" name="sh_name" value="${shop.sh_name}">
   	<section id="shopInfo_register">
   	  <article class="menu_shopInfo">
   	  	  <fieldset><legend class="hide">메뉴 등록</legend>

@@ -36,6 +36,7 @@ public class ShopDetailController {
 		Shop shop = sv.select(s_id); //shopService에서 s_id가져오고 shop을 부르기
 		int sh_id = shop.getSh_id(); //shop의 sh_id 가져오기
 		model.addAttribute("sh_id", sh_id);	
+		model.addAttribute("shop", shop);
 		return "shop/restaurantDetail";	
 		
 	}
