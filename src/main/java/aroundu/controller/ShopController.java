@@ -65,7 +65,9 @@ public class ShopController {
 		int result = sv.insert(shop);
 		model.addAttribute("result", result);
 		int sh_id = shop.getSh_id();
-		model.addAttribute("sh_id", sh_id);	
+		model.addAttribute("sh_id", sh_id);
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
 		return "shop/restaurantPicture";
 	}
 	/*샵 사진 등록 */
@@ -84,6 +86,8 @@ public class ShopController {
 	@RequestMapping(value="restaurantPicture", method = RequestMethod.POST)
 	public String restaurantPicture(int sh_id, Model model, Shop shop, HttpSession session,
 			HttpServletRequest request) throws IOException {
+		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);
 		shop.setSh_id(sh_id);
 		if(!shop.getFile1().isEmpty()){	
 			long date = new Date().getTime();
@@ -148,15 +152,30 @@ public class ShopController {
 		
 		sv.update(shop);		
 		int result = sv.update(shop);
-//		Shop shop1 = sv.select(shop.getSh_id());
-//		System.out.println("sh_id1="+shop.getSh_id());
-//		System.out.println("sh_id2="+sh_id);
-//		if (shop1==null) System.out.println("못읽음");
-//		else System.out.println("sh_name = " + shop1.getSh_name());
+		model.addAttribute("seller", seller);
 		model.addAttribute("result", result);
 		model.addAttribute("sh_id", sh_id);	
-//		model.addAttribute("shop", shop1);
 		return "shop/menuRegist";
+	}
+	
+	/*샵 View */
+	@RequestMapping(value= "shopView", method = RequestMethod.GET)
+	public String shopView(Model model, HttpSession session) {
+		String s_id = (String)session.getAttribute("id"); //세션 가져오기
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
+		Shop shop = sv.select(s_id); //shopService에서 s_id가져오고 shop을 부르기
+		int sh_id = shop.getSh_id(); //shop의 sh_id 가져오기
+		String sh_name=shop.getSh_name();
+		model.addAttribute("sh_id", sh_id);	
+		model.addAttribute("sh_name", sh_name);
+		return "shop/shopView";
+	}
+	/*샵 View */
+	@RequestMapping(value= "shopView", method = RequestMethod.POST)
+	public String shopView(Shop shop, Model model,HttpSession session) {
+
+		return "shop/shopView";
 	}
 	
 }

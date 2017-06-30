@@ -41,7 +41,7 @@ public class ShopDetailController {
 	}
 	/*부가정보 및 샵아이디 입력 */
 	@RequestMapping(value= "restaurantDetail", method = RequestMethod.POST)
-	public String restaurantBasic(int sh_id, ShopDetail shopDetail, Model model) {
+	public String restaurantBasic(int sh_id, Shop shop, ShopDetail shopDetail, Model model) {
 		shopDetail.setSh_id(sh_id);
 		if (shopDetail.getAloneMeal() ==null) shopDetail.setAloneMeal("n");
 		if (shopDetail.getBlanket() ==null) shopDetail.setBlanket("n");
@@ -53,7 +53,9 @@ public class ShopDetailController {
 		if (shopDetail.getToilet() ==null) shopDetail.setToilet("n");	
 		int result = sd.insert(shopDetail);
 		model.addAttribute("shopDetail", shopDetail);	
-		model.addAttribute("result", result);		
+		model.addAttribute("result", result);	
+		model.addAttribute("sh_id", sh_id);
+		model.addAttribute("shop", shop);
 		return "shop/shopView";	
 	}
 }

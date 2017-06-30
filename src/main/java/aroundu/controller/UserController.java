@@ -83,7 +83,7 @@ public class UserController {
 	/*나의 정보 수정*/
 	@RequestMapping("u_page")
 	public String u_page(Model model, HttpSession session){
-		String id = (String)session.getAttribute("u_id");
+		String id = (String)session.getAttribute("id");
 		User user = us.select(id);
 		model.addAttribute("user",user);
 		return "user/u_page";

@@ -1,0 +1,14 @@
+@charset "UTF-8";
+body {margin:0;background-color:#FFFBE2}
+a{text-decoration:none}a:visited{color:inherit}
+div{overflow:hidden}
+form{margin:0}fieldset{border:none;padding:0;margin:0}legend{display:none}
+input,button{outline:none;}
+button,label{cursor:pointer}
+ul{list-style:none;padding:0;margin:0}
+
+
+.universe {margin:0 auto;background-color:white}
+
+
+.hide{display:none}
