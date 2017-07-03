@@ -93,13 +93,26 @@ body{background-color:#E6E6E6}
   	  	  	  <span class="txt">대표 메뉴</span>
   	  	  	  <img src="${path}/resources/img/top-menu.png" width="50" height="50">
   	  	  	  <span class="txt">top3</span>
+  	  	  	  <span> ${menu.it_name}</span>
+  	  	  	  <span> ${menu.it_img1}</span>
+  	  	  	  <span> ${menu.it_price}</span>
   	  	  	</div>
   	  	  </div>
   	  	  <div class="menu-detail">
   	  	  	<ul>
-  	  	  	  <li></li>
+  	  	  	  <li>${shopDetail.smoking}</li>
+  	  	  	  <li>${shopDetail.freeWifi}</li>
+  	  	  	  <li>${shopDetail.toilet}</li>
+  	  	  	  <li>${shopDetail.parking}</li>
+  	  	  	  <li>${shopDetail.blanket}</li>
+  	  	  	  <li>${shopDetail.mobileCharge}</li>
   	  	  	</ul>
   	  	  </div>
+  	  	</div>
+  	  	<div> 
+  	  			<span> ${menu.it_name}</span>
+  	  	  	  <span> ${menu.it_img1}</span>
+  	  	  	  <span> ${menu.it_price}</span>
   	  	</div>
   	  	<div class="location">
   	  	  <p class="loc-txt">서울시 강남구 역삼동</p>

@@ -57,7 +57,11 @@ public class MenuController {
 	}
 	/*메뉴 정보 및 샵 아이디 기입 */
 	@RequestMapping(value="restaurantMenu", method = RequestMethod.POST)
-	public String restuarantMenu(int sh_id, Menu menu, Model model, HttpServletRequest request) throws IOException {
+	public String restuarantMenu(int sh_id, Shop shop, Menu menu, Model model, 
+			HttpServletRequest request, HttpSession session) throws IOException {
+		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
 		menu.setSh_id(sh_id);
 		if(!menu.getMenu1().isEmpty()){	
 			long date = new Date().getTime();
@@ -91,18 +95,24 @@ public class MenuController {
 		}	
 		int result = ms.insert(menu);
 		model.addAttribute("result", result);
+		model.addAttribute("menu", menu);
 		model.addAttribute("sh_id", sh_id);
+		shop = sv.select(s_id);
+		model.addAttribute("shop", shop);
+		System.out.println("[사진입력 결과]가계 설명은"+shop.getSh_content());
 		return "shop/restaurantMenuResult";
 	}
 	
 	@RequestMapping("restaurantMenuResult")
-	public String restaurantMenuResult(int sh_id, Model model, HttpSession session) {
+	public String restaurantMenuResult(int sh_id, Menu menu, Model model, HttpSession session) {
 		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
+		model.addAttribute("menu", menu);
 		model.addAttribute("sh_id", sh_id);
 		Shop shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
+		System.out.println("[메뉴 결과]가계 설명은"+shop.getSh_content());
 		return "shop/restaurantDetail";
 	}
 	

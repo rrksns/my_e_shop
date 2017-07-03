@@ -31,8 +31,8 @@ public class ShopController {
 	@Autowired 
 	ShopService sv;
 	
-//	@Autowired
-//	ShopDetailService sd;
+	@Autowired
+	ShopDetailService sd;
 	
 	@Autowired 
 	MenuService ms;
@@ -169,7 +169,9 @@ public class ShopController {
 		model.addAttribute("seller", seller);
 		model.addAttribute("result", result);
 		model.addAttribute("sh_id", sh_id);	
+		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
+		System.out.println("[사진입력 결과]가계 설명은"+shop.getSh_content());
 		return "shop/menuRegist";
 	}
 	
@@ -180,6 +182,14 @@ public class ShopController {
 		String s_id = (String)session.getAttribute("id"); 
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
+		int it_id=menu.getIt_id();
+		menu = ms.select(it_id);
+		model.addAttribute("it_id",it_id);
+		System.out.println("[마지막] 메뉴정보"+menu.getIt_name());
+		int sh_detailId=shopDetail.getSh_detailId();
+		menu = ms.select(sh_detailId);
+		model.addAttribute("sh_detailId",sh_detailId);
+		System.out.println("[마지막] 부가정보"+shopDetail.getFreeWifi());
 		shop = sv.select(s_id);	
 		int sh_id = shop.getSh_id(); 
 		String sh_name=shop.getSh_name();

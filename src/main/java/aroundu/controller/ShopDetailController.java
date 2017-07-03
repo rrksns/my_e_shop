@@ -30,7 +30,7 @@ public class ShopDetailController {
 	/*부가정보 및 샵아이디받기 */
 	@RequestMapping(value= "restaurantDetail", method = RequestMethod.GET)
 	public String restaurantDetail(ShopDetail shopDetail, Model model, HttpSession session) {
-		String s_id = (String)session.getAttribute("id"); //세션 가져오기
+		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
 		Shop shop = sv.select(s_id); //shopService에서 s_id가져오고 shop을 부르기
@@ -42,7 +42,11 @@ public class ShopDetailController {
 	}
 	/*부가정보 및 샵아이디 입력 */
 	@RequestMapping(value= "restaurantDetail", method = RequestMethod.POST)
-	public String restaurantBasic(int sh_id, Shop shop, ShopDetail shopDetail, Model model) {
+	public String restaurantBasic(int sh_id, Shop shop, ShopDetail shopDetail, 
+			Model model, HttpSession session) {
+		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
 		shopDetail.setSh_id(sh_id);
 		if (shopDetail.getAloneMeal() ==null) shopDetail.setAloneMeal("n");
 		if (shopDetail.getBlanket() ==null) shopDetail.setBlanket("n");
@@ -56,7 +60,10 @@ public class ShopDetailController {
 		model.addAttribute("shopDetail", shopDetail);	
 		model.addAttribute("result", result);	
 		model.addAttribute("sh_id", sh_id);
+		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
+		System.out.println("[샵 부가정보]가계 설명은"+shop.getSh_content());
+		
 		return "shop/shopView";	
 	}
 }

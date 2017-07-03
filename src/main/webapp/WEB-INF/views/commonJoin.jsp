@@ -16,12 +16,12 @@
   	  <a class="home_logo" href="main.go" title="메인화면으로">AROUND U</a>
   	</div>
   	<div class="titleWrap_H">
-  	  <h2 class="title box">회원 유형을 선택하세요</h2>
+  	  <h2 class="title box">회원가입</h2>
   	</div>
   </header>
   <section id="subscriptionType">
   	<p class="txt">Around U에 오신 것을 환영합니다.</p>
-  	<p class="txt small">회원유형을 선택하신 후 로그인하세요.</p>
+  	<p class="txt small">회원유형을 선택하신 후 회원가입 하세요.</p>
   	<div class="select_container">
   	  <div class="titleWrap_C">
   	  	<h3 class="title">회원 유형을 선택하세요</h3>

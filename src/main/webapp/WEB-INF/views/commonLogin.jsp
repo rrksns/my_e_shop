@@ -16,7 +16,7 @@
   	  <a class="home_logo" href="main.go" title="메인화면으로">AROUND U</a>
   	</div>
   	<div class="titleWrap_H">
-  	  <h2 class="title box">회원 유형을 선택하세요</h2>
+  	  <h2 class="title box">로그인</h2>
   	</div>
   </header>
   <section id="subscriptionType">
