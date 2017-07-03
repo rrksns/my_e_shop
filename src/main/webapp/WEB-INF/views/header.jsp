@@ -8,5 +8,7 @@
 <link href="${path}/css/bootstrap.min.css" rel="stylesheet">
 <script src="${path}/js/jquery.js"></script>
 <script src="${path}/js/bootstrap.min.js"></script>
+<script src="${path}/js/jquery-1.11.3.min.js"></script>
+<script src="${path}/js/star.js"></script>
 <style>	.err { color: red; font-size: 20px;  } </style>
 
