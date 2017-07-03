@@ -94,7 +94,7 @@ body{background-color:#E6E6E6}
   	  	  	  <img src="${path}/resources/img/top-menu.png" width="50" height="50">
   	  	  	  <span class="txt">top3</span>
   	  	  	  <span> ${menu.it_name}</span>
-  	  	  	  <span> ${menu.it_img1}</span>
+  	  	  	  <span> <img src="/menuPic/upload/${menu.it_img1}"></span>
   	  	  	  <span> ${menu.it_price}</span>
   	  	  	</div>
   	  	  </div>
@@ -111,12 +111,12 @@ body{background-color:#E6E6E6}
   	  	</div>
   	  	<div> 
   	  			<span> ${menu.it_name}</span>
-  	  	  	  <span> ${menu.it_img1}</span>
+  	  	  	  <span> <img src="menuPic/upload/${menu.it_img1}"></span>
   	  	  	  <span> ${menu.it_price}</span>
   	  	</div>
   	  	<div class="location">
-  	  	  <p class="loc-txt">서울시 강남구 역삼동</p>
-  	  	  <p class="loc-txt">[지번]서울시 서대문구</p>
+  	  	  <p class="loc-txt">${shop.sh_addr1}</p>
+  	  	  <p class="loc-txt">${shop.sh_addr2}</p>
   	  	  <div class="loc-img">
   	  	  </div>
   	  	</div>
