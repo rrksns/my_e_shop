@@ -58,6 +58,15 @@ public class ReplyBoardController {
 		model.addAttribute("r_id",r_id);
 		return "replyBoard/slist";
 	}
+	@RequestMapping("score")
+	public String score(){
+		return "replyBoard/score";
+	}
+	@RequestMapping("input_score")
+	public String in_score(){
+		return "replyBoard/in_score";
+	}
+	
 	
 
 		

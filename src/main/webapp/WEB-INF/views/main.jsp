@@ -8,10 +8,12 @@
 <title>Around U</title>
 <link rel="stylesheet" href="${path}/resources/css/alll.css">
 <link rel="stylesheet" href="${path}/resources/css/home.css">
+
 </head>
 <body>
 	<div class="universe">
 		<header class="site-header">
+		
 			<div class="top-cover">
 				<div class="home-logo">
 					<a href="main.go" rel="home">AROUND U</a>
@@ -50,10 +52,11 @@
 				</ul>
 			</nav>
 		</header>
+			
 		<div class="contents" role="main">
 			<div class="a">
 				<div class="mapStyle">
-					<div id="map" style="width:740px;height:400px;"></div>
+						<div id="map" style="width:740px;height:400px;"></div>
 						<div>
 						<script src="//apis.daum.net/maps/maps3.js?apikey=f6eed7143332943349595b742f572fde"></script>
 						<script type="text/javascript">
@@ -122,6 +125,7 @@
 						}    
 						</script>
 						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -133,7 +137,7 @@
 				<article class="shop"></article>
 			</section>
 		</div>
-		<footer> </footer>
+		<footer>	 </footer>
 	
 </body>
 </html>
