@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>My Shop 등록 : 로드 샵</title>
-<link rel="stylesheet" href="${path}/resources/css/all.css">
+<%-- <link rel="stylesheet" href="${path}/resources/css/all.css">  --%>
 <link rel="stylesheet" href="${path}/resources/css/myshop.css">
 
 </head>

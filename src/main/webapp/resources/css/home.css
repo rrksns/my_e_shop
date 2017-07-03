@@ -1,13 +1,13 @@
-@CHARSET "UTF-8";
-/* 프레임 */
+ @CHARSET "UTF-8";
+프레임
 .universe{width:1100px;background-color:white}
 .site-header{margin-bottom:10px}
 .contents{padding:0 30px}
-/* 전역 */
+전역
 section{border:1px solid #FF7D43;}
 .nav-list{display:inline-block}
 
-/* 헤더 스타일 */
+헤더 스타일
 .top-cover {
 	height:45px;
 	line-height:45px;
@@ -94,7 +94,7 @@ section{border:1px solid #FF7D43;}
 					.category:hover > .cate-icon {
 						opacity:1;
 					}
-/* 콘텐츠 스타일*/
+콘텐츠 스타일
 .a{
 	border:1px solid #FF7D43;
 	margin-bottom:10px;
@@ -113,4 +113,4 @@ section{border:1px solid #FF7D43;}
 	width:196.5px;
 	height:150px;
 	border:1px solid #FF7D43;
-}
+} 

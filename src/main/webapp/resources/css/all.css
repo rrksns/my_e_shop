@@ -6,36 +6,25 @@ input[type="checkbox"]{display:none}
 	overflow:hidden;
 	margin:0 auto;
 	background-color:white;
-}
+} 
 
 .box {
 	display:block;
 	float:left;
-}
+} 
 
 .hide {
 	display:none;
-}
+} 
 
 .txt_small{font-size:small}
-.txt_big{font-size:x-large}
+.txt_big{font-size:x-large} 
 
 .fl_L{float:left}
-.fl_R{float:right}
+.fl_R{float:right}  
 
 
-/* 별점주기 */
-.star_rating {font-size:0; letter-spacing:-4px;}
-.star_rating a {
-    font-size:22px;
-    letter-spacing:0;
-    display:inline-block;
-    margin-left:5px;
-    color:#ccc;
-    text-decoration:none;
-}
-.star_rating a:first-child {margin-left:0;}
-.star_rating a.on {color:#777;}
+
 
 
 

@@ -1,65 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@include file="header.jsp"%>
-<!DOCTYPE html>
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Around U</title>
-
-<link rel="stylesheet" href="${path}/resources/css/alll.css">
-<link rel="stylesheet" href="${path}/resources/css/home.css">
+<title>Insert title here</title>
 </head>
 <body>
-	<div class="universe">
-		<header class="site-header">
-		
-			<div class="top-cover">
-				<div class="home-logo">
-					<a href="main.go" rel="home">AROUND U</a>
-				</div>
-				<nav class="user-nav">
-					<ul>
-						<li class="nav-list"><a href="commonLogin.go">로그인</a></li>
-						<li class="nav-list"><a href="commonJoin.go">회원가입</a></li>
-						<li class="nav-list"><a href="commonLogin.go">my page</a></li>
-						<li class="nav-list"><a href="commonLogin.go">my e-shop</a></li>
-						<li class="nav-list"><a href="boardList.go">Q&A</a></li>
-					</ul>
-				</nav>
-			</div>
-			<div class="search">
-				<h2 class="hide">검색</h2>
-				<form action="" method="get" accept-charset="utf-8" role="search">
-					<fieldset>
-						<legend>통합 검색</legend>
-						<input class="sch-inp" type="search" title="검색어 입력"
-							autocomplete="off" autofocus>
-						<button class="sch-btn" type="submit">
-							<span class="hide">검색</span>
-						</button>
-					</fieldset>
-				</form>
-			</div>
-			<nav class="site-nav" role="navigation">
-				<h2 class="hide">사이트 바로가기</h2>
-				<ul>
-					<li class="nav-list"><a class="category" href=""
-						title="카테고리 검색"><span class="cate-icon"></span> 전체 카테고리</a></li>
-					<li class="nav-list"><a href="">로드샵</a></li>
-					<li class="nav-list"><a href="">온라인샵</a></li>
-					<li class="nav-list"><a href="">중고마켓</a></li>
-				</ul>
-			</nav>
-		</header>
-			
-		<div class="contents" role="main">
-			<div class="a">
-				<div class="mapStyle">
-						<div id="map" style="width:740px;height:400px;"></div>
-						<div>
-						<script src="//apis.daum.net/maps/maps3.js?apikey=f6eed7143332943349595b742f572fde"></script>
-						<script type="text/javascript">
+<div id="map" style="width:750px;height:350px;"></div>
+					<div>
+					<script src="//apis.daum.net/maps/maps3.js?apikey=f6eed7143332943349595b742f572fde"></script>
+					<script type="text/javascript">
 						var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
 						mapOption = { 
 						    center: new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -125,18 +76,5 @@
 						}    
 						</script>
 						</div>
-					</div>
-				</div>
-			</div>
-			<section class="b">
-				<article class="shop"></article>
-				<article class="shop"></article>
-				<article class="shop"></article>
-				<article class="shop"></article>
-				<article class="shop"></article>
-			</section>
-		</div>
-		<footer>	 </footer>
-	
 </body>
 </html>
