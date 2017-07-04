@@ -1,0 +1,259 @@
+@CHARSET "UTF-8";/* 로드샵 */
+/* 전체 */
+p,h1,h2,h3,h4{margin:0}h4,dl{padding-bottom:3px;border-bottom:1px solid #4A7EBB}
+/* 프레임 */
+.universe {width:1100px}
+.top-cover{height:45px;text-align:right;padding-right:30px;background-color:#FFC000}
+.main-frame{float:right;width:755px;padding-right:30px;padding-top:10px}
+.side-frame{float:left;width:255px;padding-left:30px;padding-top:10px}
+/* 탑 커버 부분 */
+.bookmark_btn {
+	font-weight:bold;
+	margin-right:20px;
+}
+	.bookmark_btn::before {
+		position:relative;
+		top:5px;
+		display:inline-block;
+		width:20px;
+		height:20px;
+		content:'';
+		margin-right:5px;
+		background:url("../img/chk_btn.png") 0 0 no-repeat;
+	}
+	#bookmark:checked ~ .bookmark_btn::before {
+		background-position:-20px 0;
+	}
+.coupon_btn {
+	width:100px;
+	font-size:16px;
+	font-weight:bold;
+	border:none;
+}
+	.img {
+		position:relative;
+		top:10px;
+		display:inline-block;
+		width:32px;
+		height:32px;
+		margin-right:5px;
+		background:url("../img/misc_icon_small.png") 0 0 no-repeat;
+	}
+/* 메인(헤더) */
+.summary {
+	margin-bottom:5px;
+}
+.entry,.open-closed,.misc,.service-type{float:left}
+.entry {
+	width:180px;
+	text-align:center;
+	font-size:25px;
+	font-weight:bold;
+}
+	.shop-name {
+		margin-bottom:5px;
+	}
+	.grade {
+		width:120px;
+		height:24px;
+		margin-left:30px;
+		background:url(../img/grade-icon.png) 0 0 repeat-x;
+	}
+		.gpa {
+			display:block;
+			width:0%;
+			height:24px;
+			background:url(../img/grade-icon.png) 0 -24px repeat-x;
+		}
+.open-closed {
+	width:50px;
+	font-size:14px;
+	text-align:center;
+	margin-right:20px;
+	margin-top:5px;
+}
+	.sign {
+		position:relative;
+		left:9px;
+		display:block;
+		width:32px;
+		height:32px;
+		background-image:url(../img/misc_icon_small.png);
+	}
+		.open {
+			background-position:0 -64px;
+		}
+		.closed {
+			background-position:-32px -64px;
+		}
+	.open-closed .txt {
+		display:block;
+	}
+.misc {
+	width:300px;
+	font-size:14px;
+	margin-right:10px;
+}
+	.misc-info {
+		margin-bottom:5px;
+		background:beige;
+	}
+.service-type {
+	width:195px;
+}
+	.allday {
+		float:left;
+		width:80px;
+	}
+		.allday-icon {
+			position:relative;
+			left:8px;
+			display:block;
+			width:64px;
+			height:64px;
+			background:url(../img/top-menu.png);
+			background-size:contain;
+		}
+	.misc-type {
+		float:left;
+		width:115px;
+	}
+		.type-style {
+			position:relative;
+			left:12.75px;
+			display:inline-block;
+			float:left;
+			width:50%;
+			height:32px;
+			margin-bottom:5px;
+			background:url(../img/top-menu.png) no-repeat;
+			background-size:contain;
+		}
+.banner {
+	margin-bottom:10px;
+}
+/* 메인(콘텐츠) */
+.menu {
+	float:left;
+	width:490px;
+}
+	.menu-cate {
+		list-style-type:none;
+		padding:0;
+		margin:0;
+	}
+		.menu-cate dt, dd {
+			display:inline-block;
+		}
+		.menu-cate dt {
+			font-size:20px;
+			font-weight:bold;
+		}
+		.menu-cate dd {
+			cursor:pointer;
+			margin-right:20px;
+		}
+		.menu-cate dd:hover {
+			color:white;
+			background-color:#4A7EBB;
+		}
+	.signature-menu {
+		width:100%;
+		height:118px;
+		margin-top:5px;
+		border-bottom:1px solid #4A7EBB
+	}
+		.menu_ea {
+			display:inline-block;
+			height:118px;
+		}
+			.menu-info {
+				display:none;
+				position:relative;
+				top:-60px;
+				width:118px;
+				font-weight:bold;
+				text-align:center;
+			}
+			.menu-img:hover ~ .menu-info {
+				display:inline-block;
+			}
+		.signature-menu .description {
+			display:inline-block;
+			width:118px;
+			height:118px;
+			text-align:center;
+			font-weight:bold;
+		}
+		.description .txt {
+			display:block;
+			margin-bottom:10px;
+		}
+.location {
+	float:right;
+	width:250px;
+}
+	.loc-txt {
+		font-size:14px;
+		font-weight:bold;
+	}
+	.loc-img {
+		height:250px;
+		background:lime;
+	}
+/* 사이드 */
+.hits {
+	font-size:14px;
+	font-weight:bold;
+	margin-bottom:40px;
+}
+	.ft_wt {
+		font-weight:normal;
+	}
+.sns {	
+}
+	.linked {
+		display:inline-block;
+		width:32px;
+		height:32px;
+		background-image:url(../img/misc_icon_small.png);
+	}
+		.facebook {
+			background-position:0 -96px;
+		}
+		.instagram {
+			background-position:-32px -96px;
+		}
+		.twitter {
+			background-position:-64px -96px;
+		}
+.photo {
+	height:235px;
+	margin-bottom:10px;
+}
+	.main-photo {
+		height:180px;
+		margin-bottom:5px;
+		background:black;
+	}
+	.sub-photo {
+		height:50px;
+		background:yellow;
+	}
+.shop-description {
+	margin-bottom:10px;
+}
+	.ad-info {
+		margin:5px 0;
+	}
+		.ad-info-icon {
+			display:inline-block;
+			width:31.5px;
+			height:31.5px;
+			background:url(../img/misc_icon_small.png) no-repeat;
+		}
+.employment {
+}
+	.publish {
+		opacity:0.5;
+	}

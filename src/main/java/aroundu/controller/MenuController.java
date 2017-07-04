@@ -94,6 +94,7 @@ public class MenuController {
 			menu.setIt_img3(fname);				
 		}	
 		int result = ms.insert(menu);
+		
 		model.addAttribute("result", result);
 		model.addAttribute("menu", menu);
 		model.addAttribute("sh_id", sh_id);

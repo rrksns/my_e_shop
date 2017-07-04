@@ -1,0 +1,108 @@
+@CHARSET "UTF-8";/* 로그인 */
+.universe {width:900px;height:420px;margin-top:80px}button{cursor:pointer}input[type="checkbox"]{display:none}
+/* 로그인 섹션 스타일 */
+.login {
+	width:820px;
+	height:360px;
+	margin:20px auto;
+}
+	.login header {
+		width:100%;
+		height:40px;
+		border-bottom:thick solid #ff7d43;
+	}
+		.home_logo {
+			line-height:40px;
+			font-size:25px;
+			font-weight:bold;
+			color:#ff7d43;
+		}
+	
+	.titleWrap {
+		width:100%;
+		height:45px;
+		margin-top:40px;
+	}
+		.title {
+			margin:0; padding:0;
+			margin-left:10px;
+			line-height:45px;
+		}
+		
+	.userInfoWrap {
+		width:100%;
+		height:110px;
+		margin-top:40px;
+	}
+		.inputWrap {
+			float:left;
+			width:490px;
+			height:80px;
+			font-size:14px;
+			font-weight:bold;
+			margin-left:10px;
+		}
+			.inputWrap input {
+				width:405px;
+				height:35px;
+				margin-left:10px
+			}
+			.inputWrap label {
+				line-height:35px;
+			}
+			#id {
+				margin:0 0 8px 24px;
+			}
+		.log_btn {
+			width:140px;
+			height:80px;
+			font-size:25px;
+			font-weight:bold;
+			color:white;
+			border:none;
+			border-radius:20px;
+			background-color:#ff7d43;
+		}
+		
+		.saveIdWrap {
+			width:405px;
+			height:30px;
+			margin-left:80px;
+			line-height:30px;
+		}
+			.chk_btn {
+				display:inline-block;
+				cursor:pointer;
+				font-size:14px;
+				font-weight:bold;
+				color:#9E9C9C;
+			}
+			.chk_btn::before {
+				position:relative;
+				top:4px;
+				display:inline-block;
+				width:20px;
+				height:20px;
+				background:url(../img/check.png) 0 0 no-repeat;
+				margin-right:4px;
+				content:'';
+			}
+			.saveIdWrap input[type="checkbox"]:checked + .chk_btn::before {
+				background-position:-20px 0;
+			}
+			
+		.miscWrap {
+			font-size:14px;
+			font-weight:bold;
+			color:000000;
+			margin-top:30px; margin-left:135px;
+		}
+			.miscWrap a:hover{
+				text-decoration:underline
+			}
+			.miscWrap a:visited {
+				color:black;
+			}
+			.txt_bar {
+				margin:0 15px;
+			}
