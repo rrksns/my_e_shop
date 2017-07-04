@@ -153,7 +153,12 @@ public class MenuController {
 	@RequestMapping("mDelete")
 	public String mDelete(Menu menu){
 		ms.delete(menu.getIt_id()); 
-		return "redirect : mlist"; 
+		return "redirect:mlist.go"; 
+	}
+	@RequestMapping("mUpdate")
+	public String mUpdate(Menu menu){
+		ms.update(menu);
+		return "redirect:mlist.go";
 	}
 	
 }

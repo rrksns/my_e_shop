@@ -20,4 +20,7 @@ public interface MenuService {
 
 	void delete(int it_id);
 
+
+	void update(Menu menu);
+
 }

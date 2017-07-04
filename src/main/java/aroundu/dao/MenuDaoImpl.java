@@ -40,4 +40,10 @@ public class MenuDaoImpl implements MenuDao{
 		st.delete("Menuns.delete",it_id);
 	}
 
+	@Override
+	public void update(Menu menu) {
+		st.update("Menuns",menu);
+		
+	}
+
 }

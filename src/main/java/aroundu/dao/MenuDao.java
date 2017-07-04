@@ -16,6 +16,8 @@ public interface MenuDao {
 
 	void delete(int it_id);
 
+	void update(Menu menu);
+
 	
 
 }

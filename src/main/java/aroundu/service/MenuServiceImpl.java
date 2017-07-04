@@ -40,6 +40,12 @@ public class MenuServiceImpl implements MenuService{
 		
 	}
 
+	@Override
+	public void update(Menu menu) {
+		md.update(menu);
+		
+	}
+
 
 
 }

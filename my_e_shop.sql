@@ -88,6 +88,8 @@ alter table shop add dineIn VARCHAR(1);
 alter table shop add delivery VARCHAR(1);
 
 alter table shop add foreign key (s_id) references seller(s_id);
+delete from shop ;
+
 
 drop table board;
 select *from board;
@@ -127,6 +129,7 @@ sh_id int(20)
 alter table menu add foreign key(sh_id) references shop(sh_id);
 
 select * from menu;
+delete from menu;
 alter table board add top3 varchar(1);
 
 alter table menu add foreign key (sh_id) references shop(sh_id);

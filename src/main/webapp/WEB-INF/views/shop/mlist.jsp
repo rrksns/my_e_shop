@@ -9,29 +9,27 @@
  <script type="text/javascript">
   $(function() {
 	$('.edit1').click(function() {
-		var id  = $(this).attr('it_id'); //수정할 id
-		var it_price = $(this).attr('it_price'); //수정할 가격
+		var it_id  = $(this).attr('it_id'); //수정할 id
 		var it_cont = $('#td_'+id).text();
-		var it_img1 = $(this).attr('it_img1');
+	/* 	var it_img1 = $(this).attr('it_img1');
 		var it_img2 = $(this).attr('it_img2');
-		var it_img3 = $(this).attr('it_img3');
-		$('#td_'+id).html("<textarea rows='1' cols='80' id='tt_"+id+"'>"+it_cont
+		var it_img3 = $(this).attr('it_img3'); */
+		$('#td_'+it_id).html("<textarea rows='1' cols='80' id='tt_"+it_id+"'>"+it_cont
 			+"</textarea>");
-		$('#btn_'+id).html(
-			"<input type='button' value='확인' onclick='up("+id+")'>"+
+		$('#btn_'+it_id).html(
+			"<input type='button' value='확인' onclick='up("+it_id+")'>"+
 			"<input type='button' value='취소' onclick='lst()'>");
 	});
 });
-function up(id){
-	var it_name
-	var it_price
-	var it_cont
-	var it_img1
+function up(it_id){
+	var it_name ="${menu.it_name}";
+	var it_price="${menu.it_price}";	
+	/* var it_img1
 	var it_img2
-	var it_img3	
-	var it_cont = $('#tt_'+id).val();
-	var formData = "it_id="+id+'&it_cont='+it_cont;
-	$.post('repUpdate.go',formData,function(data){
+	var it_img3	 */
+	var it_cont = $('#tt_'+it_id).val();
+	var formData = "it_id="+it_id+'&it_name'+it_name+'&it_price'+it_price+'&it_cont='+it_cont;
+	$.post('mUpdate.go',formData,function(data){
 		$('#mlist').html(data);
 	});
 } 
@@ -39,8 +37,9 @@ function lst(){
 	$('#mlist').load('mlist.go');
 }
  function del(it_id) {
-	var formData="it_id="+id;
+	var formData="it_id="+it_id;
 	$.post("mDelete.go",formData, function(data) {
+		alert('1');
 		$('#mlist').html(data);
 	}); 
 }
