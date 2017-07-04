@@ -50,8 +50,17 @@ public class MenuController {
 		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
-		Shop shop = sv.select(s_id);
+		Shop shop = sv.select(s_id); 
+		int sh_id = shop.getSh_id(); 
+		model.addAttribute("sh_id", sh_id);	
 		model.addAttribute("shop", shop);
+		
+		/*String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
+		Shop shop = sv.select(s_id);
+		model.addAttribute("shop", shop);*/
+		
 //		int sh_id = shop.getSh_id();
 //		model.addAttribute("sh_id", sh_id);	
 		return "shop/restaurantMenu";
@@ -95,13 +104,20 @@ public class MenuController {
 			menu.setIt_img3(fname);				
 		}	
 		int result = ms.insert(menu);
-		
-		model.addAttribute("result", result);
-		model.addAttribute("menu", menu);
+		model.addAttribute("menu", menu);	
+		model.addAttribute("result", result);	
 		model.addAttribute("sh_id", sh_id);
 		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
-		System.out.println("[사진입력 결과]가계 설명은"+shop.getSh_content());
+		
+		
+		
+/*		model.addAttribute("result", result);
+		model.addAttribute("menu", menu);
+		model.addAttribute("sh_id", sh_id);
+		shop = sv.select(s_id);
+		model.addAttribute("shop", shop);*/
+		
 		return "shop/restaurantMenuResult";
 	}
 	

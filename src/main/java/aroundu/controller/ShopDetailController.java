@@ -33,8 +33,8 @@ public class ShopDetailController {
 		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
-		Shop shop = sv.select(s_id); //shopService에서 s_id가져오고 shop을 부르기
-		int sh_id = shop.getSh_id(); //shop의 sh_id 가져오기
+		Shop shop = sv.select(s_id); 
+		int sh_id = shop.getSh_id(); 
 		model.addAttribute("sh_id", sh_id);	
 		model.addAttribute("shop", shop);
 		return "shop/restaurantDetail";	
@@ -62,7 +62,6 @@ public class ShopDetailController {
 		model.addAttribute("sh_id", sh_id);
 		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
-		System.out.println("[샵 부가정보]가계 설명은"+shop.getSh_content());
 		
 		return "shop/shopView";	
 	}
