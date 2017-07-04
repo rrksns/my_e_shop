@@ -103,13 +103,13 @@ public class MenuController {
 			fs.close();
 			menu.setIt_img3(fname);				
 		}	
-		int result = ms.insert(menu);
-		model.addAttribute("menu", menu);	
+		int result = ms.insert(menu);		
 		model.addAttribute("result", result);	
 		model.addAttribute("sh_id", sh_id);
 		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
-		
+		menu=ms.select(sh_id);
+		model.addAttribute("menu", menu);
 		
 		
 /*		model.addAttribute("result", result);

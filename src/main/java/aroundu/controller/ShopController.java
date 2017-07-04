@@ -184,10 +184,14 @@ public class ShopController {
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
 		
-		int it_id=menu.getIt_id();
+		int sh_id = shop.getSh_id();
+		menu=ms.select(sh_id);
+		model.addAttribute("menu", menu);
+		
+	/*	int it_id=menu.getIt_id();
 		menu = ms.select(it_id);
 		model.addAttribute("it_id",it_id);
-		System.out.println("사진은"+menu.getIt_img2());
+		System.out.println("사진은"+menu.getIt_img2());*/
 		
 		int sh_detailId=shopDetail.getSh_detailId();
 		menu = ms.select(sh_detailId);
