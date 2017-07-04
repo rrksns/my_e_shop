@@ -39,7 +39,6 @@ function lst(){
  function del(it_id) {
 	var formData="it_id="+it_id;
 	$.post("mDelete.go",formData, function(data) {
-		alert('1');
 		$('#mlist').html(data);
 	}); 
 }

@@ -23,4 +23,7 @@ public interface MenuService {
 
 	void update(Menu menu);
 
+
+	int selectShid(int it_id);
+
 }

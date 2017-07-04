@@ -1,6 +1,6 @@
 package aroundu.controller; 
 
-import java.io.FileNotFoundException;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
@@ -152,8 +152,10 @@ public class MenuController {
 	
 	@RequestMapping("mDelete")
 	public String mDelete(Menu menu,Model model){
-		ms.delete(menu.getIt_id()); 
-		int sh_id = menu.getSh_id();
+		ms.delete(menu.getIt_id());
+		int sh_id = (int)ms.selectShid(menu.getIt_id());
+		/*int sh_id = menu.getSh_id();*/
+		System.out.println("sh-id는 뭐냐?"+sh_id);
 		model.addAttribute("sh_id",sh_id);
 		return "redirect:mlist.go"; 
 	}
