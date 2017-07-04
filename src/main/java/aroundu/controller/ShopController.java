@@ -187,7 +187,7 @@ public class ShopController {
 		int it_id=menu.getIt_id();
 		menu = ms.select(it_id);
 		model.addAttribute("it_id",it_id);
-		
+		System.out.println("사진은"+menu.getIt_img2());
 		int sh_detailId=shopDetail.getSh_detailId();
 		menu = ms.select(sh_detailId);
 		model.addAttribute("sh_detailId",sh_detailId);
