@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -115,6 +116,22 @@ public class MenuController {
 		model.addAttribute("shop", shop);
 		System.out.println("[메뉴 결과]가계 설명은"+shop.getSh_content());
 		return "shop/restaurantDetail";
+	}
+	
+	/*ajax사용 메뉴등록*/
+	@RequestMapping("mInsert")
+	public String menuInsert(Menu menu, Model model){
+		ms.insert(menu);
+		List<Menu> mlist = ms.list(menu);
+		model.addAttribute("mlist",mlist);
+		return "shop/mlist";
+	}
+	
+	@RequestMapping("mlist")
+	public String mlist(int sh_id,Menu menu, Model model){
+		List<Menu> mlist = ms.list(menu);
+		model.addAttribute("mlist",mlist);
+		return "shop/mlist";
 	}
 	
 }

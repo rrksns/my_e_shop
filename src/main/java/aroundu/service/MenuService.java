@@ -1,5 +1,7 @@
 package aroundu.service;
 
+import java.util.List;
+
 import aroundu.model.Menu;
 
 public interface MenuService {
@@ -8,5 +10,11 @@ public interface MenuService {
 
 
 	Menu select(int sh_id);
+
+
+	List<Menu> list();
+
+
+	List<Menu> list(Menu menu);
 
 }

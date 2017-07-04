@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
+import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -184,12 +185,10 @@ public class ShopController {
 		model.addAttribute("seller", seller);
 		int it_id=menu.getIt_id();
 		menu = ms.select(it_id);
-		model.addAttribute("it_id",it_id);
-		System.out.println("[마지막] 메뉴정보"+menu.getIt_name());
+		model.addAttribute("it_id",it_id);		
 		int sh_detailId=shopDetail.getSh_detailId();
 		menu = ms.select(sh_detailId);
-		model.addAttribute("sh_detailId",sh_detailId);
-		System.out.println("[마지막] 부가정보"+shopDetail.getFreeWifi());
+		model.addAttribute("sh_detailId",sh_detailId);		
 		shop = sv.select(s_id);	
 		int sh_id = shop.getSh_id(); 
 		String sh_name=shop.getSh_name();
@@ -205,5 +204,7 @@ public class ShopController {
 
 		return "shop/shopView";
 	}
+	
+	
 	
 }
