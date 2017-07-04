@@ -184,20 +184,25 @@ public class ShopController {
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
 		
-		int it_id=menu.getIt_id();
+		int sh_id = shop.getSh_id();
+		menu=ms.select(sh_id);
+		model.addAttribute("menu", menu);
+		
+	/*	int it_id=menu.getIt_id();
 		menu = ms.select(it_id);
 		model.addAttribute("it_id",it_id);
+		System.out.println("사진은"+menu.getIt_img2());*/
 		
 		int sh_detailId=shopDetail.getSh_detailId();
 		menu = ms.select(sh_detailId);
 		model.addAttribute("sh_detailId",sh_detailId);
 		
 		shop = sv.select(s_id);	
-		int sh_id = shop.getSh_id(); 
-		String sh_name=shop.getSh_name();
+		model.addAttribute("shop", shop);
+		
 		/*model.addAttribute("sh_id", sh_id);	
 		model.addAttribute("sh_name", sh_name);*/
-		model.addAttribute("shop", shop);
+		
 //		System.out.println("가계 설명은"+shop.getSh_content());
 		return "shop/shopView";
 	}

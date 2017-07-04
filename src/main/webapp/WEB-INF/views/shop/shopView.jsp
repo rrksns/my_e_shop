@@ -13,8 +13,10 @@ body{background-color:#E6E6E6}
 </style>
 </head>
 <body>
-<input type="hidden" name="sh_id" value= "${sh_id}">
-<input type="hidden" name="sh_name" value= "${shop.sh_name}">
+<input type="text" name="sh_id" value= "${sh_id}">
+<input type="text" name="sh_name" value= "${shop.sh_name}">
+<input type="text" name="it_id" value= "${menu.it_id}">
+<input type="text" name="sh_detailId" value= "${shopDetail.sh_detailId}">
 <div class="universe">
   <div class="top-cover">
   	<span>
@@ -100,13 +102,15 @@ body{background-color:#E6E6E6}
   	  	  </div>
   	  	  <div class="menu-detail">
   	  	  	<ul>
-  	  	  	  <li>${shopDetail.smoking}</li>
-  	  	  	  <c:if test="${ shopDetail.smoking !='y'}">
-  	  	  	  	<img src="${path}/resources/img/service_icon smoke" width="20" height="20">  	
-  	  	  	  </c:if>
-  	  	  	  <c:if test="${ shopDetail.smoking !='y'}">
+  	  	  	  <li>
   	  	  	  
+  	  	  	  <c:if test="${ shopDetail.smoking =='y'}">
+  	  	  	  		<img src="${path}/resources/img/enter.png" width="50" height="50">
   	  	  	  </c:if>
+  	  	  	  <c:if test="${ shopDetail.smoking !='y'}">  	  	  
+  	  	  			<img src="${path}/resources/img/home.png" width="50" height="50">	  
+  	  	  	  </c:if>
+  	  	  	  </li>
   	  	  	  <li>${shopDetail.freeWifi}</li>
   	  	  	  <li>${shopDetail.toilet}</li>
   	  	  	  <li>${shopDetail.parking}</li>
