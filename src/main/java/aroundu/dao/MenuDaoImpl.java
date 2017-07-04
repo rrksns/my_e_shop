@@ -1,5 +1,7 @@
 package aroundu.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -19,8 +21,18 @@ public class MenuDaoImpl implements MenuDao{
 
 	@Override
 	public Menu select(int sh_id) {
-		// TODO Auto-generated method stub
 		return st.selectOne("Menuns.select", sh_id);
+	}
+
+	/*메뉴 리스트 불러오기*/
+	@Override
+	public List<Menu> list() {
+		return st.selectList("Menuns.list");
+	}
+
+	@Override
+	public List<Menu> list(Menu menu) {
+		return st.selectList("Menuns.list",menu);
 	}
 
 }

@@ -38,6 +38,39 @@
 		}
 	}
 </script>
+<script type="text/javascript">
+
+	$(function(){
+		$('#mlist').load("mlist.go");		
+ 		$('#menuInsert').click(function(){
+			if(!form.it_name.value){
+				alert('메뉴이름을 입력 후에 클릭하시오');
+				form.it_name.focus();return false;
+			}
+			
+			if(!form.it_price.value){
+				alert('메뉴가격을 입력 후에 클릭하시오');
+				form.it_price.focus();return false;
+			}
+			
+			if(!form.it_cont.value){
+				alert('메뉴설명을 입력 후에 클릭하시오');
+				form.it_cont.focus();return false;
+			}			
+			
+			
+			var frmData = $('#frm').serialize(); 
+			$.post('mInsert.go',frmData,function(data){
+				$('#mlist').html(data);
+				$('#textarea').val("");		
+				
+				/* function lst(){
+					$('#slist').load('slist.go'); 
+				}*/
+			});				
+		}); 
+	});
+	</script>
 
 </head>
 <body>
@@ -73,7 +106,7 @@
 		</header>
 		<section>
 			<h2>메뉴 등록</h2>
-	<form action="restaurantMenu.go" method="post" name="form" enctype="multipart/form-data">
+	<form action="restaurantMenu.go" method="post" name="form" id="frm" enctype="multipart/form-data">
 		<input type="text" name="sh_id" value= "${shop.sh_id}">
 		<input type="text" name="sh_name" value="${shop.sh_name}">
 		<div class="tab">
@@ -89,34 +122,36 @@
 				<table>
 					<tr>
 						<th scope="row">메뉴</th>
-						<td><input type="text" name="it_name"  required="required"></td>
+						<td><input type="text" name="it_name"  id="it_name" required="required"></td>
 					</tr>
 					<tr>
 						<th scope="row">가격</th>
-						<td><input type="text" name="it_price"  required="required"></td>
+						<td><input type="text" name="it_price"  id="it_price" required="required"></td>
 					</tr>
 					<tr>
 						<th scope="row">메뉴설명</th>
-						<td><input type="text" name="it_cont"  required="required"></td>
+						<td><input type="text" name="it_cont"  id="it_cont" required="required"></td>
 					</tr>
 					<tr>
 						<th scope="row">사진 등록</th>
-						<td><input type="file" name="menu1"></td>
+						<td><input type="file" id="it_pic1" name="menu1"></td>
 					</tr>
 					<tr>
 						<th scope="row">사진 추가</th>
-						<td><input type="file" name="menu2"></td>
+						<td><input type="file" id="it_pic2" name="menu2"></td>
 					</tr>
 					<tr>
 						<th scope="row">사진 추가</th>
-						<td><input type="file" name="menu3"></td>
+						<td><input type="file" id="it_pic3" name="menu3"></td>
 					</tr> 
 					<tr>
 						<th scope="row">top3</th>
 						<td><input type="checkbox" name="it_top3" id="it_top3" value="y">
 						<label for="it_top3">선택</label></td>
 					</tr>
+					<input type="hidden" name="it_group" value="1"> <!-- 메뉴그룹을 임의로 지정 -->
 				</table>
+				<input type="button" value="확인" id="menuInsert" class="btn btn-info">
 			</div>
 
 			<div class="contents" id="con2" style="display: none;">
@@ -125,11 +160,14 @@
 			<div class="contents" id="con3" style="display: none;">
 			</div>
 		</div>
+		
 		<div class="nextBtnWrap">
   	  	  	  <button class="prev_btn" type="button" onclick="history.go(-1)">이전으로</button>
   	  	  	  <button class="next_btn" type="submit">다음으로</button>
   	  	</div>
 	</form>
+	
+	<div id ="mlist"></div>
 			
 		</section>
 		</main>

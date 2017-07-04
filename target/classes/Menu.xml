@@ -30,4 +30,8 @@
 		select * from menu where it_id = 
 		(select ifnull(max(it_id), 0) from menu where sh_id =#{sh_id})
 	</select>
+	
+	<select id="list" parameterType="menu" resultMap="menuResult">
+		select * from menu where it_group=#{it_group} and sh_id=#{sh_id} order by it_id
+	</select>
 </mapper>
