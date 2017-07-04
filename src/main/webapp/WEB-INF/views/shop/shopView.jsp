@@ -101,6 +101,12 @@ body{background-color:#E6E6E6}
   	  	  <div class="menu-detail">
   	  	  	<ul>
   	  	  	  <li>${shopDetail.smoking}</li>
+  	  	  	  <c:if test="${ shopDetail.smoking !='y'}">
+  	  	  	  	<img src="${path}/resources/img/service_icon smoke" width="20" height="20">  	
+  	  	  	  </c:if>
+  	  	  	  <c:if test="${ shopDetail.smoking !='y'}">
+  	  	  	  
+  	  	  	  </c:if>
   	  	  	  <li>${shopDetail.freeWifi}</li>
   	  	  	  <li>${shopDetail.toilet}</li>
   	  	  	  <li>${shopDetail.parking}</li>
