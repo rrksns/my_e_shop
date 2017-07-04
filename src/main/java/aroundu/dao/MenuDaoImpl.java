@@ -35,4 +35,9 @@ public class MenuDaoImpl implements MenuDao{
 		return st.selectList("Menuns.list",menu);
 	}
 
+	@Override
+	public void delete(int it_id) {
+		st.delete("Menuns.delete",it_id);
+	}
+
 }

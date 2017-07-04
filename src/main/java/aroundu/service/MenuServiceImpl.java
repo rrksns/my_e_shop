@@ -34,6 +34,12 @@ public class MenuServiceImpl implements MenuService{
 		return md.list(menu);
 	}
 
+	@Override
+	public void delete(int it_id) {
+		md.delete(it_id);  
+		
+	}
+
 
 
 }

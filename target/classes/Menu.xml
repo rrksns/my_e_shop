@@ -34,4 +34,8 @@
 	<select id="list" parameterType="menu" resultMap="menuResult">
 		select * from menu where it_group=#{it_group} and sh_id=#{sh_id} order by it_id
 	</select>
+	
+	<delete id="delete" parameterType="int">
+		delete from menu where it_id = #{it_id}
+	</delete>
 </mapper>

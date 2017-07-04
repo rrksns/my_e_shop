@@ -6,12 +6,16 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
- <!--<script type="text/javascript">
+ <script type="text/javascript">
   $(function() {
 	$('.edit1').click(function() {
-		var id  = $(this).attr('id'); //수정할 rno
-		var txt = $('#td_'+id).text();
-		$('#td_'+id).html("<textarea rows='2' cols='100' id='tt_"+id+"'>"+txt
+		var id  = $(this).attr('it_id'); //수정할 id
+		var it_price = $(this).attr('it_price'); //수정할 가격
+		var it_cont = $('#td_'+id).text();
+		var it_img1 = $(this).attr('it_img1');
+		var it_img2 = $(this).attr('it_img2');
+		var it_img3 = $(this).attr('it_img3');
+		$('#td_'+id).html("<textarea rows='1' cols='80' id='tt_"+id+"'>"+it_cont
 			+"</textarea>");
 		$('#btn_'+id).html(
 			"<input type='button' value='확인' onclick='up("+id+")'>"+
@@ -19,22 +23,28 @@
 	});
 });
 function up(id){
-	var replytext = $('#tt_'+id).val();
-	var formData = "rno="+id+'&replytext='+replytext;
+	var it_name
+	var it_price
+	var it_cont
+	var it_img1
+	var it_img2
+	var it_img3	
+	var it_cont = $('#tt_'+id).val();
+	var formData = "it_id="+id+'&it_cont='+it_cont;
 	$.post('repUpdate.go',formData,function(data){
-		$('#slist').html(data);
+		$('#mlist').html(data);
 	});
 } 
 function lst(){
-	$('#slist').load('slist.go');
+	$('#mlist').load('mlist.go');
 }
- function del(rno,bno) {
-	var formData="rno="+rno;
-	$.post("repDelete.go",formData, function(data) {
-		$('#slist').html(data);
+ function del(it_id) {
+	var formData="it_id="+id;
+	$.post("mDelete.go",formData, function(data) {
+		$('#mlist').html(data);
 	}); 
 }
-</script> -->
+</script>
 </head>
 <body>
 <div align="center">

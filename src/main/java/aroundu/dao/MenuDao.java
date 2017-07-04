@@ -14,4 +14,8 @@ public interface MenuDao {
 
 	List<Menu> list(Menu menu);
 
+	void delete(int it_id);
+
+	
+
 }

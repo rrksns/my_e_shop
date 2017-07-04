@@ -134,4 +134,10 @@ public class MenuController {
 		return "shop/mlist";
 	}
 	
+	@RequestMapping("mDelete")
+	public String mDelete(Menu menu){
+		ms.delete(menu.getIt_id()); 
+		return "redirect : mlist"; 
+	}
+	
 }

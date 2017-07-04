@@ -17,4 +17,7 @@ public interface MenuService {
 
 	List<Menu> list(Menu menu);
 
+
+	void delete(int it_id);
+
 }
