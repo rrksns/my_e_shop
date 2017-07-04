@@ -151,13 +151,17 @@ public class MenuController {
 	}
 	
 	@RequestMapping("mDelete")
-	public String mDelete(Menu menu){
+	public String mDelete(Menu menu,Model model){
 		ms.delete(menu.getIt_id()); 
+		int sh_id = menu.getSh_id();
+		model.addAttribute("sh_id",sh_id);
 		return "redirect:mlist.go"; 
 	}
 	@RequestMapping("mUpdate")
-	public String mUpdate(Menu menu){
+	public String mUpdate(Menu menu,Model model){
 		ms.update(menu);
+		int sh_id = menu.getSh_id();
+		model.addAttribute("sh_id",sh_id);
 		return "redirect:mlist.go";
 	}
 	
