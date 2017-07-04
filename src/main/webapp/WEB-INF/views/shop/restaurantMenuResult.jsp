@@ -8,6 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<input type="text" name="sh_id" value= "${menu.it_id}">
 <c:if test="${result >0 }">
 	<script type="text/javascript">
 		alert("입력성공");
