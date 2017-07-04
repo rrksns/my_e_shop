@@ -38,6 +38,27 @@
 		}
 	}
 </script>
+<script type="text/javascript">
+
+	$(function(){
+		$('#mlist').load("mlist.go");		
+ 		$('#menuInsert').click(function(){
+			if(!frm.replytext.value){
+				alert('댓글 입력 후에 클릭하시오');
+				frm.replytext.focus();return false;
+			}
+			var frmData = $('#frm').serialize(); 
+			$.post('mInsert.go',frmData,function(data){
+				$('#menulist').html(data);
+				$('#textarea').val("");		
+				
+				/* function lst(){
+					$('#slist').load('slist.go'); 
+				}*/
+			});				
+		}); 
+	});
+	</script>
 
 </head>
 <body>
@@ -117,6 +138,7 @@
 						<label for="it_top3">선택</label></td>
 					</tr>
 				</table>
+				<input type="button" value="확인" id="menuInsert" class="btn btn-info">
 			</div>
 
 			<div class="contents" id="con2" style="display: none;">
@@ -125,6 +147,7 @@
 			<div class="contents" id="con3" style="display: none;">
 			</div>
 		</div>
+		<div id ="mlist"></div>
 		<div class="nextBtnWrap">
   	  	  	  <button class="prev_btn" type="button" onclick="history.go(-1)">이전으로</button>
   	  	  	  <button class="next_btn" type="submit">다음으로</button>

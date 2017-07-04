@@ -54,7 +54,7 @@
 댓글 : <textarea rows="2" cols="100" name="replytext" id="textarea"></textarea>
 <input type="button" value="확인" id="repInsert" class="btn btn-info">
 <input type="button" value="평가하기" onclick="score()">
-<p><a href="https://naver.com" onclick="winPop(this.href, {name:'팝업1',width:300,height:500}); return false;">팝업보기 </a></p>  
+<!-- <p><a href="https://naver.com" onclick="winPop(this.href, {name:'팝업1',width:300,height:500}); return false;">팝업보기 </a></p> -->  
 </form>
 </div>
 
