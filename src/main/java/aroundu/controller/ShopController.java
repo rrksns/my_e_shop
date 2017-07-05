@@ -184,6 +184,11 @@ public class ShopController {
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
 		
+		/*shop 정보 가져오기*/
+		shop = sv.select(s_id);	
+		model.addAttribute("shop", shop);
+		
+		/*menu 가져오기*/
 		int sh_id = shop.getSh_id();
 		menu=ms.select(sh_id);
 		model.addAttribute("menu", menu);
@@ -193,17 +198,16 @@ public class ShopController {
 		model.addAttribute("it_id",it_id);
 		System.out.println("사진은"+menu.getIt_img2());*/
 		
+		/*shopDetail 가져오기*/
 		int sh_detailId=shopDetail.getSh_detailId();
 		menu = ms.select(sh_detailId);
 		model.addAttribute("sh_detailId",sh_detailId);
 		
-		shop = sv.select(s_id);	
-		model.addAttribute("shop", shop);
+	
 		
 		/*model.addAttribute("sh_id", sh_id);	
 		model.addAttribute("sh_name", sh_name);*/
 		
-//		System.out.println("가계 설명은"+shop.getSh_content());
 		return "shop/shopView";
 	}
 	/*샵 View */
