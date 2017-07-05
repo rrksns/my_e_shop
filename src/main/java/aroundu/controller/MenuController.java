@@ -113,8 +113,6 @@ public class MenuController {
 		menu=ms.select(sh_id);
 
 		model.addAttribute("menu", menu);
-		
-		System.out.println("메뉴창에서 등록된 메뉴들의 이름은"+menu.getIt_name());
 
 		
 /*		model.addAttribute("result", result);
