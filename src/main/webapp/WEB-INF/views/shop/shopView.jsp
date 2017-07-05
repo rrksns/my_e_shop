@@ -62,11 +62,7 @@ body{background-color:#E6E6E6}
   	  1
   	  1
   	  1
-  	  1
-  	  1
-  	  1
-  	  1
-  	  1
+  	
   	  1
   	  11
   	  </pre>
@@ -186,8 +182,8 @@ body{background-color:#E6E6E6}
   	  	<a class="linked twitter" href="" target="_blank" rel="external"></a>
   	  </div>
   	  <div class="photo">
-  	  	<div class="main-photo"><img src="menuPic/upload/${shop.sh_img1}"></div>
-  	  	<div class="sub-photo"><img src="menuPic/upload/${shop.sh_img2}"></div>
+  	  	<div class="main-photo"><img src="shopPic/upload/${shop.sh_img1}"></div>
+  	  	<div class="sub-photo"><img src="shopPic/upload/${shop.sh_img2}"></div>
   	  </div>
   	  <div class="shop-description">
   	  	<h4>기본 정보</h4>

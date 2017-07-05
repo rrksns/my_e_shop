@@ -68,32 +68,36 @@ public class ShopController {
 	/*샵 기본정보 등록 */
 	@RequestMapping(value= "restaurantBasic", method = RequestMethod.POST)
 	public String restaurantBasic(Shop shop, Model model,HttpSession session) {
+		/*세션에서 S_id 추출 후 shop에 s_id 입력 */
 		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
 		shop.setS_id(s_id);
+		/*샵 기본 정보 입력 후 result 뿌려줌 */
 		if (shop.getDineIn() ==null) shop.setDineIn("n");
 		if (shop.getTakeOut() ==null) shop.setTakeOut("n");
 		if (shop.getDelivery() ==null) shop.setDelivery("n");
 		if (shop.getAllday_open() ==null) shop.setAllday_open("n");
-		System.out.println("con sh_name="+shop.getSh_name());
 		int result = sv.insert(shop);
 		model.addAttribute("result", result);
+		/*등록된 샵에서 sh_id 추출 후 뿌려줌 */
 		int sh_id = shop.getSh_id();
 		model.addAttribute("sh_id", sh_id);
-		
-//		model.addAttribute("shop", shop);
+
 		return "shop/restaurantPicture";
 	}
 	/*샵 사진 등록 */
 	@RequestMapping(value= "restaurantPicture", method = RequestMethod.GET)
 	public String restaurantPicture(Model model, HttpSession session) {
+		/*세션에서 S_id 추출 후 shop에 s_id 입력 */
 		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
-		model.addAttribute("seller", seller);	
+		model.addAttribute("seller", seller);
 		Shop shop = sv.select(s_id);
+		/*select 한 샵에서 sh_id 추출후 sh_id 뿌려줌 */
 		int sh_id = shop.getSh_id();
-		model.addAttribute("sh_id", sh_id);			
+		model.addAttribute("sh_id", sh_id);	
+		
 		return "shop/restaurantPicture";		
 		}	
 	
@@ -101,9 +105,12 @@ public class ShopController {
 	@RequestMapping(value="restaurantPicture", method = RequestMethod.POST)
 	public String restaurantPicture(int sh_id, Model model, Shop shop, HttpSession session,
 			HttpServletRequest request) throws IOException {
+		/*세션에서 S_id 추출 후 shop에 s_id 입력 */
 		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
+		
 		shop.setSh_id(sh_id);
+		
 		if(!shop.getFile1().isEmpty()){	
 			long date = new Date().getTime();
 			String fname = date+"-"+shop.getFile1().getOriginalFilename();			

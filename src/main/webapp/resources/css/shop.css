@@ -234,11 +234,11 @@ p,h1,h2,h3,h4{margin:0}h4,dl{padding-bottom:3px;border-bottom:1px solid #4A7EBB}
 	.main-photo {
 		height:180px;
 		margin-bottom:5px;
-		background:black;
+		/* background:black; */
 	}
 	.sub-photo {
 		height:50px;
-		background:yellow;
+		/* background:yellow; */
 	}
 .shop-description {
 	margin-bottom:10px;
