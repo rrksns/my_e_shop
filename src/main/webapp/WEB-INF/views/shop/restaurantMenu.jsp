@@ -113,6 +113,7 @@
 	<form action="restaurantMenu.go" method="post" name="form" id="frm" enctype="multipart/form-data">
 		<input type="text" name="sh_id" value= "${shop.sh_id}">
 		<input type="text" name="sh_name" value="${shop.sh_name}">
+		<input type="text" name="it_id" value="${menu.it_id}">
 		<div class="tab">
 			<ul>
 				<li><a href="javascript_:showTabMenu(1)">메뉴그룹1</a></li>

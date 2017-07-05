@@ -58,11 +58,18 @@ body{background-color:#E6E6E6}
   	  	</div>
   	  </div>
   	  <div class="banner">
-  	  	배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너
-  	  	배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너
-  	  	배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너
-  	  	배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너배너
-  	  	너배너배너배너배너배너배너배너배너
+  	  <pre>1
+  	  1
+  	  1
+  	  1
+  	  1
+  	  1
+  	  1
+  	  1
+  	  1
+  	  1
+  	  11
+  	  </pre>
   	  </div>
   	</header>
   	<div class="contents" role="main">
@@ -95,39 +102,29 @@ body{background-color:#E6E6E6}
   	  	  	  <span class="txt">대표 메뉴</span>
   	  	  	  <img src="${path}/resources/img/top-menu.png" width="50" height="50">
   	  	  	  <span class="txt">top3</span>
-  	  	  	  <span> ${menu.it_name}</span>
-  	  	  	  <span> <img src="/menuPic/upload/${menu.it_img1}"></span>
-  	  	  	  <span> ${menu.it_price}</span>
   	  	  	</div>
   	  	  </div>
   	  	  <div class="menu-detail">
   	  	  	<ul>
-  	  	  	  <li>
-  	  	  	  
-  	  	  	  <c:if test="${ shopDetail.smoking =='y'}">
-  	  	  	  		<img src="${path}/resources/img/enter.png" width="50" height="50">
-  	  	  	  </c:if>
-  	  	  	  <c:if test="${ shopDetail.smoking !='y'}">  	  	  
-  	  	  			<img src="${path}/resources/img/home.png" width="50" height="50">	  
-  	  	  	  </c:if>
-  	  	  	  </li>
-  	  	  	  <li>${shopDetail.freeWifi}</li>
-  	  	  	  <li>${shopDetail.toilet}</li>
-  	  	  	  <li>${shopDetail.parking}</li>
-  	  	  	  <li>${shopDetail.blanket}</li>
-  	  	  	  <li>${shopDetail.mobileCharge}</li>
+  	  	  	  <li></li>
+  	  	  	  <li></li>
+  	  	  	  <li></li>
+  	  	  	  <li></li>
+  	  	  	  <li></li>
+  	  	  	  <li></li>
   	  	  	</ul>
   	  	  </div>
   	  	</div>
-  	  	<div> 
+  	  	<%-- <div> 
   	  			<span> ${menu.it_name}</span>
   	  	  	  <span> <img src="menuPic/upload/${menu.it_img1}"></span>
   	  	  	  <span> ${menu.it_price}</span>
-  	  	</div>
+  	  	</div> --%>
   	  	<div class="location">
   	  	  <p class="loc-txt">${shop.sh_addr1}</p>
   	  	  <p class="loc-txt">${shop.sh_addr2}</p>
   	  	  <div class="loc-img">
+  	  	  	
   	  	  </div>
   	  	</div>
   	  </div>
@@ -189,22 +186,60 @@ body{background-color:#E6E6E6}
   	  	<a class="linked twitter" href="" target="_blank" rel="external"></a>
   	  </div>
   	  <div class="photo">
-  	  	<div class="main-photo"></div>
-  	  	<div class="sub-photo"></div>
+  	  	<div class="main-photo"><img src="menuPic/upload/${shop.sh_img1}"></div>
+  	  	<div class="sub-photo"><img src="menuPic/upload/${shop.sh_img2}"></div>
   	  </div>
   	  <div class="shop-description">
   	  	<h4>기본 정보</h4>
   	  	<div class="ad-info">
-  	  	  <span class="ad-info-icon"></span>
-  	  	  <span class="ad-info-icon"></span>
-  	  	  <span class="ad-info-icon"></span>
-  	  	  <span class="ad-info-icon"></span>
-  	  	  <span class="ad-info-icon"></span>
-  	  	  <span class="ad-info-icon"></span>
-  	  	  <span class="ad-info-icon"></span>
-  	  	  <span class="ad-info-icon"></span>
-  	  	  <span class="ad-info-icon"></span>
-  	  	  <span class="ad-info-icon"></span>
+  	  	  <span>
+  	  	  	 <c:if test="${shopDetail.smoking =='y'}">
+  	  	  	  		<img src="${path}/resources/img/smoking-area.png" width="30" height="30">
+  	  	  	  </c:if>
+  	  	  	  <c:if test="${shopDetail.smoking !='y'}">  	  	  
+  	  	  			<img src="${path}/resources/img/home.png" width="30" height="30">	  
+  	  	  	  </c:if>
+  	  	  </span>
+  	  	    <span>
+  	  	  	 <c:if test="${shopDetail.freeWifi =='y'}">
+  	  	  	  		<img src="${path}/resources/img/wifi.png" width="30" height="30">
+  	  	  	  </c:if>
+  	  	  	  <c:if test="${shopDetail.freeWifi !='y'}">  	  	  
+  	  	  			<img src="${path}/resources/img/home.png" width="30" height="30">	  
+  	  	  	  </c:if>
+  	  	  </span>
+  	  	     <span>
+  	  	  	 <c:if test="${shopDetail.toilet =='y'}">
+  	  	  	  		<img src="${path}/resources/img/toilet.png" width="30" height="30">
+  	  	  	  </c:if>
+  	  	  	  <c:if test="${shopDetail.toilet !='y'}">  	  	  
+  	  	  			<img src="${path}/resources/img/home.png" width="30" height="30">	  
+  	  	  	  </c:if>
+  	  	  </span>
+  	  	     <span>
+  	  	  	 <c:if test="${shopDetail.parking =='y'}">
+  	  	  	  		<img src="${path}/resources/img/parking.png" width="30" height="30">
+  	  	  	  </c:if>
+  	  	  	  <c:if test="${shopDetail.parking !='y'}">  	  	  
+  	  	  			<img src="${path}/resources/img/home.png" width="30" height="30">	  
+  	  	  	  </c:if>
+  	  	  </span>
+  	  	     <span>
+  	  	  	 <c:if test="${shopDetail.blanket =='y'}">
+  	  	  	  		<img src="${path}/resources/img/blanket.png" width="30" height="30">
+  	  	  	  </c:if>
+  	  	  	  <c:if test="${shopDetail.blanket !='y'}">  	  	  
+  	  	  			<img src="${path}/resources/img/home.png" width="30" height="30">	  
+  	  	  	  </c:if>
+  	  	  </span>
+  	  	     <span>
+  	  	  	 <c:if test="${shopDetail.mobileCharge =='y'}">
+  	  	  	  		<img src="${path}/resources/img/charging-phone.png" width="30" height="30">
+  	  	  	  </c:if>
+  	  	  	  <c:if test="${shopDetail.mobileCharge !='y'}">  	  	  
+  	  	  			<img src="${path}/resources/img/home.png" width="30" height="30">	  
+  	  	  	  </c:if>
+  	  	  </span>
   	  	</div>
   	  	<div class="description">
   	  	  <pre>${shop.sh_content}</pre>

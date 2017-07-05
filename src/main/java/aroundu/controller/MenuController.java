@@ -74,6 +74,7 @@ public class MenuController {
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
 		menu.setSh_id(sh_id);
+		
 		if(!menu.getMenu1().isEmpty()){	
 			long date = new Date().getTime();
 			String fname = date+"-"+menu.getMenu1().getOriginalFilename();			
@@ -110,7 +111,11 @@ public class MenuController {
 		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
 		menu=ms.select(sh_id);
-		model.addAttribute("menu", menu);		
+
+		model.addAttribute("menu", menu);
+		
+		System.out.println("메뉴창에서 등록된 메뉴들의 이름은"+menu.getIt_name());
+
 		
 /*		model.addAttribute("result", result);
 		model.addAttribute("menu", menu);
