@@ -7,6 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
  <script type="text/javascript">
+ $(function(){
+		$('#mlist').load("mlist.go");	});
+ 
   $(function() {
 	$('.edit1').click(function() {
 		var it_id  = $(this).attr('it_id'); //수정할 id

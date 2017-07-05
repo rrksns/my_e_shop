@@ -133,6 +133,47 @@ body{background-color:#E6E6E6}
   	  </div>
   	  <div class="review">
   	  	<h4>리뷰</h4>
+			  	  	<script type="text/javascript">
+			
+				$(function(){
+					$('#slist').load("slist.go");		
+			 		$('#repInsert').click(function(){
+						if(!frm.replytext.value){
+							alert('댓글 입력 후에 클릭하시오');
+							frm.replytext.focus();return false;
+						}
+						var frmData = $('#frm').serialize(); 
+						$.post('sInsert.go',frmData,function(data){
+							$('#slist').html(data);
+							$('#textarea').val("");		
+							
+							/* function lst(){
+								$('#slist').load('slist.go'); 
+							}*/
+						});				
+					}); 
+				});
+				</script>
+				<script type="text/javascript">
+				function score(){
+					window.open('score.go','popup1','width=300,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
+				}
+				
+				
+				</script>
+			
+			<p>
+			<div>
+			<form name="frm" id="frm">
+			<input type="hidden" name="replyer" value="${rb.replyer}">
+			댓글 : <textarea rows="2" cols="100" name="replytext" id="textarea"></textarea>
+			<input type="button" value="확인" id="repInsert" class="btn btn-info">
+			<input type="button" value="평가하기" onclick="score()">
+			<!-- <p><a href="https://naver.com" onclick="winPop(this.href, {name:'팝업1',width:300,height:500}); return false;">팝업보기 </a></p> -->  
+			</form>
+			</div>
+			
+			<div id="slist"></div>
   	  </div>
   	</div>
   </div>

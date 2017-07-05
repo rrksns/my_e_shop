@@ -1,6 +1,7 @@
 package aroundu.controller; 
 
 
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
@@ -109,8 +110,7 @@ public class MenuController {
 		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
 		menu=ms.select(sh_id);
-		model.addAttribute("menu", menu);
-		
+		model.addAttribute("menu", menu);		
 		
 /*		model.addAttribute("result", result);
 		model.addAttribute("menu", menu);
@@ -129,14 +129,46 @@ public class MenuController {
 		model.addAttribute("menu", menu);
 		model.addAttribute("sh_id", sh_id);
 		Shop shop = sv.select(s_id);
-		model.addAttribute("shop", shop);
-		System.out.println("[메뉴 결과]가계 설명은"+shop.getSh_content());
+		model.addAttribute("shop", shop);		
 		return "shop/restaurantDetail";
 	}
 	
 	/*ajax사용 메뉴등록*/
 	@RequestMapping("mInsert")
-	public String menuInsert(Menu menu, Model model){
+	public String mInsert(int sh_id,Menu menu, Model model,HttpServletRequest request,
+			HttpSession session) throws IOException{	
+		menu.setSh_id(sh_id);
+		
+		if(menu.getMenu1()!=null){	
+			long date = new Date().getTime();
+			String fname = date+"-"+menu.getMenu1().getOriginalFilename();			
+			String path = request.getSession().getServletContext().getRealPath("/menuPic/upload");
+			String fpath = path + "\\" + fname;			
+			FileOutputStream fs = new FileOutputStream(fpath);
+			fs.write(menu.getMenu1().getBytes());
+			fs.close();
+			menu.setIt_img1(fname);				
+		}
+		if(menu.getMenu2()!=null){	
+			long date = new Date().getTime();
+			String fname = date+"-"+menu.getMenu2().getOriginalFilename();			
+			String path = request.getSession().getServletContext().getRealPath("/menuPic/upload");
+			String fpath = path + "\\" + fname;			
+			FileOutputStream fs = new FileOutputStream(fpath);
+			fs.write(menu.getMenu2().getBytes());
+			fs.close();
+			menu.setIt_img2(fname);				
+		}
+		if(menu.getMenu3()!=null){	
+			long date = new Date().getTime();
+			String fname = date+"-"+menu.getMenu3().getOriginalFilename();			
+			String path = request.getSession().getServletContext().getRealPath("/menuPic/upload");
+			String fpath = path + "\\" + fname;			
+			FileOutputStream fs = new FileOutputStream(fpath);
+			fs.write(menu.getMenu3().getBytes());
+			fs.close();
+			menu.setIt_img3(fname);				
+		}	
 		ms.insert(menu);
 		List<Menu> mlist = ms.list(menu);
 		model.addAttribute("mlist",mlist);
@@ -151,10 +183,12 @@ public class MenuController {
 	}
 	
 	@RequestMapping("mDelete")
-	public String mDelete(Menu menu,Model model){
+	public String mDelete(Menu menu,Model model){		
 		/*int sh_id = (int)ms.selectShid(menu.getIt_id());*/
+		int sh_id = menu.getSh_id();
+		System.out.println("sh_id"+sh_id);
 		ms.delete(menu.getIt_id());
-		/*int sh_id = menu.getSh_id();*/
+		menu.setSh_id(sh_id);
 		List<Menu> mlist = ms.list(menu);
 		model.addAttribute("mlist",mlist);
 		return "shop/mlist";

@@ -163,6 +163,8 @@ replyer varchar(50),
 regdate date,
 updatedate date
 );
+delete from shop;
+delete from menu;
 
 select * from replyBoard;
 delete from replyBoard ;

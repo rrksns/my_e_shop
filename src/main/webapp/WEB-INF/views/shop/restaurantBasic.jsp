@@ -162,7 +162,8 @@
 					var geocoder = new daum.maps.services.Geocoder();
 					
 					// 주소로 좌표를 검색합니다
-					geocoder.addr2coord('제주특별자치도 제주시 첨단로 242', function(status, result) {
+				
+					geocoder.addr2coord('제주특별자치도 제주시 첨단로 242', function(status, result) { 
 					
 					    // 정상적으로 검색이 완료됐으면 
 					     if (status === daum.maps.services.Status.OK) {

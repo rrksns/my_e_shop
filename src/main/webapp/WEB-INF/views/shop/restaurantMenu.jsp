@@ -42,7 +42,7 @@
 
 	$(function(){
 		$('#mlist').load("mlist.go");		
- 		$('#menuInsert').click(function(){
+ 		$('#mInsert').click(function(){
 			if(!form.it_name.value){
 				alert('메뉴이름을 입력 후에 클릭하시오');
 				form.it_name.focus();return false;
@@ -56,13 +56,17 @@
 			if(!form.it_cont.value){
 				alert('메뉴설명을 입력 후에 클릭하시오');
 				form.it_cont.focus();return false;
-			}			
-			
+			}					
 			
 			var frmData = $('#frm').serialize(); 
 			$.post('mInsert.go',frmData,function(data){
 				$('#mlist').html(data);
-				$('#textarea').val("");		
+				$('#it_name').val("");
+				$('#it_price').val("");	
+				$('#it_cont').val("");	
+				$('#it_pic1').val("");
+				$('#it_pic2').val("");
+				$('#it_pic3').val("");
 				
 				/* function lst(){
 					$('#slist').load('slist.go'); 
@@ -151,7 +155,7 @@
 					</tr>
 					<input type="hidden" name="it_group" value="1"> <!-- 메뉴그룹을 임의로 지정 -->
 				</table>
-				<input type="button" value="확인" id="menuInsert" class="btn btn-info">
+				<input type="button" value="확인" id="mInsert" class="btn btn-info">
 			</div>
 
 			<div class="contents" id="con2" style="display: none;">
