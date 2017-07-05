@@ -65,7 +65,7 @@
 						</p>
 					</div>
 					<div class="map">
-						<div id="map" style="width: 750px; height: 454px;"></div>
+						<div id="map" style="width: 600px; height: 400px;"></div>
 						<div>
 							<script
 								src="//apis.daum.net/maps/maps3.js?apikey=f6eed7143332943349595b742f572fde"></script>

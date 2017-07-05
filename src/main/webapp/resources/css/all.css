@@ -6,26 +6,19 @@ input[type="checkbox"]{display:none}
 	overflow:hidden;
 	margin:0 auto;
 	background-color:white;
-} 
+}
 
 .box {
 	display:block;
 	float:left;
-} 
+}
 
 .hide {
 	display:none;
-} 
+}
 
 .txt_small{font-size:small}
-.txt_big{font-size:x-large} 
+.txt_big{font-size:x-large}
 
 .fl_L{float:left}
-.fl_R{float:right}  
-
-
-
-
-
-
-
+.fl_R{float:right}
