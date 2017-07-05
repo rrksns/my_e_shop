@@ -39,8 +39,8 @@
 		select * from menu where it_group=#{it_group} and sh_id=#{sh_id} order by it_id
 	</select>
 	
-	<select id="selctShid" parameterType="int" resultType="int">
-		select sh_id from menu where it_id = #{it_id}
+	<select id="selectShid" parameterType="int" resultType="int">
+		select ifnull(sh_id,0) sh_id from menu where it_id = #{it_id}
 	</select>
 	
 	

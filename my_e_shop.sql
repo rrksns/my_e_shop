@@ -166,3 +166,5 @@ updatedate date
 
 select * from replyBoard;
 delete from replyBoard ;
+select * from menu;
+select ifnull(sh_id,0) sh_id from menu where it_id = 29;
