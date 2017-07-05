@@ -46,6 +46,11 @@ public class MenuServiceImpl implements MenuService{
 		
 	}
 
+	@Override
+	public int selectShid(int it_id) {
+		return md.selectShid(it_id);
+	}
+
 
 
 }

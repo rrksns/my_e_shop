@@ -127,7 +127,7 @@ sh_id int(20)
 )
 
 alter table menu add foreign key(sh_id) references shop(sh_id);
-
+select sh_id from menu where it_id=21;
 select * from menu;
 delete from menu;
 alter table board add top3 varchar(1);
@@ -166,3 +166,5 @@ updatedate date
 
 select * from replyBoard;
 delete from replyBoard ;
+select * from menu;
+select ifnull(sh_id,0) sh_id from menu where it_id = 29;

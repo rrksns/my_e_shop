@@ -42,8 +42,14 @@ public class MenuDaoImpl implements MenuDao{
 
 	@Override
 	public void update(Menu menu) {
-		st.update("Menuns",menu);
+		st.update("Menuns.update",menu);
 		
+	}
+
+	@Override
+	public int selectShid(int it_id) {
+		System.out.println("it_id = "+it_id);
+		return st.selectOne("Menuns.selectShid",it_id);
 	}
 
 }
