@@ -108,7 +108,7 @@ public class ShopController {
 		/*세션에서 S_id 추출 후 shop에 s_id 입력 */
 		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
-		
+		model.addAttribute("seller", seller);
 		shop.setSh_id(sh_id);
 		
 		if(!shop.getFile1().isEmpty()){	
@@ -172,11 +172,10 @@ public class ShopController {
 			shop.setSh_img6(fname);				
 		}
 		
-		sv.update(shop);		
+		sv.update(shop);
 		int result = sv.update(shop);
-		model.addAttribute("seller", seller);
 		model.addAttribute("result", result);
-		model.addAttribute("sh_id", sh_id);	
+		model.addAttribute("sh_id", sh_id);
 		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
 		System.out.println("[사진입력 결과]가계 설명은"+shop.getSh_content());
