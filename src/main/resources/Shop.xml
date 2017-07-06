@@ -30,8 +30,6 @@
 		<result property="takeOut" 		column="takeOut" />
 		<result property="dineIn"		column="dineIn" />
 		<result property="delivery"		column="delivery" />
-		<result property="it_groupId"	column="it_groupId" />
-		<result property="it_groupName"	column="it_groupName" />
 	</resultMap>
 	
 
@@ -50,7 +48,7 @@
 			sh_brTimeS, sh_brTimeE, s_id, allday_open, driveThru, takeOut, dineIn, delivery) 
 			values(#{sh_id}, #{sh_name},#{sh_content}, #{sh_addr1},#{sh_addr2}, #{sh_tel}, #{sh_operTimeS}, 
 			#{sh_operTimeE}, #{sh_brTimeS}, #{sh_brTimeE}, #{s_id}, #{allday_open},
-			#{driveThru}, #{takeOut}, #{dineIn}, #{delivery}<!-- , #{it_groupId}, #{it_groupName}  -->)
+			#{driveThru}, #{takeOut}, #{dineIn}, #{delivery})
 	</insert>
 	
 	<select id="select1" parameterType="string" resultType="shop">

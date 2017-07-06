@@ -5,10 +5,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" > 
-<link href="${path}/css/bootstrap.min.css" rel="stylesheet">
-<script src="${path}/js/jquery.js"></script>
-<script src="${path}/js/bootstrap.min.js"></script>
-<script src="${path}/js/jquery-1.11.3.min.js"></script>
-<script src="${path}/js/star.js"></script>
+<link href="${path}/resources/css/bootstrap.min.css" rel="stylesheet">
+<script src="${path}/resources/js/jquery.js"></script>
+<script src="${path}/resources/js/bootstrap.min.js"></script>
+<script src="${path}/resources/js/jquery-1.11.3.min.js"></script>
+<script src="${path}/resources/js/star.js"></script>
 <style>	.err { color: red; font-size: 20px;  } </style>
 
