@@ -121,6 +121,17 @@ $(function(){
 						<li><a href="#tabs-3">메뉴명 3</a></li> -->
 					</ul>
 					<div id="tabs-1">
+						메뉴 그룹
+						<c:if test="${!empty testList}">
+							<select name="selectBox" id="selectBox" style="width: 80px;"
+								class="select_02">
+								<c:forEach var="testList" items="${testList}" varStatus="i">
+									<option value="${testList.name}">${testList.name}</option>
+								</c:forEach>
+							</select>
+						</c:if>
+						<p>
+
 						메뉴 이름 <input type="text" name="it_name" id="it_name"
 							required="required" placeholder="메뉴 이름을 입력하세요">
 						<p>

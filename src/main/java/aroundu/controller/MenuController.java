@@ -18,8 +18,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import aroundu.model.Menu;
+import aroundu.model.MenuBoard;
 import aroundu.model.Seller;
 import aroundu.model.Shop;
+import aroundu.service.MenuBoardService;
 import aroundu.service.MenuService;
 import aroundu.service.SellerService;
 import aroundu.service.ShopService;
@@ -35,6 +37,9 @@ public class MenuController {
 	
 	@Autowired
 	SellerService ss;
+	
+	@Autowired
+	MenuBoardService mbs;
 	
 	/*수동 or 자동 등록 선택 */
 	@RequestMapping("menuRegist")
@@ -226,13 +231,13 @@ public class MenuController {
 	
 	/*메뉴 그룹 추가*/
 	@RequestMapping("addMenu")
-	public String addMenu(String it_groupName, HttpSession session){
+	public String addMenu(MenuBoard menuBoard, HttpSession session){
 		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);	
 		Shop shop = sv.select(s_id); 
 		int sh_id = shop.getSh_id(); 
-		shop.setSh_id(sh_id);
-	/*	sv.insertGroup(shop);*/
+		menuBoard.setSh_id(sh_id);
+		mbs.insertGroup(shop);
 		return "shop/addMenu";
 	}
 	
