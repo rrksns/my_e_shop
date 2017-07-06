@@ -18,13 +18,11 @@
 		$("#tabs").tabs();
 	});
 </script>
-<<<<<<< HEAD
 <!-- <script type="text/javascript">
 	$(function() {
 		$('#mlist').load("mlist.go");
 		$('#mInsert').click(function() {
 			if (!form.it_name.value) {
-=======
 <script type="text/javascript">
 
 $(function(){
@@ -65,13 +63,11 @@ $(function(){
 			});
 		});
 	});
-<<<<<<< HEAD
-</script> -->
-=======
-	</script>
- 
 
->>>>>>> 1108ef97a64ecb9a0ba75152bf36f9a75694d9bd
+</script>
+
+	</script> -->
+ 
 </head>
 <body>
 	<div class="universe">
@@ -106,7 +102,6 @@ $(function(){
 		</header>
 		<section>
 			<h2>메뉴 등록</h2>
-<<<<<<< HEAD
 			<form action="restaurantMenu.go" method="post" name="form" id="frm"
 				enctype="multipart/form-data">
 				<input type="text" name="sh_id" value="${sh_id}"> <input
@@ -148,8 +143,8 @@ $(function(){
 				</div>
 			</form>
 		<!-- 	<div id="mlist"></div> -->
-=======
-	<form action="restaurantMenu.go" method="post" name="form" id="frm" enctype="multipart/form-data">
+
+	<%-- <form action="restaurantMenu.go" method="post" name="form" id="frm" enctype="multipart/form-data">
 		<input type="text" name="sh_id" value= "${shop.sh_id}">
 		<input type="text" name="sh_name" value="${shop.sh_name}">
 		<input type="text" name="it_id" value="${menu.it_id}">
@@ -213,9 +208,8 @@ $(function(){
 	
 	
 	
-	<div id ="mlist"></div>
+	<div id ="mlist"></div> --%>
 			
->>>>>>> 1108ef97a64ecb9a0ba75152bf36f9a75694d9bd
 		</section>
 		</main>
 	</div>
