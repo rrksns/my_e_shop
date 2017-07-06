@@ -127,7 +127,7 @@ $(function(){
 							메뉴사진 3 <input type="file" id="it_pic3" name="menu3"> <p>
 							탑 메뉴 등록 <input type="checkbox" name="it_top3" id="it_top3" value="y"><p>
 							<label for="it_top3">선택</label> 
-							<input type="hidden" name="it_group" value="1">
+							
 					</div>
 					<div id="tabs-2">
 					zzz
