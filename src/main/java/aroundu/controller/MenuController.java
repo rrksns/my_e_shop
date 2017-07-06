@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -147,10 +148,7 @@ public class MenuController {
 	@RequestMapping("mInsert")
 	public String mInsert(int sh_id,Menu menu, Model model,HttpServletRequest request,
 			HttpSession session) throws IOException{	
-		System.out.println("인서트 할때 sh_id="+sh_id);
-		System.out.println("인서트 할때 it_id="+menu.getIt_id());
-		System.out.println("인서트 할때 이미지="+menu.getIt_img1());
-		System.out.println("인서트 할때 그룹_id="+menu.getIt_group());
+		
 		menu.setSh_id(sh_id);		
 		if(menu.getMenu1()!=null){	
 			long date = new Date().getTime();
@@ -219,5 +217,25 @@ public class MenuController {
 		model.addAttribute("sh_id",sh_id);
 		return "redirect:mlist.go";
 	}
+	
+	/*메뉴 그룹 추가폼*/
+	@RequestMapping("addMenuForm")
+	public String addMenuForm(){		
+		return "shop/addMenuForm";
+	}
+	
+	/*메뉴 그룹 추가*/
+	@RequestMapping("addMenu")
+	public String addMenu(String it_groupName, HttpSession session){
+		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);	
+		Shop shop = sv.select(s_id); 
+		int sh_id = shop.getSh_id(); 
+		shop.setSh_id(sh_id);
+		sv.insertGroup(shop);
+		return "shop/addMenu";
+	}
+	
+	
 	
 }

@@ -9,8 +9,7 @@ public interface ShopService {
 
 	Shop select(String s_id);
 
-	Shop select(int sh_id);
-	
+	Shop select(int sh_id);	
 
 	
 }

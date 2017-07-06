@@ -13,6 +13,11 @@
 <link rel="stylesheet" href="/resources/demos/style.css">
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+function addMenuForm(){
+	window.open('addMenuForm.go','popup','width=500,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
+}
+</script>
 <script>
 	$(function() {
 		$("#tabs").tabs();
@@ -106,11 +111,14 @@ $(function(){
 				enctype="multipart/form-data">
 				<input type="text" name="sh_id" value="${sh_id}"> <input
 					type="text" name="sh_name" value="${shop.sh_name}">
+					
+					<h1>메뉴 그룹 등록</h1>
+					<input type="button" name="addGroup" value="+그룹추가"  onclick="addMenuForm()">
 				<div id="tabs">
 					<ul>
 						<li><a href="#tabs-1">메뉴명 1</a></li>
-						<li><a href="#tabs-2">메뉴명 2</a></li>
-						<li><a href="#tabs-3">메뉴명 3</a></li>
+						<!-- <li><a href="#tabs-2">메뉴명 2</a></li>
+						<li><a href="#tabs-3">메뉴명 3</a></li> -->
 					</ul>
 					<div id="tabs-1">
 						메뉴 이름 <input type="text" name="it_name" id="it_name"
@@ -129,13 +137,13 @@ $(function(){
 							<label for="it_top3">선택</label> 
 							
 					</div>
-					<div id="tabs-2">
+				<!-- 	<div id="tabs-2">
 					zzz
 						
 					</div>
 					<div id="tabs-3">
 					dddd
-					</div>
+					</div> -->
 				</div>
 				<div class="nextBtnWrap">
 					<button class="prev_btn" type="button" onclick="history.go(-1)">이전으로</button>

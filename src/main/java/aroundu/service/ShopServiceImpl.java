@@ -32,5 +32,6 @@ public class ShopServiceImpl implements ShopService{
 		return sd.select(sh_id);
 	}
 	
+	
 
 }

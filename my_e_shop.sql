@@ -77,6 +77,15 @@ alter table shop add it_groupName varchar(30);
 alter table menu add it_groupId varchar(20);
 alter table menu drop it_group;
 
+alter table shop drop it_groupId;
+alter table shop drop it_groupName;
+
+create table menuBoard(
+it_groupId varchar(20) primary key,
+it_groupName varchar(30),
+sh_id int(20)
+);
+
 alter table shop add sh_img6 varchar(100);
 alter table shop add sh_operTimeS varchar(50);
 alter table shop add sh_operTimeE varchar(50);
