@@ -8,9 +8,11 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import aroundu.model.Menu;
 import aroundu.model.Seller;
 import aroundu.model.Shop;
 import aroundu.model.ShopDetail;
+import aroundu.service.MenuService;
 import aroundu.service.SellerService;
 import aroundu.service.ShopDetailService;
 import aroundu.service.ShopService;
@@ -26,6 +28,9 @@ public class ShopDetailController {
 	
 	@Autowired
 	SellerService ss;
+	
+	@Autowired 
+	MenuService ms;
 	
 	/*부가정보 및 샵아이디받기 */
 	@RequestMapping(value= "restaurantDetail", method = RequestMethod.GET)
@@ -57,11 +62,13 @@ public class ShopDetailController {
 		if (shopDetail.getSmoking() ==null) shopDetail.setSmoking("n");
 		if (shopDetail.getToilet() ==null) shopDetail.setToilet("n");	
 		int result = sd.insert(shopDetail);
-		model.addAttribute("shopDetail", shopDetail);	
 		model.addAttribute("result", result);	
+		model.addAttribute("shopDetail", shopDetail);	
 		model.addAttribute("sh_id", sh_id);
 		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
+		Menu menu = ms.select(sh_id);	
+		model.addAttribute("menu", menu);
 		
 		return "shop/shopView";	
 	}

@@ -102,10 +102,14 @@ body{background-color:#E6E6E6}
   	  	  </div>
   	  	  <div class="menu-detail">
   	  	  	<ul>
-  	  	  	  <li></li>
-  	  	  	  <li></li>
-  	  	  	  <li></li>
-  	  	  	  <li></li>
+  	  	  	  <li>${menu.it_name}</li>
+  	  	  	  <li>${menu.it_price}</li>
+  	  	  	  <li>${menu.it_cont}</li>
+  	  	  	  
+  	  	  	  <div><img src="menuPic/upload/${menu.it_img3}"></div>
+  	  	  	  <div><img src="menuPic/upload/${menu.it_img2}"></div>
+  	  	  	  <div><img src="menuPic/upload/${menu.it_img1}"></div>
+  	  	  	  
   	  	  	  <li></li>
   	  	  	  <li></li>
   	  	  	</ul>
