@@ -40,7 +40,7 @@
 </script>
 <script type="text/javascript">
 
-	$(function(){
+$(function(){
 		$('#mlist').load("mlist.go");		
  		$('#mInsert').click(function(){
 			if(!form.it_name.value){
@@ -75,6 +75,7 @@
 		}); 
 	});
 	</script>
+ 
 
 </head>
 <body>
@@ -171,6 +172,8 @@
   	  	  	  <button class="next_btn" type="submit">다음으로</button>
   	  	</div>
 	</form>
+	
+	
 	
 	<div id ="mlist"></div>
 			

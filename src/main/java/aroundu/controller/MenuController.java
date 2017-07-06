@@ -48,11 +48,14 @@ public class MenuController {
 	/*메뉴 정보 및 샵 아이디 받기 */
 	@RequestMapping(value="restaurantMenu", method = RequestMethod.GET)
 	public String restuarantMenu(Menu menu, HttpSession session, Model model) {
+		
+		
 		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
 		Shop shop = sv.select(s_id); 
 		int sh_id = shop.getSh_id(); 
+		System.out.println("sh_id="+sh_id); 
 		model.addAttribute("sh_id", sh_id);	
 		model.addAttribute("shop", shop);
 		
@@ -140,8 +143,7 @@ public class MenuController {
 	@RequestMapping("mInsert")
 	public String mInsert(int sh_id,Menu menu, Model model,HttpServletRequest request,
 			HttpSession session) throws IOException{	
-		menu.setSh_id(sh_id);
-		
+		menu.setSh_id(sh_id);		
 		if(menu.getMenu1()!=null){	
 			long date = new Date().getTime();
 			String fname = date+"-"+menu.getMenu1().getOriginalFilename();			
@@ -179,7 +181,12 @@ public class MenuController {
 	}
 	
 	@RequestMapping("mlist")
-	public String mlist(int sh_id,Menu menu, Model model){
+	public String mlist(Menu menu, Model model, HttpSession session){
+		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
+		Shop shop = sv.select(s_id); 
+		int sh_id = shop.getSh_id(); 
 		List<Menu> mlist = ms.list(menu);
 		model.addAttribute("mlist",mlist);
 		return "shop/mlist";
@@ -188,7 +195,7 @@ public class MenuController {
 	@RequestMapping("mDelete")
 	public String mDelete(Menu menu,Model model){		
 		/*int sh_id = (int)ms.selectShid(menu.getIt_id());*/
-		int sh_id = menu.getSh_id();
+		int sh_id = (int)menu.getSh_id();
 		System.out.println("sh_id"+sh_id);
 		ms.delete(menu.getIt_id());
 		menu.setSh_id(sh_id);

@@ -7,8 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
  <script type="text/javascript">
-/*  $(function(){
-		$('#mlist').load("mlist.go");	}); */
+ 
  
   $(function() {
 	$('.edit1').click(function() {
@@ -39,14 +38,16 @@ function up(it_id){
 function lst(){
 	$('#mlist').load('mlist.go');
 }
- function del(it_id) {
-	 alert('1');
-	var formData="it_id="+it_id;
-	$.post("mDelete.go",formData, function(data) {
-		$('#mlist').html(data);
-	}); 
-}
+ 
+	function del(it_id) {
+		 alert('삭제');
+		var formData="it_id="+it_id;
+		$.post("mDelete.go",formData, function(data) {
+			$('#mlist').html(data);
+		}); 
+	}
 </script>
+
 </head>
 <body>
 <div align="center">

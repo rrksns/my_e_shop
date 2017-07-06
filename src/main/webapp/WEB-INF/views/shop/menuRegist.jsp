@@ -37,7 +37,7 @@
   	  	<h3 class="title"><img src="${path}/resources/img/home.png" width="25" height="25" alt=""> My e-Shop</h3>
   	  </div>
   	</header>
-  		<input type="text" name="sh_id" value= "${sh_id}">
+  		<input type="text" name="sh_id" value= "${shop.sh_id}"> <!-- shop.sh_id 수정 -->
   	  	<input type="text" name="sh_name" value="${shop.sh_name}">
   	<section id="shopInfo_register">
   	  <article class="menu_shopInfo">
@@ -48,7 +48,7 @@
   	  	  	  	<a href="#"><img src="${path}/resources/img/auto.png"></a>
   	  	  	  </div>
   	  	  	  <div class="typeWrap" style="float:right">
-  	  	  	  	<a href="restaurantMenu.go"><img src="${path}/resources/img/manual.png"></a>
+  	  	  	  	<a href="restaurantMenu.go?sh_id=${shop.sh_id}"><img src="${path}/resources/img/manual.png"></a>
   	  	  	  </div>
   	  	  	</div>
   	  	  </fieldset>
