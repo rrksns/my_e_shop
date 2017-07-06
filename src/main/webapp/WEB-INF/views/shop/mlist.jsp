@@ -6,8 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
- <script type="text/javascript">
- 
+ <script type="text/javascript"> 
  
   $(function() {
 	$('.edit1').click(function() {
@@ -50,7 +49,7 @@ function lst(){
 
 </head>
 <body>
-<div align="center">
+<div >
 	<h2 >메뉴</h2>
 <table >
 	<tr><td>메뉴명</td><td>가격</td><td>설명</td><td></td></tr>	
