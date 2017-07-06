@@ -11,7 +11,7 @@
 		<result property="it_img1"		column="it_img1" /> 
 		<result property="it_img1" 		column="it_img1" />
 		<result property="it_img1" 		column="it_img1" />
-		<result property="top3"			column="top3" /> 
+		<result property="it_top3"		column="it_top3" /> 
 		<result property="sh_id"		column="sh_id" /> 		
 
 	</resultMap>

@@ -175,7 +175,8 @@ public class ShopController {
 		sv.update(shop);
 		int result = sv.update(shop);
 		model.addAttribute("result", result);
-		model.addAttribute("sh_id", sh_id);
+		model.addAttribute("sh_id", sh_id);		
+		
 		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
 		System.out.println("[사진입력 결과]가계 설명은"+shop.getSh_content());
