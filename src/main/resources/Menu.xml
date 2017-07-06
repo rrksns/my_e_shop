@@ -5,7 +5,6 @@
 	<resultMap id="menuResult" 		type="menu">
 		<result property="it_name" 		column="it_name" />
 		<result property="it_id" 		column="it_id" />
-		<result property="it_group"		column="it_group" /> 
 		<result property="it_price" 	column="it_price" />
 		<result property="it_cont" 		column="it_cont" />
 		<result property="it_img1"		column="it_img1" /> 
@@ -13,7 +12,7 @@
 		<result property="it_img1" 		column="it_img1" />
 		<result property="it_top3"		column="it_top3" /> 
 		<result property="sh_id"		column="sh_id" /> 		
-
+		<result property="it_groupId"	column="it_groupId" /> 
 	</resultMap>
 	
 		
@@ -22,9 +21,9 @@
 		<selectKey keyProperty="it_id" order="BEFORE" resultType="int">
 			select ifnull(max(it_id), 0)+1  it_id from menu
 		</selectKey>
-			insert into menu values(#{it_id}, #{it_name}, #{it_group}, 
+			insert into menu values(#{it_id}, #{it_name},  
 			#{it_price}, #{it_cont},  #{it_img3}, #{it_img2}, #{it_img1},
-			#{it_top3},  #{sh_id})
+			#{it_top3},  #{sh_id}, #{it_groupId})
 	</insert>
 	
 	<select id="select"  parameterType="int" resultType="menu">

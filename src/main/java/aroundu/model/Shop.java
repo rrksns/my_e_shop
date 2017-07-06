@@ -34,10 +34,24 @@ public class Shop {
 	public String takeOut;
 	public String dineIn;
 	public String delivery;
-	
+	private String it_groupId;
+	private String it_groupName;
 	private MultipartFile file1; private MultipartFile file2;
 	private MultipartFile file3; private MultipartFile file4;
 	private MultipartFile file5; private MultipartFile file6;
+	
+	public String getIt_groupId() {
+		return it_groupId;
+	}
+	public void setIt_groupId(String it_groupId) {
+		this.it_groupId = it_groupId;
+	}
+	public String getIt_groupName() {
+		return it_groupName;
+	}
+	public void setIt_groupName(String it_groupName) {
+		this.it_groupName = it_groupName;
+	}
 
 	public MultipartFile getFile1() {
 		return file1;

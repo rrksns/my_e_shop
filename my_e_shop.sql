@@ -71,6 +71,12 @@ sh_count int(100),
 sh_pick varchar(30),
 s_id varchar(20)
 );
+
+alter table shop add it_groupId varchar(20);
+alter table shop add it_groupName varchar(30);
+alter table menu add it_groupId varchar(20);
+alter table menu drop it_group;
+
 alter table shop add sh_img6 varchar(100);
 alter table shop add sh_operTimeS varchar(50);
 alter table shop add sh_operTimeE varchar(50);

@@ -5,7 +5,6 @@ import org.springframework.web.multipart.MultipartFile;
 public class Menu {
 	private int it_id;
 	private String it_name;
-	private String it_group;
 	private int it_price;
 	private String it_cont;
 	private String it_img1;
@@ -13,6 +12,7 @@ public class Menu {
 	private String it_img3;
 	private String it_top3;
 	private int sh_id;
+	private String it_groupId;
 	
 	private MultipartFile menu1; private MultipartFile menu2;
 	private MultipartFile menu3;
@@ -60,11 +60,11 @@ public class Menu {
 	public void setIt_name(String it_name) {
 		this.it_name = it_name;
 	}
-	public String getIt_group() {
-		return it_group;
+	public String getIt_groupId() {
+		return it_groupId;
 	}
-	public void setIt_group(String it_group) {
-		this.it_group = it_group;
+	public void setIt_groupId(String it_groupId) {
+		this.it_groupId = it_groupId;
 	}
 	public int getIt_price() {
 		return it_price;
