@@ -10,19 +10,19 @@
 	
 		
 
-	<insert id="insert" parameterType="menuBoard">
+<!-- 	<insert id="insert" parameterType="menuBoard">
 		<selectKey keyProperty="it_groupId" order="BEFORE" resultType="int">
 			select ifnull(max(it_groupId), 0)+1  it_groupId from menuBoard
 		</selectKey>
 			insert into menuBoard values(#{it_groupId}, #{it_groupName},  
 			#{sh_id})
-	</insert>
+	</insert> -->
 	
-	<select id="select"  parameterType="int" resultType="menu">
+	<!-- <select id="select"  parameterType="int" resultType="menuBoard">
 		select * from menuBoard where it_groupId = 
 		(select ifnull(max(it_id), 0) from menuBoard where sh_id =#{sh_id})
-	</select>
-	아직 구동 x 
+	</select> 
+	아직 구동 x -->
 <!-- 	<select id="select2" parameterType="int" resultType="menu">
 		select * from shop where it_id = #{it_id}
 	</select>
