@@ -147,6 +147,10 @@ public class MenuController {
 	@RequestMapping("mInsert")
 	public String mInsert(int sh_id,Menu menu, Model model,HttpServletRequest request,
 			HttpSession session) throws IOException{	
+		System.out.println("인서트 할때 sh_id="+sh_id);
+		System.out.println("인서트 할때 it_id="+menu.getIt_id());
+		System.out.println("인서트 할때 이미지="+menu.getIt_img1());
+		System.out.println("인서트 할때 그룹_id="+menu.getIt_group());
 		menu.setSh_id(sh_id);		
 		if(menu.getMenu1()!=null){	
 			long date = new Date().getTime();
@@ -191,6 +195,7 @@ public class MenuController {
 		model.addAttribute("seller", seller);
 		Shop shop = sv.select(s_id); 
 		int sh_id = shop.getSh_id(); 
+		menu = ms.select(sh_id);
 		List<Menu> mlist = ms.list(menu);
 		model.addAttribute("mlist",mlist);
 		return "shop/mlist";

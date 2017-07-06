@@ -172,6 +172,15 @@ $(function(){
 						<td><input type="text" name="it_cont"  id="it_cont" required="required"></td>
 					</tr>
 					<tr>
+						<th scope="row">그룹설정</th>
+						<td><select name="it_groupId"  id="it_groupId" >
+						<option value="1">식사</option>
+						<option value="2">음료</option>
+						<option value="3">디저트</option>
+						</select>
+						</td>
+					</tr>
+					<tr>
 						<th scope="row">사진 등록</th>
 						<td><input type="file" id="it_pic1" name="menu1"></td>
 					</tr>
@@ -190,7 +199,7 @@ $(function(){
 					</tr>
 					<input type="hidden" name="it_group" value="1"> <!-- 메뉴그룹을 임의로 지정 -->
 				</table>
-				<input type="button" value="확인" id="mInsert" class="btn btn-info">
+				
 			</div>
 
 			<div class="contents" id="con2" style="display: none;">
@@ -202,10 +211,10 @@ $(function(){
 		
 		<div class="nextBtnWrap">
   	  	  	  <button class="prev_btn" type="button" onclick="history.go(-1)">이전으로</button>
-  	  	  	  <button class="next_btn" type="submit">다음으로</button>
+  	  	  	  <button class="next_btn" type="submit">입력</button>
   	  	</div>
 	</form>
-	
+	<input type="button" value="확인" id="mInsert" class="btn btn-info">
 	
 	
 	<div id ="mlist"></div> --%>
