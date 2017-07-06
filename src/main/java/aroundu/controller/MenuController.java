@@ -232,7 +232,7 @@ public class MenuController {
 		Shop shop = sv.select(s_id); 
 		int sh_id = shop.getSh_id(); 
 		shop.setSh_id(sh_id);
-		sv.insertGroup(shop);
+	/*	sv.insertGroup(shop);*/
 		return "shop/addMenu";
 	}
 	
