@@ -76,6 +76,7 @@ public class MenuController {
 		String s_id = (String)session.getAttribute("id");
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
+		
 		menu.setSh_id(sh_id);
 		
 		if(!menu.getMenu1().isEmpty()){	
@@ -110,13 +111,14 @@ public class MenuController {
 		}	
 		int result = ms.insert(menu);		
 		model.addAttribute("result", result);	
-		model.addAttribute("sh_id", sh_id);
 		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
+		model.addAttribute("sh_id", sh_id);
 		menu=ms.select(sh_id);
-
 		model.addAttribute("menu", menu);
-
+		int it_id = menu.getIt_id();
+		model.addAttribute("it_id", it_id);
+		System.out.println("메뉴창에서 입력된 메뉴 아이디는"+menu.getIt_id());
 		
 /*		model.addAttribute("result", result);
 		model.addAttribute("menu", menu);
@@ -135,7 +137,9 @@ public class MenuController {
 		model.addAttribute("menu", menu);
 		model.addAttribute("sh_id", sh_id);
 		Shop shop = sv.select(s_id);
-		model.addAttribute("shop", shop);		
+		model.addAttribute("shop", shop);
+		
+		System.out.println("메뉴확인에서 입력된 메뉴 아이디는"+menu.getIt_id());
 		return "shop/restaurantDetail";
 	}
 	
