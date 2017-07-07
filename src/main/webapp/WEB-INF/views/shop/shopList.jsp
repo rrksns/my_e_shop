@@ -8,13 +8,16 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+<table>
+<tr>
 <c:forEach var="shop" items="${shopList }">
-	<span>${shop.sh_name}</span><br>
-	<span>
-		<img src="shopPic/upload/${shop.sh_img1}" width="210" height="160">
-		<a href="shopView.go?sh_id=${shop.sh_id}"></a> 
-	</span> <br>
-	
+<td>${shop.sh_name}<br>
+	<a href="shopView.go?sh_id=${shop.sh_id}">
+	<img src="shopPic/upload/${shop.sh_img1}" width="210" height="160">
+		</a></td>
 </c:forEach>
+</tr>
+</table>
 </body>
 </html>
