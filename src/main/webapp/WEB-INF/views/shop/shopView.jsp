@@ -6,13 +6,14 @@
 <head>
 <meta charset="UTF-8">
 <title></title> 
-<%-- <link rel="stylesheet" href="${path}/resources/css/all.css">
-<link rel="stylesheet" href="${path}/resources/css/shop.css">  --%>
+<link rel="stylesheet" href="${path}/resources/css/all.css">
+<link rel="stylesheet" href="${path}/resources/css/shop.css">
 <style type="text/css">
 body{background-color:#E6E6E6}
 </style>
 </head>
 <body>
+	<form action="shopView.go" method="post">
 <input type="text" name="sh_id" value= "${sh_id}">
 <input type="text" name="sh_name" value= "${shop.sh_name}">
 <input type="text" name="it_id" value= "${menu.it_id}">
@@ -221,7 +222,7 @@ body{background-color:#E6E6E6}
 				</script>
 			
 			<p>
-			<div>
+			<%-- <div>
 			<form name="frm" id="frm">
 			<input type="hidden" name="replyer" value="${rb.replyer}">
 			댓글 : <textarea rows="2" cols="100" name="replytext" id="textarea"></textarea>
@@ -229,7 +230,7 @@ body{background-color:#E6E6E6}
 			<input type="button" value="평가하기" onclick="score()">
 			<!-- <p><a href="https://naver.com" onclick="winPop(this.href, {name:'팝업1',width:300,height:500}); return false;">팝업보기 </a></p> -->  
 			</form>
-			</div>
+			</div> --%>
 			
 			<div id="slist"></div>
   	  </div>
@@ -310,8 +311,12 @@ body{background-color:#E6E6E6}
   	  	<h4>채용 정보</h4>
   	  	<pre class="publish">※ 채용 정보 없음</pre>
   	  </div>
-  	</aside>
+  	</aside> 	
   </div>
-</div>
+  		<div class="nextBtnWrap">
+  	  		<button class="prev_btn" type="button" onclick="history.go(-1)">이전으로</button>
+  	  		<button class="next_btn" type="submit">완료</button>
+  	  	</div>
+  	  </form> 		 
 </body>
 </html>
