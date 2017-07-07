@@ -190,47 +190,45 @@ public class ShopController {
 		String s_id = (String)session.getAttribute("id"); 
 		Seller seller = ss.select(s_id);
 		model.addAttribute("seller", seller);
-		System.out.println("마지막 뷰에서 seller id"+seller.getS_id());
+		
 		/*shop 정보 가져오기*/
 		shop = sv.select(s_id);	
 		model.addAttribute("shop", shop);
 		int sh_id = shop.getSh_id();
-		System.out.println("마지막 뷰에서 shop 정보는"+shop.getSh_content());
+		
 		/*menu 가져오기*/
 		menu = ms.select(sh_id);	
-	/*	int it_id = menu.getIt_id();
-		model.addAttribute("it_id", it_id);
-		menu = ms.select(it_id);*/
+
 		model.addAttribute("menu", menu);
-		
-		
-		System.out.println("마지막 뷰에서 menu id는"+menu.getIt_id());
-		/*int sh_id = shop.getSh_id();
-		menu=ms.select(sh_id);*/
-		
-		
-	/*	int it_id=menu.getIt_id();
-		menu = ms.select(it_id);
-		model.addAttribute("it_id",it_id);
-		System.out.println("사진은"+menu.getIt_img2());*/
-		
+			
 		/*shopDetail 가져오기*/
 		int sh_detailId=shopDetail.getSh_detailId();
 		shopDetail = sd.select(sh_detailId);
 		model.addAttribute("sh_detailId",sh_detailId);
-		
-	
-		
-		/*model.addAttribute("sh_id", sh_id);	
-		model.addAttribute("sh_name", sh_name);*/
-		
 		return "shop/shopView";
 	}
 	/*샵 View */
 	@RequestMapping(value= "shopView", method = RequestMethod.POST)
-	public String shopView(Shop shop, Model model,HttpSession session) {
+	public String shopView(Shop shop, ShopDetail shopDetail,
+			Menu menu, Model model, HttpSession session) {
+		String s_id = (String)session.getAttribute("id"); 
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
+		/*shop 정보 가져오기*/
+		shop = sv.select(s_id);	
+		model.addAttribute("shop", shop);
+		int sh_id = shop.getSh_id();
+		
+		/*menu 가져오기*/
+		menu = ms.select(sh_id);	
 
-		return "shop/shopView";
+		model.addAttribute("menu", menu);
+			
+		/*shopDetail 가져오기*/
+		int sh_detailId=shopDetail.getSh_detailId();
+		shopDetail = sd.select(sh_detailId);
+		model.addAttribute("sh_detailId",sh_detailId);
+		return "sellerMain";
 	}
 	
 
