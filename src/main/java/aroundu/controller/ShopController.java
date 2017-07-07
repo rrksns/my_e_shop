@@ -233,6 +233,7 @@ public class ShopController {
 		return "shop/shopView";
 	}
 	
+<<<<<<< HEAD
 	@RequestMapping("shopGo")
 	public String shopGo(int sh_id, Model model){		
 		
@@ -248,4 +249,13 @@ public class ShopController {
 	}
 	
 	
+=======
+	@RequestMapping("shopList")
+	public String shopList(Model model,HttpSession session) {
+			String id=(String)session.getAttribute("id");
+			List<Shop> shopList = sv.getShopMainList();
+			model.addAttribute("shopList", shopList);
+		return "shop/shopList";
+	}
+>>>>>>> c2d09e489a3167b9f31a79d70a5744d2bbd84c91
 }

@@ -7,8 +7,12 @@
 <meta charset="UTF-8">
 <title>AROUDN U</title>
 <link rel="stylesheet" href="${path}/resources/css/index.css">
-
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,700" rel="stylesheet">
+<script type="text/javascript">
+	$(function(){
+		$('#shopList').load('shopList.go');
+	});
+</script>
 </head>
 <body>
 <div class="universe">
@@ -146,12 +150,13 @@
   	  <div class="new-shop"><h2 class="hide">새로 등록한 샵</h2>
   	  	<h3 class="title">신규 등록 샵</h3>
 <ul>
-<li class="shop-list">
+<div id="shopList"></div>
+<%-- <li class="shop-list">
 <a href="main.go?shopMainList=${shopMainList}">
 <img src="shopPic/upload/${shop.sh_img1}" width="210" height="160">
 <span>${shop.sh_name}</span>
 </a>
-</li>
+</li> --%>
 </ul>
   	  </div>
   	</div>

@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title></title>
+<title></title> 
 <%-- <link rel="stylesheet" href="${path}/resources/css/all.css">
 <link rel="stylesheet" href="${path}/resources/css/shop.css">  --%>
 <style type="text/css">
@@ -123,7 +123,7 @@ body{background-color:#E6E6E6}
 				<c:forEach var="menu" items="${mlist}">
 					<tr><td>${menu.it_id}</td>				
 					<td>${menu.it_name}</td><td>${menu.it_price}원</td>
-					<td><img src="menuPic/upload/${menu.it_img3}" height="100" width="100"></td><td>${menu.it_groupId}</td>
+					<td><img src="menuPic/upload/${menu.it_img1}" height="100" width="100"></td><td>${menu.it_groupId}</td>
 				</tr>				
 				</c:forEach></c:if>
 				</table>
@@ -137,7 +137,7 @@ body{background-color:#E6E6E6}
   	  	<div class="location">
   	  	  <p class="loc-txt" id="sample6_address">${shop.sh_addr1}</p>
   	  	  <p class="loc-txt">${shop.sh_addr2}</p>
-  	  	  <div class="loc-img">
+  	  	  <!-- <div class="loc-img"> -->
   	  	  	<div id="map" style="width:250px;height:250px;"></div>
   	  	  	  		<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=f6eed7143332943349595b742f572fde&libraries=services"></script>
 					<script>
@@ -185,7 +185,7 @@ body{background-color:#E6E6E6}
 					
 					
 					</script>	
-				</div>
+				<!-- </div> -->
   	  	  </div>
   	  	</div>
   	  </div>
