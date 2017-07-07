@@ -232,6 +232,11 @@ public class ShopController {
 		return "shop/shopView";
 	}
 	
-	
-	
+	@RequestMapping("shopList")
+	public String shopList(Model model,HttpSession session) {
+			String id=(String)session.getAttribute("id");
+			List<Shop> shopList = sv.getShopMainList();
+			model.addAttribute("shopList", shopList);
+		return "shop/shopList";
+	}
 }

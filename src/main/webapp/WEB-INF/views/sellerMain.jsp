@@ -9,6 +9,11 @@
 <link rel="stylesheet" href="${path}/resources/css/index.css">
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,700" rel="stylesheet">
+<script type="text/javascript">
+	$(function(){
+		$('#shopList').load('shopList.go');
+	});
+</script>
 </head>
 <body>
 <div class="universe">
@@ -142,13 +147,14 @@
   	  </div>
   	  <div class="new-shop"><h2 class="hide">새로 등록한 샵</h2>
   	  	<h3 class="title">나의 등록 샵</h3>
-<span>${seller.s_name}님의 %{shop.sh_name} 바로가기</span>
-<ul>
+<span>${s_name}님의 %{shop.sh_name} 바로가기</span>
+<div id="shopList"></div>
+<ul >
 <li class="shop-list">
-<a href="main.go?shopMainList=${shopMainList}">
+<%-- <a href="main.go?shopMainList=${shopMainList}">
 <img src="shopPic/upload/${shop.sh_img1}" width="210" height="160">
 <span>${shop.sh_name}</span>
-</a>
+</a> --%>
 </li>
 </ul>
   	  </div>
