@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title></title> 
 <link rel="stylesheet" href="${path}/resources/css/all.css">
-<link rel="stylesheet" href="${path}/resources/css/shop.css">
+<link rel="stylesheet" href="${path}/resources/css/shop.css"> 
 <style type="text/css">
 body{background-color:#E6E6E6}
 </style>
@@ -59,13 +59,13 @@ body{background-color:#E6E6E6}
   	  	</div>
   	  </div>
   	  <div class="banner">
-  	  <pre>1
-  	  1
-  	  1
-  	  1
-  	
-  	  1
-  	  11
+  	  <pre>
+  	   배너.
+  	  .
+  	  .
+  	  .
+  	  
+  	  
   	  </pre>
   	  </div>
   	</header>
@@ -124,7 +124,7 @@ body{background-color:#E6E6E6}
 				<c:forEach var="menu" items="${mlist}">
 					<tr><td>${menu.it_id}</td>				
 					<td>${menu.it_name}</td><td>${menu.it_price}원</td>
-					<td><img src="menuPic/upload/${menu.it_img1}" height="100" width="100"></td><td>${menu.it_groupId}</td>
+					<td><img src="menuPic/upload/${menu.it_img3}" height="100" width="100"></td><td>${menu.it_groupId}</td>
 				</tr>				
 				</c:forEach></c:if>
 				</table>
@@ -190,52 +190,9 @@ body{background-color:#E6E6E6}
   	  	  </div>
   	  	</div>
   	  </div>
-  	  <div class="review">
-  	  	<h4>리뷰</h4>
-			  	  	<script type="text/javascript">
-			
-				$(function(){
-					$('#slist').load("slist.go");		
-			 		$('#repInsert').click(function(){
-						if(!frm.replytext.value){
-							alert('댓글 입력 후에 클릭하시오');
-							frm.replytext.focus();return false;
-						}
-						var frmData = $('#frm').serialize(); 
-						$.post('sInsert.go',frmData,function(data){
-							$('#slist').html(data);
-							$('#textarea').val("");		
-							
-							/* function lst(){
-								$('#slist').load('slist.go'); 
-							}*/
-						});				
-					}); 
-				});
-				</script>
-				<script type="text/javascript">
-				function score(){
-					window.open('score.go','popup1','width=300,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
-				}
-				
-				
-				</script>
-			
-			<p>
-			<%-- <div>
-			<form name="frm" id="frm">
-			<input type="hidden" name="replyer" value="${rb.replyer}">
-			댓글 : <textarea rows="2" cols="100" name="replytext" id="textarea"></textarea>
-			<input type="button" value="확인" id="repInsert" class="btn btn-info">
-			<input type="button" value="평가하기" onclick="score()">
-			<!-- <p><a href="https://naver.com" onclick="winPop(this.href, {name:'팝업1',width:300,height:500}); return false;">팝업보기 </a></p> -->  
-			</form>
-			</div> --%>
-			
-			<div id="slist"></div>
+  	 
   	  </div>
-  	</div>
-  </div>
+  
   <div class="side-frame">
   	<aside>
   	  <div class="hits">
@@ -248,8 +205,8 @@ body{background-color:#E6E6E6}
   	  	<a class="linked twitter" href="" target="_blank" rel="external"></a>
   	  </div>
   	  <div class="photo">
-  	  	<div class="main-photo"><img src="shopPic/upload/${shop.sh_img1}"></div>
-  	  	<div class="sub-photo"><img src="shopPic/upload/${shop.sh_img2}"></div>
+  	  	<div class="main-photo"><img src="shopPic/upload/${shop.sh_img1}" height="180"></div>
+  	  	<div class="sub-photo"><img src="shopPic/upload/${shop.sh_img2}" ></div>
   	  </div>
   	  <div class="shop-description">
   	  	<h4>기본 정보</h4>
@@ -313,6 +270,68 @@ body{background-color:#E6E6E6}
   	  </div>
   	</aside> 	
   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   <!--  <div class="review">
+  	  	<h4>리뷰</h4> -->
+			  	<%--  	<script type="text/javascript">
+			
+				$(function(){
+					$('#slist').load("slist.go");		
+			 		$('#repInsert').click(function(){
+						if(!frm.replytext.value){
+							alert('댓글 입력 후에 클릭하시오');
+							frm.replytext.focus();return false;
+						}
+						var frmData = $('#frm').serialize(); 
+						$.post('sInsert.go',frmData,function(data){
+							$('#slist').html(data);
+							$('#textarea').val("");		
+							
+							/* function lst(){
+								$('#slist').load('slist.go'); 
+							}*/
+						});				
+					}); 
+				});
+				</script>
+				<script type="text/javascript">
+				function score(){
+					window.open('score.go','popup1','width=300,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
+				}
+								
+				</script>
+				</div>
+			
+			<p>
+			 <div>
+			<form name="frm" id="frm">
+			<input type="hidden" name="replyer" value="${rb.replyer}">
+			댓글 : <textarea rows="2" cols="100" name="replytext" id="textarea"></textarea>
+			<input type="button" value="확인" id="repInsert" class="btn btn-info">
+			<input type="button" value="평가하기" onclick="score()">
+			<!-- <p><a href="https://naver.com" onclick="winPop(this.href, {name:'팝업1',width:300,height:500}); return false;">팝업보기 </a></p> -->  
+			</form>
+			</div> 
+										
+  
+			<div id="slist"></div> --%>
+			
+			
+			
+			
   		<div class="nextBtnWrap">
   	  		<button class="prev_btn" type="button" onclick="history.go(-1)">이전으로</button>
   	  		<button class="next_btn" type="submit">완료</button>

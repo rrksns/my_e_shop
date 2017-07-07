@@ -11,7 +11,7 @@
 <section id="wrap">
 	<!--HGROUP-->
 	<div class="hgroup"><h1>등록 샵 리스트</h1>
-		<p><a href="">관리자 페이지 </a> |
+		<p><a href="">관리자 페이지 </a> 
 		   <a href="main">메인으로</a></p>		
 	</div>
 	<!--/HGROUP-->
@@ -62,7 +62,7 @@
 			<a href="proList.html?currentPage=${i }">${i}</a>
 		</c:if>
 		</c:forEach>
-	</p>
+	</p> 
 	<!--/페이징-->		
 	</section>	
 </body>
