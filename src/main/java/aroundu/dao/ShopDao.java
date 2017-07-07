@@ -1,6 +1,9 @@
 package aroundu.dao;
 
+import java.util.List;
+
 import aroundu.model.Shop;
+
 
 public interface ShopDao {
 	int insert (Shop shop);
@@ -10,5 +13,6 @@ public interface ShopDao {
 	Shop select(String s_id);
 
 	Shop select(int sh_id);
-	
+
+	List<Shop> getShopMainList();
 }

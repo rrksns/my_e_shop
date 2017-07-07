@@ -1,5 +1,7 @@
 package aroundu.service;
 
+import java.util.List;
+
 import aroundu.model.Shop;
 
 public interface ShopService {
@@ -9,7 +11,9 @@ public interface ShopService {
 
 	Shop select(String s_id);
 
-	Shop select(int sh_id);	
+	Shop select(int sh_id);
+
+	List<Shop> getShopMainList();	
 
 	
 }

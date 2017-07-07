@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="${path}/resources/css/myshop.css">
 </head>
 <body>
+
 	<div class="universe">
 		<aside>
 			<h2 class="home_logo">

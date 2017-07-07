@@ -1,5 +1,7 @@
 package aroundu.dao;
 
+import java.util.List;
+
 import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -34,6 +36,10 @@ public class ShopDaoImpl implements ShopDao{
 		// TODO Auto-generated method stub
 		return st.selectOne("Shopns.select2", sh_id);
 	}
-	
 
+	@Override
+	public List<Shop> getShopMainList() {
+		// TODO Auto-generated method stub
+		return st.selectList("Shopns.getShopMainList");
+	}
 }

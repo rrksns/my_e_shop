@@ -1,5 +1,7 @@
 package aroundu.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 import aroundu.model.Seller;
+
 import aroundu.service.SellerService;
 
 
@@ -19,13 +22,6 @@ public class SellerController {
 	@Autowired 
 	SellerService ss;
 	
-
-	
-	/*메인화면 호출*/
-	@RequestMapping("main")
-	public String main(){
-	return "main";
-	}	
 
 	//일반회원가입  or 샵등록 선택
 	@RequestMapping("commonJoin")
