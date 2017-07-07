@@ -52,6 +52,7 @@
 	</tr>
 	<c:set var="num" value="${num -1 }" />
 	</c:forEach>
+	
 	</tbody>
 	</table>	
 	<!--페이징-->
