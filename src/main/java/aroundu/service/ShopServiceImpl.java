@@ -1,5 +1,7 @@
 package aroundu.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +32,11 @@ public class ShopServiceImpl implements ShopService{
 	public Shop select(int sh_id) {
 		// TODO Auto-generated method stub
 		return sd.select(sh_id);
+	}
+	@Override
+	public List<Shop> getShopMainList() {
+		// TODO Auto-generated method stub
+		return sd.getShopMainList();
 	}
 	
 	

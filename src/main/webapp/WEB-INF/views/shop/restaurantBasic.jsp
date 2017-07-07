@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>My Shop 등록 : 로드 샵</title>
-<%-- <link rel="stylesheet" href="${path}/resources/css/all.css">  --%>
+<link rel="stylesheet" href="${path}/resources/css/all.css">
 <link rel="stylesheet" href="${path}/resources/css/myshop.css">
 
 </head>
@@ -38,6 +38,7 @@
   	</header>
   	<section id="shopInfo_register">
   	  <article class="basic_shopInfo">
+  	  	
   	  	<form action="restaurantBasic.go" method="post">
   	  	<input type="text" name="sh_id" value="${shop.sh_id+1}">
   	  	  <fieldset><legend class="hide">기본 정보</legend>
@@ -91,15 +92,14 @@
   	  	  	  <div class="infoContainer fl_R">
   	  	  	  	 <div class="inputWrap">
   	  	  			<label>가계 이름</label>
-  	  	  			<input id="id" name="sh_name" type="text" title="사업자등록증과 동일하게 입력" required="required">
+  	  	  			<input id="id" name="sh_name" type="text" title="사업자등록증과 동일하게 입력" required="required"><p>
   	  	  			<label>가계 전화번호</label>
-  	  	  			<input id="pw" name="sh_tel" type="text" autocomplete="off" title="-없이 입력하세요">
+  	  	  			<input id="pw" name="sh_tel" type="text" autocomplete="off" title="-없이 입력하세요"><p>
   	  	  			<label>주소</label>
-  	  	  		<input type="text" id="sample6_postcode" placeholder="우편번호">
+  	  	  			<input type="text" id="sample6_postcode" placeholder="우편번호"><p>
 					<input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
 					<input type="text" id="sample6_address" name="sh_addr1" placeholder="주소">
 					<input type="text" id="sample6_address2" name="sh_addr2" placeholder="상세주소">
-					
 					<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 					<script>
 					    function sample6_execDaumPostcode() {
@@ -147,7 +147,7 @@
 					</div>
 					<input type="button" value="위치표시" onclick="go()">
 					
-					<div id="map" style="width:370px;height:150px;"></div>
+					<div id="map" style="width:350px;height:120px;"></div>
   	  	  	  		<script type="text/javascript" src="//apis.daum.net/maps/maps3.js?apikey=f6eed7143332943349595b742f572fde&libraries=services"></script>
 					<script>
 					function go(){
@@ -194,8 +194,7 @@
 					
 					}
 					</script>	
-				</div>
-  	  	  	
+				</div> 	
   	  	  	</div>  	  	  		
   	  		<div class="nextBtnWrap">
   	  	  	  <button class="prev_btn" type="button" onclick="history.go(-1)">이전으로</button>
