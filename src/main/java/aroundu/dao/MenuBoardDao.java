@@ -1,8 +1,11 @@
 package aroundu.dao;
 
-import org.springframework.stereotype.Repository;
 
-@Repository
+import aroundu.model.MenuBoard;
+
+
 public interface MenuBoardDao {
+
+	void insertGroup(MenuBoard menuBoard);
 
 }

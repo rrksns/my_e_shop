@@ -178,8 +178,7 @@ public class ShopController {
 		model.addAttribute("sh_id", sh_id);		
 		
 		shop = sv.select(s_id);
-		model.addAttribute("shop", shop);
-		System.out.println("[사진입력 결과]가계 설명은"+shop.getSh_content());
+		model.addAttribute("shop", shop);		
 		return "shop/menuRegist";
 	}
 	
@@ -202,6 +201,7 @@ public class ShopController {
 		model.addAttribute("it_id", it_id);
 		menu = ms.select(it_id);*/
 		model.addAttribute("menu", menu);
+		
 		
 		System.out.println("마지막 뷰에서 menu id는"+menu.getIt_id());
 		/*int sh_id = shop.getSh_id();

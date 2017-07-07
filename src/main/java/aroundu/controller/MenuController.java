@@ -17,6 +17,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import aroundu.model.Board;
 import aroundu.model.Menu;
 import aroundu.model.MenuBoard;
 import aroundu.model.Seller;
@@ -85,7 +86,7 @@ public class MenuController {
 		
 		menu.setSh_id(sh_id);
 		
-		if(!menu.getMenu1().isEmpty()){	
+		if(menu.getMenu1()!=null){	
 			long date = new Date().getTime();
 			String fname = date+"-"+menu.getMenu1().getOriginalFilename();			
 			String path = request.getSession().getServletContext().getRealPath("/menuPic/upload");
@@ -95,7 +96,7 @@ public class MenuController {
 			fs.close();
 			menu.setIt_img1(fname);				
 		}
-		if(!menu.getMenu2().isEmpty()){	
+	/*	if(menu.getMenu2()!=null){		
 			long date = new Date().getTime();
 			String fname = date+"-"+menu.getMenu2().getOriginalFilename();			
 			String path = request.getSession().getServletContext().getRealPath("/menuPic/upload");
@@ -114,7 +115,7 @@ public class MenuController {
 			fs.write(menu.getMenu3().getBytes());
 			fs.close();
 			menu.setIt_img3(fname);				
-		}	
+		}	*/
 		int result = ms.insert(menu);		
 		model.addAttribute("result", result);	
 		shop = sv.select(s_id);
@@ -124,15 +125,16 @@ public class MenuController {
 		model.addAttribute("menu", menu);
 		int it_id = menu.getIt_id();
 		model.addAttribute("it_id", it_id);
-		System.out.println("메뉴창에서 입력된 메뉴 아이디는"+menu.getIt_id());
-		
+		List<Menu> mlist = ms.mlist(sh_id);	
+		model.addAttribute("mlist",mlist);
+				
 /*		model.addAttribute("result", result);
 		model.addAttribute("menu", menu);
 		model.addAttribute("sh_id", sh_id);
 		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);*/
-		
-		return "shop/restaurantMenuResult";
+		/*return "shop/restaurantMenuResult";*/
+		return "shop/restaurantMenu";
 	}
 	
 	@RequestMapping("restaurantMenuResult")
@@ -225,20 +227,21 @@ public class MenuController {
 	
 	/*메뉴 그룹 추가폼*/
 	@RequestMapping("addMenuForm")
-	public String addMenuForm(){		
+	public String addMenuForm(){
+		
 		return "shop/addMenuForm";
 	}
 	
 	/*메뉴 그룹 추가*/
-	@RequestMapping("addMenu")
-	public String addMenu(MenuBoard menuBoard, HttpSession session){
+	@RequestMapping(value= "addMenu", method = RequestMethod.POST)
+	public String addMenu(MenuBoard menuBoard, HttpSession session){	
+		System.out.println("menu이름="+menuBoard.getIt_groupName());
 		String s_id = (String)session.getAttribute("id");
-		Seller seller = ss.select(s_id);	
 		Shop shop = sv.select(s_id); 
 		int sh_id = shop.getSh_id(); 
 		menuBoard.setSh_id(sh_id);
-		mbs.insertGroup(shop);
-		return "shop/addMenu";
+		mbs.insertGroup(menuBoard);
+		return "redirect:addMenuForm.go";
 	}
 	
 	

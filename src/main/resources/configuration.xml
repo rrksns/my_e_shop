@@ -9,7 +9,7 @@
 		<typeAlias alias="shop" type="aroundu.model.Shop" />
 		<typeAlias alias="board" type="aroundu.model.Board" />
 		<typeAlias alias="menu" type="aroundu.model.Menu" />
-		<typeAlias alias="menuBoard" type="aroundu.model.MenuBoard"/>
+		<typeAlias alias="mb" type="aroundu.model.MenuBoard"/>
 		<typeAlias alias="shopDetail" type="aroundu.model.ShopDetail" />
 		<typeAlias alias="user" type="aroundu.model.User" />
 		<typeAlias alias="rb" type="aroundu.model.ReplyBoard"/>

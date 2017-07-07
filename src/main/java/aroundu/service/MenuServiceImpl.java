@@ -51,6 +51,13 @@ public class MenuServiceImpl implements MenuService{
 		return md.selectShid(it_id);
 	}
 
+	@Override
+	public java.util.List<Menu> mlist(int sh_id) {
+		return md.mlist(sh_id);
+	}
+
+	
+
 
 
 }

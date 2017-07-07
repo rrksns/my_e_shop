@@ -25,5 +25,8 @@ public interface MenuService {
 
 
 	int selectShid(int it_id);
+	
+	
+	List<Menu> mlist(int sh_id);
 
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="MenuBoardns">
-	<resultMap id="menuResult" 		type="menuBoard">		
+<mapper namespace="mbns">
+	<resultMap id="mbResult" 		type="mb">		
 		<result property="it_groupId"	column="it_groupId" />
 		<result property="it_groupName"	column="it_groupName" /> 
 		<result property="sh_id"		column="sh_id" /> 
@@ -10,13 +10,13 @@
 	
 		
 
-<!-- 	<insert id="insert" parameterType="menuBoard">
+	<insert id="insertGroup" parameterType="mb">
 		<selectKey keyProperty="it_groupId" order="BEFORE" resultType="int">
 			select ifnull(max(it_groupId), 0)+1  it_groupId from menuBoard
 		</selectKey>
 			insert into menuBoard values(#{it_groupId}, #{it_groupName},  
 			#{sh_id})
-	</insert> -->
+	</insert> 
 	
 	<!-- <select id="select"  parameterType="int" resultType="menuBoard">
 		select * from menuBoard where it_groupId = 

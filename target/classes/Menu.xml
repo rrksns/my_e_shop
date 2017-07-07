@@ -43,6 +43,10 @@
 		select ifnull(sh_id,0) sh_id from menu where it_id = #{it_id}
 	</select>
 	
+	<select id="mlist" parameterType="int" resultMap="menuResult">
+		select * from menu where sh_id = #{sh_id} order by it_groupId
+	</select>
+	
 	
 	<delete id="delete" parameterType="int">
 		delete from menu where it_id = #{it_id}

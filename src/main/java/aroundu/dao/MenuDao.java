@@ -20,6 +20,10 @@ public interface MenuDao {
 
 	int selectShid(int it_id);
 
+	void selectList(int sh_id);
+
+	List<Menu> mlist(int sh_id);
+
 	
 
 }

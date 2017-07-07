@@ -16,13 +16,22 @@
 <script type="text/javascript">
 function addMenuForm(){
 	window.open('addMenuForm.go','popup','width=500,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
+	
+
 }
 </script>
 <script>
 	$(function() {
 		$("#tabs").tabs();
 	});
+	
+		
 </script>
+<!-- <script type="text/javascript">
+$(function() {
+	$('#mlist').load("mlist.go");}
+</script> -->
+
 <!-- <script type="text/javascript">
 	$(function() {
 		$('#mlist').load("mlist.go");
@@ -34,7 +43,6 @@ $(function(){
 		$('#mlist').load("mlist.go");		
  		$('#mInsert').click(function(){
 			if(!form.it_name.value){
->>>>>>> 1108ef97a64ecb9a0ba75152bf36f9a75694d9bd
 				alert('메뉴이름을 입력 후에 클릭하시오');
 				form.it_name.focus();
 				return false;
@@ -107,12 +115,14 @@ $(function(){
 		</header>
 		<section>
 			<h2>메뉴 등록</h2>
-			<form action="restaurantMenu.go" method="post" name="form" id="frm"
+			<!-- <form action="restaurantMenu.go" method="post" name="form" id="frm"
+			enctype="multipart/form-data"> -->
+			 <form action="restaurantMenu.go" method="post" name="form" id="frm" 
 				enctype="multipart/form-data">
 				<input type="text" name="sh_id" value="${sh_id}"> <input
 					type="text" name="sh_name" value="${shop.sh_name}">
 					
-					<h1>메뉴 그룹 등록</h1>
+					<!-- 메뉴그룹등록 -->
 					<input type="button" name="addGroup" value="+그룹추가"  onclick="addMenuForm()">
 				<div id="tabs">
 					<ul>
@@ -122,14 +132,28 @@ $(function(){
 					</ul>
 					<div id="tabs-1">
 						메뉴 그룹
-						<c:if test="${!empty testList}">
+						<%-- <c:if test="${!empty testList}">
 							<select name="selectBox" id="selectBox" style="width: 80px;"
 								class="select_02">
 								<c:forEach var="testList" items="${testList}" varStatus="i">
 									<option value="${testList.name}">${testList.name}</option>
 								</c:forEach>
 							</select>
-						</c:if>
+						</c:if> --%>
+						<script type="text/javascript">
+						function SelectValue(slvalue){
+							var obj_id = document.getElementById('group');
+							obj_id.value = slvalue;
+						}
+						
+						</script>
+						<input type="text" id="group" name="it_groupId">
+						<select name="sl" onchange="SelectValue(this.value)">
+						<option selected>선택
+						<option  value="식사">식사</option>
+						<option value="음료">음료</option>
+						<option value="디저트">디저트</option>
+						</select>
 						<p>
 
 						메뉴 이름 <input type="text" name="it_name" id="it_name"
@@ -141,9 +165,9 @@ $(function(){
 							메뉴 내용 <input type="text" name="it_cont" id="it_cont"
 								required="required">
 						<p>
-							메뉴사진 1 <input type="file" id="it_pic1" name="menu1"><p>
-							메뉴사진 2 <input type="file" id="it_pic2" name="menu2"><p>
-							메뉴사진 3 <input type="file" id="it_pic3" name="menu3"> <p>
+							메뉴 사진 <input type="file" id="it_pic1" name="menu1"><p>
+							<!-- 메뉴사진 2 <input type="file" id="it_pic2" name="menu2"><p>
+							메뉴사진 3 <input type="file" id="it_pic3" name="menu3"> <p> -->
 							탑 메뉴 등록 <input type="checkbox" name="it_top3" id="it_top3" value="y"><p>
 							<label for="it_top3">선택</label> 
 							
@@ -152,15 +176,33 @@ $(function(){
 					zzz
 						
 					</div>
-					<div id="tabs-3">
+					<div id="tabs-3"> 
 					dddd
 					</div> -->
 				</div>
 				<div class="nextBtnWrap">
 					<button class="prev_btn" type="button" onclick="history.go(-1)">이전으로</button>
-					<button class="next_btn" type="submit">다음으로</button>
+					<button class="next_btn" type="submit">추가하기</button>
+					<input type="button" class="next_btn" onclick="location.href='restaurantMenuResult.go?sh_id=${sh_id}'" value="다음으로">
 				</div>
 			</form>
+			<br>
+			<table class="table table-striped">
+			<tr><td>메뉴</td><td>가격</td><td>소개</td><td>분류</td></tr>			
+			<c:if test="${empty mlist}">
+			<tr><td colspan="3">데이터가 없습니다</td>
+			</c:if>
+
+			 <c:if test="${not empty mlist}">
+				<c:forEach var="menu" items="${mlist}">
+					<tr><td>${menu.it_id}</td>				
+					<td>${menu.it_name}</td><td>${menu.it_price}</td>
+					<td>${menu.it_img1}</td><td>${menu.it_groupId}</td>
+				</tr>				
+				</c:forEach></c:if>
+						
+			</table>
+		
 		<!-- 	<div id="mlist"></div> -->
 
 	<%-- <form action="restaurantMenu.go" method="post" name="form" id="frm" enctype="multipart/form-data">

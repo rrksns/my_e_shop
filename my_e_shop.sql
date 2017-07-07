@@ -86,6 +86,8 @@ it_groupName varchar(30),
 sh_id int(20)
 );
 
+select * from menuBoard;
+
 alter table shop add sh_img6 varchar(100);
 alter table shop add sh_operTimeS varchar(50);
 alter table shop add sh_operTimeE varchar(50);
@@ -104,6 +106,7 @@ alter table shop add delivery VARCHAR(1);
 
 alter table shop add foreign key (s_id) references seller(s_id);
 delete from shop ;
+delete from replyBoard;
 
 
 drop table board;

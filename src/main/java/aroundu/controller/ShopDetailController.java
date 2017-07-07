@@ -1,5 +1,7 @@
 package aroundu.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,6 +71,8 @@ public class ShopDetailController {
 		model.addAttribute("shop", shop);
 		Menu menu = ms.select(sh_id);	
 		model.addAttribute("menu", menu);
+		List<Menu> mlist = ms.mlist(sh_id);	
+		model.addAttribute("mlist",mlist);
 		
 		return "shop/shopView";	
 	}
