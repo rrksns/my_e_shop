@@ -186,7 +186,7 @@ body{background-color:#E6E6E6}
 					
 					
 					</script>	
-				<!-- </div> -->
+				</div> 
   	  	  </div>
   	  	</div>
   	  </div>

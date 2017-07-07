@@ -27,12 +27,9 @@ function addMenuForm(){
 	
 		
 </script>
-<!-- <script type="text/javascript">
-$(function() {
-	$('#mlist').load("mlist.go");}
-</script> -->
 
-<!-- <script type="text/javascript">
+<!-- 
+<script type="text/javascript">
 	$(function() {
 		$('#mlist').load("mlist.go");
 		$('#mInsert').click(function() {
@@ -79,7 +76,7 @@ $(function(){
 
 </script>
 
-	</script> -->
+	</script>  -->
  
 </head>
 <body>

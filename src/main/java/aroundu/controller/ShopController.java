@@ -231,7 +231,7 @@ public class ShopController {
 		return "sellerMain";
 	}
 	
-
+	/*메인에서 shop조회를 위한 각종정보조회*/
 	@RequestMapping("shopGo")
 	public String shopGo(int sh_id, Model model){		
 		
