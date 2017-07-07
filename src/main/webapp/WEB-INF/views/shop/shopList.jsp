@@ -13,7 +13,7 @@
 	<span>
 		<img src="shopPic/upload/${shop.sh_img1}" width="210" height="160">
 		<a href="shopView.go?sh_id=${shop.sh_id}"></a> 
-	</span>
+	</span> <br>
 	
 </c:forEach>
 </body>
