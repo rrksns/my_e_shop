@@ -11,9 +11,10 @@ public interface ShopService {
 
 	Shop select(String s_id);
 
-	Shop select(int sh_id);
+	Shop select2(int sh_id);
 
-	List<Shop> getShopMainList();	
+	List<Shop> getShopMainList();
+	
 
 	
 }

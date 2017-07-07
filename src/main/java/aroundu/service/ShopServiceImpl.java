@@ -29,15 +29,16 @@ public class ShopServiceImpl implements ShopService{
 		return sd.select(s_id);
 	}
 	@Override
-	public Shop select(int sh_id) {
+	public Shop select2(int sh_id) {
 		// TODO Auto-generated method stub
-		return sd.select(sh_id);
+		return sd.select2(sh_id);
 	}
 	@Override
 	public List<Shop> getShopMainList() {
 		// TODO Auto-generated method stub
 		return sd.getShopMainList();
 	}
+	
 	
 	
 

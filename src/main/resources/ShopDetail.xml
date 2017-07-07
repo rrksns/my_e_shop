@@ -47,4 +47,8 @@
 		select * from shopDetail where sh_detailId = 
 		(select ifnull(max(sh_detailId), 0) from shopDetail where sh_id=#{sh_id})
 	</select>
+	
+	<select id="select2" parameterType="int" resultType="shopDetail">
+		select * from shopDetail where sh_id = #{sh_id}
+	</select>
 </mapper>

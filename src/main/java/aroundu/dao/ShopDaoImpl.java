@@ -32,7 +32,7 @@ public class ShopDaoImpl implements ShopDao{
 	}
 
 	@Override
-	public Shop select(int sh_id) {
+	public Shop select2(int sh_id) {
 		// TODO Auto-generated method stub
 		return st.selectOne("Shopns.select2", sh_id);
 	}
@@ -42,4 +42,6 @@ public class ShopDaoImpl implements ShopDao{
 		// TODO Auto-generated method stub
 		return st.selectList("Shopns.getShopMainList");
 	}
+
+	
 }

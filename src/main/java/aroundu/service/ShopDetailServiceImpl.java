@@ -20,8 +20,12 @@ public class ShopDetailServiceImpl implements ShopDetailService {
 
 	@Override
 	public int insert(ShopDetail shopDetail) {
-		// TODO Auto-generated method stub
 		return sd.insert(shopDetail);
+	}
+
+	@Override
+	public ShopDetail select2(int sh_id) {
+		return sd.select2(sh_id);
 	}
 
 }

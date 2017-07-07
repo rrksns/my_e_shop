@@ -24,6 +24,8 @@ public interface MenuDao {
 
 	List<Menu> mlist(int sh_id);
 
+	Menu select2(int sh_id);
+
 	
 
 }

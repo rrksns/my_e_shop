@@ -22,5 +22,10 @@ public class ShopDetailDaoImpl implements ShopDetailDao {
 		// TODO Auto-generated method stub
 		return st.insert("ShopDetailns.insert", shopDetail);
 	}
+
+	@Override
+	public ShopDetail select2(int sh_id) {
+		return st.selectOne("ShopDetailns.select2",sh_id);
+	}
 	
 }

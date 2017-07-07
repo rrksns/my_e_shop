@@ -63,4 +63,9 @@ public class MenuDaoImpl implements MenuDao{
 		return st.selectList("Menuns.mlist",sh_id);
 	}
 
+	@Override
+	public Menu select2(int sh_id) {
+		return st.selectOne("Menuns.select2",sh_id);
+	}
+
 }

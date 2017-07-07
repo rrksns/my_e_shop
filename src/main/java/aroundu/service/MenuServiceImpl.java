@@ -56,6 +56,11 @@ public class MenuServiceImpl implements MenuService{
 		return md.mlist(sh_id);
 	}
 
+	@Override
+	public Menu select2(int sh_id) {
+		return md.select2(sh_id);
+	}
+
 	
 
 

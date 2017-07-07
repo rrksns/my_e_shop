@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -232,6 +233,19 @@ public class ShopController {
 		return "shop/shopView";
 	}
 	
+	@RequestMapping("shopGo")
+	public String shopGo(int sh_id, Model model){		
+		
+		Shop shop =sv.select2(sh_id);
+		Menu menu =ms.select2(sh_id);
+		ShopDetail shopDetail = sd.select2(sh_id);
+		List<Menu> mlist = ms.list(menu);
+		model.addAttribute("shop",shop);
+		model.addAttribute("menu",menu);
+		model.addAttribute("shopDetail",shopDetail);	
+		model.addAttribute("mlist",mlist);	
+		return "shop/shopGo";
+	}
 	
 	
 }

@@ -8,4 +8,6 @@ public interface ShopDetailDao {
 
 	int insert(ShopDetail shopDetail);
 
+	ShopDetail select2(int sh_id);
+
 }

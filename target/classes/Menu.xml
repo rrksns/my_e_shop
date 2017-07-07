@@ -47,6 +47,10 @@
 		select * from menu where sh_id = #{sh_id} order by it_groupId
 	</select>
 	
+	<select id="select2" parameterType="int" resultType="menu">
+		select * from menu where sh_id = #{sh_id}
+	</select>
+	
 	
 	<delete id="delete" parameterType="int">
 		delete from menu where it_id = #{it_id}

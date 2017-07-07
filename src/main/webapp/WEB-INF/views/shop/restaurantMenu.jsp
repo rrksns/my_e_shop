@@ -160,7 +160,7 @@ $(function(){
 							required="required" placeholder="메뉴 이름을 입력하세요">
 						<p>
 							메뉴 가격 <input type="text" name="it_price" id="it_price"
-								required="required">
+								required="required" placeholder="숫자를 입력하세요">
 						<p>
 							메뉴 내용 <input type="text" name="it_cont" id="it_cont"
 								required="required">

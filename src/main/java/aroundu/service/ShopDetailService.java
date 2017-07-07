@@ -8,5 +8,7 @@ public interface ShopDetailService {
 
 	int insert(ShopDetail shopDetail);
 
+	ShopDetail select2(int sh_id);
+
 
 }
