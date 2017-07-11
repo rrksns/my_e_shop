@@ -16,5 +16,7 @@ public interface ShopDao {
 
 	List<Shop> getShopMainList();
 
+	List<Shop> getShopMainList1(String id);
+
 	
 }

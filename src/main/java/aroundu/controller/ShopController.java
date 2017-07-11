@@ -253,6 +253,14 @@ public class ShopController {
 			model.addAttribute("shopList", shopList);
 		return "shop/shopList";
 	}
+	/*로그인한 아이디로 해당리스트 검색*/
+	@RequestMapping("shopList1")
+	public String shopList1(Model model,HttpSession session) {
+			String id=(String)session.getAttribute("id");			
+			List<Shop> shopList = sv.getShopMainList1(id);
+			model.addAttribute("shopList", shopList);
+		return "shop/shopList";
+	}
 	
 	
 

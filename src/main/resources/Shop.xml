@@ -59,7 +59,11 @@
 		select * from shop where sh_id = #{sh_id}
 	</select>
 	<select id="getShopMainList" parameterType="int" resultMap="shopResult">
-		select * from shop order by sh_id desc limit 3
+		select * from shop order by sh_id desc limit 4
+	</select>
+	
+	<select id="getShopMainList1" parameterType="string" resultMap="shopResult">
+		select * from shop where s_id=#{s_id} order by sh_id desc limit 3
 	</select>
 	
 </mapper>

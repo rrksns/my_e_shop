@@ -43,5 +43,10 @@ public class ShopDaoImpl implements ShopDao{
 		return st.selectList("Shopns.getShopMainList");
 	}
 
+	@Override
+	public List<Shop> getShopMainList1(String id) {
+		return st.selectList("Shopns.getShopMainList",id);
+	}
+
 	
 }

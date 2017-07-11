@@ -14,6 +14,8 @@ public interface ShopService {
 	Shop select2(int sh_id);
 
 	List<Shop> getShopMainList();
+
+	List<Shop> getShopMainList1(String id);
 	
 
 	
