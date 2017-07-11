@@ -15,7 +15,7 @@ import aroundu.service.ShopService;
 @Controller
 public class MainController {
 	@Autowired 
-	ShopService sv;
+	ShopService sv; 
 
 	
 	/*메인화면 호출*/
