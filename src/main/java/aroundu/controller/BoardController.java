@@ -13,7 +13,7 @@ import aroundu.service.PagingPgm;
 
 @Controller
 public class BoardController {
-	@Autowired 
+	@Autowired  
 	BoardService bs;
 	
 /*게시판 리스트 불러옴*/
