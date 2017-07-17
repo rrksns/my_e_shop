@@ -14,8 +14,8 @@ public class ReplyBoardDaoImpl implements ReplyBoardDao{
 	private SqlSessionTemplate rst;
 
 	@Override
-	public List<ReplyBoard> list() {
-		return rst.selectList("rbns.list");
+	public List<ReplyBoard> list(int sh_id) {
+		return rst.selectList("rbns.list", sh_id);
 	}
 
 	@Override

@@ -39,6 +39,24 @@ public class ShopController {
 	@Autowired 
 	MenuService ms;
 	
+	/*해당샵 조회후 호출*/
+	@RequestMapping("shopView1")
+	public String shopView1(int sh_id, Model model){	
+		Shop shop = sv.select2(sh_id);
+		model.addAttribute(shop);		
+		
+		/*menu 가져오기*/
+		Menu menu = ms.select(sh_id);		
+		List<Menu> mlist = ms.list(menu);
+			
+		/*shopDetail 가져오기*/
+		ShopDetail shopDetail = sd.select(sh_id);
+		model.addAttribute(shopDetail);
+		int sh_detailId=shopDetail.getSh_detailId();		
+		model.addAttribute("sh_detailId",sh_detailId);
+		
+		return "shop/shopView1";
+	}
 	
 	/*샵 메인실행*/
 	@RequestMapping("shopMain")

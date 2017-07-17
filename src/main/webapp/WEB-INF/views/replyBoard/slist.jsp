@@ -25,9 +25,13 @@ function up(id){
 		$('#slist').html(data);
 	});
 } 
-function lst(){
+/* function lst(){
 	$('#slist').load('slist.go');
-}
+} */
+function lst(){
+	$('#slist').load('slist.go?sh_id=${sh_id}');
+};
+
  function del(rno,bno) {
 	var formData="rno="+rno;
 	$.post("repDelete.go",formData, function(data) {

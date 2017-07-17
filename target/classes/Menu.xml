@@ -36,7 +36,7 @@
 	</select> -->
 	
 	<select id="list" parameterType="menu" resultMap="menuResult">
-		select * from menu where it_group=#{it_group} and sh_id=#{sh_id} order by it_id
+		select * from menu where sh_id=#{sh_id} order by it_id
 	</select>
 	
 	<select id="selectShid" parameterType="int" resultType="int">

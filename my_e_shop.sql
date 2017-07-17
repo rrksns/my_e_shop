@@ -179,9 +179,11 @@ rno int(20) primary key,
 replytext varchar(500),
 replyer varchar(50),
 regdate date,
-updatedate date
+updatedate date,
+sh_id int(20)
 );
 delete from shop;
+select * from shop;
 delete from menu;
 
 select * from replyBoard;

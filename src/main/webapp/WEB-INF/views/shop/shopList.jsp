@@ -13,7 +13,7 @@
 <tr>
 <c:forEach var="shop" items="${shopList }">
 <td>${shop.sh_name}<br>
-	<a href="shopView.go?sh_id=${shop.sh_id}">
+	<a href="shopView1.go?sh_id=${shop.sh_id}">
 	<img src="shopPic/upload/${shop.sh_img1}" width="210" height="160">
 		</a></td>
 </c:forEach>

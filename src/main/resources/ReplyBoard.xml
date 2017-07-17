@@ -10,15 +10,15 @@
 		<result property="regdate" 		column="regdate" />
 		
 	</resultMap>
-<select id="list" resultMap="rbResult">
-	select * from replyBoard order by rno
+<select id="list" parameterType="int" resultMap="rbResult">
+	select * from replyBoard where sh_id=#{sh_id} order by rno
 </select>
 
 <insert id="insert" parameterType="rb">
 		<selectKey keyProperty="rno" order="BEFORE" resultType="int">
 			select ifnull(max(rno),0)+1 from replyBoard <!-- rno를 자동으로 증가시켜 세팅해줌 -->
 		</selectKey>
-		insert into replyBoard values(#{rno},#{replytext},#{replyer},now(),now())
+		insert into replyBoard values(#{rno},#{replytext},#{replyer},now(),now(),#{sh_id})
 	</insert>
 	
 	<update id="update" parameterType="rb">

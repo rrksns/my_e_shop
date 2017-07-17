@@ -50,7 +50,7 @@
 <p>
 <div>
 <form name="frm" id="frm">
-<input type="hidden" name="replyer" value="${rb.replyer}">
+<input type="text" name="replyer" value="${rb.replyer}" readonly="readonly">
 댓글 : <textarea rows="2" cols="100" name="replytext" id="textarea"></textarea>
 <input type="button" value="확인" id="repInsert" class="btn btn-info">
 <input type="button" value="평가하기" onclick="score()">

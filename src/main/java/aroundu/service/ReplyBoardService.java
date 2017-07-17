@@ -6,7 +6,7 @@ import aroundu.model.ReplyBoard;
 
 public interface ReplyBoardService {
 
-	List<ReplyBoard> list();
+	List<ReplyBoard> list(int sh_id);
 
 	void insert(ReplyBoard rb);
 
