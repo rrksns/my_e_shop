@@ -9,8 +9,7 @@
 <body>
 	<script type="text/javascript">
 		location.href="main.go";
-		/* location.href="mapHere.go"; */
+		/* location.href="mapHere.go"; */ 
 	</script>
 </body>
-
 </html> 
