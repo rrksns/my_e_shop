@@ -45,8 +45,9 @@ public class ReplyBoardController {
 		return "redirect:slist.go";
 	}
 	@RequestMapping("repUpdate")
-	public String repUpdate(int sh_id,ReplyBoard rb,HttpSession session, Model model){
-		rbs.update(rb); //업데이트 함 
+	public String repUpdate(ReplyBoard rb,HttpSession session, Model model){
+		rbs.update(rb); //업데이트 함
+		int sh_id =(int)rb.getSh_id();
 		String r_id = (String)session.getAttribute("id");
 		List<ReplyBoard> slist = rbs.list(sh_id);
 		model.addAttribute("slist", slist);
@@ -55,9 +56,10 @@ public class ReplyBoardController {
 	}
 	
 	@RequestMapping("repDelete")
-	public String repDelete(int sh_id,ReplyBoard rb,HttpSession session, Model model){
+	public String repDelete(ReplyBoard rb,HttpSession session, Model model){
 		rbs.delete(rb.getRno()); 
 		String r_id = (String)session.getAttribute("id");
+		int sh_id =(int)rb.getSh_id();
 		List<ReplyBoard> slist = rbs.list(sh_id);
 		model.addAttribute("slist", slist);
 		model.addAttribute("r_id",r_id);

@@ -31,7 +31,8 @@
 		<interceptor>
 			<mapping path="/sellerMain.go"/>
 			<mapping path="/shopMain.go"/>
-			<mapping path="/bd_insertForm.go"/>			
+			<mapping path="/bd_insertForm.go"/>	
+			<mapping path="/sInsert.go"/>			
 			<beans:ref bean="sessionChk"/>
 		</interceptor>
 	</interceptors>
