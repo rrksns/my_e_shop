@@ -1,0 +1,67 @@
+@charset "UTF-8";
+/* 프레임(헤드) */
+.secondary-line {
+	height:45px;
+	line-height:45px;
+	padding:0 30px;
+	background-color:#E2E2E2;
+}
+	.home-img {
+		position:relative;
+		top:4px;
+	}
+/* aside */
+.support {
+	float:left;
+	width:220px;
+	text-align:center;
+	padding-top:50px;
+	background-color:#FF7D43;
+}
+	.shop-name {
+		padding:0 30px;
+		margin-bottom:80px;
+	}
+		.name-txt {
+			font-size:20px;
+		}
+		
+	.input-steb {
+		}
+		.steb-list {
+			padding:0 30px;
+		}
+		.here {
+			color:#A48000;
+			background-color:white;
+		}
+			.steb-txt {
+				padding:10px 0;
+				border-bottom:2px solid #DEBB3D;
+			}
+			.here .steb-txt {
+				border:white;
+			}
+/* main */
+.contents {
+	float:left;
+	width:820px;
+	padding:10px 30px;
+}
+/* 버튼 디자인 */
+button {
+	width:150px;
+	height:50px;
+	color:white;
+	font:25px bold;
+	border:none;
+	border-radius:10px;
+	background-color:#FF7D43
+}
+		.prev-btn {
+			float:left;
+			background-color:#9C9999;
+		}
+		.next-btn {
+			float:right;
+		}

@@ -48,5 +48,11 @@ public class ShopDaoImpl implements ShopDao{
 		return st.selectList("Shopns.getShopMainList",id);
 	}
 
+	@Override
+	public List<Shop> getSellerShopList() {
+		// TODO Auto-generated method stub
+		return st.selectList("Shopns.getSellerShopList");
+	}
+
 	
 }

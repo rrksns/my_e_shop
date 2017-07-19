@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/* 태그 스타일 */
+input{width:200px;height:25px;outline:none;border:none;padding:0 10px;background-color:#DEBB3D}
+input[type="time"]{width:120px;height:30px;font-size:15px}
+textarea{width:800px;height:130px;max-width:800px;max-height:130px;scrolling:yes;padding:10px;border:none;outline:none;background-color:#DEBB3D}
+select{
+	display:block;
+	float:left;
+	width:60px;
+	height:30px;
+	border:none;
+	outline:none;
+	padding:5px;
+	appearance:none;
+	-webkit-appearance: none;
+	background:url(img/btn/dropdown-close.png) no-repeat 95% 50%;
+	background-size:10px 10px;
+	background-color:#DEBB3D;
+}
+select::-ms-expand {
+	display: none;
+}
+/* 프레임(가로) */
+.horizontal-frame {
+	overflow:hidden;
+	margin-top:20px;
+	margin-bottom:10px;
+}
+/* 프레임(세로-왼쪽) */
+.vertical-frame {
+	width:400px;
+}
+	.vertical-frame .shop-name {
+		padding:0;
+		margin-bottom:10px;
+	}
+		.vertical-frame .shop-name h4 {
+			display:inline-block;
+			margin-right:10px;
+		}
+	.phone-number {
+		margin-bottom:10px;
+	}
+		.phone-number h4 {
+			display:inline-block;
+			margin-right:10px;
+		}
+	.address{}
+		.address-search, .address-detail {
+			margin-bottom:2px;
+		}
+			.address h4 {
+				display:inline-block;
+			}
+			.address-search h4{
+				margin-right:40px;
+			}
+			.address-search input {
+				width:294px;
+			}
+			.address-detail button {
+				width:90px;
+				height:25px;
+				font:15px bold;
+				border-radius:5px;
+				background-color:#ADADAD;
+			}
+			.address-detail h4{
+				margin-right:10px;
+			}
+			#map {
+				width:400px;
+				height:280px;
+				margin-top:5px;
+				background:url(img/bg/map.png) center no-repeat;
+				background-size:contain;
+			}
+/* 프레임(세로-오른쪽) */
+.service-type {
+	overflow:hidden;
+	width:398px;
+	border:1px solid #DEBB3D;
+	margin:5px 0 10px 0;
+}
+	.comment {
+		font-size:12px;
+		font-weight:normal;
+		margin-left:10px;
+	}
+		.service-type .wrapper {
+			float:left;
+			width:99.5px;
+			height:150px;
+			text-align:center;
+		}
+			.wrapper h5{
+				font-weight:normal;
+				margin:10px 0;
+			}
+			.service-img {
+				width:50px;
+				height:50px;
+			}
+			.chk-btn {
+				display:block;
+				width:20px;
+				height:20px;
+				margin:10px auto;
+				background:url(img/btn/checkbox.png) 0 -20px;
+			}
+				input[type="checkbox"]:checked ~ .chk-btn {
+					background-position:-20px -20px;
+				}
+.operating-hours {
+	overflow:hidden;
+}
+	.input-time {
+		float:left;
+		width:250px;
+	}
+		.input-time .wrapper {
+			margin-bottom:10px;
+		}
+			.input-time h4 {
+				margin-bottom:5px;
+			}
+			.select-time {
+				overflow:hidden;
+				margin-bottom:2px;
+			}
+			.allday {
+				float:left;
+				width:100px;
+				text-align:center;
+				padding-top:10px;
+			}
+				.allday h5 {
+					margin-bottom:10px;
+				}
+.hashtag h4 {
+	margin-bottom:5px;
+}
+.hashtag input {
+	width:360px;
+}
+.txt-info h4 {
+	margin-bottom:5px;
+}
+.btn-box {
+	margin-top:50px;
+}

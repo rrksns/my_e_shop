@@ -18,5 +18,7 @@ public interface ShopDao {
 
 	List<Shop> getShopMainList1(String id);
 
+	List<Shop> getSellerShopList();
+
 	
 }

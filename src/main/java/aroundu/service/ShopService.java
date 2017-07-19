@@ -5,6 +5,8 @@ import java.util.List;
 import aroundu.model.Shop;
 
 public interface ShopService {
+	List<Shop> getSellerShopList();
+
 	int insert (Shop shop);
 
 	int update(Shop shop);

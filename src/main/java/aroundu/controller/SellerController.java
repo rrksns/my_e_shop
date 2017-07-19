@@ -13,14 +13,18 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 import aroundu.model.Seller;
-
+import aroundu.model.Shop;
 import aroundu.service.SellerService;
+import aroundu.service.ShopService;
 
 
 @Controller
 public class SellerController {
 	@Autowired 
 	SellerService ss;
+	
+	@Autowired
+	ShopService sv;
 	
 
 	//일반회원가입  or 샵등록 선택
@@ -78,7 +82,12 @@ public class SellerController {
 	
 	/*로그인 페이지*/
 	@RequestMapping("sellerLoginForm")
-	public String sellerLoginForm(){
+	public String sellerLoginForm(Model model,HttpSession session){
+		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller",seller);
+		Shop shop =  sv.select(s_id);
+		model.addAttribute("shop", shop);
 		return "seller/sellerLoginForm";
 	}
 	/*로그인체크 실행*/
@@ -91,12 +100,25 @@ public class SellerController {
 		}else if(result==0){model.addAttribute("msg","암호가 일치하지 않습니다");
 		}else model.addAttribute("msg","ID가 존재하지 않습니다");
 		model.addAttribute("s_id",s_id);
+		
+		Seller seller = ss.select(s_id); 
+		model.addAttribute("seller",seller); //셀러정보 보내기
+		
+		Shop shop =  sv.select(s_id);
+		model.addAttribute("shop", shop); //샵 정보 보내기
 		return "seller/sellerLoginForm";
 	}
 
 	/*셀러메인호출*/
 	@RequestMapping("sellerMain")
-	public String sellerMain(){
+	public String sellerMain(Model model, HttpSession session){
+		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);//셀러정보 보내기
+		model.addAttribute("seller",seller);
+		Shop shop =  sv.select(s_id);
+		model.addAttribute("shop", shop);
+		List<Shop> sellerShopList = sv.getSellerShopList();
+		model.addAttribute("sellerShopList", sellerShopList);
 		return "sellerMain";
 	}
 	/*로그아웃*/

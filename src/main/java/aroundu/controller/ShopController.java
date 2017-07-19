@@ -39,8 +39,18 @@ public class ShopController {
 	@Autowired 
 	MenuService ms;
 	
+	/*my eshop 실행*/
+	@RequestMapping("shopManagement")
+	public String shopManagement(HttpSession session, Model model) {
+		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
+		Shop shop =  sv.select(s_id);
+		model.addAttribute("shop", shop);
+		return "shop/shopManagement";
+	}
 	
-	/*샵 메인실행*/
+	/*샵 등록 실행*/
 	@RequestMapping("shopMain")
 	public String shopMain(HttpSession session, Model model) {
 		String s_id = (String)session.getAttribute("id");
@@ -253,6 +263,16 @@ public class ShopController {
 			model.addAttribute("shopList", shopList);
 		return "shop/shopList";
 	}
+	/*셀러 로그인시 메인*/
+	@RequestMapping("sellerShopList")
+	public String sellerShopList(Model model,HttpSession session) {
+			String s_id=(String)session.getAttribute("id");
+			List<Shop> sellerShopList = sv.getSellerShopList();
+			model.addAttribute("sellerShopList", sellerShopList);
+		return "shop/shopList";
+	}
+	
+	
 	/*로그인한 아이디로 해당리스트 검색*/
 	@RequestMapping("shopList1")
 	public String shopList1(Model model,HttpSession session) {
