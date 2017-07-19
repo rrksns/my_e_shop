@@ -72,6 +72,7 @@ star-input2>.input2.focus{outline:1px dotted #ddd;}
 .star-input2>output{display:inline-block;width:60px; font-size:18px;text-align:right; vertical-align:middle;}
 </style>
 
+
 </head>
 
 <body>

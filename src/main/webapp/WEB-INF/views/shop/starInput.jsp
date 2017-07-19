@@ -11,7 +11,7 @@
 <c:if test="${result > 0 }">
  	<script type="text/javascript">
  		alert("평점입력이 완료되었습니다")
- 		location.href="score.go";
+ 		location.href="score1.go";
  	</script>
 </c:if>
 <c:if test="${result <= 0 }">

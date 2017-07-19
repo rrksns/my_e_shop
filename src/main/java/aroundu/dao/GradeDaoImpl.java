@@ -16,4 +16,9 @@ public class GradeDaoImpl implements GradeDao{
 		return gst.insert("Gradens.insert",grade);
 	}
 
+	@Override
+	public String select(String u_id) {
+		return gst.selectOne("Gradens.select", u_id);
+	}
+
 }

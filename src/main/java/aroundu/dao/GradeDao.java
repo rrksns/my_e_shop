@@ -6,4 +6,6 @@ public interface GradeDao {
 
 	int insert(Grade grade);
 
+	String select(String u_id);
+
 }

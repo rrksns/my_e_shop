@@ -211,6 +211,7 @@ price int(20)
 );	
 
 select * from grade;
+select u_id from grade where u_id='uu';
 
 select * from replyBoard;
 delete from replyBoard ;

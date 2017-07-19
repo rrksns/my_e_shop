@@ -16,4 +16,9 @@ public class GradeServiceImpl implements GradeService{
 		return gd.insert(grade);
 	}
 
+	@Override
+	public String select(String u_id) {
+		return gd.select(u_id);
+	}
+
 }
