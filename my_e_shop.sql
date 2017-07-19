@@ -202,6 +202,13 @@ delete from shop;
 select * from shop;
 delete from menu;
 
+create table grade(
+u_id  varchar(20) primary key,
+sh_id int(20),
+flavor int(20),
+service int(20),
+price int(20)
+);	
 
 
 
