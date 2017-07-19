@@ -39,6 +39,7 @@ public class ShopController {
 	@Autowired 
 	MenuService ms;
 	
+<<<<<<< HEAD
 	/*my eshop 실행*/
 	@RequestMapping("shopManagement")
 	public String shopManagement(HttpSession session, Model model) {
@@ -48,6 +49,25 @@ public class ShopController {
 		Shop shop =  sv.select(s_id);
 		model.addAttribute("shop", shop);
 		return "shop/shopManagement";
+=======
+	/*해당샵 조회후 호출*/
+	@RequestMapping("shopView1")
+	public String shopView1(int sh_id, Model model){	
+		Shop shop = sv.select2(sh_id);
+		model.addAttribute(shop);		
+		
+		/*menu 가져오기*/
+		Menu menu = ms.select(sh_id);		
+		List<Menu> mlist = ms.list(menu);
+			
+		/*shopDetail 가져오기*/
+		ShopDetail shopDetail = sd.select(sh_id);
+		model.addAttribute(shopDetail);
+		int sh_detailId=shopDetail.getSh_detailId();		
+		model.addAttribute("sh_detailId",sh_detailId);
+		
+		return "shop/shopView1";
+>>>>>>> 6907c1eb802efb96c6093a4f5e424d1bf6b94d53
 	}
 	
 	/*샵 등록 실행*/

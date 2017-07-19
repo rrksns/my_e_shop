@@ -21,14 +21,18 @@
 function up(id){
 	var replytext = $('#tt_'+id).val();
 	var formData = "rno="+id+'&replytext='+replytext;
-	$.post('repUpdate.go',formData,function(data){
+		$.post('repUpdate.go',formData,function(data){			
 		$('#slist').html(data);
 	});
 } 
-function lst(){
+/* function lst(){
 	$('#slist').load('slist.go');
-}
- function del(rno,bno) {
+} */
+function lst(){
+	$('#slist').load('slist.go?sh_id=${sh_id} ');
+};
+
+ function del(rno) {
 	var formData="rno="+rno;
 	$.post("repDelete.go",formData, function(data) {
 		$('#slist').html(data);

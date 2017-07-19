@@ -14,8 +14,8 @@ public class ReplyBoardServiceImpl implements ReplyBoardService{
 	private ReplyBoardDao rbd;
 
 	@Override
-	public List<ReplyBoard> list() {
-		return rbd.list();
+	public List<ReplyBoard> list(int sh_id) {
+		return rbd.list(sh_id);
 	}
 
 	@Override

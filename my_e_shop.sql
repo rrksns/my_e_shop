@@ -179,10 +179,31 @@ rno int(20) primary key,
 replytext varchar(500),
 replyer varchar(50),
 regdate date,
-updatedate date
+updatedate date,
+sh_id int(20)
 );
+
+create table grade (
+u_id int(20) primary key,
+aloneMeal		VARCHAR(1),
+parking		VARCHAR(1),
+parkingSpace		int(20),
+toilet		VARCHAR(1),
+smoking		VARCHAR(1),
+mobileCharge	VARCHAR(1),
+blanket		VARCHAR(1),
+kidsroom		VARCHAR(1),
+freeWifi		VARCHAR(1),
+sh_id int(20), foreign key (sh_id) references shop(sh_id)
+);
+
+
 delete from shop;
+select * from shop;
 delete from menu;
+
+
+
 
 select * from replyBoard;
 delete from replyBoard ;

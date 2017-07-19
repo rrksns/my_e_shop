@@ -6,8 +6,16 @@ public class ReplyBoard {
 	private String replyer;
 	private String regdate;
 	private String updatedate;
+	private int sh_id;
 	
 	
+	
+	public int getSh_id() {
+		return sh_id;
+	}
+	public void setSh_id(int sh_id) {
+		this.sh_id = sh_id;
+	}
 	public int getRno() {
 		return rno;
 	}
