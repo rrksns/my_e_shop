@@ -210,7 +210,7 @@ service int(20),
 price int(20)
 );	
 
-
+select * from grade;
 
 select * from replyBoard;
 delete from replyBoard ;

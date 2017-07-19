@@ -9,6 +9,9 @@
 		<result property="service" 		column="service" />
 		<result property="price"		column="price" /> 		 
 	</resultMap>
+	<insert id="insert" parameterType="grade">
+		insert into grade values(#{u_id},cast('#{sh_id}' as unsigned),#{flavor},#{service},#{price})
+	</insert>
 	
 	<!-- 	
 

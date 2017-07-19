@@ -309,7 +309,7 @@ body{background-color:#E6E6E6}
 				</script>
 				<script type="text/javascript">
 				function score(){
-					window.open('score.go','popup1','width=300,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
+					window.open('score.go?sh_id=${shop.sh_id}','popup1','width=300,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
 				}
 								
 				</script>
