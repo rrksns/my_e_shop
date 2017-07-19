@@ -67,7 +67,7 @@ public class ReplyBoardController {
 	}
 	@RequestMapping("score")
 	public String score(int sh_id, Model model){
-		model.addAttribute(sh_id);
+		model.addAttribute("sh_id",sh_id);
 		return "replyBoard/score";
 	}
 	@RequestMapping("input_score")

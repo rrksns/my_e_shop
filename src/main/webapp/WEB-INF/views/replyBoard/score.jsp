@@ -76,9 +76,9 @@ star-input2>.input2.focus{outline:1px dotted #ddd;}
 
 <body>
 <fieldset>
-<input type="text" name="sh_id" value="${sh_id}">
+
 <form action="starInput.go" method="post">
-<input type="text" name="sh_id" value="${sh_id}">
+<input type="hidden" name="sh_id" value="${sh_id}">
 <ul>
 
 <li>맛

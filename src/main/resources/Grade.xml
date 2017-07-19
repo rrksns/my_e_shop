@@ -10,7 +10,7 @@
 		<result property="price"		column="price" /> 		 
 	</resultMap>
 	<insert id="insert" parameterType="grade">
-		insert into grade values(#{u_id},cast('#{sh_id}' as unsigned),#{flavor},#{service},#{price})
+		insert into grade values(#{u_id},#{sh_id},#{flavor},#{service},#{price})
 	</insert>
 	
 	<!-- 	

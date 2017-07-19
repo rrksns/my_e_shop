@@ -214,5 +214,6 @@ select * from grade;
 
 select * from replyBoard;
 delete from replyBoard ;
+delete from grade ;
 select * from menu;
 select ifnull(sh_id,0) sh_id from menu where it_id = 29;
