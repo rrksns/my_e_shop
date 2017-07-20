@@ -202,10 +202,19 @@ delete from shop;
 select * from shop;
 delete from menu;
 
+create table grade(
+u_id  varchar(20) primary key,
+sh_id int(20),
+flavor int(20),
+service int(20),
+price int(20)
+);	
 
-
+select * from grade;
+select u_id from grade where u_id='uu';
 
 select * from replyBoard;
 delete from replyBoard ;
+delete from grade ;
 select * from menu;
 select ifnull(sh_id,0) sh_id from menu where it_id = 29;

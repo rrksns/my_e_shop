@@ -13,6 +13,7 @@
 		<typeAlias alias="shopDetail" type="aroundu.model.ShopDetail" />
 		<typeAlias alias="user" type="aroundu.model.User" />
 		<typeAlias alias="rb" type="aroundu.model.ReplyBoard"/>
+		<typeAlias alias="grade" type="aroundu.model.Grade"/>
 
 	</typeAliases>
 	
@@ -26,6 +27,7 @@
 		<mapper resource="MenuBoard.xml" />
 		<mapper resource="ShopDetail.xml" />
 		<mapper resource="ReplyBoard.xml"/>
+		<mapper resource="Grade.xml"/>
 	</mappers>
 	
 </configuration>

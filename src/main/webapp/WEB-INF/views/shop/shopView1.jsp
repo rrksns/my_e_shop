@@ -34,7 +34,7 @@ body{background-color:#E6E6E6}
   	  	  	${shop.sh_name}
   	  	  </div>
   	  	  <div class="grade">
-  	  	  	<span class="gpa"></span>
+  	  	  	<span class="gpa"></span>  	  	     
   	  	  </div>
   	  	</div>
   	  	<div class="open-closed">
@@ -64,6 +64,7 @@ body{background-color:#E6E6E6}
   	  .
   	  .
   	  .
+  	     	/5점 ()명
   	  
   	  
   	  </pre>
@@ -309,7 +310,7 @@ body{background-color:#E6E6E6}
 				</script>
 				<script type="text/javascript">
 				function score(){
-					window.open('score.go','popup1','width=300,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
+					window.open('score.go?sh_id=${shop.sh_id}','popup1','width=300,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
 				}
 								
 				</script>

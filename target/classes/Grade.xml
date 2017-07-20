@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="Gradens">
+	<resultMap id="grResult" 		type="grade">
+		<result property="sh_id" 		column="sh_id" />
+		<result property="u_id" 		column="u_id" />
+		<result property="flavor" 		column="flavor" />
+		<result property="service" 		column="service" />
+		<result property="price"		column="price" /> 		 
+	</resultMap>
+	<insert id="insert" parameterType="grade">
+		insert into grade values(#{u_id},#{sh_id},#{flavor},#{service},#{price})
+	</insert>
+	
+	<select id="select" parameterType="string" resultType="string">
+		select u_id from grade where u_id=#{u_id}
+	</select>
+	
+	<select id="count" parameterType="int" resultType="int">
+		select count(*) from grade where sh_id=#{sh_id}
+	</select>
+	
+	<select id="list" parameterType="int" resultMap="grResult">
+		select service from grade where sh_id=#{sh_id}
+	</select>
+	
+	<!-- 	
+
+	<insert id="insert" parameterType="menu">
+		<selectKey keyProperty="it_id" order="BEFORE" resultType="int">
+			select ifnull(max(it_id), 0)+1  it_id from menu
+		</selectKey>
+			insert into menu values(#{it_id}, #{it_name},  
+			#{it_price}, #{it_cont},  #{it_img3}, #{it_img2}, #{it_img1},
+			#{it_top3},  #{sh_id}, #{it_groupId})
+	</insert>
+	
+	<select id="select"  parameterType="int" resultType="menu">
+		select * from menu where it_id = 
+		(select ifnull(max(it_id), 0) from menu where sh_id =#{sh_id})
+	</select>
+	아직 구동 x 
+	<select id="select2" parameterType="int" resultType="menu">
+		select * from shop where it_id = #{it_id}
+	</select>
+	
+	<select id="list" parameterType="menu" resultMap="menuResult">
+		select * from menu where sh_id=#{sh_id} order by it_id
+	</select>
+	
+	<select id="selectShid" parameterType="int" resultType="int">
+		select ifnull(sh_id,0) sh_id from menu where it_id = #{it_id}
+	</select>
+	
+	<select id="mlist" parameterType="int" resultMap="menuResult">
+		select * from menu where sh_id = #{sh_id} order by it_groupId
+	</select>
+	
+	<select id="select2" parameterType="int" resultType="menu">
+		select * from menu where sh_id = #{sh_id}
+	</select>	
+	
+	<delete id="delete" parameterType="int">
+		delete from menu where it_id = #{it_id}
+	</delete>
+	
+	<update id="update" parameterType="menu">
+		update menu set it_name=#{it_name}, it_price=#{it_price},it_cont=#{it_cont} where it_id=#{it_id}
+	</update> -->
+</mapper>
