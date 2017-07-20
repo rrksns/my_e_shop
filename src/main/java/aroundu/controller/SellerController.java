@@ -95,8 +95,8 @@ public class SellerController {
 	public String sellerLogin(String s_id, String s_pw,Model model,HttpSession session){	
 		int result=ss.loginChk(s_id,s_pw);
 		if(result>0){
-			session.setAttribute("id",s_id);
-			return "sellerMain";
+			session.setAttribute("id",s_id);			
+			return "seller/sellerLog_fin";
 		}else if(result==0){model.addAttribute("msg","암호가 일치하지 않습니다");
 		}else model.addAttribute("msg","ID가 존재하지 않습니다");
 		model.addAttribute("s_id",s_id);
@@ -113,9 +113,9 @@ public class SellerController {
 	@RequestMapping("sellerMain")
 	public String sellerMain(Model model, HttpSession session){
 		String s_id = (String)session.getAttribute("id");
-		Seller seller = ss.select(s_id);//셀러정보 보내기
+		Seller seller = ss.select(s_id);//셀러정보 보내기		
 		model.addAttribute("seller",seller);
-		Shop shop =  sv.select(s_id);
+		Shop shop =  sv.select(s_id);	
 		model.addAttribute("shop", shop);
 		List<Shop> sellerShopList = sv.getSellerShopList();
 		model.addAttribute("sellerShopList", sellerShopList);

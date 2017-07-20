@@ -301,7 +301,7 @@ public class ShopController {
 			String s_id=(String)session.getAttribute("id");
 			List<Shop> sellerShopList = sv.getSellerShopList();
 			model.addAttribute("sellerShopList", sellerShopList);
-		return "shop/shopList";
+		return "shop/sellershopList";
 	}
 	
 	

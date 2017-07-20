@@ -201,9 +201,9 @@ sh_id int(20), foreign key (sh_id) references shop(sh_id)
 delete from shop;
 select * from shop;
 delete from menu;
-
+drop table grade;
 create table grade(
-u_id  varchar(20) primary key,
+u_id  varchar(20),
 sh_id int(20),
 flavor int(20),
 service int(20),
