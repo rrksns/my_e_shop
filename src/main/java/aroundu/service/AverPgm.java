@@ -12,10 +12,12 @@ public class AverPgm {
 		this.count = count;
 		this.glist = glist;
 		int sum=0;
-		
+		Grade g = null;
 		for(int i = 0 ;i<glist.size() ; i++){
-			sum = sum +glist.get(i); 
+			g = glist.get(i); 
 		}
+		
+	
 		
 	}
 

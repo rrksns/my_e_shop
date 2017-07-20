@@ -16,6 +16,8 @@
 </script>
 </head>
 <body>
+<input type="hidden" name="s_id" value= "${s_id}">
+<input type="hidden" name="sh_name" value= "${shop.sh_name}">
 <div class="universe">
   <header class="site-header">
   	<div class="top-cover">
@@ -147,7 +149,7 @@
   	  </div>
   	  <div class="new-shop"><h2 class="hide">새로 등록한 샵</h2>
   	  	<h3 class="title">나의 등록 샵</h3>
-<span>${s_name}님의 ${sh_name} 바로가기</span>
+<span>${seller.s_name}님의 ${shop.sh_name} 바로가기</span>
 <ul>
 <div id="sellerShopList"></div>
 <%-- <li class="shop-list">

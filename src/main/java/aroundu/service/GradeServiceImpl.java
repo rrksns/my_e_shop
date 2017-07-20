@@ -19,8 +19,8 @@ public class GradeServiceImpl implements GradeService{
 	}
 
 	@Override
-	public String select(String u_id) {
-		return gd.select(u_id);
+	public String select(String sh_id) {
+		return gd.select(sh_id);
 	}
 
 	@Override

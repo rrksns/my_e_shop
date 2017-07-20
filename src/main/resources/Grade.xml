@@ -14,7 +14,7 @@
 	</insert>
 	
 	<select id="select" parameterType="string" resultType="string">
-		select u_id from grade where u_id=#{u_id}
+		select u_id from grade where sh_id=#{sh_id}
 	</select>
 	
 	<select id="count" parameterType="int" resultType="int">

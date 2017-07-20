@@ -1,6 +1,6 @@
 package aroundu.controller; 
 
-import java.io.FileNotFoundException;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Date;
@@ -12,7 +12,6 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -24,7 +23,6 @@ import aroundu.model.ShopDetail;
 import aroundu.service.AverPgm;
 import aroundu.service.GradeService;
 import aroundu.service.MenuService;
-import aroundu.service.PagingPgm;
 import aroundu.service.SellerService;
 import aroundu.service.ShopDetailService;
 import aroundu.service.ShopService;
@@ -43,12 +41,10 @@ public class ShopController {
 	@Autowired 
 	MenuService ms;
 	
-<<<<<<< HEAD
 	@Autowired
 	GradeService gs;
 	
-=======
-<<<<<<< HEAD
+
 	/*my eshop 실행*/
 	@RequestMapping("shopManagement")
 	public String shopManagement(HttpSession session, Model model) {
@@ -58,8 +54,8 @@ public class ShopController {
 		Shop shop =  sv.select(s_id);
 		model.addAttribute("shop", shop);
 		return "shop/shopManagement";
-=======
->>>>>>> 1da5a39afef8dbb70e32da8c96c2d78eb9086558
+		}
+
 	/*해당샵 조회후 호출*/
 	@RequestMapping("shopView1")
 	public String shopView1(int sh_id, Model model){	
@@ -81,15 +77,9 @@ public class ShopController {
 		List<Grade> glist = gs.list(sh_id); /*sh_id로 같은 모든 데이터를 가져옴 임의로 service로 제한함*/
 		AverPgm ap = new AverPgm(count,glist);
 		
-		model.addAttribute("count",count);
-		
-		
-		
-		
-		
-		
+		model.addAttribute("count",count);		
 		return "shop/shopView1";
->>>>>>> 6907c1eb802efb96c6093a4f5e424d1bf6b94d53
+
 	}
 	
 	/*샵 등록 실행*/
@@ -311,7 +301,7 @@ public class ShopController {
 			String s_id=(String)session.getAttribute("id");
 			List<Shop> sellerShopList = sv.getSellerShopList();
 			model.addAttribute("sellerShopList", sellerShopList);
-		return "shop/shopList";
+		return "shop/sellershopList";
 	}
 	
 	

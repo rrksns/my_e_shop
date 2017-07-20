@@ -63,7 +63,7 @@
   	  </div>
   	</aside>
   	<div class="contents" role="main">
-  	  <form id="register" action="restaurantBasic.go" method="post">
+  	  <form id="register" action="shopRegist.go" method="post">
   	  	<fieldset><legend class="hide">템플릿 선택</legend>
   	  	  <h3 class="title">템플릿 선택</h3>
   	  	  <div class="select-template">
@@ -114,7 +114,7 @@ $('aside').css({height:$(window).height()});
 $("input[name='template']").change(function() {
 	var select = this.value;
 	if(select == "restaurant"){
-		$('#register').attr('action', '');
+		$('#register').attr('action', 'restaurantBasic.go');
 	} else {
 		$('#register').attr('action', '');
 	}
@@ -128,7 +128,7 @@ function setPreviewBox(e) {
 
 function showPreview() { 
 	var text; 
-	text = '<img src="img/bg/preview-restaurant.png" width="350" height="auto">'
+	text = '<img src="${path}/resources/img/bg/preview-restaurant.png" width="350" height="auto">'
 	document.getElementById('preview').innerHTML = text; 
 	document.getElementById('preview').style.visibility = 'visible';
 } 

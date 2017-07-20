@@ -200,6 +200,7 @@ input#file {
 	margin-top:50px;
 }
 </style>
+
 </head>
 <body>
 <div class="universe">
@@ -297,7 +298,10 @@ input#file {
   	</div>
   </div>
 </div>
-				
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script>
+		$('aside').css({height:$(window).height()});
+		</script>		
 
 <%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -347,6 +351,6 @@ input#file {
 				<button class="next_btn" type="submit">다음으로</button>
 			</div>
 		</form>
-	</section>
+	</section>--%>
 </body>
-</html> --%>
+</html> 
