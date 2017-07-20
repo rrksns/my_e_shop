@@ -1,0 +1,35 @@
+@charset "UTF-8";
+.select-box {
+	overflow:hidden;
+	margin-top:20px;
+}
+	.select-box .wrapper {
+		float:left;
+		width:185px;
+		height:180px;
+		text-align:center;
+		border:1px solid #FF7D43;
+		border-radius:10px;
+		margin-right:24px;
+		margin-bottom:20px;
+	}
+		.wrapper h4 {
+			margin:20px 0 10px 0;
+		}
+		.service-img {
+			width:64px;
+			height:64px;
+		}
+		.chk-btn {
+			display:block;
+			width:32px;
+			height:32px;
+			margin:10px auto;
+			background-image:url(img/btn/checkbox2.png);
+		}
+		input[type="checkbox"]:checked ~ .chk-btn {
+			background-position:-32px 0;
+		}
+.btn-box {
+	margin-top:30px;
+}

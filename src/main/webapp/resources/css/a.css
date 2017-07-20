@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+/* 태그 스타일 */
+body{font-family:'Roboto','Nanum Gothic';margin:0;background-color:#FFFBE2}
+h1,h2,h3,h4,h5,h6,p{margin:0;padding:0}p{font-weight:bold}
+a{text-decoration:none}a:visited{color:inherit}
+span{display:inline-block}
+form{margin:0}fieldset{border:none;padding:0;margin:0}legend{display:none}
+ul,ol,dl{list-style-type:none;margin:0;padding:0}
+button{cursor:pointer;outline:none}label{cursor:pointer}
+input[type="checkbox"],input[type="radio"]{display:none}
+/* 사용자 전역 클래스 */
+.universe{width:1100px;margin:0 auto;background-color:white;}
+.page-body{overflow:hidden}
+.hide,.dropdown{display:none}
+.nav-list,.wrapper{display:inline-block}
+.title{padding-bottom:3px;border-bottom:1px solid #FF7D43}
+.fl_L{float:left}.fl_R{float:right}
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+.top-cover {
+	height:45px;
+	line-height:45px;
+	color:white;
+	font-weight:bold;
+	padding:0 30px;
+	background-color:#FF7D43;
+}
+	.home-logo {
+		float:left;
+	}
+		.logo {
+			font-size:25px;
+		}
+	.user-nav {
+		float:right;
+		position:relative;
+	}
+		.user-nav .nav-list:hover {
+			color:black;
+			border-radius:25px;
+			background-color:#FFFBE2;
+		}
+			.myshop-btn {
+				display:block;
+				width:50px;
+				text-align:center;
+			}
+				.myshop-img {
+					vertical-align:middle;
+				}
+			.dropdown-btn {
+				display:block;
+				padding:0 5px;
+			}
+				.dropdown-img {
+					width:12px;
+					height:12px;
+					vertical-align:middle;
+					background-image:url('img/btn/dropdown-close.png');
+					background-size:contain;
+				}
+				.nav-list:hover .dropdown-btn > .dropdown-img {
+					background-image:url('img/btn/dropdown-open.png');
+				}
+				.nav-list:hover .dropdown-btn ~ .dropdown {
+					display:block;
+				}
+				.dropdown {
+					position:absolute;
+					right:0;
+					line-height:30px;
+					color:#686868;
+					font-size:14px;
+					font-weight:normal;
+					text-align:center;
+					border-top:2px solid #DEBB3D;
+					box-shadow:0 3px 5px rgba(0,0,0,.35);
+					background-color:#EFEFEF;
+				}
+					.dropdown a {
+						display:block;
+						width:120px;
+					}
+					.log-out {
+						background-color:#DDDDDD;
+					}
+						.log-out:hover {
+							background-color:#DDDDDD !important;
+						}
+					.dropdown li:hover {
+						background-color:#CCCCCC;
+					}

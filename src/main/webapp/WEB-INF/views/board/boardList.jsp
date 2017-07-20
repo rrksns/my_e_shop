@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ include file="../header.jsp" %>
+	pageEncoding="UTF-8"%>
+<%@ include file="../header.jsp"%>
 <!DOCTYPE html PUBLIC >
 <html>
 <head>
@@ -9,46 +9,56 @@
 </head>
 <body>
 
-<div class="container">
-<h2 class="text-primary" align="center">게시판 목록</h2>
+	<div class="container">
+		<h2 class="text-primary" align="center">게시판 목록</h2>
 
-<table class="table table-striped">
-<tr><td>번호</td><td>제목</td><td>작성자</td><td>작성일</td><td>조회수</td></tr>
-<c:if test="${empty list }">
-	<tr><td colspan="5">데이터가 없습니다</td>
-</c:if>
-
-<c:if test="${not empty list }">
-<c:set var="no1" value="${no}"></c:set>
-	<c:forEach var="board" items="${list}">
-		<tr><td>${no1}</td>
-	<c:if test="${board.del =='y' }">
-		<td colspan="4">삭제된 데이터 입니다</td>
-	</c:if>
-	<c:if test="${board.del !='y' }"> 
-		<td><a href="bd_view.go?bd_num=${board.bd_num}&pageNum=${pp.currentPage}" >
-			<c:if test="${board.re_level >0 }">
-				<img alt="" src="resources/img/level.gif" height="2" 
-						width="${board.re_level *5 }">
-				<img alt="" src="resources/img/re.gif">
+		<table class="table table-striped">
+			<tr>
+				<td>번호</td>
+				<td>제목</td>
+				<td>작성자</td>
+				<td>작성일</td>
+				<td>조회수</td>
+			</tr>
+			<c:if test="${empty list }">
+				<tr>
+					<td colspan="5">데이터가 없습니다</td>
 			</c:if>
-			${board.bd_subject}
-			<c:if test="${board.bd_count > 30 }">
-				<img alt="" src="resources/img/hot.gif">
-			</c:if></a>
-		</td>
-		<td>${board.s_id}</td><td>${board.bd_regDate}</td>
-		<td>${board.bd_count}</td>
-	</c:if></tr>
-	<c:set var="no1" value="${no1-1}"></c:set>
-</c:forEach>
-</c:if>
-</table>
 
-<!-- 검색기능 -->
-<form action="boardList.go" >
-		<select name="search">
-		<option value="bd_subject" <c:if test="${search =='bd_subject'}">
+			<c:if test="${not empty list }">
+				<c:set var="no1" value="${no}"></c:set>
+				<c:forEach var="board" items="${list}">
+					<tr>
+						<td>${no1}</td>
+						<c:if test="${board.del =='y' }">
+							<td colspan="4">삭제된 데이터 입니다</td>
+						</c:if>
+						<c:if test="${board.del !='y' }">
+							<td><a
+								href="bd_view.go?bd_num=${board.bd_num}&pageNum=${pp.currentPage}">
+									<c:if test="${board.re_level >0 }">
+										<img alt="" src="resources/img/level.gif" height="2"
+											width="${board.re_level *5 }">
+										<img alt="" src="resources/img/re.gif">
+									</c:if> ${board.bd_subject} <c:if test="${board.bd_count > 30 }">
+										<img alt="" src="resources/img/hot.gif">
+									</c:if>
+							</a></td>
+							<td>${board.s_id}</td>
+							<td>${board.bd_regDate}</td>
+							<td>${board.bd_count}</td>
+						</c:if>
+					</tr>
+					<c:set var="no1" value="${no1-1}"></c:set>
+				</c:forEach>
+			</c:if>
+		</table>
+
+		<!-- 검색기능 -->
+		<form action="boardList.go">
+			<select name="search">
+				<option value="bd_subject"
+					<c:if test="${search =='bd_subject'}">
 		selected="selected"</c:if>>제목</option>
 		<option value="bd_content"<c:if test="${search =='bd_content'}">
 		selected="selected"</c:if>>내용</option>

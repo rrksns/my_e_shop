@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.select-template {
+	margin-top:20px;
+}
+	.template {
+		width:820px;
+		height:120px;
+		border:2px solid #DEBB3D;
+		margin-bottom:10px;
+	}
+		.template label {
+			display:block;
+			width:760px;
+			height:120px;
+			line-height:120px;
+			padding:0 30px;
+		}
+			input[type="radio"]:checked ~ .comment {
+				font-size:20px;
+				color:#FF7D43;
+			}
+			.template-img {
+				width:64px;
+				height:64px;
+				background-image:url(img/icon/template.png);
+				vertical-align:middle;
+			}
+				.restaurant {
+					background-position:0 0;
+				}
+				.academy {
+					background-position:-64px 0;
+				}
+				.clothes {
+					background-position:-128px 0;
+				}
+				.facility {
+					background-position:-192px 0;
+				}
+			.comment {
+				font-size:18px;
+				font-weight:bold;
+				margin-left:20px;
+			}
+#preview {
+	POSITION:absolute;
+	Z-INDEX:1;
+	VISIBILITY:hidden;
+}
+.btn-box {
+	margin-top:40px;
+}

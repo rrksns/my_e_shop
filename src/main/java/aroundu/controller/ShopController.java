@@ -43,9 +43,23 @@ public class ShopController {
 	@Autowired 
 	MenuService ms;
 	
+<<<<<<< HEAD
 	@Autowired
 	GradeService gs;
 	
+=======
+<<<<<<< HEAD
+	/*my eshop 실행*/
+	@RequestMapping("shopManagement")
+	public String shopManagement(HttpSession session, Model model) {
+		String s_id = (String)session.getAttribute("id");
+		Seller seller = ss.select(s_id);
+		model.addAttribute("seller", seller);
+		Shop shop =  sv.select(s_id);
+		model.addAttribute("shop", shop);
+		return "shop/shopManagement";
+=======
+>>>>>>> 1da5a39afef8dbb70e32da8c96c2d78eb9086558
 	/*해당샵 조회후 호출*/
 	@RequestMapping("shopView1")
 	public String shopView1(int sh_id, Model model){	
@@ -75,9 +89,10 @@ public class ShopController {
 		
 		
 		return "shop/shopView1";
+>>>>>>> 6907c1eb802efb96c6093a4f5e424d1bf6b94d53
 	}
 	
-	/*샵 메인실행*/
+	/*샵 등록 실행*/
 	@RequestMapping("shopMain")
 	public String shopMain(HttpSession session, Model model) {
 		String s_id = (String)session.getAttribute("id");
@@ -290,6 +305,16 @@ public class ShopController {
 			model.addAttribute("shopList", shopList);
 		return "shop/shopList";
 	}
+	/*셀러 로그인시 메인*/
+	@RequestMapping("sellerShopList")
+	public String sellerShopList(Model model,HttpSession session) {
+			String s_id=(String)session.getAttribute("id");
+			List<Shop> sellerShopList = sv.getSellerShopList();
+			model.addAttribute("sellerShopList", sellerShopList);
+		return "shop/shopList";
+	}
+	
+	
 	/*로그인한 아이디로 해당리스트 검색*/
 	@RequestMapping("shopList1")
 	public String shopList1(Model model,HttpSession session) {

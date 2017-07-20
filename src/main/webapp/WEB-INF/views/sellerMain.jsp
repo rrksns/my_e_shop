@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,700" rel="stylesheet">
 <script type="text/javascript">
 	$(function(){
-		$('#shopList').load('shopList.go');
+		$('#sellerShopList').load('sellerShopList.go');
 	});
 </script>
 </head>
@@ -25,7 +25,7 @@
   	  <nav class="user-nav"><h2 class="hide">사용자 메뉴</h2>
   	  		<a href="s_logout.go">로그아웃</a>
 			<a href ="s_page.go">my page</a>
-			<a href ="shopMain.go">my e-shop</a>
+			<a href ="shopManagement.go">my e-shop</a>
 			<a href ="boardList.go">게시판</a>	  
   	  </nav>
   	</div>
@@ -147,15 +147,15 @@
   	  </div>
   	  <div class="new-shop"><h2 class="hide">새로 등록한 샵</h2>
   	  	<h3 class="title">나의 등록 샵</h3>
-<span>${s_name}님의 %{shop.sh_name} 바로가기</span>
-<div id="shopList"></div>
-<ul >
-<li class="shop-list">
-<%-- <a href="main.go?shopMainList=${shopMainList}">
+<span>${s_name}님의 ${sh_name} 바로가기</span>
+<ul>
+<div id="sellerShopList"></div>
+<%-- <li class="shop-list">
+<a href="main.go?shopMainList=${shopMainList}">
 <img src="shopPic/upload/${shop.sh_img1}" width="210" height="160">
 <span>${shop.sh_name}</span>
-</a> --%>
-</li>
+</a>
+</li> --%>
 </ul>
   	  </div>
   	</div>

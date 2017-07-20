@@ -43,6 +43,11 @@ public class ShopServiceImpl implements ShopService{
 		// TODO Auto-generated method stub
 		return sd.getShopMainList1(id);
 	}
+	@Override
+	public List<Shop> getSellerShopList() {
+		// TODO Auto-generated method stub
+		return sd.getSellerShopList();
+	}
 	
 	
 	

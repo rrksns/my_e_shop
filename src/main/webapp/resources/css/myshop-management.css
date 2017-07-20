@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* 헤더 */
+.management-nav {
+	
+}
+/* aside 스타일 */
+.management-nav{}
+	.management-nav li {
+		padding:0 30px;
+		color:white;
+		font-weight:bold;
+	}
+	.management-nav li:hover {
+		color:#DEBB3D;
+	}
+	.open {
+		color:#A48000 !important;
+		background:white;
+		
+	}
+		.nav-btn {
+			display:block;
+			padding:10px 0;
+		}
+/* 나의 e-Shop */
+.shop-list {
+	margin-top:20px;
+}
+	.shop-list h4 {
+		margin-bottom:10px;
+	}
+	.shop-list .wrapper {
+		text-align:center;
+		margin:0 20px 20px 0;
+	}
+		.shop-img {
+			width:250px;
+			height:185px;
+		}
+		.shop-list .name-txt {
+			display:block;
+			font-size:14px;
+			font-weight:bold;
+		}
+	.shop-addition {
+		display:inline-block;
+		width:250px;
+		text-align:center;
+	}
+		.shop-addition a {
+			cursor:pointer;
+		}
+		.shop-addition .comment {
+			display:block;
+			margin-top:10px;
+			font-size:20px;
+			font-weight:bold;
+		}

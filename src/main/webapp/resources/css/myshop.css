@@ -1,261 +1,198 @@
-@CHARSET "UTF-8";/* 마이샵 등록 */
-.universe{font-family:calibri;width:1000px;height:750px}
-p{margin:0}ul{list-style:none;margin:0;padding:0}img{position:relative}input[type="radio"],input[type="checkbox"]{display:none}
-button{color:white;font:25px bold;border:none;border-radius:10px;background-color:#ff7d43}
-/* aside 부분 */
-aside {
-	float:left;
-	width:200px;
-	height:750px;
-	text-align:center;
-	font-weight:bold;
-	background-color:#ff7d43;
+@charset "UTF-8";
+/* 프레임(헤더) */
+.secondary-line {
+	height:45px;
+	line-height:45px;
+	padding:0 30px;
+	background-color:#FFC000
 }
-	.home_logo {
-		color:white;
+	.secondary-line .wrapper {
+		margin-right:15px;
 	}
-	aside p {
-		padding:10px 0;
-		margin:0 15px;
-		border-bottom:1px solid #7030a0;
-	}
-	.shopNameWrap {
-		margin:35px 0 70px 0;
-	}
-	.phase li {
-		color:white;
-	}
-/* 메인 컨텐츠 */
-main { 
-	float:left;
-	width:800px;
-}
-	/* 헤더 */
-	.setWrap {
-		height:35px;
-		text-align:right;
-	}
-		.set_btn {
-			position:relative;
-			top:4px;
-			margin-right:10px;
-			border:none;
-			background-color:white;
-		}
-	.titleWrap {
-		height:45px;
-		line-height:45px;
-		background-color:#e2e2e2;
-	}
-		.title {
-			margin:0; padding:0;
-			margin-left:30px;
-		}
-			.title img {
-				top:4px;
-			}
-			
-	/* 샵 정보 등록 */
-	#shopInfo_register {
-		padding:0 30px;
-	}
-	.start_shopInfo {
-		text-align:center;
-	}
-		.txtBox {
-			font-size:25px;
-			margin-bottom:60px;
-		}
-			.welcomeWrap {
-				font-size:40px;
-				margin:100px 0;
-			}
-			.instWrap {
-				font-weight:100;
-			}
-		.start_btn {
-			width:100px;
-			height:55px;
-		}
-	/* 기본 정보(템플릿 선택) */
-	.templateBox {
-		margin-bottom:10px;
-	}
-		.templateBox label {
-			display:block;
-			height:110px;
-			line-height:100px;
-			border:1px solid black;
-			margin-bottom:10px;
-			cursor:pointer;
-			font-size:17px;
-			font-weight:bold;
-		}
-		.templateBox label::before {
-			position:relative;
-			top:20px;
+		.bookmark-btn::before {
 			display:inline-block;
-			width:70px;
-			height:70px;
-			margin:0 30px;
 			content:'';
-			background-image:url(../img/template_icon.png);
-		}
-			.template1::before {
-				background-position:0 0;
-			}
-			.template2::before {
-				background-position:-70px 0;
-			}
-			.template3::before {
-				background-position:-140px 0;
-			}
-			.template4::before {
-				background-position:-210px 0;
-			}
-	.nextBtnWrap {
-		margin-top:20px;
-	}
-		.prev_btn {
-			float:left;
-			width:150px;
-			height:50px;
-			background-color:#9C9999;
-		}
-		.next_btn {
-			float:right;
-			width:150px;
-			height:50px;
-		}
-	/* 기본 정보 입력 */
-	.basic_shopInfo h4 {
-		margin-bottom:5px;
-	}
-	
-	.txtInfo {
-		width:720px;
-		height:130px;
-		padding:10px;
-		border:none;
-		outline:none;
-		background-color:#ccc1da;
-	}
-	.infoContainer {
-		width:350px;
-	}
-		.serviceTypeBox {
-			border:1px solid black;
-		}
-			.serviceTypeBox .typeWrap {
-				float:left;
-				width:85px;
-				height:120px;
-				text-align:center;
-				font-size:12px;
-				padding:10px;
-				border:none;
-			}
-				.mg_add {
-					margin:0 15px;
-				}
-				.type_icon {
-					position:relative;
-					left:13px;
-					display:block;
-					width:64px;
-					height:64px;
-					background:url(../img/type_icon.png) no-repeat;
-					margin:10px 0;
-				}
-					.in {
-						background-position:0 0;
-					}
-					.take {
-						background-position:-64px 0;
-					}
-					.delivery {
-						background-position:-128px 0;
-					}
-					.alltime {
-						background-position:-192px 0;
-						margin:2px;
-					}
-		.timeBox {
-			float:left;
-		}
-			.timeWrap input[type="time"] {
-				font-size:15px;
-				width:120px;
-				height:30px;
-				background-color:#ccc1da;
-				border:none;
-				outline:none;
-			}
-		.alltimeWrap {
-			position:relative;
-			top:50px;
-			text-align:center;
-			font-size:12px;
-		}
-					
-	/* 메뉴 등록 */
-	.typeBox {
-		width:600px;
-		margin:40px auto;
-	}
-		.typeWrap {
-			float:left;
-			width:270px;
-			height:280px;
-			border:3px dashed #c2a8dc;
-		}
-	/* 부가 정보 */
-	.selectWrap {
-		display:inline-block;
-		width:200px;
-		height:180px;
-		margin:20px;
-		border:1px solid #ff7d43;
-		text-align:center;
-	}
-		.selectWrap h4 {
-			margin-bottom:0;
-		}
-		input[type="checkbox"]:checked ~ .chk_btn {
-			background-position:-20px -40px;
-		}
-		.chk_btn {
-			display:block;
 			width:20px;
 			height:20px;
-			margin:0 auto;
-			background:url(../img/check.png) 0 -40px no-repeat;
+			vertical-align:middle;
+			margin-right:5px;
+			background-image:url('img/btn/checkbox.png');
 		}
-		.service_icon {
-			position:relative;
-			left:60px;
-			display:block;
-			width:80px;
-			height:80px;
-			margin:10px 0;
-			background:url(../img/service_icon.png) no-repeat;
+			#bookmark:checked ~ .bookmark-btn::before {
+				background-position:-20px 0;
+			}
+		.coupon-img {
+			vertical-align:middle;
+			margin-right:5px;
 		}
-			.smoke {
-				background-position:0 0;
+/* 프레임(바디) */
+.page-body {
+	overflow:hidden;
+	padding:10px 30px;
+}
+/* 메인 */
+.contents {
+	float:right;
+	width:755px;
+}
+	.head-line {
+		overflow:hidden;
+		margin-bottom:5px;
+	}
+		.entry,.open-closed,.summary,.service-type{float:left}
+		.entry {
+			width:120px;
+			text-align:center;
+		}
+			.shop-name {
+				font-size:25px;
+				font-weight:bold;
+				word-break:keep-all;
+				margin-bottom:5px;
 			}
-			.wifi {
-				background-position:-80px 0;
+			.gpa {
+				width:120px;
+				height:24px;
+				background:url(img/icon/star-blank.png) repeat-x;
 			}
-			.bathroom {
-				background-position:-160px 0;
+				.gpa-img {
+					display:block;
+					width:0%;
+					height:24px;
+					background:url(img/icon/star-full.png) repeat-x;
+				}
+		.open-closed {
+			width:50px;
+			color:#45B3F2;
+			font-size:14px;
+			font-weight:bold;
+			text-align:center;
+			margin:0 50px 0 10px;
+		}
+			.open-txt {
+				color:#34ABEF;
 			}
-			.parking {
-				background-position:-240px 0;
+			.closed-txt {
+				color:#EF5434;
 			}
-			.blanket {
-				background-position:0 -80px;
+		.summary {
+			width:320px;
+			font-size:16px;
+			margin-right:10px;
+		}
+				.summary-info {
+					margin-bottom:10px;
+					background:beige;
+				}
+	.banner {
+		height:200px;
+		margin-bottom:10px;
+		background:blue;
+	}
+	.menu-line {
+		overflow:hidden;
+		margin-bottom:10px;
+	}
+		.menu {
+			float:left;
+			width:490px;
+		}
+			.menu-category {
+				border-bottom:1px solid #4A7EBB;
+				margin-bottom:5px;
 			}
-			.charge {
-				background-position:-80px -80px;
+				.menu-category * {
+					display:inline-block;
+					margin-right:30px;
+				}
+				.menu-category li {
+					cursor:pointer;
+					padding:3px;
+				}
+				.selected {
+					color:white;
+					border-radius:10px;
+					background-color:#4A7EBB;
+					font-weight:normal !important;
+				}
+				.menu-category li:hover {
+					font-weight:bold;
+				}
+			.top-menu {
+				border-bottom:1px solid #4A7EBB;
+				margin-bottom:5px;
 			}
-		
+				.top-menu .wrapper {
+					position:relative;
+					top:-20px;
+					width:100px;
+					text-align:center;
+				}
+					.menu-img {
+						margin-right:5px;
+					}
+		.location {
+			float:right;
+			width:250px;
+		}
+			.loc-txt {
+				font-size:12px;
+			}
+			#map {
+				width:250px;
+				height:250px;
+				margin-top:5px;
+			}
+/* 사이드 */
+.support {
+	float:left;
+	width:255px;
+}
+	.hits {
+		font-size:15px;
+		font-weight:bold;
+		margin-bottom:40px;
+	}
+	.linked {
+		display:inline-block;
+		width:32px;
+		height:32px;
+		background-image:url('img/icon/sns.png');
+	}
+	
+		.facebook {
+			background-position:0 0;
+		}
+		.instagram {
+			background-position:-32px 0;
+		}
+		.twitter {
+			background-position:-64px 0;
+		}
+	.photo {
+		margin-bottom:10px;
+	}
+		.sub-photo {
+			height:50px;
+		}
+			.sub-photo img {
+				display:block;
+				float:left;
+				width:51px;
+				height:50px;
+			}
+	.shop-info {
+		margin-bottom:10px;
+	}
+		.add-info {
+			margin:4px 0;
+		}
+			.info-img {
+				width:32px;
+				height:32px;
+			}
+	.employment {
+	}
+		.publish {
+			opacity:0.5;
+		}
