@@ -17,6 +17,14 @@
 		select u_id from grade where u_id=#{u_id}
 	</select>
 	
+	<select id="count" parameterType="int" resultType="int">
+		select count(*) from grade where sh_id=#{sh_id}
+	</select>
+	
+	<select id="list" parameterType="int" resultMap="grResult">
+		select service from grade where sh_id=#{sh_id}
+	</select>
+	
 	<!-- 	
 
 	<insert id="insert" parameterType="menu">

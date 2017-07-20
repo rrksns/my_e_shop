@@ -34,7 +34,7 @@ body{background-color:#E6E6E6}
   	  	  	${shop.sh_name}
   	  	  </div>
   	  	  <div class="grade">
-  	  	  	<span class="gpa"></span>
+  	  	  	<span class="gpa"></span>  	  	     
   	  	  </div>
   	  	</div>
   	  	<div class="open-closed">
@@ -64,6 +64,7 @@ body{background-color:#E6E6E6}
   	  .
   	  .
   	  .
+  	     	/5점 ()명
   	  
   	  
   	  </pre>

@@ -16,11 +16,15 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import aroundu.model.Grade;
 import aroundu.model.Menu;
 import aroundu.model.Seller;
 import aroundu.model.Shop;
 import aroundu.model.ShopDetail;
+import aroundu.service.AverPgm;
+import aroundu.service.GradeService;
 import aroundu.service.MenuService;
+import aroundu.service.PagingPgm;
 import aroundu.service.SellerService;
 import aroundu.service.ShopDetailService;
 import aroundu.service.ShopService;
@@ -39,6 +43,9 @@ public class ShopController {
 	@Autowired 
 	MenuService ms;
 	
+	@Autowired
+	GradeService gs;
+	
 	/*해당샵 조회후 호출*/
 	@RequestMapping("shopView1")
 	public String shopView1(int sh_id, Model model){	
@@ -54,6 +61,18 @@ public class ShopController {
 		model.addAttribute(shopDetail);
 		int sh_detailId=shopDetail.getSh_detailId();		
 		model.addAttribute("sh_detailId",sh_detailId);
+		
+		/*평점계산하기*/
+		int count = gs.count(sh_id); /*평가인원*/
+		List<Grade> glist = gs.list(sh_id); /*sh_id로 같은 모든 데이터를 가져옴 임의로 service로 제한함*/
+		AverPgm ap = new AverPgm(count,glist);
+		
+		model.addAttribute("count",count);
+		
+		
+		
+		
+		
 		
 		return "shop/shopView1";
 	}
