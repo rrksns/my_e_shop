@@ -8,7 +8,7 @@ public interface GradeService {
 
 	int insert(Grade grade);
 
-	String select(String u_id);
+	String select(String sh_id);
 
 	int count(int sh_id);
 

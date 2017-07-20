@@ -20,7 +20,7 @@ public class GradeController {
 		
 		String u_id = (String)session.getAttribute("id");		
 		grade.setU_id(u_id);
-		String v_id = (String)gs.select(grade.getU_id());		 
+		String v_id = (String)gs.select(grade.getSh_id());		 
 		if(u_id == v_id || u_id.equals(v_id)){	// 입력된 아이디가 있는지 체크	
 			return "shop/starNo";
 		}else{			

@@ -19,8 +19,8 @@ public class GradeDaoImpl implements GradeDao{
 	}
 
 	@Override
-	public String select(String u_id) {
-		return gst.selectOne("Gradens.select", u_id);
+	public String select(String sh_id) {
+		return gst.selectOne("Gradens.select", sh_id);
 	}
 
 	@Override
