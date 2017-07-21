@@ -202,6 +202,8 @@ delete from shop;
 select * from shop;
 delete from menu;
 drop table grade;
+
+
 create table grade(
 u_id  varchar(20),
 sh_id int(20),
@@ -215,6 +217,6 @@ select u_id from grade where u_id='uu';
 
 select * from replyBoard;
 delete from replyBoard ;
-delete from grade ;
+delete from grade where u_id='ww';
 select * from menu;
 select ifnull(sh_id,0) sh_id from menu where it_id = 29;

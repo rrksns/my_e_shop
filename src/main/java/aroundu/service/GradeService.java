@@ -13,6 +13,10 @@ public interface GradeService {
 	int count(int sh_id);
 
 	List<Grade> list(int sh_id);
+	List<Grade> list1(int sh_id);
+	List<Grade> list2(int sh_id);
+
+	List<Grade> vlist(String sh_id);
 
 	
 

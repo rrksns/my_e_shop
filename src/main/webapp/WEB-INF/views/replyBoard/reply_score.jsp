@@ -28,7 +28,7 @@
 	</script>
 	<script type="text/javascript">
 	function score(){
-		window.open('score.go','popup1','width=300,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
+		window.open('score.go','popup1','width=500,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
 	}
 	
 	function winPop(url, opts) {
