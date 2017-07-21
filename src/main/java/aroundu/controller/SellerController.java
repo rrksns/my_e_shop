@@ -117,7 +117,8 @@ public class SellerController {
 		model.addAttribute("seller",seller);
 		Shop shop =  sv.select(s_id);	
 		model.addAttribute("shop", shop);
-		List<Shop> sellerShopList = sv.getSellerShopList();
+		List<Shop> sellerShopList = sv.getSellerShopList(s_id);
+		System.out.println("리스트 사이즈"+sellerShopList.size());
 		model.addAttribute("sellerShopList", sellerShopList);
 		return "sellerMain";
 	}

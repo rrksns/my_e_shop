@@ -302,7 +302,7 @@ public class ShopController {
 	@RequestMapping("sellerShopList")
 	public String sellerShopList(Model model,HttpSession session) {
 			String s_id=(String)session.getAttribute("id");
-			List<Shop> sellerShopList = sv.getSellerShopList();
+			List<Shop> sellerShopList = sv.getSellerShopList(s_id);
 			model.addAttribute("sellerShopList", sellerShopList);
 		return "shop/sellershopList";
 	}

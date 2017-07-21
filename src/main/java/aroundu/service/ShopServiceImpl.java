@@ -44,9 +44,8 @@ public class ShopServiceImpl implements ShopService{
 		return sd.getShopMainList1(id);
 	}
 	@Override
-	public List<Shop> getSellerShopList() {
-		// TODO Auto-generated method stub
-		return sd.getSellerShopList();
+	public List<Shop> getSellerShopList(String s_id) {
+		return sd.getSellerShopList(s_id);
 	}
 	@Override
 	public List<Shop> list(Shop shop) {

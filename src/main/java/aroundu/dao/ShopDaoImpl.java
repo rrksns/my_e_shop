@@ -49,7 +49,7 @@ public class ShopDaoImpl implements ShopDao{
 	}
 
 	@Override
-	public List<Shop> getSellerShopList() {
+	public List<Shop> getSellerShopList(String s_id) {
 		// TODO Auto-generated method stub
 		return st.selectList("Shopns.getSellerShopList");
 	}
