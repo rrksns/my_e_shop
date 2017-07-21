@@ -30,6 +30,8 @@
 		<result property="takeOut" 		column="takeOut" />
 		<result property="dineIn"		column="dineIn" />
 		<result property="delivery"		column="delivery" />
+		<result property="sh_hash"		column="sh_hash" />
+		
 	</resultMap>
 	
 
