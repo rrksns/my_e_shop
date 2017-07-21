@@ -89,4 +89,28 @@ public class AverPgm {
 		this.glist = glist;
 	}
 
+
+
+	public List<Grade> getGlist1() {
+		return glist1;
+	}
+
+
+
+	public void setGlist1(List<Grade> glist1) {
+		this.glist1 = glist1;
+	}
+
+
+
+	public List<Grade> getGlist2() {
+		return glist2;
+	}
+
+
+
+	public void setGlist2(List<Grade> glist2) {
+		this.glist2 = glist2;
+	}
+
 }

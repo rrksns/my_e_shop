@@ -31,6 +31,10 @@
 		select price from grade where sh_id=#{sh_id}
 	</select>
 	
+	<select id="vlist" parameterType="int" resultMap="grResult">
+		select u_id from grade where sh_id=#{sh_id}
+	</select>
+	
 	<!-- 	
 
 	<insert id="insert" parameterType="menu">

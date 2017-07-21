@@ -43,4 +43,9 @@ public class GradeServiceImpl implements GradeService{
 		return gd.list2(sh_id);
 	}
 
+	@Override
+	public List<Grade> vlist(String sh_id) {
+		return gd.vlist(sh_id);
+	}
+
 }

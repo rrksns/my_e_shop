@@ -18,4 +18,6 @@ public interface GradeDao {
 	
 	List<Grade> list2(int sh_id);
 
+	List<Grade> vlist(String sh_id);
+
 }

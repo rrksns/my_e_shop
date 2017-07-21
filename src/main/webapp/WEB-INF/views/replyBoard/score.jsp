@@ -71,14 +71,64 @@ star-input2>.input2.focus{outline:1px dotted #ddd;}
 .star-input2>.input2>label[for="a5"]{width:150px;z-index:1;}
 .star-input2>output{display:inline-block;width:60px; font-size:18px;text-align:right; vertical-align:middle;}
 </style>
+<script type="text/javascript">
+	function chk(){
+		if(!frm.flavor.value){
+			alert('맛 평점을 입력하세요');
+			/*  frm.flavor.focus();  */
+			return false;			
+		}	 
+		
+		if(!frm.sevice.value){
+			alert('서비스 평점을 입력하세요');
+			/* frm.sevice.focus(); */
+			return false;
+		}
+		
+		if(!frm.price.value){
+			alert('가격 평점을 입력하세요');
+			/* frm.price.focus(); */
+			return false;
+		}
+		
+	}
+ 
 
+
+	
+</script> 
+<!--   $(function(){
+	$('#sub').click(function(){
+		alert('1')
+		if(!frm.flavor.value){
+			alert('맛 평점을 입력하세요');
+			frm.flavor.focus();
+			return false;
+		}
+		
+		else if(!frm.sevice.value){
+			alert('서비스 평점을 입력하세요');
+			frm.sevice.focus();
+			return false;
+		}
+		
+		else(!frm.price.value){
+			alert('가격 평점을 입력하세요');
+			frm.price.focus();
+			return false;
+		}
+		
+		
+	});	
+	
+});   -->
 
 </head>
 
 <body>
 <fieldset>
 
-<form action="starInput.go" method="post">
+<form action="starInput.go" method="post" id="frm" name="frm" onsubmit="return chk()">
 <input type="hidden" name="sh_id" value="${sh_id}">
 <ul>
 
@@ -136,7 +186,7 @@ star-input2>.input2.focus{outline:1px dotted #ddd;}
   	<output for="star-input2"><b>0</b>점</output>						
 </span> 
 
-<input type="submit" value="입력하기" >
+<input type="submit" value="입력하기" id="sub">
 <input type="button" value="닫기" onclick="window.close()">
 
 

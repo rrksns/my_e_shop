@@ -43,4 +43,9 @@ public class GradeDaoImpl implements GradeDao{
 		return gst.selectList("Gradens.list2",sh_id);
 	}
 
+	@Override
+	public List<Grade> vlist(String sh_id){
+		return gst.selectList("Gradens.vlist",sh_id);
+	}
+
 }
