@@ -33,4 +33,14 @@ public class GradeServiceImpl implements GradeService{
 		return gd.list(sh_id);
 	}
 
+	@Override
+	public List<Grade> list1(int sh_id) {		
+		return gd.list1(sh_id);
+	}
+
+	@Override
+	public List<Grade> list2(int sh_id) {		
+		return gd.list2(sh_id);
+	}
+
 }

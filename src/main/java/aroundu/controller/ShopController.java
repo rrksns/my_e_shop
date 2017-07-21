@@ -74,9 +74,11 @@ public class ShopController {
 		
 		/*평점계산하기*/
 		int count = gs.count(sh_id); /*평가인원*/
-		List<Grade> glist = gs.list(sh_id); /*sh_id로 같은 모든 데이터를 가져옴 임의로 service로 제한함*/
-		AverPgm ap = new AverPgm(count,glist);
-		
+		List<Grade> glist = gs.list(sh_id); /*service리스트*/
+		List<Grade> glist1 = gs.list1(sh_id);/*flovor 리스트*/
+		List<Grade> glist2 = gs.list2(sh_id);/*price 리스트*/
+		AverPgm ap = new AverPgm(count,glist,glist1,glist2);		
+		model.addAttribute("ap",ap);
 		model.addAttribute("count",count);		
 		return "shop/shopView1";
 

@@ -64,10 +64,11 @@ body{background-color:#E6E6E6}
   	  .
   	  .
   	  .
-  	     	/5점 ()명
+  	     	
   	  
   	  
   	  </pre>
+  	  ${ap.aver}/5점 (${count})명
   	  </div>
   	</header>
   	<div class="contents" role="main">

@@ -14,7 +14,7 @@ import aroundu.service.GradeService;
 public class GradeController {
 	@Autowired
 	GradeService gs;
-	
+	/*평점 입력하기*/
 	@RequestMapping("starInput")
 	public String starInput(Grade grade, Model model, HttpSession session){
 		
@@ -34,5 +34,7 @@ public class GradeController {
 	public String score1(){ 
 		return "shop/score1";
 	}
+	
+	
 
 }
