@@ -301,10 +301,10 @@ public class ShopController {
 	/*셀러 로그인시 메인*/
 	@RequestMapping("sellerShopList")
 	public String sellerShopList(Model model,HttpSession session) {
-			String s_id=(String)session.getAttribute("id");
-			List<Shop> sellerShopList = sv.getSellerShopList(s_id);
+			String s_id=(String)session.getAttribute("id");			
+			List<Shop> sellerShopList = sv.getSellerShopList(s_id);			
 			model.addAttribute("sellerShopList", sellerShopList);
-		return "shop/sellershopList";
+		return "seller/sellerShopList";
 	}
 	
 	

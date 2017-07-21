@@ -87,6 +87,7 @@ sh_id int(20)
 );
 
 select * from menuBoard;
+select * from shop where s_id="lee2";
 
 alter table shop add sh_hash varchar(300);
 alter table shop add sh_img6 varchar(100);
