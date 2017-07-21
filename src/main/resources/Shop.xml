@@ -30,6 +30,8 @@
 		<result property="takeOut" 		column="takeOut" />
 		<result property="dineIn"		column="dineIn" />
 		<result property="delivery"		column="delivery" />
+		<result property="sh_hash"		column="sh_hash" />
+		
 	</resultMap>
 	
 
@@ -68,6 +70,20 @@
 	
 	<select id="getSellerShopList" parameterType="string" resultMap="shopResult">
 		select * from shop where s_id=#{s_id} order by sh_id desc limit 3
+	</select>
+	
+	<select id="list" parameterType="shop" resultMap="shopResult">
+	select * from shop 
+			<where>	
+			<if test="keyword != null and search !='shcon'">
+				${search} like concat('%',#{keyword},'%')
+			</if>
+			<if test="keyword != null and search =='shcon'" >
+			sh_name like concat('%', #{keyword},'%') or
+			sh_hash like concat('%', #{keyword},'%')
+			</if>
+		</where>
+		order by sh_id desc
 	</select>
 	
 </mapper>

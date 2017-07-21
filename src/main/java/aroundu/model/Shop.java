@@ -34,11 +34,18 @@ public class Shop {
 	public String takeOut;
 	public String dineIn;
 	public String delivery;
+	private String sh_hash;
 	
 	private MultipartFile file1; private MultipartFile file2;
 	private MultipartFile file3; private MultipartFile file4;
 	private MultipartFile file5; private MultipartFile file6;	
 
+	
+	//search작업
+		private String search;
+		private String keyword;	
+		
+		
 	public MultipartFile getFile1() {
 		return file1;
 	}
@@ -262,5 +269,26 @@ public class Shop {
 	public void setDelivery(String delivery) {
 		this.delivery = delivery;
 	}
+	public String getSearch() {
+		return search;
+	}
+	public void setSearch(String search) {
+		this.search = search;
+	}
+	public String getKeyword() {
+		return keyword;
+	}
+	public void setKeyword(String keyword) {
+		this.keyword = keyword;
+	}
+	public String getSh_hash() {
+		return sh_hash;
+	}
+	public void setSh_hash(String sh_hash) {
+		this.sh_hash = sh_hash;
+	}
+	
+	
+	
 
 }

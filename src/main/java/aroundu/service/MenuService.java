@@ -3,6 +3,7 @@ package aroundu.service;
 import java.util.List;
 
 import aroundu.model.Menu;
+import aroundu.model.Shop;
 
 public interface MenuService {
 
@@ -31,5 +32,8 @@ public interface MenuService {
 
 
 	Menu select2(int sh_id);
+
+
+	List<Shop> list(Shop shop);
 
 }

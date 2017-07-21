@@ -14,4 +14,6 @@ public interface ReplyBoardService {
 
 	void delete(int rno);
 
+	int select(int rno);
+
 }

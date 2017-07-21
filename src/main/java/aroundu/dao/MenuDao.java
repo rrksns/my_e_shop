@@ -3,6 +3,7 @@ package aroundu.dao;
 import java.util.List;
 
 import aroundu.model.Menu;
+import aroundu.model.Shop;
 
 public interface MenuDao {
 
@@ -25,6 +26,8 @@ public interface MenuDao {
 	List<Menu> mlist(int sh_id);
 
 	Menu select2(int sh_id);
+
+	List<Shop> list(Shop shop);
 
 	
 

@@ -36,4 +36,9 @@ public class ReplyBoardDaoImpl implements ReplyBoardDao{
 		
 	}
 
+	@Override
+	public int select(int rno) {
+		return rst.selectOne("rbns.select",rno);
+	}
+
 }

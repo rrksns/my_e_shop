@@ -8,6 +8,7 @@
 		<result property="replytext" 	column="replytext" />
 		<result property="replyer"		column="replyer" /> 
 		<result property="regdate" 		column="regdate" />
+		<result property="sh_id" 		column="sh_id" />
 		
 	</resultMap>
 <select id="list" parameterType="int" resultMap="rbResult">
@@ -29,6 +30,10 @@
 	<delete id="delete" parameterType="int">
 		delete from replyBoard where rno=#{rno}
 	</delete>
+	
+	<select id="select" parameterType="int" resultType="int">
+		select sh_id from replyBoard where rno=#{rno}
+	</select>
 
 <!-- <select id="list" parameterType="int" resultMap="rbResult">
 		select * from replyBoard where bno=#{bno} order by rno

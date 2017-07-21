@@ -20,5 +20,7 @@ public interface ShopDao {
 
 	List<Shop> getSellerShopList();
 
+	List<Shop> list(Shop shop);
+
 	
 }

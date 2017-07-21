@@ -8,7 +8,7 @@
 	<script type="text/javascript">
 
 	$(function(){
-		$('#slist').load("slist.go");		
+		$('#slist').load("slist.go?sh_id=${sh_id}");		
  		$('#repInsert').click(function(){
 			if(!frm.replytext.value){
 				alert('댓글 입력 후에 클릭하시오');
@@ -18,17 +18,14 @@
 			$.post('sInsert.go',frmData,function(data){
 				$('#slist').html(data);
 				$('#textarea').val("");		
-				
-				/* function lst(){
-					$('#slist').load('slist.go'); 
-				}*/
+								
 			});				
 		}); 
 	});
 	</script>
 	<script type="text/javascript">
 	function score(){
-		window.open('score.go','popup1','width=500,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
+		window.open('score.go','popup1','width=700,height=500,toolbar=no,menubar=no,resizable=no, scrollbars=no')
 	}
 	
 	function winPop(url, opts) {

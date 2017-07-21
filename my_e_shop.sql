@@ -88,6 +88,7 @@ sh_id int(20)
 
 select * from menuBoard;
 
+alter table shop add sh_hash varchar(300);
 alter table shop add sh_img6 varchar(100);
 alter table shop add sh_operTimeS varchar(50);
 alter table shop add sh_operTimeE varchar(50);
@@ -212,6 +213,7 @@ service int(20),
 price int(20)
 );	
 
+select * from shop;
 select * from grade;
 select u_id from grade where u_id='uu';
 

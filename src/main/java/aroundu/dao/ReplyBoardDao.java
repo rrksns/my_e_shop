@@ -14,4 +14,6 @@ public interface ReplyBoardDao {
 
 	void delete(int rno);
 
+	int select(int rno);
+
 }

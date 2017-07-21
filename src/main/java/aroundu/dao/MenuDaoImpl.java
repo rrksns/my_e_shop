@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import aroundu.model.Menu;
+import aroundu.model.Shop;
 
 @Repository
 public class MenuDaoImpl implements MenuDao{
@@ -66,6 +67,11 @@ public class MenuDaoImpl implements MenuDao{
 	@Override
 	public Menu select2(int sh_id) {
 		return st.selectOne("Menuns.select2",sh_id);
+	}
+
+	@Override
+	public List<Shop> list(Shop shop) {
+		return st.selectList("Menuns.list",shop);
 	}
 
 }

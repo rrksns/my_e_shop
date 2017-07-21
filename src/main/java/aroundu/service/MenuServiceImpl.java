@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import aroundu.dao.MenuDao;
 import aroundu.model.Menu;
+import aroundu.model.Shop;
 @Service
 public class MenuServiceImpl implements MenuService{
 	
@@ -59,6 +60,11 @@ public class MenuServiceImpl implements MenuService{
 	@Override
 	public Menu select2(int sh_id) {
 		return md.select2(sh_id);
+	}
+
+	@Override
+	public List<Shop> list(Shop shop) {
+		return md.list(shop);
 	}
 
 	

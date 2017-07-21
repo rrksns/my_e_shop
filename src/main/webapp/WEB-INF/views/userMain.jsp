@@ -32,12 +32,41 @@
   	</div>
   	<div class="search">
   	  <h2 class="hide">검색</h2>
-  	  <form action="" method="get" accept-charset="utf-8" role="search">
+  	  <form action="sh_search.go" method="post" accept-charset="utf-8" role="search">
   	  	<fieldset><legend>통합 검색</legend>
-  	  	  <input class="sch-inp" type="search" title="검색어 입력" autocomplete="off" autofocus>
-  	  	  <button class="sch-btn" type="submit"><span class="hide">검색</span></button>
+  	  	<select name="search">
+				<option value="sh_name"
+					<c:if test="${search =='sh_name'}">
+		selected="selected"</c:if>>샵이름</option>
+		<option value="it_name"<c:if test="${search =='it_name'}">
+		selected="selected"</c:if>>메뉴</option>
+		<option value="sh_hash" <c:if test="${search =='sh_hash'}">
+		selected="selected"</c:if>>Hash tag</option>
+		<option value="shcon" <c:if test="${search =='shcon'}">
+		selected="selected"</c:if>>샵이름+Hashtag</option>
+	</select>
+	
+  	  	  <input class="sch-inp" type="search" name="keyword" title="검색어 입력" autocomplete="off" autofocus>
+  	  	  <button class="sch-btn" type="submit" ><span class="hide">검색</span></button>
   	  	</fieldset>
   	  </form>
+  	  		<!-- 검색기능 -->
+<%-- 		<form action="boardList.go">
+			<select name="search">
+				<option value="bd_subject"
+					<c:if test="${search =='bd_subject'}">
+		selected="selected"</c:if>>제목</option>
+		<option value="bd_content"<c:if test="${search =='bd_content'}">
+		selected="selected"</c:if>>내용</option>
+		<option value="s_id" <c:if test="${search =='s_id'}">
+		selected="selected"</c:if>>작성자</option>
+		<option value="subcon" <c:if test="${search =='subcon'}">
+		selected="selected"</c:if>>제목+내용</option>
+	</select>
+	<input type="text" name="keyword"> 
+	<input type="submit" value="확인">
+</form> --%>
+  	  
   	</div>
   	<nav class="site-nav" role="navigation">
   	  <h2 class="hide">사이트 바로가기</h2>

@@ -60,7 +60,8 @@ public class ShopController {
 	@RequestMapping("shopView1")
 	public String shopView1(int sh_id, Model model){	
 		Shop shop = sv.select2(sh_id);
-		model.addAttribute(shop);		
+		model.addAttribute("shop",shop);
+		model.addAttribute("sh_id",sh_id);
 		
 		/*menu 가져오기*/
 		Menu menu = ms.select(sh_id);		

@@ -18,6 +18,8 @@ public interface ShopService {
 	List<Shop> getShopMainList();
 
 	List<Shop> getShopMainList1(String id);
+
+	List<Shop> list(Shop shop);
 	
 
 	

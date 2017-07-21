@@ -36,4 +36,9 @@ public class ReplyBoardServiceImpl implements ReplyBoardService{
 		
 	}
 
+	@Override
+	public int select(int rno) {
+		return rbd.select(rno);
+	}
+
 }

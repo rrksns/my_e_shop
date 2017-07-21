@@ -47,23 +47,26 @@ public class ReplyBoardController {
 	@RequestMapping("repUpdate")
 	public String repUpdate(ReplyBoard rb,HttpSession session, Model model){
 		rbs.update(rb); //업데이트 함
-		int sh_id =(int)rb.getSh_id();
+		int sh_id =(int)rbs.select(rb.getRno());		
 		String r_id = (String)session.getAttribute("id");
 		List<ReplyBoard> slist = rbs.list(sh_id);
 		model.addAttribute("slist", slist);
-		model.addAttribute("r_id",r_id);	
-		return "replyBoard/slist";
+		model.addAttribute("r_id",r_id);			
+		model.addAttribute("sh_id",sh_id);
+		return "redirect:slist.go";
 	}
 	
 	@RequestMapping("repDelete")
 	public String repDelete(ReplyBoard rb,HttpSession session, Model model){
-		rbs.delete(rb.getRno()); 
+		
 		String r_id = (String)session.getAttribute("id");
-		int sh_id =(int)rb.getSh_id();
+		int sh_id =(int)rbs.select(rb.getRno());
+		rbs.delete(rb.getRno()); 
 		List<ReplyBoard> slist = rbs.list(sh_id);
 		model.addAttribute("slist", slist);
 		model.addAttribute("r_id",r_id);
-		return "replyBoard/slist";
+		model.addAttribute("sh_id",sh_id);
+		return "redirect:slist.go";
 	}
 	@RequestMapping("score")
 	public String score(int sh_id, Model model){

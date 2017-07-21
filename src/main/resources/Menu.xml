@@ -30,6 +30,17 @@
 		select * from menu where it_id = 
 		(select ifnull(max(it_id), 0) from menu where sh_id =#{sh_id})
 	</select>
+	
+<!-- 	<select id="list" parameterType="shop" resultMap="menuResult">
+	select * from sh_id
+			<where>	
+			<if test="keyword != null and search !='shcon'">
+				${search} like concat('%',#{keyword},'%')
+			</if>
+			
+		</where>
+		order by sh_id desc
+	</select> -->
 	<!-- 아직 구동 x 
 	<select id="select2" parameterType="int" resultType="menu">
 		select * from shop where it_id = #{it_id}

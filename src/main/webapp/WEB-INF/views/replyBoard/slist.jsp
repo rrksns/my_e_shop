@@ -6,8 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script type="text/javascript">
- $(function() {
+ <script type="text/javascript">
+  $(function() {
 	$('.edit1').click(function() {
 		var id  = $(this).attr('id'); //수정할 rno
 		var txt = $('#td_'+id).text();
@@ -25,11 +25,9 @@ function up(id){
 		$('#slist').html(data);
 	});
 } 
-/* function lst(){
-	$('#slist').load('slist.go');
-} */
+
 function lst(){
-	$('#slist').load('slist.go?sh_id=${sh_id} ');
+	$('#slist').load('slist.go?sh_id=${sh_id}');
 };
 
  function del(rno) {
@@ -37,8 +35,8 @@ function lst(){
 	$.post("repDelete.go",formData, function(data) {
 		$('#slist').html(data);
 	}); 
-}
-</script>
+} 
+</script> 
 </head>
 <body>
 <div class="container" align="center">
