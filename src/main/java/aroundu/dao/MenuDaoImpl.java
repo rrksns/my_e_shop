@@ -74,4 +74,9 @@ public class MenuDaoImpl implements MenuDao{
 		return st.selectList("Menuns.list",shop);
 	}
 
+	@Override
+	public List<Menu> list2(String keyword) {
+		return st.selectList("Menuns.list2",keyword);
+	}
+
 }

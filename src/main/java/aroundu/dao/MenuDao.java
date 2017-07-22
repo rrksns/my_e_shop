@@ -29,6 +29,8 @@ public interface MenuDao {
 
 	List<Shop> list(Shop shop);
 
+	List<Menu> list2(String keyword);
+
 	
 
 }

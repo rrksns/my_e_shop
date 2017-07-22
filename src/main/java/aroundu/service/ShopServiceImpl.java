@@ -51,6 +51,14 @@ public class ShopServiceImpl implements ShopService{
 	public List<Shop> list(Shop shop) {
 		return sd.list(shop);
 	}
+	@Override
+	public int getTotal(Shop shop) {
+		return sd.getTotal(shop);
+	}
+	@Override
+	public List<Shop> list2(Shop shop) {
+		return sd.list2(shop);
+	}
 	
 	
 	

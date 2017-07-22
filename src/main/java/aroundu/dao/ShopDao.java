@@ -22,5 +22,9 @@ public interface ShopDao {
 
 	List<Shop> list(Shop shop);
 
+	int getTotal(Shop shop);
+
+	List<Shop> list2(Shop shop);
+
 	
 }

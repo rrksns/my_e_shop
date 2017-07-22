@@ -11,6 +11,9 @@
 <style type="text/css">
 body{background-color:#E6E6E6}
 </style>
+<script type="text/javascript">
+	$('gpa').css('width','${ap.aver/5*100}');
+</script>
 </head>
 <body>
 	

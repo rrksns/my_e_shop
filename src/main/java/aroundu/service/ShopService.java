@@ -20,6 +20,10 @@ public interface ShopService {
 	List<Shop> getShopMainList1(String id);
 
 	List<Shop> list(Shop shop);
+
+	int getTotal(Shop shop);
+
+	List<Shop> list2(Shop shop);
 	
 
 	

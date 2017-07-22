@@ -67,6 +67,11 @@ public class MenuServiceImpl implements MenuService{
 		return md.list(shop);
 	}
 
+	@Override
+	public List<Menu> list2(String keyword) {
+		return md.list2(keyword);
+	}
+
 	
 
 
