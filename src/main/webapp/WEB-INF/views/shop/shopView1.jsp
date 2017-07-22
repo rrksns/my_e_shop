@@ -12,7 +12,9 @@
 body{background-color:#E6E6E6}
 </style>
 <script type="text/javascript">
-	$('gpa').css('width','${ap.aver/5*100}');
+	/* $('.gpa').css('width','${ap.aver}'/5*100); */
+	/* $('.gpa').css('width','50%');  */
+	document.getElementById('gpa')
 </script>
 </head>
 <body>
