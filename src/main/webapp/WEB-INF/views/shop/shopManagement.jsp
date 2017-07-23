@@ -65,12 +65,13 @@
   	  <div class="shop-list">
   	  	<h4>현재 보유중인 샵(<span>1</span>개)</h4>
   	  	<div class="wrapper">
-			<c:forEach var="shop" items="${shopList }">
+		<%-- 	<c:forEach var="shop" items="${sllerShopList }">
  	 			 <a href="shopView.go?sh_id=${shop.sh_id}">
   	  	  		<img class="shop-img" src="shopPic/upload/${shop.sh_img1}">
   	  	  		<span class="name-txt">"${shop.sh_name}"</span>
   	  	  		</a>
-			</c:forEach>
+			</c:forEach> --%>
+			<div id="sellerShopList"></div>
   	  	</div>
   	  	<div class="shop-addition">
   	  	  <a onclick="new_shop()">
