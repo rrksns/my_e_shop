@@ -149,7 +149,7 @@
   	  </div>
   	  <div class="new-shop"><h2 class="hide">새로 등록한 샵</h2>
   	  	<h3 class="title">나의 등록 샵</h3>
-<span>${seller.s_name}님의 ${shop.sh_name} 바로가기</span>
+<span>${seller.s_name}님의 등록된 샵으로 바로가기</span>
 <ul>
 <div id="sellerShopList"></div>
 <%-- <li class="shop-list">
