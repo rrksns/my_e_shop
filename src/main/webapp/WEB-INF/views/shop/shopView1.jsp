@@ -7,15 +7,11 @@
 <meta charset="UTF-8">
 <title></title> 
 <link rel="stylesheet" href="${path}/resources/css/all.css">
-<link rel="stylesheet" href="${path}/resources/css/shop.css"> 
+<link rel="stylesheet" href="${path}/resources/css/myshop.css"> 
 <style type="text/css">
 body{background-color:#E6E6E6}
 </style>
-<script type="text/javascript">
-	/* $('.gpa').css('width','${ap.aver}'/5*100); */
-	/* $('.gpa').css('width','50%');  */
-	document.getElementById('gpa')
-</script>
+
 </head>
 <body>
 	
@@ -39,7 +35,9 @@ body{background-color:#E6E6E6}
   	  	  	${shop.sh_name}
   	  	  </div>
   	  	  <div class="grade">
-  	  	  	<span class="gpa"></span>  	  	     
+  	  	   <div class="gpa">
+  	  	  	<span class="gpa-img"></span>
+  	  	  	</div>  	  	  	  	     
   	  	  </div>
   	  	</div>
   	  	<div class="open-closed">
@@ -341,6 +339,10 @@ body{background-color:#E6E6E6}
 			
 			
   	
-  			 
+  <script type="text/javascript">
+	/* $('.gpa').css('width','${ap.aver}'/5*100); */
+	var a = ${ap.aver}/5*100;
+	$('.gpa-img').css('width', a);  	
+</script>			 
 </body>
 </html>

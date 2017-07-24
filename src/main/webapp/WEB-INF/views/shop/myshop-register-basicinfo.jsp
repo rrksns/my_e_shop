@@ -81,26 +81,26 @@
   	  	  	  	  	
   	  	  	  	  </div>
   	  	  	  	  <h4>주소</h4>
-  	  	  	  	  <input id="address" type="text">
+  	  	  	  	  <input id="address" type="text" name="addr1">
   	  	  	  	</div>
   	  	  	  	<div class="address-detail">
   	  	  	  	  <h4>상세주소</h4>
-  	  	  	  	  <input type="text">
+  	  	  	  	  <input type="text" name="addr1">
   	  	  	  	</div>
   	  	  	  </div>
   	  	  	  <div class="location">
   	  	  	  	<h4>위치</h4>
-  	  	  	  	<input type="button" value="위치표시" onclick="go()">
-  	  	  	  	<label onclick="">
-  	  	  	  	  <span id="map"></span>
-  	  	  	  	</label>
+  	  	  	  	<!-- <input type="button" value="위치표시" onclick="go()"> -->
+  	  	  	  	<div id="map" onclick="go()"></div>
   	  	  	  </div>
   	  	  	  
-  	  	  	  <div id="map" style="width:370px;height:150px;"></div>
   	  	  	  
   	  	  	  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?apikey=f6eed7143332943349595b742f572fde"></script>
 <script>
 function go(){
+	
+alert('go작동');
+}
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
         center: new daum.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -110,8 +110,8 @@ var mapContainer = document.getElementById('map'), // 지도를 표시할 div
 // 지도를 생성합니다    
 var map = new daum.maps.Map(mapContainer, mapOption); 
 
-var fulladdr'';
-fullAddr = $("#sampl6_address").val()// 주소-좌표 변환 객채생성
+var fulladdr='';
+fullAddr = $("#address").val()// 주소-좌표 변환 객채생성
 
 
 // 주소-좌표 변환 객체를 생성합니다
@@ -140,8 +140,8 @@ var geocoder = new daum.maps.services.Geocoder();
 
         // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
         map.setCenter(coords);
-    } 
-});   
+    	} 
+	});   
 } 
 </script>
   	  	  	  

@@ -145,49 +145,37 @@
   	  	  	 <c:if test="${shopDetail.smoking =='y'}">
   	  	  	  		<img src="${path}/resources/img/smoking-area.png" width="30" height="30">
   	  	  	  </c:if>
-  	  	  	  <c:if test="${shopDetail.smoking !='y'}">  	  	  
-  	  	  			<img src="${path}/resources/img/home.png" width="30" height="30">	  
-  	  	  	  </c:if>
+  	  	  	
   	  	  </span>
   	  	    <span>
   	  	  	 <c:if test="${shopDetail.freeWifi =='y'}">
   	  	  	  		<img src="${path}/resources/img/wifi.png" width="30" height="30">
   	  	  	  </c:if>
-  	  	  	  <c:if test="${shopDetail.freeWifi !='y'}">  	  	  
-  	  	  			<img src="${path}/resources/img/home.png" width="30" height="30">	  
-  	  	  	  </c:if>
+  	  	  	  
   	  	  </span>
   	  	     <span>
   	  	  	 <c:if test="${shopDetail.toilet =='y'}">
   	  	  	  		<img src="${path}/resources/img/toilet.png" width="30" height="30">
   	  	  	  </c:if>
-  	  	  	  <c:if test="${shopDetail.toilet !='y'}">  	  	  
-  	  	  			<img src="${path}/resources/img/home.png" width="30" height="30">	  
-  	  	  	  </c:if>
+  	  	  	 
   	  	  </span>
   	  	     <span>
   	  	  	 <c:if test="${shopDetail.parking =='y'}">
   	  	  	  		<img src="${path}/resources/img/parking.png" width="30" height="30">
   	  	  	  </c:if>
-  	  	  	  <c:if test="${shopDetail.parking !='y'}">  	  	  
-  	  	  			<img src="${path}/resources/img/home.png" width="30" height="30">	  
-  	  	  	  </c:if>
+  	  	  	
   	  	  </span>
   	  	     <span>
   	  	  	 <c:if test="${shopDetail.blanket =='y'}">
   	  	  	  		<img src="${path}/resources/img/blanket.png" width="30" height="30">
   	  	  	  </c:if>
-  	  	  	  <c:if test="${shopDetail.blanket !='y'}">  	  	  
-  	  	  			<img src="${path}/resources/img/home.png" width="30" height="30">	  
-  	  	  	  </c:if>
+  	  	  	
   	  	  </span>
   	  	     <span>
   	  	  	 <c:if test="${shopDetail.mobileCharge =='y'}">
   	  	  	  		<img src="${path}/resources/img/charging-phone.png" width="30" height="30">
   	  	  	  </c:if>
-  	  	  	  <c:if test="${shopDetail.mobileCharge !='y'}">  	  	  
-  	  	  			<img src="${path}/resources/img/home.png" width="30" height="30">	  
-  	  	  	  </c:if>
+  	  	  	  
   	  	  </span>
   	  	  <%-- <img class="info-img" src="${path}/resources/img/icon/service-icon/toilet.png"> --%>
   	  	</div>

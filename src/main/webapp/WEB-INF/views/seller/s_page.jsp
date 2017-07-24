@@ -10,6 +10,43 @@
 <link rel="stylesheet" href="${path}/resources/css/myshop-common.css">
 <link rel="stylesheet" href="${path}/resources/css/myshop-management.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,700">
+<style>
+.user-info {
+	margin-top:20px;
+}
+.user-info .wrapper {
+	display:block;
+	margin-bottom:20px;
+}
+.subTitle {
+	display:table-cell;
+	width:150px;
+	height:40px;
+	vertical-align:middle;
+}
+.info {
+	display:table-cell;
+	width:426px;
+	height:36px;
+	vertical-align:middle;
+	border:2px solid #DEBB3D;
+	padding:0 10px;
+}
+.info input {
+	width:426px;
+	height:36px;
+	font-size:18px;
+	outline:none;
+	border:none;
+}
+.srh-btn {
+	width:90px;
+	height:25px;
+	font:15px bold;
+	border-radius:5px;
+	background-color:#ADADAD;
+}
+</style>
 </head>
 <body>
 <div class="universe">
@@ -62,12 +99,99 @@
   	  </nav>
   	</aside>
   	<div id="main" class="contents" role="main">
+  	<form action="sellerUpdate.go" method="post">
+<div>
+  <h3 class="title">회원 정보</h3>
+  <div class="user-info">
+  	<div class="wrapper">
+  	  <h4 class="subTitle">회원 유형</h4>
+  	  <span class="info" style="border:none">
+  	  </span>
+  	</div>
+  	<div class="wrapper">
+  	  <h4 class="subTitle">사용자 ID</h4>
+  	  <span class="info" style="border:none">
+  	  	<input type="hidden" id="id" name="s_id" placeholder="아이디"  value="${seller.s_id}">
+  	  </span>
+  	</div>
+  	<div class="wrapper">
+  	  <h4 class="subTitle">비밀 번호</h4>
+  	  <span class="info">
+  	  	<input type="password" id="pw" name="s_pw" placeholder="비밀번호" required value="${seller.s_pw}">
+  	  </span>
+  	</div>
+  	<div class="wrapper">
+  	  <h4 class="subTitle">비밀 번호 확인</h4>
+  	  <span class="info">
+  	  	<input type="password" id="re_pw" name="pwCk"placeholder="비밀번호 확인" required value="${seller.s_pw}" onkeyup="chkPw()"> 
+  	  </span>
+  	</div>
+  	<div class="wrapper">
+  	  	 <div id="checkPwd">동일한 암호를 입력하세요</div>
+  	</div>
+  	<div class="wrapper">
+  	  <h4 class="subTitle">이름</h4>
+  	  <span class="info" style="border:none">
+  	  <input type="text" id="name" name="s_name" placeholder="이름" required value="${seller.s_name}">
+  	  	  	  
+  	  	  	  
+  	</div>
+  	<div class="wrapper">
+  	  <h4 class="subTitle">생년월일</h4>
+  	  <span class="info" style="width:200px; border:none; font-weight:bold">
+  	  	<span>년</span>
+  	  	<span>월</span>
+  	  	<span>일</span>
+  	  </span>
+  	  <h4 class="subTitle" style="width:120px; text-align:center;">성별</h4>
+  	  <span class="info" style="width:80px; border:none">
+  	   	  	  
+  	  	  	<!--   <input type="radio" id="gender_w" name="s_gender" value="f" 
+  	  	  	  <c:if test="${seller.s_gender=='f'}">
+  	  	  	  	checked="checked"
+  	  	  	  </c:if>  
+  	  	  	  >
+  	  	  	  <label class="gender_btn" for="f">여자</label>
+  	  	  	  <input type="radio" id="gender_m" name="s_gender" value="m"
+  	  	  	  <c:if test="${seller.s_gender=='m'}">
+  	  	  	  	checked="checked"
+  	  	  	  </c:if>  
+  	  	  	  > -->
+  	  	  	  <label class="gender_btn margin" for="m">남자</label>
+  	  	 
+  	  </span>
+  	</div>
+  	<div class="wrapper">
+  	  <h4 class="subTitle">주소</h4>
+  	  <span class="info">
+  	  	<input type="text" style="width:330px">
+  	  	<span><button class="srh-btn" type="button">주소 검색</button></span>
+  	  </span>
+  	</div>
+  	<div class="wrapper">
+  	  <h4 class="subTitle">휴대전화</h4>
+  	  <span class="info">
+  	  	<input type="text" id="email" name="s_mobile" placeholder="휴대전화 번호(-없이)" required value="${seller.s_mobile}">
+  	  </span>
+  	</div>
+  	<div class="wrapper">
+  	  <h4 class="subTitle">이메일</h4>
+  	  <span class="info">
+  	  	<input type="email" id="email" name="s_email" placeholder="이메일(e-mail)" required value="${seller.s_email}">
+  	  </span>
+  	</div>
+  </div>
+</div>
+<div class="btn-box" style="margin-top:50px">
+  	<button type="submit" style="margin-left:300px">수정하기</button>
+</div>
+</form>
   	</div>
   </div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-$('aside').css({height:$(window).height()});
+$('aside').css({height:$('#main').height()});
 $("#main").load('sellerInfo.html');
 
 $(".management-nav li").click(function() {
