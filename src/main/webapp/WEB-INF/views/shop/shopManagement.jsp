@@ -10,6 +10,13 @@
 <link rel="stylesheet" href="${path}/resources/css/myshop-common.css">
 <link rel="stylesheet" href="${path}/resources/css/myshop-management.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,700">
+
+<script type="text/javascript">
+	$(function(){
+		$('#sellerShopList').load('sellerShopList.go');
+	});
+</script>
+
 </head>
 <body>
 <div class="universe">
@@ -64,15 +71,10 @@
   	  <h3 class="title">나의 e-Shop</h3>
   	  <div class="shop-list">
   	  	<h4>현재 보유중인 샵(<span>1</span>개)</h4>
-  	  	<div class="wrapper">
-		<%-- 	<c:forEach var="shop" items="${sllerShopList }">
- 	 			 <a href="shopView.go?sh_id=${shop.sh_id}">
-  	  	  		<img class="shop-img" src="shopPic/upload/${shop.sh_img1}">
-  	  	  		<span class="name-txt">"${shop.sh_name}"</span>
-  	  	  		</a>
-			</c:forEach> --%>
-			<div id="sellerShopList"></div>
-  	  	</div>
+  	  	<!-- <div class="wrapper"> -->
+		
+			<div class="wrapper" id="sellerShopList"></div>
+  	  	<!-- </div> -->
   	  	<div class="shop-addition">
   	  	  <a onclick="new_shop()">
   	  	  	<img src="${path}/resources/img/icon/addition.png">

@@ -138,11 +138,11 @@
   	  	  	  	  <div class="wrapper">
   	  	  	  	  	<h4>운영 시간</h4>
   	  	  	  	  	<div class="select-time">
-  	  	  	  	  	  <select>
+  	  	  	  	  	  <select name="sh_operTimeS1">
   	  	  	  	  	  	<option selected>오전</option>
   	  	  	  	  	  	<option>오후</option>
   	  	  	  	  	  </select>
-  	  	  	  	  	  <select>
+  	  	  	  	  	  <select name="sh_operTimeS2">
   	  	  	  	  	  	<option>1시</option>
   	  	  	  	  	  	<option>2시</option>
   	  	  	  	  	  	<option>3시</option>
@@ -156,7 +156,7 @@
   	  	  	  	  	  	<option>11시</option>
   	  	  	  	  	  	<option>12시</option>
   	  	  	  	  	  </select>
-  	  	  	  	  	  <select>
+  	  	  	  	  	  <select name="sh_operTimeS3">
   	  	  	  	  	  	<option selected>00분</option>
   	  	  	  	  	  	<option>10분</option>
   	  	  	  	  	  	<option>20분</option>
@@ -166,11 +166,11 @@
   	  	  	  	  	  </select><span style="font-weight:bold;margin-left:10px;font-size:20px;">~</span>
   	  	  	  	  	</div>
   	  	  	  	  	<div class="select-time fl_R">
-  	  	  	  	  	  <select>
+  	  	  	  	  	  <select name="sh_operTimeE1">
   	  	  	  	  	  	<option>오전</option>
   	  	  	  	  	  	<option selected>오후</option>
   	  	  	  	  	  </select>
-  	  	  	  	  	  <select>
+  	  	  	  	  	  <select name="sh_operTimeE2">
   	  	  	  	  	  	<option>1시</option>
   	  	  	  	  	  	<option>2시</option>
   	  	  	  	  	  	<option>3시</option>
@@ -184,7 +184,7 @@
   	  	  	  	  	  	<option>11시</option>
   	  	  	  	  	  	<option>12시</option>
   	  	  	  	  	  </select>
-  	  	  	  	  	  <select>
+  	  	  	  	  	  <select name="sh_operTimeE3">
   	  	  	  	  	  	<option selected>00분</option>
   	  	  	  	  	  	<option>10분</option>
   	  	  	  	  	  	<option>20분</option>
@@ -204,15 +204,15 @@
   	  	  	  </div>
   	  	  	  <div class="hashtag">
   	  	  	  	<h4>해시태그</h4>
-  	  	  	  	<input type="text">
+  	  	  	  	<input type="text" name="sh_hash">
   	  	  	  </div>
   	  	  	  <div class="sns">
   	  	  	  	<h4>페이스북</h4>
-  	  	  	  	<input type="text">
+  	  	  	  	<input type="text" name="sh_web1">
   	  	  	  	<h4>인스타</h4>
-  	  	  	  	<input type="text">
+  	  	  	  	<input type="text" name="sh_web2">
   	  	  	  	<h4>트위터</h4>
-  	  	  	  	<input type="text">
+  	  	  	  	<input type="text" name="sh_web3">
   	  	  	  </div>
   	  	  	</div>
   	  	  </div>

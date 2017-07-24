@@ -254,8 +254,8 @@ input#file {
   	<div class="contents" role="main">
 			<form action="restaurantPicture.go" method="post"
 				enctype="multipart/form-data">
-				<input type="text" name="sh_id" value="${sh_id}">
-				<input type="text" name="sh_name" value="${shop.sh_name}">
+				<input type="hidden" name="sh_id" value="${sh_id}">
+				<input type="hidden" name="sh_name" value="${shop.sh_name}">
 					  	<fieldset><legend class="hide">사진 업로드</legend>
   	  	  <h3 class="title">사진 등록</h3>
   	  	 

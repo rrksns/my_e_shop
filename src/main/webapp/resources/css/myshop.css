@@ -16,7 +16,7 @@
 			height:20px;
 			vertical-align:middle;
 			margin-right:5px;
-			background-image:url('img/btn/checkbox.png');
+			background-image:url('../img/btn/checkbox.png');
 		}
 			#bookmark:checked ~ .bookmark-btn::before {
 				background-position:-20px 0;
@@ -53,13 +53,13 @@
 			.gpa {
 				width:120px;
 				height:24px;
-				background:url(img/icon/star-blank.png) repeat-x;
+				background:url(../img/icon/star-blank.png) repeat-x;
 			}
 				.gpa-img {
 					display:block;
 					width:0%;
 					height:24px;
-					background:url(img/icon/star-full.png) repeat-x;
+					background:url(../img/icon/star-full.png) repeat-x;
 				}
 		.open-closed {
 			width:50px;
@@ -101,7 +101,7 @@
 	.banner {
 		height:200px;
 		margin-bottom:10px;
-		background:url(img/bg/banner.png) no-repeat;
+		background:url(../img/bg/banner.png) no-repeat;
 		background-size:contain;
 	}
 	.menu-line {
@@ -183,7 +183,7 @@
 					.view-img {
 						width:40px;
 						height:40px;
-						background:url(img/btn/direction.png) 0 -40px no-repeat;
+						background:url(../img/btn/direction.png) 0 -40px no-repeat;
 					}
 				.view-btn:hover {
 					opacity:1;
@@ -215,7 +215,7 @@
 		display:inline-block;
 		width:32px;
 		height:32px;
-		background-image:url('img/icon/sns.png');
+		background-image:url('../img/icon/sns.png');
 	}
 	
 		.facebook {
@@ -250,12 +250,12 @@
 		.pre {
 			left:0;
 			opacity:0.2;
-			background:url(img/btn/direction.png) -40px 0;
+			background:url(../img/btn/direction.png) -40px 0;
 		}
 		.next {
 			right:0;
 			opacity:0.2;
-			background:url(img/btn/direction.png);
+			background:url(../img/btn/direction.png);
 		}
 		.slide-btn:hover {
 			opacity:1;

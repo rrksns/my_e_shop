@@ -53,6 +53,8 @@ public class ShopController {
 		model.addAttribute("seller", seller);
 		Shop shop =  sv.select(s_id);
 		model.addAttribute("shop", shop);
+		List<Shop> sellerShopList = sv.getSellerShopList(s_id);		
+		model.addAttribute("sellerShopList", sellerShopList);
 		return "shop/shopManagement";
 		}
 

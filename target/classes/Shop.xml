@@ -14,8 +14,12 @@
 		<result property="sh_summary"	column="sh_summary" />
 		<result property="sh_operTimeS" column="sh_operTimeS" />
 		<result property="sh_operTimeE" column="sh_operTimeE" />
-		<result property="sh_brTimeS"	column="sh_brTimeS" />
-		<result property="sh_brTimeE" 	column="sh_brTimeE" />
+		<result property="sh_brTimeS1"	column="sh_brTimeS1" />
+		<result property="sh_brTimeS2"	column="sh_brTimeS2" />
+		<result property="sh_brTimeS3"	column="sh_brTimeS3" />
+		<result property="sh_brTimeE1" 	column="sh_brTimeE1" />
+		<result property="sh_brTimeE2" 	column="sh_brTimeE2" />
+		<result property="sh_brTimeE3" 	column="sh_brTimeE3" />
 		<result property="sh_img1" 		column="sh_img1" />
 		<result property="sh_img2"		column="sh_img2" />
 		<result property="sh_img3" 		column="sh_img3" />
@@ -46,11 +50,15 @@
 	<selectKey keyProperty="sh_id" order="BEFORE" resultType="int">
 		select ifnull(max(sh_id), 0)+1 sh_id from shop
 	</selectKey>
-			insert into shop (sh_id, sh_name,sh_content,sh_addr1,sh_addr2, sh_tel, sh_operTimeS, sh_operTimeE,
-			sh_brTimeS, sh_brTimeE, s_id, allday_open, driveThru, takeOut, dineIn, delivery) 
-			values(#{sh_id}, #{sh_name},#{sh_content}, #{sh_addr1},#{sh_addr2}, #{sh_tel}, #{sh_operTimeS}, 
-			#{sh_operTimeE}, #{sh_brTimeS}, #{sh_brTimeE}, #{s_id}, #{allday_open},
-			#{driveThru}, #{takeOut}, #{dineIn}, #{delivery})
+			insert into shop (sh_id, sh_name,sh_content,sh_addr1,sh_addr2, sh_tel, sh_operTimeS1, sh_operTimeS2, 
+			sh_operTimeS3, sh_operTimeE1, sh_operTimeE2, sh_operTimeE3,
+			sh_brTimeS, sh_brTimeE, s_id, allday_open, driveThru, takeOut, dineIn, delivery,
+			sh_hash, sh_web1, sh_web2, sh_web3, sh_web4) 
+			values(#{sh_id}, #{sh_name},#{sh_content}, #{sh_addr1},#{sh_addr2}, #{sh_tel}, #{sh_operTimeS1},
+			#{sh_operTimeS2},#{sh_operTimeS3}, #{sh_operTimeE1}, #{sh_operTimeE2},
+			#{sh_operTimeE3}, #{sh_brTimeS}, #{sh_brTimeE}, #{s_id}, #{allday_open},
+			#{driveThru}, #{takeOut}, #{dineIn}, #{delivery},
+			#{sh_hash}, #{sh_web1}, #{sh_web2}, #{sh_web3}, #{sh_web4})
 	</insert>
 	
 	<select id="select1" parameterType="string" resultType="shop">
@@ -61,7 +69,7 @@
 		select * from shop where sh_id = #{sh_id}
 	</select>
 	<select id="getShopMainList" parameterType="int" resultMap="shopResult">
-		select * from shop order by sh_id desc limit 4
+		select * from shop order by sh_id desc 
 	</select>
 	
 	<select id="getShopMainList1" parameterType="string" resultMap="shopResult">
@@ -69,7 +77,7 @@
 	</select>
 	
 	<select id="getSellerShopList" parameterType="string" resultMap="shopResult">
-		select * from shop where s_id=#{s_id} order by sh_id desc limit 3
+		select * from shop where s_id=#{s_id} order by sh_id desc 
 	</select>
 	
 	<select id="getTotal" parameterType="shop" resultType="int">
