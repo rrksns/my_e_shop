@@ -74,6 +74,15 @@
   	  	  <div class="summary-info">3.해시태그</div>
   	  	</div>
   	  	<div class="service-type">
+  	  	  <div class="vertical-line_L">
+  	  	  	<img src="img/icon/allday.png" width="64" height="64" alt="24시간 영업">
+  	  	  </div>
+  	  	  <div class="vertical-line_R">
+  	  	  	<img src="img/icon/drive-thru.png" width="35" height="35" alt="24시간 영업">
+  	  	  	<img src="img/icon/dine-in.png" width="35" height="35" alt="24시간 영업">
+  	  	  	<img src="img/icon/take-out.png" width="35" height="35" alt="24시간 영업">
+  	  	  	<img src="img/icon/delivery.png" width="35" height="35" alt="24시간 영업">
+  	  	  </div>
   	  	</div>
   	  </div>
   	  <div class="banner"><h2 class="hide">배너광고</h2>
@@ -99,7 +108,18 @@
   	  	  	</div>
   	  	  </div>
   	  	  <div	class="menu-list">
-  	  	  	<div>1</div>
+  	  	  	<div class="tab-container">
+  	  	  	  <div class="wrapper">
+  	  	  	  	<span class="menu-name">메뉴이름</span>
+  	  	  	  	<span class="price">가격</span>
+  	  	  	  </div>
+  	  	  	  <div class="space"></div>
+  	  	  	  <div class="wrapper">
+  	  	  	  	<span class="menu-name">메뉴이름</span>
+  	  	  	  	<span class="price">가격</span>
+  	  	  	  </div>
+  	  	  	  <button class="view-btn" type="button"><span class="view-img"></span></button>
+  	  	  	</div>
   	  	  	<div>2</div>
   	  	  	<div>3</div>
   	  	  </div>
@@ -127,14 +147,20 @@
   	  </div>
   	  <div class="photo">
   	  	<div class="main-photo">
-  	  	  <img src="" width="255" height="180" alt="사진1">
+  	  	  <img src="" width="255" height="180" alt="메인">
   	  	</div>
   	  	<div class="sub-photo">
-  	  	  <img src="" alt="사진2">
-  	  	  <img src="" alt="사진3">
-  	  	  <img src="" alt="사진4">
-  	  	  <img src="" alt="사진5">
-  	  	  <img src="" alt="사진6">
+  	  	  <ul>
+  	  	  	<li><img src="" alt="사진1"></li>
+  	  	  	<li><img src="" alt="사진2"></li>
+  	  	  	<li><img src="" alt="사진3"></li>
+  	  	  	<li><img src="" alt="사진4"></li>
+  	  	  	<li><img src="" alt="사진5"></li>
+  	  	  </ul>
+  	  	</div>
+  	  	<div>
+  	  	  <a class="slide-btn pre" href="" onclick="prevPhoto()"><span class="hide">이전</span></a>
+  	  	  <a class="slide-btn next" href="" onclick="nextPhoto()"><span class="hide">다음</span></a>
   	  	</div>
   	  </div>
   	  <div class="shop-info">
@@ -170,6 +196,27 @@ $('.menu-category li').click(function() {
 	$('.menu-list>div').hide();
 	$('.menu-list>div[data-tab='+dataTab+']').show();
 });
+
+function photoView(seq) {
+	$('.main-photo').find('img').attr('src', photolist.eq(seq).find('img').attr('src'));
+}
+function autoNext() {
+	if(overflag == true) {
+		return;
+	}
+	photoView(seq);
+	seq++;
+	if(seq>4) {
+		seq = 0;
+	}
+}
+var timerid = setInterval( autoNext, 1000*5 );
+var photolist=$('.sub-photo li');
+var seq=0;
+var overflag = false;
+$('.slide-btn').mouseover( function() { overflag=true; } );
+$('.slide-btn').mouseout( function() { overflag=false; } );
+$(document).ready( function() { autoNext(); });
 </script>
 </div>
 </body>

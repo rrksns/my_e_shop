@@ -123,6 +123,7 @@
 		<a href ="boardList.go">Q&A</a>   -->
   	  </nav>
   	</div>
+  	
   	<div class="search">
   	  <h2 class="hide">검색</h2>
   	  <form action="sh_search.go" method="post" accept-charset="utf-8" role="search">
