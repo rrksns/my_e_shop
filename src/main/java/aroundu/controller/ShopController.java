@@ -65,13 +65,18 @@ public class ShopController {
 		
 		/*menu 가져오기*/
 		Menu menu = ms.select(sh_id);		
-		List<Menu> mlist = ms.list(menu);
+		List<Menu> mlist1 = ms.list11(menu);
+		List<Menu> mlist2 = ms.list12(menu);
+		List<Menu> mlist3 = ms.list13(menu);
 			
 		/*shopDetail 가져오기*/
 		ShopDetail shopDetail = sd.select(sh_id);
 		model.addAttribute(shopDetail);
 		int sh_detailId=shopDetail.getSh_detailId();		
 		model.addAttribute("sh_detailId",sh_detailId);
+		model.addAttribute("mlist1",mlist1);
+		model.addAttribute("mlist2",mlist2);
+		model.addAttribute("mlist3",mlist3);
 		
 		/*평점계산하기*/
 		int count = gs.count(sh_id); /*평가인원*/

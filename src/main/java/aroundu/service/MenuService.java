@@ -39,4 +39,9 @@ public interface MenuService {
 
 	List<Menu> list2(String keyword);
 
+
+	List<Menu> list11(Menu menu);
+	List<Menu> list12(Menu menu);
+	List<Menu> list13(Menu menu);
+
 }

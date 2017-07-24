@@ -34,18 +34,11 @@ public class MainController {
 	public String sh_search(Shop shop,Model model){
 		int total=0;
 		List<Shop> sh_list1=null;
-		if(shop.getSearch()=="sh_name" || shop.getSearch()=="sh_con" || shop.getSearch()=="sh_hash"){
+		/*if(shop.getSearch()=="sh_name" || shop.getSearch()=="sh_con" || shop.getSearch()=="sh_hash"){*/
 		total = sv.getTotal(shop);
 		sh_list1 = sv.list(shop);		
-	}
-				
-		
-		
 		model.addAttribute("sh_list1",sh_list1);
-		model.addAttribute("total",total);
-		
-	
-		
+		model.addAttribute("total",total);			
 		//검색기능
 		model.addAttribute("search",shop.getSearch());
 		model.addAttribute("keyword",shop.getKeyword());

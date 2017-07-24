@@ -54,6 +54,18 @@
 		select * from menu where it_name=#{it_name} order by it_id
 	</select>
 	
+	<select id="list11" parameterType="menu" resultMap="menuResult">
+		select * from menu where sh_id=#{sh_id} and it_groupId="식사" order by it_id
+	</select>
+	
+	<select id="list12" parameterType="menu" resultMap="menuResult">
+		select * from menu where sh_id=#{sh_id} and it_groupId="음료" order by it_id
+	</select>
+	
+	<select id="list13" parameterType="menu" resultMap="menuResult">
+		select * from menu where sh_id=#{sh_id} and it_groupId="디저트" order by it_id
+	</select>
+	
 	<select id="selectShid" parameterType="int" resultType="int">
 		select ifnull(sh_id,0) sh_id from menu where it_id = #{it_id}
 	</select>

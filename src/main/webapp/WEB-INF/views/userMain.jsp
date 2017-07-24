@@ -131,7 +131,7 @@
 				<option value="sh_name"
 					<c:if test="${search =='sh_name'}">
 		selected="selected"</c:if>>샵이름</option>
-		<option value="it_name"<c:if test="${search =='it_name'}">
+		<option value="sh_hash"<c:if test="${search =='sh_hash'}">
 		selected="selected"</c:if>>메뉴</option>
 		<option value="sh_hash" <c:if test="${search =='sh_hash'}">
 		selected="selected"</c:if>>Hash tag</option>

@@ -23,9 +23,12 @@
 <c:if test="${not empty sh_list1}">
 
 <c:forEach var="shop" items="${sh_list1}">
-<td>${shop.sh_name}<br>
-	<%-- <a href="shopView.go?s_id=${seller.s_id}"> --%>
+<td>샵이름 : ${shop.sh_name}<br>
+	<a href="shopView1.go?sh_id=${shop.sh_id}">
 	<img src="shopPic/upload/${shop.sh_img1}" width="210" height="160">
+		</a>
+	<%-- <a href="shopView.go?s_id=${seller.s_id}"> --%>
+	
 		<!-- </a> --></td>
 	
 </c:forEach>

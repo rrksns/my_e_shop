@@ -184,9 +184,44 @@
   	  	  	  	<span class="price">가격</span>
   	  	  	  </div>
   	  	  	  <button class="view-btn" type="button"><span class="view-img"></span></button>
+  	  	  	  <table>
+  	  	  	  <c:if test="${empty mlist1}">
+			<tr><td colspan="3">데이터가 없습니다</td>
+			</c:if>
+			
+  	  	  	 <c:if test="${not empty mlist1}">
+				<c:forEach var="menu" items="${mlist}">
+					<tr><td>${menu.it_id}</td>				
+					<td>${menu.it_name}</td><td>${menu.it_price}원</td>					
+				</tr>				
+				</c:forEach></c:if>
+				</table>
+  	  	  	  
   	  	  	</div>
-  	  	  	<div>2</div>
-  	  	  	<div>3</div>
+  	  	  	<div> <table>
+  	  	  	  <c:if test="${empty mlist2}">
+			<tr><td colspan="3">데이터가 없습니다</td>
+			</c:if>
+			
+  	  	  	 <c:if test="${not empty mlist2}">
+				<c:forEach var="menu" items="${mlist}">
+					<tr><td>${menu.it_id}</td>				
+					<td>${menu.it_name}</td><td>${menu.it_price}원</td>					
+				</tr>				
+				</c:forEach></c:if>
+				</table></div>
+  	  	  	<div> <table>
+  	  	  	  <c:if test="${empty mlist3}">
+			<tr><td colspan="3">데이터가 없습니다</td>
+			</c:if>
+			
+  	  	  	 <c:if test="${not empty mlist3}">
+				<c:forEach var="menu" items="${mlist}">
+					<tr><td>${menu.it_id}</td>				
+					<td>${menu.it_name}</td><td>${menu.it_price}원</td>					
+				</tr>				
+				</c:forEach></c:if>
+				</table></div>
   	  	  </div>
   	  	</div>
   	
@@ -456,7 +491,7 @@
 
 	<script type="text/javascript">//댓글 계산
 	/* $('.gpa').css('width','${ap.aver}'/5*100); */
-	var a = ${ap.aver}/5*100;
+	var a = (${ap.aver})/5*100;
 	$('.gpa-img').css('width', a);  	
 	</script>
 
