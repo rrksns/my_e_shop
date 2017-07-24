@@ -147,6 +147,9 @@ top3 varchar(1),
 sh_id int(20) 
 )
 
+select * from menu;
+
+
 alter table menu add foreign key(sh_id) references shop(sh_id);
 select sh_id from menu where it_id=21;
 select * from menu;

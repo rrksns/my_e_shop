@@ -69,8 +69,9 @@ select::-ms-expand {
 				width:400px;
 				height:280px;
 				margin-top:5px;
-				background:url(../img/bg/map.png) center no-repeat;
-				background-size:contain;
+				cursor:pointer;
+			/* 	background:url(../img/bg/map.png) center no-repeat;
+				background-size:contain; */
 			}
 /* 프레임(세로-오른쪽) */
 .service-type {

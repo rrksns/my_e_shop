@@ -353,7 +353,7 @@ $(function(){
 							메뉴 사진 <input type="file" id="it_pic1" name="menu1"><p>
 							<!-- 메뉴사진 2 <input type="file" id="it_pic2" name="menu2"><p>
 							메뉴사진 3 <input type="file" id="it_pic3" name="menu3"> <p> -->
-							탑 메뉴 등록 <input type="checkbox" name="it_top3" id="it_top3" value="y"><p>
+							탑 메뉴 등록 <input type="checkbox" name="it_top3" id="it_top3" value="y" style="display:inline-block;"><p>
 							<label for="it_top3">선택</label> 
 							
 					</div>

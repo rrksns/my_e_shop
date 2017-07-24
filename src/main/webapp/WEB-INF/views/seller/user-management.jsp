@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ include file="../header.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -67,7 +68,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $('aside').css({height:$(window).height()});
-$("#main").load('myinfo.html');
+$("#main").load('${path}/resources/css/sellerInfo.html');
 
 $(".management-nav li").click(function() {
 	$(".management-nav li").removeClass('open');
@@ -76,12 +77,12 @@ $(".management-nav li").click(function() {
 });
 
 $(".not").click(function() {
-	$("#main").load("premium.html");
+	$("#main").load("seller/premium.html");
 	return false;
 });
 
 $(".management-nav li:first").click(function() {
-	$("#main").load("myinfo.html");
+	$("#main").load("${path}/resources/css/sellerInfo.html");
 	return false;
 });
 </script>

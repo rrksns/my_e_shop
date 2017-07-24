@@ -149,11 +149,14 @@ section {
 				.titleWrap {
 					float:left;
 				}
+					.box1 {
+						display:inline-block;
+						width:250px;
+					}
 					.txt_color {
 						color:#ff7d43;
 					}
 					.detail_btn {
-						margin-left:30px;
 						border:0;
 						border-radius:20px;
 						color:white;
@@ -161,33 +164,36 @@ section {
 						outline:none;
 					}
 					.open {
-						position:relative;
-						top:2px;
 						display:inline-block;
 						width:20px;
 						height:10px;
-						background:url(../img/check.png) 0 -20px no-repeat;
+						background:url(../img/btn/dropdown.png);
+						text-align:center;
 					}
-					.add_margin {
-						margin-left:56px;
-					}
-					
 				.agrBtnWrap {
 					float:right;
 					font-weight:bold;
 				}	
 					.chk_btn {
-						position:relative;
-						top:1px;
+						display:inline-block;
 						cursor:pointer;
+					}
+					.chk_btn::before {
+						position:relative;
+						top:4px;
+						display:inline-block;
 						width:20px;
 						height:20px;
-						background:url(../img/check.png) 0 0 no-repeat;
+						background:url(../img/btn/checkbox.png) 0 -20px no-repeat;
+						margin-right:4px;
+						content:'';
+					}
+					input[type="checkbox"]:checked + .chk_btn::before {
+						background-position:-20px -20px;
 					}
 					input[type="checkbox"] {
-						visibility:hidden;
+						display:none;
 					}
-					
 /* 일반회원가입 정보입력 */
 .info_container {
 	border-top:1px solid #ff7d43;
