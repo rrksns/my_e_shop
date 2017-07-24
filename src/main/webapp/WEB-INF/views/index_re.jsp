@@ -8,18 +8,107 @@
 <link rel="stylesheet" href="index.css">
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,700" rel="stylesheet">
+<style>
+.top-cover {
+	height:45px;
+	line-height:45px;
+	color:white;
+	font-weight:bold;
+	padding:0 30px;
+	background-color:#FF7D43;
+}
+	.home-logo {
+		float:left;
+	}
+		.logo {
+			font-size:25px;
+		}
+	.user-nav2 {
+		float:right;
+		position:relative;
+	}
+		.user-nav2 .nav-list:hover {
+			color:black;
+			border-radius:25px;
+			background-color:#FFFBE2;
+		}
+			.myshop-btn {
+				display:block;
+				width:50px;
+				text-align:center;
+			}
+				.myshop-img {
+					vertical-align:middle;
+				}
+			.dropdown-btn {
+				display:block;
+				padding:0 5px;
+			}
+				.dropdown-img {
+					width:12px;
+					height:12px;
+					vertical-align:middle;
+					background-image:url('img/btn/dropdown-close.png');
+					background-size:contain;
+				}
+				.nav-list:hover .dropdown-btn > .dropdown-img {
+					background-image:url('img/btn/dropdown-open.png');
+				}
+				.nav-list:hover .dropdown-btn ~ .dropdown {
+					display:block;
+				}
+				.dropdown {
+					position:absolute;
+					right:0;
+					line-height:30px;
+					color:#686868;
+					font-size:14px;
+					font-weight:normal;
+					text-align:center;
+					border-top:2px solid #DEBB3D;
+					box-shadow:0 3px 5px rgba(0,0,0,.35);
+					background-color:#EFEFEF;
+				}
+					.dropdown a {
+						display:block;
+						width:120px;
+					}
+					.log-out {
+						background-color:#DDDDDD;
+					}
+						.log-out:hover {
+							background-color:#DDDDDD !important;
+						}
+					.dropdown li:hover {
+						background-color:#CCCCCC;
+					}
+</style>
 </head>
 <body>
 <div class="universe">
   <header class="site-header">
   	<div class="top-cover">
   	  <div class="home-logo">
-  	  	<h1 class="logo"><a href="" rel="home">AROUND U</a></h1>
+  	  	<h1 class="logo"><a href="">AROUND U</a></h1>
   	  </div>
-  	  <nav class="user-nav"><h2 class="hide">사용자 메뉴</h2>
+  	  <nav class="user-nav2"><h2 class="hide">사용자 메뉴</h2>
   	  	<ul>
-  	  	  <li class="nav-list"><a href="">로그인</a></li>
-  	  	  <li class="nav-list"><a href="">회원가입</a></li>
+  	  	  <li class="nav-list">
+  	  	  	<a class="myshop-btn" href="" title="마이 샵">
+  	  	  	  <img class="myshop-img" src="img/icon/shop.png" width="25" height="25" alt="마이 샵">
+  	  	  	</a>
+  	  	  </li>
+  	  	  <li class="nav-list">
+  	  	  	<a class="dropdown-btn" href=""><span>"사용자"</span>님 <span class="dropdown-img"></span></a>
+  	  	  	<ul class="dropdown">
+  	  	  	  <li><a href="">마이페이지</a></li>
+  	  	  	  <li><a href="">1</a></li>
+  	  	  	  <li><a href="">2</a></li>
+  	  	  	  <li><a href="">3</a></li>
+  	  	  	  <li><a href="">4</a></li>
+  	  	  	  <li class="log-out"><a href="">로그아웃</a></li>
+  	  	  	</ul>
+  	  	  </li>
   	  	</ul>
   	  </nav>
   	</div>

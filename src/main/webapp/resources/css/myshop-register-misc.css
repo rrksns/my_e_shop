@@ -25,7 +25,7 @@
 			width:32px;
 			height:32px;
 			margin:10px auto;
-			background-image:url(img/btn/checkbox2.png);
+			background-image:url(../img/btn/checkbox2.png);
 		}
 		input[type="checkbox"]:checked ~ .chk-btn {
 			background-position:-32px 0;

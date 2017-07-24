@@ -75,19 +75,23 @@
   	  	  	  </div>
   	  	  	  <div class="address">
   	  	  	  	<div class="address-search">
+  	  	  	  	  <div style="margin-bottom:3px">
+  	  	  	  	  	<h4></h4>
+  	  	  	  	  	<button type="button" onclick="execDaumPostcode()">주소 검색</button>
+  	  	  	  	  </div>
   	  	  	  	  <h4>주소</h4>
   	  	  	  	  <input id="address" type="text">
   	  	  	  	</div>
   	  	  	  	<div class="address-detail">
   	  	  	  	  <h4>상세주소</h4>
   	  	  	  	  <input type="text">
-  	  	  	  	  <button type="button" onclick="execDaumPostcode()">주소 검색</button>
   	  	  	  	</div>
-  	  	  	  	<div class="location">
-  	  	  	  	  <h4>위치</h4>
-  	  	  	  	  	<div id="map">
-  	  	  	  	  	</div>
-  	  	  	  	</div>
+  	  	  	  </div>
+  	  	  	  <div class="location">
+  	  	  	  	<h4>위치</h4>
+  	  	  	  	<label onclick="">
+  	  	  	  	  <span id="map"></span>
+  	  	  	  	</label>
   	  	  	  </div>
   	  	  	</div>
   	  	  	<div class="vertical-frame fl_R">
@@ -188,7 +192,15 @@
   	  	  	  	</div>
   	  	  	  </div>
   	  	  	  <div class="hashtag">
-  	  	  	  	<h4>해시 태그</h4>
+  	  	  	  	<h4>해시태그</h4>
+  	  	  	  	<input type="text">
+  	  	  	  </div>
+  	  	  	  <div class="sns">
+  	  	  	  	<h4>페이스북</h4>
+  	  	  	  	<input type="text">
+  	  	  	  	<h4>인스타</h4>
+  	  	  	  	<input type="text">
+  	  	  	  	<h4>트위터</h4>
   	  	  	  	<input type="text">
   	  	  	  </div>
   	  	  	</div>
@@ -297,7 +309,7 @@ function assert_msglen(message, maximum) {
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-$('aside').css({height:$(window).height()});
+$('aside').css({height:$('.page-body').height()});
 </script>
 </body>
 </html>

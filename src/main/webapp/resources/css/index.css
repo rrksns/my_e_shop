@@ -45,12 +45,27 @@ input{outline:none}
 				background-color:#FFFBE2;
 			}
 	.search {
-		width:500px;
+		width:520px;
 		margin:30px auto 50px auto;
 	}
+		.sch-filter {
+			float:left;
+			width:70px;
+			height:40px;
+			display:block;
+			border:none;
+			outline:none;
+			color:white;
+			padding:5px;
+			appearance:none;
+			-webkit-appearance: none;
+			background:url(img/btn/dropdown-close.png) no-repeat 95% 50%;
+			background-size:10px 10px;
+			background-color:#FF7D43;
+		}
 		.sch-inp {
 			float:left;
-			width:460px;
+			width:410px;
 			height:40px;
 			font-size:18px;
 			font-weight:bold;
@@ -61,7 +76,7 @@ input{outline:none}
 			width:40px;
 			height:40px;
 			border:none;
-			background:url(search.png) no-repeat;
+			background:url(img/icon/search.png) no-repeat;
 		}
 	.site-nav {
 		padding:0 30px;
@@ -101,7 +116,7 @@ input{outline:none}
 						width:20px;
 						height:20px;
 						opacity:0.5;
-						background-image:url(category.png);
+						background-image:url(img/icon/cate-icon.png);
 						background-size:contain;
 					}
 						.cate-btn:hover > .cate-icon {
@@ -133,32 +148,26 @@ input{outline:none}
 			}
 			#map {
 				width:750px;
-				height:454px;
+				height:500px;
 			}
 		.near-shop .side-frame {
 			float:left;
-			width:265px;
-			padding:10px;
+			width:245px;
+			padding:20px;
 		}
-			.near-shop .search {
-				margin:0;
+			.ad-banner {
+				width:245px;
+				height:460px;
+				background:blue;
 			}
-				.near-shop .search .sch-inp {
-					width:240px;
-					height:25px;
-					font-size:14px;
-				}
-				.near-shop .search .sch-btn {
-					width:25px;
-					height:25px;
-					background-size:contain;
-				}
 	.new-shop {
 		padding:10px;
 		border:2px solid #FF7D43;
+		margin-bottom:10px;
 	}
 		.shop-list {
 			display:inline-block;
-			width:210px;
+			width:250px;
 			text-align:center;
+			margin-bottom:10px;
 		}

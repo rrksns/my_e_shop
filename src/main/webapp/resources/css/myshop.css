@@ -16,7 +16,7 @@
 			height:20px;
 			vertical-align:middle;
 			margin-right:5px;
-			background-image:url('img/btn/checkbox.png');
+			background-image:url('../img/btn/checkbox.png');
 		}
 			#bookmark:checked ~ .bookmark-btn::before {
 				background-position:-20px 0;
@@ -53,13 +53,13 @@
 			.gpa {
 				width:120px;
 				height:24px;
-				background:url(img/icon/star-blank.png) repeat-x;
+				background:url(../img/icon/star-blank.png) repeat-x;
 			}
 				.gpa-img {
 					display:block;
 					width:0%;
 					height:24px;
-					background:url(img/icon/star-full.png) repeat-x;
+					background:url(../img/icon/star-full.png) repeat-x;
 				}
 		.open-closed {
 			width:50px;
@@ -157,7 +157,7 @@
 		display:inline-block;
 		width:32px;
 		height:32px;
-		background-image:url('img/icon/sns.png');
+		background-image:url('../img/icon/sns.png');
 	}
 	
 		.facebook {

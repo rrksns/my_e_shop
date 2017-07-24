@@ -8,6 +8,7 @@
 <title>AROUDN U</title>
 <link rel="stylesheet" href="${path}/resources/css/index.css">
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,700" rel="stylesheet">
+
 <script type="text/javascript">
 	$(function(){
 		$('#shopList').load('shopList.go');
@@ -39,7 +40,7 @@
   	  	  <button class="sch-btn" type="submit"><span class="hide">검색</span></button>
   	  	</fieldset>
   	  </form>
-  	</div>
+  	</div> 
   	<nav class="site-nav" role="navigation">
   	  <h2 class="hide">사이트 바로가기</h2>
   	  <ul>

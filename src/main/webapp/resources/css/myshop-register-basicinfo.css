@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /* 태그 스타일 */
-input{width:200px;height:25px;outline:none;border:none;padding:0 10px;background-color:#DEBB3D}
+input{width:250px;height:25px;outline:none;border:none;padding:0 10px;background-color:#DEBB3D}
 input[type="time"]{width:120px;height:30px;font-size:15px}
 textarea{width:800px;height:130px;max-width:800px;max-height:130px;scrolling:yes;padding:10px;border:none;outline:none;background-color:#DEBB3D}
 select{
@@ -36,37 +36,34 @@ select::-ms-expand {
 	}
 		.vertical-frame .shop-name h4 {
 			display:inline-block;
-			margin-right:10px;
+			width:80px;
+			height:25px;
 		}
 	.phone-number {
 		margin-bottom:10px;
 	}
 		.phone-number h4 {
 			display:inline-block;
-			margin-right:10px;
+			width:80px;
+			height:25px;
 		}
-	.address{}
-		.address-search, .address-detail {
+	.address{
+		margin-bottom:10px;
+	}
+		.address-search {
 			margin-bottom:2px;
 		}
 			.address h4 {
 				display:inline-block;
+				width:80px;
+				height:25px;
 			}
-			.address-search h4{
-				margin-right:40px;
-			}
-			.address-search input {
-				width:294px;
-			}
-			.address-detail button {
+			.address-search button {
 				width:90px;
 				height:25px;
 				font:15px bold;
 				border-radius:5px;
 				background-color:#ADADAD;
-			}
-			.address-detail h4{
-				margin-right:10px;
 			}
 			#map {
 				width:400px;
@@ -137,11 +134,19 @@ select::-ms-expand {
 				.allday h5 {
 					margin-bottom:10px;
 				}
-.hashtag h4 {
-	margin-bottom:5px;
+.hashtag {
+	margin-bottom:10px;
 }
-.hashtag input {
-	width:360px;
+.hashtag h4 {
+	display:inline-block;
+	width:80px;
+	height:25px;
+}
+.sns h4 {
+	display:inline-block;
+	width:80px;
+	height:25px;
+	margin-bottom:3px;
 }
 .txt-info h4 {
 	margin-bottom:5px;

@@ -56,11 +56,11 @@ input[type="checkbox"],input[type="radio"]{display:none}
 					width:12px;
 					height:12px;
 					vertical-align:middle;
-					background-image:url('img/btn/dropdown-close.png');
+					background-image:url('../img/btn/dropdown-close.png');
 					background-size:contain;
 				}
 				.nav-list:hover .dropdown-btn > .dropdown-img {
-					background-image:url('img/btn/dropdown-open.png');
+					background-image:url('../img/btn/dropdown-open.png');
 				}
 				.nav-list:hover .dropdown-btn ~ .dropdown {
 					display:block;
