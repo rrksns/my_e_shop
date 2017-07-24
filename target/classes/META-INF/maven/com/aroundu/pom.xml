@@ -5,7 +5,7 @@
 	<groupId>com</groupId>
 	<artifactId>aroundu</artifactId> 
 	<name>aroundu</name>
-	<packaging>war</packaging>
+	<!-- <packaging>war</packaging> -->
 	<version>1.0.0-BUILD-SNAPSHOT</version>
 	<properties>
 		<java-version>1.8</java-version>
@@ -288,13 +288,13 @@
 					<target>${java-version}</target>
 				</configuration>
 			</plugin>
-			<plugin>
+			<!-- <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
 				<configuration>
 					<warName>abc</warName>
 				</configuration>
-			</plugin> 
+			</plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-dependency-plugin</artifactId>
