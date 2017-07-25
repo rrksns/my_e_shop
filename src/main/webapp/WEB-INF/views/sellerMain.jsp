@@ -80,8 +80,11 @@
 								navigator.geolocation
 										.getCurrentPosition(function(position) {
 
-											var lat = position.coords.latitude, // 위도
-											lon = position.coords.longitude; // 경도
+											/* var lat = position.coords.latitude, // 위도
+											var lon = position.coords.longitude; // 경도 */
+											
+											var lat = 37.5043645, // 위도
+											lon = 127.0508325; // 경도 			
 
 											var locPosition = new daum.maps.LatLng(
 													lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다

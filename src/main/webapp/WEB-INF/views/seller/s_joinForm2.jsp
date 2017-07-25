@@ -62,7 +62,7 @@
   	  <ol class="steb_list box">
   	  	<li>가입유형</li>
   	  	<li>약관동의</li>
-  	  	<li>정보입력</li>
+  	  	<li style="font-weight:bold;color:#ff7d43;">정보입력</li>
   	  	<li>가입완료</li>
   	  </ol>
   	</div>

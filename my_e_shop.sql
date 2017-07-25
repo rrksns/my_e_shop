@@ -110,6 +110,21 @@ alter table shop add delivery VARCHAR(1);
 alter table shop add foreign key (s_id) references seller(s_id);
 delete from shop ;
 delete from replyBoard;
+delete from  menuBoard;
+
+alter table shop add sh_operTimeS1 varchar(50);
+alter table shop add sh_operTimeS2 varchar(50);
+alter table shop add sh_operTimeS3 varchar(50);
+alter table shop add sh_operTimeE1 varchar(50);
+alter table shop add sh_operTimeE2 varchar(50);
+alter table shop add sh_operTimeE3 varchar(50);
+alter table shop add sh_hash varchar(255);
+alter table shop add sh_web1 varchar(255);
+alter table shop add sh_web2 varchar(255);
+alter table shop add sh_web3 varchar(255);
+alter table shop add sh_web4 varchar(255);
+alter table shop drop sh_operTimes;
+alter table shop drop sh_operTimeE;
 
 
 drop table board;
@@ -153,7 +168,11 @@ select * from menu;
 alter table menu add foreign key(sh_id) references shop(sh_id);
 select sh_id from menu where it_id=21;
 select * from menu;
+delete from shop;
 delete from menu;
+
+select * from shop;
+
 alter table board add top3 varchar(1);
 
 alter table menu add foreign key (sh_id) references shop(sh_id);

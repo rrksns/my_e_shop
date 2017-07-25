@@ -6,6 +6,8 @@
 <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 <!-- <meta http-equiv="Content-Type" content="text/html; charset=utf-8" >  -->
 <%-- <link href="${path}/resources/css/bootstrap.min.css" rel="stylesheet"> --%>
+
+
 <script src="${path}/resources/js/jquery.js"></script>
 <script src="${path}/resources/js/bootstrap.min.js"></script>
 <script src="${path}/resources/js/jquery-1.11.3.min.js"></script>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ include file="../header.jsp" %>
+<%@ include file="../header.jsp" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,16 +17,16 @@
 </head>
 <body>
 	
-<input type="text" name="sh_id" value= "${sh_id}"> <!-- 필요없는 정보 -->
+<%-- <input type="text" name="sh_id" value= "${sh_id}"> <!-- 필요없는 정보 -->
 <input type="text" name="sh_name" value= "${shop.sh_name}"><!-- 필요없는 정보 -->
 <input type="text" name="it_id" value= "${menu.it_id}"><!-- 필요없는 정보 -->
-<input type="text" name="sh_detailId" value= "${shopDetail.sh_detailId}"> <!-- 필요없는 정보 -->
+<input type="text" name="sh_detailId" value= "${shopDetail.sh_detailId}"> <!-- 필요없는 정보 --> --%>
 
 <div class="universe">
   <header class="page-header">
   	<div class="top-cover">
   	  <div class="home-logo">
-  	  	<h1 class="logo"><a href="">AROUND U</a></h1>
+  	  	<h1 class="logo"><a href="sellerMain.go">AROUND U</a></h1>
   	  </div>
   	  <nav class="user-nav"><h2 class="hide">사용자 메뉴</h2>
   	  	<ul>
@@ -49,7 +49,7 @@
   	  	</ul>
   	  </nav>
   	</div>
-  	<div class="secondary-line">
+ <div class="secondary-line">
   	  <div class="wrapper">
   	  	<input id="bookmark" type="checkbox">
   	  	<label class="bookmark-btn" for="bookmark">팔로잉</label>
@@ -134,22 +134,44 @@
   	  	  <span class="open-txt">운영중</span>
   	  	</div>	
   	  	<div class="summary">
-  	  	  <div class="summary-info">1.카테고리</div>
-  	  	  <div class="summary-info">2.운영시간</div>
-  	  	  <div class="summary-info">3.해시태그</div>
+  	  	    <div class="summary-info">1.카테고리 <span>Restaurant</span></div>
+  	  	  <div class="summary-info">2.운영시간 <span>${sh_operTimeS1}:${sh_operTimeS2}:${sh_operTimeS3}</span>
+  	  	  <span>~</span><span>${sh_operTimeE1}:${sh_operTimeE2}:${sh_operTimeE3}</span></div>
+  	  	  <div class="summary-info">3.해시태그 <span>${shop.sh_hash}</span></div>
   	  	</div>
   	  	<div class="service-type">
   	  	  <div class="vertical-line_L">
-  	  	  	<img src="${path}/resources/img/icon/allday.png" width="64" height="64" alt="24시간 영업">
+  	  	  	<span>
+  	  	  		<c:if test="${shop.allday_open =='y'}">
+  	  	  			<img src="${path}/resources/img/icon/allday.png" width="64" height="64" alt="24시간 영업">
+  	  	  		</c:if>
+  	  	  	</span>
   	  	  </div>
   	  	  <div class="vertical-line_R">
-  	  	  	<img src="${path}/resources/img/icon/drive-thru.png" width="35" height="35" alt="24시간 영업">
-  	  	  	<img src="${path}/resources/img/icon/dine-in.png" width="35" height="35" alt="24시간 영업">
-  	  	  	<img src="${path}/resources/img/icon/take-out.png" width="35" height="35" alt="24시간 영업">
-  	  	  	<img src="${path}/resources/img/icon/delivery.png" width="35" height="35" alt="24시간 영업">
+  	  	  	<span>
+  	  	  		<c:if test="${shop.driveThru =='y'}">
+  	  	  			<img src="${path}/resources/img/icon/drive-thru.png" width="35" height="35" alt="드라이브쓰루">
+  	  	  		</c:if>
+  	  	  	</span>
+  	  	  	<span>
+  	  	  		<c:if test="${shop.dineIn =='y'}">	
+  	  	  			<img src="${path}/resources/img/icon/dine-in.png" width="35" height="35" alt="매장식사">
+  	  	  		</c:if>
+  	  	  	</span>
+  	  	  	<span>
+  	  	  		<c:if test="${shop.takeOut =='y'}">	
+  	  	  			<img src="${path}/resources/img/icon/take-out.png" width="35" height="35" alt="테이크아웃">
+  	  	  		</c:if>
+  	  	  	</span>
+  	  	  	<span>
+  	  	  		<c:if test="${shop.delivery =='y'}">	
+  	  	  			<img src="${path}/resources/img/icon/delivery.png" width="35" height="35" alt="배달">
+  	  	  		</c:if>
+  	  	  	</span>
   	  	  </div>
   	  	</div>
   	  </div>
+  	  
   	  <div class="banner"><h2 class="hide">배너광고</h2>
   	  </div>
   	  <div class="menu-line">
@@ -163,10 +185,9 @@
   	  	  	</ul>
   	  	  </div>
   	  	  <div class="top-menu">
-  	  	  	<img class="menu-img" src="" width="118" height="118" alt="대표메뉴1">
-  	  	  	<img class="menu-img" src="" width="118" height="118" alt="대표메뉴2">
-  	  	  	<img class="menu-img" src="" width="118" height="118" alt="대표메뉴3">
-  	  	  	<div class="wrapper">
+  	  	  		<img class="menu-img" src="menuPic/upload/${menu.it_img3}" width="118" height="118" alt="대표메뉴1">
+  	  	  	<img class="menu-img" src="menuPic/upload/${menu.it_img2}" width="118" height="118" alt="대표메뉴2">
+  	  	  	<img class="menu-img" src="menuPic/upload/${menu.it_img1}" width="118" height="118" alt="대표메뉴3">
   	  	  	  <p>대표 메뉴</p>
   	  	  	  <img src="${path}/resources/img/icon/top3.png" width="50" height="50">
   	  	  	  <p>top3</p>
@@ -175,27 +196,27 @@
   			<div	class="menu-list">
   	  	  	<div class="tab-container">
   	  	  	  <div class="wrapper">
-  	  	  	  	<span class="menu-name">메뉴이름</span>
-  	  	  	  	<span class="price">가격</span>
-  	  	  	  </div>
-  	  	  	  <div class="space"></div>
-  	  	  	  <div class="wrapper">
-  	  	  	  	<span class="menu-name">메뉴이름</span>
-  	  	  	  	<span class="price">가격</span>
-  	  	  	  </div>
-  	  	  	  <button class="view-btn" type="button"><span class="view-img"></span></button>
-  	  	  	  <table>
+  	  	  	    <table>
   	  	  	  <c:if test="${empty mlist1}">
 			<tr><td colspan="3">데이터가 없습니다</td>
 			</c:if>
 			
   	  	  	 <c:if test="${not empty mlist1}">
-				<c:forEach var="menu" items="${mlist}">
+				<c:forEach var="menu" items="${mlist1}">
 					<tr><td>${menu.it_id}</td>				
 					<td>${menu.it_name}</td><td>${menu.it_price}원</td>					
 				</tr>				
 				</c:forEach></c:if>
 				</table>
+  	  	  	  <!-- 	<span class="menu-name">메뉴이름</span>
+  	  	  	  	<span class="price">가격</span>
+  	  	  	  </div>
+  	  	  	  <div class="space"></div>
+  	  	  	  <div class="wrapper">
+  	  	  	  	<span class="menu-name">메뉴이름</span>
+  	  	  	  	<span class="price">가격</span> -->
+  	  	  	  </div>
+  	  	  	  <button class="view-btn" type="button"><span class="view-img"></span></button>  	  	  	
   	  	  	  
   	  	  	</div>
   	  	  	<div> <table>
@@ -204,7 +225,7 @@
 			</c:if>
 			
   	  	  	 <c:if test="${not empty mlist2}">
-				<c:forEach var="menu" items="${mlist}">
+				<c:forEach var="menu" items="${mlist2}">
 					<tr><td>${menu.it_id}</td>				
 					<td>${menu.it_name}</td><td>${menu.it_price}원</td>					
 				</tr>				
@@ -216,7 +237,7 @@
 			</c:if>
 			
   	  	  	 <c:if test="${not empty mlist3}">
-				<c:forEach var="menu" items="${mlist}">
+				<c:forEach var="menu" items="${mlist3}">
 					<tr><td>${menu.it_id}</td>				
 					<td>${menu.it_name}</td><td>${menu.it_price}원</td>					
 				</tr>				

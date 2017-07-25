@@ -152,7 +152,7 @@ function addMenuForm(){
 
 			 <c:if test="${not empty mlist}">
 				<c:forEach var="menu" items="${mlist}">
-					<tr><td>${menu.it_id}</td>				
+					<tr>				
 					<td>${menu.it_name}</td><td>${menu.it_price}</td>
 					<td>${menu.it_img1}</td><td>${menu.it_groupId}</td>
 				</tr>				

@@ -36,7 +36,7 @@
   	  	  	</a>
   	  	  </li>
   	  	  <li class="nav-list">
-  	  	  	<a class="dropdown-btn" href=""><span>"{seller.s_name}"</span>님 <span class="dropdown-img"></span></a>
+  	  	  	<a class="dropdown-btn" href=""><span>"${seller.s_name}"</span>님 <span class="dropdown-img"></span></a>
   	  	  	<ul class="dropdown">
   	  	  	  <li><a href="">마이페이지</a></li>
   	  	  	  <li><a href="">1</a></li>
@@ -55,13 +55,13 @@
   	  </div>
   	</div>
   </header>
-  <input type="text" name="sh_id" value= "${shop.sh_id}"> <!-- shop.sh_id 수정 -->
-  <input type="text" name="sh_name" value="${shop.sh_name}">
-  <input type="text" name="s_id" value="${seller.s_name}">
+  <input type="hidden" name="sh_id" value= "${shop.sh_id}"> <!-- shop.sh_id 수정 -->
+  <input type="hidden" name="sh_name" value="${shop.sh_name}">
+  <input type="hidden" name="s_id" value="${seller.s_name}">
   <div class="page-body">
   	<aside class="support" role="complementary">
   	  <div class="shop-name">
-  	  	<p><span class="name-txt">"{seller.s_name}"</span>님의</p>
+  	  	<p><span class="name-txt">"${seller.s_name}"</span>님의</p>
   	  	<p style="padding:5px 0; border-bottom:2px solid #DEBB3D;">e-Shop</p>
   	  </div>
   	  <div class="input-steb"><h2 class="hide">샵 정보 등록 단계</h2>

@@ -42,7 +42,7 @@
   	  	<ul>
   	  	  <li class="nav-list">
   	  	  	<a class="myshop-btn" href="" title="마이 샵">
-  	  	  	  <img class="myshop-img" src="img/icon/shop.png" width="25" height="25" alt="마이 샵">
+  	  	  	  <img class="myshop-img" src="${path}/resources/img/icon/shop.png" width="25" height="25" alt="마이 샵">
   	  	  	</a>
   	  	  </li>
   	  	  <li class="nav-list">
@@ -61,7 +61,7 @@
   	</div>
   	<div class="secondary-line">
   	  <div class="page-title">
-  	  	<h3><img class="home-img" src="${path}/resources/css/img/icon/home.png" width="25" height="25" alt=""> My e-Shop</h3>
+  	  	<h3><img class="home-img" src="${path}/resources/img/icon/home.png" width="25" height="25" alt=""> My e-Shop</h3>
   	  </div>
   	</div>
   </header>

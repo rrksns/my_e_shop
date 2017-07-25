@@ -53,6 +53,8 @@ public class ShopController {
 		model.addAttribute("seller", seller);
 		Shop shop =  sv.select(s_id);
 		model.addAttribute("shop", shop);
+		List<Shop> sellerShopList = sv.getSellerShopList(s_id);		
+		model.addAttribute("sellerShopList", sellerShopList);
 		return "shop/shopManagement";
 		}
 
@@ -125,6 +127,7 @@ public class ShopController {
 		model.addAttribute("seller", seller);
 		shop.setS_id(s_id);
 		/*샵 기본 정보 입력 후 result 뿌려줌 */
+		if (shop.getDriveThru() ==null) shop.setDineIn("n");
 		if (shop.getDineIn() ==null) shop.setDineIn("n");
 		if (shop.getTakeOut() ==null) shop.setTakeOut("n");
 		if (shop.getDelivery() ==null) shop.setDelivery("n");

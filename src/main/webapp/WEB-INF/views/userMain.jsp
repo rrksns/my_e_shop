@@ -123,6 +123,7 @@
 		<a href ="boardList.go">Q&A</a>   -->
   	  </nav>
   	</div>
+  	
   	<div class="search">
   	  <h2 class="hide">검색</h2>
   	  <form action="sh_search.go" method="post" accept-charset="utf-8" role="search">
@@ -202,8 +203,11 @@
 								navigator.geolocation
 										.getCurrentPosition(function(position) {
 
-											var lat = position.coords.latitude, // 위도
-											lon = position.coords.longitude; // 경도
+											/* var lat = position.coords.latitude, // 위도
+											var lon = position.coords.longitude; // 경도 */
+											
+											var lat = 37.5043645, // 위도
+											lon = 127.0508325; // 경도 			
 
 											var locPosition = new daum.maps.LatLng(
 													lat, lon), // 마커가 표시될 위치를 geolocation으로 얻어온 좌표로 생성합니다
@@ -253,6 +257,73 @@
 								map.addControl(zoomControl,
 										daum.maps.ControlPosition.RIGHT);
 							}
+							
+							// 마커를 표시할 위치와 title 객체 배열입니다 
+							var positions = [
+							    {
+							        title: '스타벅스 선릉점', 
+							        latlng: new daum.maps.LatLng(37.5037348,127.0489977)
+							    },
+							    {
+							        title: '스타벅스 선릉역점', 
+							        latlng: new daum.maps.LatLng(37.5039098,127.0463263)
+							    },
+							    {
+							        title: '폴바셋 선릉역점', 
+							        latlng: new daum.maps.LatLng(37.5054622,127.048666)
+							    },
+							    {
+							        title: '투썸플레이스 선릉역점',
+							        latlng: new daum.maps.LatLng(37.5033986,127.0456259)
+							    },
+							    
+							    /*    중식당 */
+							    
+							     {
+							        title: '마담밍', 
+							        latlng: new daum.maps.LatLng(37.503674, 127.050355)
+							    },
+							    
+							    {
+							        title: '티엔티엔', 
+							        latlng: new daum.maps.LatLng(37.503045, 127.048394)
+							    },
+							    
+							    {
+							        title: '동보성', 
+							        latlng: new daum.maps.LatLng(37.504479, 127.049961)
+							    },
+							    
+							    {
+							        title: '하오', 
+							        latlng: new daum.maps.LatLng(37.504375, 127.053888)
+							    },
+							    
+							    {
+							        title: '서래향', 
+							        latlng: new daum.maps.LatLng(37.505334, 127.046867)
+							    }
+							];
+
+							// 마커 이미지의 이미지 주소입니다
+							var imageSrc = "http://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png"; 
+							    
+							for (var i = 0; i < positions.length; i ++) {
+							    
+							    // 마커 이미지의 이미지 크기 입니다
+							    var imageSize = new daum.maps.Size(24, 35); 
+							    
+							    // 마커 이미지를 생성합니다    
+							    var markerImage = new daum.maps.MarkerImage(imageSrc, imageSize); 
+							    
+							    // 마커를 생성합니다
+							    var marker = new daum.maps.Marker({
+							        map: map, // 마커를 표시할 지도
+							        position: positions[i].latlng, // 마커를 표시할 위치
+							        title : positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+							        image : markerImage // 마커 이미지 
+							    });
+							}
 						</script>
   			</div>
 				</div>
@@ -279,8 +350,8 @@
 		</div>
 	</div> -->
 	<div class="new-shop"><h2 class="hide">새로 등록한 샵</h2>
-  	  	<h3 class="title">1</h3>
-<span>${seller.s_name}님의 ${shop.sh_name} 바로가기</span>
+  	  	<h3 class="title">신규 등록 샵</h3>
+
 <div id="shopList"></div>
 <ul >
 <li class="shop-list">
@@ -295,7 +366,7 @@
   </div>
   <footer>
   </footer>
-</div>
+
 </body>
 </html>
 

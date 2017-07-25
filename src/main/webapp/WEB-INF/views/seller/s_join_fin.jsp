@@ -21,7 +21,7 @@
   	  	<li>가입유형</li>
   	  	<li>약관동의</li> 
   	  	<li>정보입력</li>
-  	  	<li>가입완료</li>
+  	  	<li style="font-weight:bold;color:#ff7d43;">가입완료</li>
   	  </ol>
   	</div>
   </header>
