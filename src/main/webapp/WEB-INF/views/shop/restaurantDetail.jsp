@@ -62,9 +62,9 @@
   	</aside>
   	<div class="contents" role="main">
   	  <form action="restaurantDetail.go" method="post">
-  	  	<%-- <input type="text" name="sh_id" value= "${sh_id}">
-  	  	<input type="text" name="sh_name" value="${shop.sh_name}">
-  	  	<input type="text" name="it_id" value="${menu.it_id}"> --%>
+  	  	 <input type="hidden" name="sh_id" value= "${sh_id}">
+  	  	<input type="hidden" name="sh_name" value="${shop.sh_name}">
+  	  	<input type="hidden" name="it_id" value="${menu.it_id}"> 
   	  	<fieldset><legend class="hide">부가 정보 선택</legend>
   	  	  <h3 class="title">부가 정보</h3>
   	  	  	<div class="select-box">
