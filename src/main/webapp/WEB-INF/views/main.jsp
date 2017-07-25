@@ -95,19 +95,36 @@
   <header class="site-header">
   	<div class="top-cover">
   	  <div class="home-logo">
-  	  	<h1 class="logo"><a href="" rel="home">AROUND U</a></h1>
+  	  	<h1 class="logo"><a href="main.go" rel="home">AROUND U</a></h1>
   	  </div>
-  	  
   	  <nav class="user-nav"><h2 class="hide">사용자 메뉴</h2>
   	  	<ul>
-  	  		<li class="nav-list"><a href="commonLogin.go">로그인</a></li>
-			<li class="nav-list"><a href="commonJoin.go">회원가입</a></li>
-			<li class="nav-list"><a href="commonLogin.go">my page</a></li>
-			<li class="nav-list"><a href="commonLogin.go">my e-shop</a></li>
-			<li class="nav-list"><a href="boardList.go">Q&A</a></li>
-  	  	</ul>
+  	  	  <li class="nav-list">
+  	  	  	<a class="myshop-btn" href="" title="마이 샵">
+  	  	  	  <img class="myshop-img" src="${path}/resources/img/icon/shop.png" width="25" height="25" alt="마이 샵">
+  	  	  	</a>
+  	  	  </li>
+  	  	  <li class="nav-list">
+  	  	  	<a class="dropdown-btn" href=""><span>"사용자"</span>님 <span class="dropdown-img"></span></a>
+  	  	  	<ul class="dropdown">
+  	  	  	  <li><a href="commonLogin.go">로그인</a></li>
+  	  	  	  <li><a href="commonJoin.go">회원가입</a></li>
+  	  	  	  <li><a href="commonLogin.go">my page</a></li>
+  	  	  	  <li><a href="commonLogin.go">my e-shop</a></li>
+  	  	  	  <li><a href="boardList.go">Q&A</a></li>
+  	  	  	  
+  	  	  	</ul>
+  	  	  </li>
+  	  	</ul>    	  
+  	  
+  	  	
   	  </nav>
   	</div>
+  	  
+  	
+  	  
+  	  	<a href="commonLogin.go">로그인</a>
+  	  	  	
   	<div class="search">
   	  <h2 class="hide">검색</h2>
   	  <form action="sh_search.go" method="post" accept-charset="utf-8" role="search">
@@ -136,9 +153,9 @@
   	 <li class="nav-list">
   	  	  <a class="cate-btn" href="#" role="button" title="카테고리 검색"><span class="cate-icon"></span> 전체 카테고리 <span></span></a>
   	  	</li>
-  	  	<li class="nav-list"><a class="nav-btn" href="">로드샵</a></li>
-  	  	<li class="nav-list"><a class="nav-btn" href="">온라인샵</a></li>
-  	  	<li class="nav-list"><a class="nav-btn" href="">중고마켓</a></li>
+  	  	<li class="nav-list"><a class="nav-btn" href="">핫플레이스</a></li>
+  	  	<li class="nav-list"><a class="nav-btn" href="">프리미엄샵</a></li>
+  	  	<li class="nav-list"><a class="nav-btn" href="">신규오픈샵</a></li>
   	  </ul>
   	</nav>
   </header>
@@ -302,7 +319,10 @@
   	  	</div>
 				</div>
 				<div class="side-frame">
-					<div class="ad-banner"></div>
+					<div class="ad-banner">
+						<img src="${path}/resources/img/bg/1.jpg" width="245" height="230">	
+						<img src="${path}/resources/img/bg/2.jpg" width="245" height="230">
+					</div>
 				</div>
 			</div>
 		</div>

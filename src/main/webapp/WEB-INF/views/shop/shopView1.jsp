@@ -186,8 +186,8 @@
   	  	  </div>
   	  	  <div class="top-menu">
   	  	  		<img class="menu-img" src="menuPic/upload/${menu.it_img3}" width="118" height="118" alt="대표메뉴1">
-  	  	  	<img class="menu-img" src="menuPic/upload/${menu.it_img2}" width="118" height="118" alt="대표메뉴2">
-  	  	  	<img class="menu-img" src="menuPic/upload/${menu.it_img1}" width="118" height="118" alt="대표메뉴3">
+  	  	  	<%-- <img class="menu-img" src="menuPic/upload/${menu.it_img2}" width="118" height="118" alt="대표메뉴2">
+  	  	  	<img class="menu-img" src="menuPic/upload/${menu.it_img1}" width="118" height="118" alt="대표메뉴3"> --%>
   	  	  	<div class="wrapper">
   	  	  	  <p>대표 메뉴</p>
   	  	  	  <img src="${path}/resources/img/icon/top3.png" width="50" height="50">

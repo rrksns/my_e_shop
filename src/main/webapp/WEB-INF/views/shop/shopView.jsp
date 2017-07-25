@@ -118,10 +118,20 @@
   	  	  	</ul>
   	  	  </div>
   	  	  <div class="top-menu">
-  	  	  
+  	  	 <%--  <c:forEach var="shop" items="${shopList}" varStatus="status">
+<c:if test="${status.index%4==0}"> <!-- 4열로 맞춰서 출력 -->
+<tr><tr>
+</c:if>
+	<td>${shop.sh_name}<br>
+	<a href="shopView1.go?sh_id=${shop.sh_id}">
+	<img src="shopPic/upload/${shop.sh_img1}" width="210" height="160">
+		</a></td>
+</c:forEach> --%>
+	
   	  	  	<img class="menu-img" src="menuPic/upload/${menu.it_img3}" width="118" height="118" alt="대표메뉴1">
-  	  	  	<img class="menu-img" src="menuPic/upload/${menu.it_img2}" width="118" height="118" alt="대표메뉴2">
-  	  	  	<img class="menu-img" src="menuPic/upload/${menu.it_img1}" width="118" height="118" alt="대표메뉴3">
+  	
+  	  	  	<%-- <img class="menu-img" src="menuPic/upload/${menu.it_img2}" width="118" height="118" alt="대표메뉴2">
+  	  	  	<img class="menu-img" src="menuPic/upload/${menu.it_img1}" width="118" height="118" alt="대표메뉴3"> --%>
   	  	  	
   	  	  	
   	  	  	<div class="wrapper">

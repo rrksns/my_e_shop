@@ -87,6 +87,11 @@ public class MenuServiceImpl implements MenuService{
 		return md.list13(menu);
 	}
 
+	@Override
+	public List<Menu> mmlist(Menu menu) {
+		return md.mmlist(menu);
+	}
+
 	
 
 

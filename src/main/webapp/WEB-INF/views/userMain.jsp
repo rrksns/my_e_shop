@@ -97,7 +97,7 @@
   <header class="site-header">
   	<div class="top-cover">
   	  <div class="home-logo">
-  	  	<h1 class="logo"><a href="" rel="home">AROUND U</a></h1>
+  	  	<h1 class="logo"><a href="main.go" rel="home">AROUND U</a></h1>
   	  </div>
   	  <nav class="user-nav"><h2 class="hide">사용자 메뉴</h2>
   	  	<ul>
@@ -171,9 +171,9 @@
   	 <li class="nav-list">
   	  	  <a class="cate-btn" href="#" role="button" title="카테고리 검색"><span class="cate-icon"></span> 전체 카테고리 <span></span></a>
   	  	</li>
-  	  	<li class="nav-list"><a class="nav-btn" href="">로드샵</a></li>
-  	  	<li class="nav-list"><a class="nav-btn" href="">온라인샵</a></li>
-  	  	<li class="nav-list"><a class="nav-btn" href="">중고마켓</a></li>
+  	  	<li class="nav-list"><a class="nav-btn" href="">핫플레이스</a></li>
+  	  	<li class="nav-list"><a class="nav-btn" href="">프리미엄샵</a></li>
+  	  	<li class="nav-list"><a class="nav-btn" href="">신규오픈샵</a></li>
   	  </ul>
   	</nav>
   </header>

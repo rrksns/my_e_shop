@@ -74,6 +74,9 @@ public class ShopDetailController {
 		List<Menu> mlist = ms.mlist(sh_id);	
 		model.addAttribute("mlist",mlist);
 		
+/*		List<Menu> mmlist = ms.mmlist(menu);//top3 메뉴를 불러오기
+		model.addAttribute("mmlist",mmlist);*/
+		
 		return "shop/shopView";	
 	}
 }

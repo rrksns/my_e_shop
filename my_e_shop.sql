@@ -129,7 +129,8 @@ alter table shop drop sh_operTimeE;
 
 
 drop table board;
-select *from board;
+select *from shop;
+delete from shop where sh_id='9';
 create table board(
 bd_num int primary key,
 bd_subject varchar(40),
@@ -165,12 +166,14 @@ sh_id int(20)
 
 select * from menu;
 
+select * from menu where sh_id="2" and top3="y" limit 3;
 
 alter table menu add foreign key(sh_id) references shop(sh_id);
 select sh_id from menu where it_id=21;
 select * from menu;
 delete from shop;
 delete from menu;
+delete from shop where sh_id="10";
 
 select * from shop;
 

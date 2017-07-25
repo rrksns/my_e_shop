@@ -66,6 +66,10 @@
 		select * from menu where sh_id=#{sh_id} and it_groupId="디저트" order by it_id
 	</select>
 	
+	<select id="mmlist" parameterType="menu" resultMap="menuResult">
+		select * from menu where sh_id=#{sh_id} and top3="y" limit 3
+	</select>
+	
 	<select id="selectShid" parameterType="int" resultType="int">
 		select ifnull(sh_id,0) sh_id from menu where it_id = #{it_id}
 	</select>

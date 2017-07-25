@@ -94,4 +94,9 @@ public class MenuDaoImpl implements MenuDao{
 		return st.selectList("Menuns.list13",menu);
 	}
 
+	@Override
+	public List<Menu> mmlist(Menu menu) {
+		return st.selectList("Menuns.mmlist",menu);
+	}
+
 }

@@ -44,4 +44,7 @@ public interface MenuService {
 	List<Menu> list12(Menu menu);
 	List<Menu> list13(Menu menu);
 
+
+	List<Menu> mmlist(Menu menu);
+
 }
