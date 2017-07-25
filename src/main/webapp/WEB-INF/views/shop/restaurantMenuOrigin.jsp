@@ -267,12 +267,10 @@ $(function(){
   	  	  <li class="nav-list">
   	  	  	<a class="dropdown-btn" href=""><span>"${seller.s_name}"</span>님 <span class="dropdown-img"></span></a>
   	  	  	<ul class="dropdown">
-  	  	  	  <li><a href="">마이페이지</a></li>
-  	  	  	  <li><a href="">1</a></li>
-  	  	  	  <li><a href="">2</a></li>
-  	  	  	  <li><a href="">3</a></li>
-  	  	  	  <li><a href="s_logout.go">4</a></li>
-  	  	  	  <li class="log-out"><a href="">로그아웃</a></li>
+  	  	  	  <li><a href="s_page.go">My Page</a></li>
+  	  	  	  <li><a href="shopManagement.go"></a>My eShop</li>
+  	  	  	  <li><a href="boardList.go">2</a>Q&A</li>
+  	  	  	  <li class="log-out"><a href="s_logout.go">로그아웃</a></li>
   	  	  	</ul>
   	  	  </li>
   	  	</ul>
@@ -304,8 +302,8 @@ $(function(){
 			<h2>메뉴 등록</h2>
 			 <form action="restaurantMenu.go" method="post" name="form" id="frm" 
 				enctype="multipart/form-data">
-				<input type="text" name="sh_id" value="${sh_id}"> <input
-					type="text" name="sh_name" value="${shop.sh_name}">
+				<input type="hidden" name="sh_id" value="${sh_id}"> <input
+					type="hidden" name="sh_name" value="${shop.sh_name}">
 					
 					<!-- 메뉴그룹등록 -->
 					<input type="button" name="addGroup" value="+그룹추가"  onclick="addMenuForm()">
