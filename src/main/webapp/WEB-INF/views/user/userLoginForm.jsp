@@ -14,10 +14,10 @@
 <div class="universe">
   <section class="login">
   	<header>
-  	  <a class="home_logo" href="main.go" title="메인화면으로">Around U</a>
+  	  <a class="home_logo" href="main.go" title="메인화면으로">AROUND U</a>
   	</header>
   	<div class="titleWrap">
-  	  <img class="box" src=resources/img/enter.png width="45" height="45">
+  	  <img class="box" src=${PATH}resources/img/enter.png width="45" height="45">
   	  <h2 class="title box">로그인</h2>
   	</div>
   	<div class="userInfoWrap">

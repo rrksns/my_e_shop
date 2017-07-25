@@ -7,7 +7,6 @@
 <meta charset="UTF-8">
 <title></title>
 <link rel="stylesheet" href="${path}/resources/css/a.css">
-<link rel="stylesheet" href="${path}/resources/css/all.css">
 <link rel="stylesheet" href="${path}/resources/css/myshop-common.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,700">
 <style>

@@ -86,7 +86,7 @@
   	<aside class="support" role="complementary">
   	  <div class="shop-name">
   	  	<p><span class="name-txt">"${seller.s_name}"</span>님의</p>
-  	  	<p style="padding:5px 0; border-bottom:2px solid #DEBB3D;">e-Shop</p>
+  	  	<p style="padding:5px 0; border-bottom:2px solid #DEBB3D;">마이페이지</p>
   	  </div>
   	  <nav class="management-nav">
   	  	<ol>
@@ -104,14 +104,14 @@
   <h3 class="title">회원 정보</h3>
   <div class="user-info">
   	<div class="wrapper">
-  	  <h4 class="subTitle">회원 유형</h4>
+  	  <h4 class="subTitle">판매회원</h4>
   	  <span class="info" style="border:none">
   	  </span>
   	</div>
   	<div class="wrapper">
   	  <h4 class="subTitle">사용자 ID</h4>
   	  <span class="info" style="border:none">
-  	  	<input type="hidden" id="id" name="s_id" placeholder="아이디"  value="${seller.s_id}">
+  	  	<input type="text" id="id" name="s_id" placeholder="아이디"  value="${seller.s_id}" readonly="readonly">
   	  </span>
   	</div>
   	<div class="wrapper">
@@ -133,15 +133,15 @@
   	  <h4 class="subTitle">이름</h4>
   	  <span class="info" style="border:none">
   	  <input type="text" id="name" name="s_name" placeholder="이름" required value="${seller.s_name}">
-  	  	  	  
+  	  </span>	  	  
   	  	  	  
   	</div>
   	<div class="wrapper">
   	  <h4 class="subTitle">생년월일</h4>
   	  <span class="info" style="width:200px; border:none; font-weight:bold">
-  	  	<span>년</span>
-  	  	<span>월</span>
-  	  	<span>일</span>
+  	  	<span>${seller.s_birthdate}</span>
+  	  	<!-- <span>월</span>
+  	  	<span>일</span> -->
   	  </span>
   	  <h4 class="subTitle" style="width:120px; text-align:center;">성별</h4>
   	  <span class="info" style="width:80px; border:none">

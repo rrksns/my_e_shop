@@ -83,6 +83,7 @@
 				.summary-info {
 					margin-bottom:10px;
 					background:beige;
+					font-weight:bold;
 				}
 		.service-type {
 			width:195px;
@@ -148,12 +149,12 @@
 					}
 			.menu-list {
 				height:125px;
-				overflow:hidden;
 				padding:0 10px;
 			}
 				.tab-container {
 					position:relative;
 					height:125px;
+					overflow:hidden;
 				}
 				.menu-list .wrapper {
 					overflow:hidden;
@@ -231,6 +232,9 @@
 		position:relative;
 		margin-bottom:10px;
 	}
+		.main-photo {
+			margin-bottom:5px;		
+		}
 		.sub-photo {
 			height:50px;
 		}
@@ -270,6 +274,9 @@
 				width:32px;
 				height:32px;
 			}
+		.shop-info .description{
+			font-size:14px;
+		}
 	.employment {
 	}
 		.publish {

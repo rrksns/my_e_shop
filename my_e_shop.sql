@@ -87,7 +87,8 @@ sh_id int(20)
 );
 
 select * from menuBoard;
-select * from shop ;
+select * from menu;
+delete from menu where sh_id='9';
 select count(*) from shop where sh_name like "%맘%";
 
 alter table shop add sh_hash varchar(300);

@@ -23,11 +23,14 @@
 		.logo {
 			font-size:25px;
 		}
-	.user-nav2 {
+	.user-nav {
 		float:right;
 		position:relative;
 	}
-		.user-nav2 .nav-list:hover {
+		.user-nav .nav-list {
+			line-height:45px;
+		}
+		.user-nav .nav-list:hover {
 			color:black;
 			border-radius:25px;
 			background-color:#FFFBE2;
@@ -107,7 +110,7 @@
   	  	  	<a class="dropdown-btn" href=""><span>"사용자"</span>님 <span class="dropdown-img"></span></a>
   	  	  	<ul class="dropdown">
   	  	  	  <li><a href="u_page.go">마이페이지</a></li>
-  	  	  	  <li><a href="U_shopMain.go">my e-shop</a></li>
+  	  	  	  <li><a href="u_shopMain.go">my e-shop</a></li> 
   	  	  	  <li><a href="boardList.go">Q&A</a></li>
   	  	  	 <!--  <li><a href="">3</a></li>
   	  	  	  <li><a href="">4</a></li> -->
@@ -328,7 +331,10 @@
   			</div>
 				</div>
 				<div class="side-frame">
-					<div class="ad-banner"></div>
+					<div class="ad-banner">
+						<img src="${path}/resources/img/bg/1.jpg" width="245" height="230">
+						<img src="${path}/resources/img/bg/2.jpg" width="245" height="230">
+					</div>
 				</div>
 			</div>
 		</div>

@@ -26,7 +26,7 @@
   	  	  	</a>
   	  	  </li>
   	  	  <li class="nav-list">
-  	  	  	<a class="dropdown-btn" href=""><span>"${seller.s_name}"</span>님 <span class="dropdown-img"></span></a>
+  	  	  	<a class="dropdown-btn" href=""><span>${seller.s_name}</span>님 <span class="dropdown-img"></span></a>
   	  	  	<ul class="dropdown">
   	  	  	  <li><a href="">마이페이지</a></li>
   	  	  	  <li><a href="">1</a></li>
@@ -48,7 +48,7 @@
   <div class="page-body">
   	<aside class="support" role="complementary">
   	  <div class="shop-name">
-  	  	<p><span class="name-txt">"${seller.s_name}"</span>님의</p>
+  	  	<p><span class="name-txt">${seller.s_name}</span>님의</p>
   	  	<p style="padding:5px 0; border-bottom:2px solid #DEBB3D;">e-Shop</p>
   	  </div>
   	  <div class="input-steb"><h2 class="hide">샵 정보 등록 단계</h2>
@@ -62,9 +62,9 @@
   	</aside>
   	<div class="contents" role="main">
   	  <form action="restaurantDetail.go" method="post">
-  	  	<input type="text" name="sh_id" value= "${sh_id}">
+  	  	<%-- <input type="text" name="sh_id" value= "${sh_id}">
   	  	<input type="text" name="sh_name" value="${shop.sh_name}">
-  	  	<input type="text" name="it_id" value="${menu.it_id}">
+  	  	<input type="text" name="it_id" value="${menu.it_id}"> --%>
   	  	<fieldset><legend class="hide">부가 정보 선택</legend>
   	  	  <h3 class="title">부가 정보</h3>
   	  	  	<div class="select-box">
@@ -90,7 +90,7 @@
   	  	  	  <div class="wrapper" style="margin-right:0;">
   	  	  	  	<h4>주차장</h4>
   	  	  	  	<img class="service-img" src="${path}/resources/img/icon/service-icon/parking.png">
-  	  	  	  	<input id="parking" type="checkbox" name="parkingSpace" valau="y">
+  	  	  	  	<input id="parking" type="checkbox" name="parkingSpace" value="y">
   	  	  	  	<label class="chk-btn" for="parking"></label>
   	  	  	  </div>
   	  	  	  <div class="wrapper">

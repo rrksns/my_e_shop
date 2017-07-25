@@ -98,10 +98,10 @@
   	  	  	  </label>
   	  	  	</div>
   	  	  </div>
-  	  	  <div class="btn-box">
+<!--   	  	  <div class="btn-box">
   	  	  	<button class="prev-btn" type="button" onclick="window.history.go(-1)">이전으로</button>
   	  	  	<button class="next-btn" type="submit">다음</button>
-  	  	  </div>
+  	  	  </div> -->
   	  	</fieldset>
   	  </form>
   	</div>

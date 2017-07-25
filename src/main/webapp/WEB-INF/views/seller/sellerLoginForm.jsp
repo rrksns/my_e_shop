@@ -14,7 +14,7 @@
 <div class="universe">
   <section class="login">
   	<header>
-  	  <a class="home_logo" href="main.go" title="메인화면으로">Around U</a>
+  	  <a class="home_logo" href="main.go" title="메인화면으로">AROUND U</a>
   	</header>
   	<div class="titleWrap">
   	  <img class="box" src=resources/img/enter.png width="45" height="45">

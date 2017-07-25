@@ -6,32 +6,24 @@
 	.vertical-line {
 		width:400px;
 	}
-		.category-tab {
-			margin-bottom:5px;
+		.menu-category {
+			margin-bottom:20px;
 		}
-			.menu-addition {
-				display:inline-block;
-				line-height:24px;
-				color:#FF7D43;
-				font-size:14px;
+			.cate-type {
 				font-weight:bold;
 			}
-				.addition-img {
-					width:24px;
-					height:24px;
-					vertical-align:middle;
-					background-image:url(../img/icon/addition2.png);
-					background-size:contain;
-				}
-		.menu-category {
-			margin-bottom:30px;
-		}
-			.menu-category .nav-list {
-				position:relative;
-				font-size:18px;
-				font-weight:bold;
-				margin-right:20px;
+			.menu-category select {
+				width:70px;
+				height:30px;
+				border:none;
+				outline:none;
 				color:white;
+				padding:5px;
+				appearance:none;
+				-webkit-appearance: none;
+				background:url(../img/btn/dropdown-close.png) no-repeat 95% 50%;
+				background-size:10px 10px;
+				background-color:#FF7D43;
 			}
 				.tab-btn {
 					display:block;
@@ -72,7 +64,18 @@
 						outline:none;
 						padding:5px;
 					}
-		.input-menu {}
+					.confirm-btn {
+						position:relative;
+						top:14px;
+						width:50px;
+						height:18px;
+						font-size:14px;
+						font-weight:bold;
+						background-color:#DEBB3D;
+					}
+		.input-menu {
+			position:relative;
+		}
 			.input-menu .wrapper {
 				display:block;
 				margin-bottom:10px;
@@ -82,7 +85,7 @@
 				}
 				.input-menu input[type="text"] {
 					width:150px;
-					height:20px;
+					height:30px;
 					outline:none;
 					border:2px solid #DEBB3D;
 					padding:5px;
@@ -100,8 +103,50 @@
 						font-size:14px;
 						
 					}
-					
-					
+			.topmenu::after {
+				display:inline-block;
+				content:'';
+				width:20px;
+				height:20px;
+				vertical-align:middle;
+				margin-right:5px;
+				background:url('../img/btn/checkbox.png') 0 -20px;
+			}
+			#top:checked ~ .topmenu::after {
+				background-position:-20px -20px;
+			}
+			.add-btn {
+				position:absolute;
+				right:100px;
+				top:70px;
+				background:white;
+				width:60px;
+				height:74px;
+			}
+				.add-img {
+					width:60px;
+					height:74px;
+					background:url(../img/btn/add-menu.png) no-repeat;
+					background-size:contain;
+				}
+		.cate-list ul {
+			border-bottom:2px solid #DEBB3D;
+			padding-bottom:3px;
+			overflow:hidden;
+		}
+		.cate-list li{
+			float:left;
+			display:inline-block;
+			width:130px;
+		}
+		.menu-list li {
+			overflow:hidden;
+			margin-bottom:4px;
+		}
+			.menu-list li span{
+				float:left;
+				width:130px;
+			}
 .btn-box {
 	margin-top:40px;
 }

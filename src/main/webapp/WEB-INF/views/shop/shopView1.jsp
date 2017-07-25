@@ -126,7 +126,7 @@
   	  	  	<span id="">${shop.sh_name}</span>
   	  	  </div>
   	  	  <div class="gpa">
-  	  	  	<span class="gpa-img">  ${ap.aver}/5점 (${count})명</span>
+  	  	  	<span class="gpa-img"> </span>
   	  	  </div>
   	  	</div>
   	  	<div class="open-closed">
@@ -134,10 +134,10 @@
   	  	  <span class="open-txt">운영중</span>
   	  	</div>	
   	  	<div class="summary">
-  	  	    <div class="summary-info">1.카테고리 <span>Restaurant</span></div>
-  	  	  <div class="summary-info">2.운영시간 <span>${sh_operTimeS1}:${sh_operTimeS2}:${sh_operTimeS3}</span>
-  	  	  <span>~</span><span>${sh_operTimeE1}:${sh_operTimeE2}:${sh_operTimeE3}</span></div>
-  	  	  <div class="summary-info">3.해시태그 <span>${shop.sh_hash}</span></div>
+  	  	    <div class="summary-info"><span>Restaurant</span></div>
+  	  	  <%-- <div class="summary-info"><span>${sh_operTimeS1}:${sh_operTimeS2}:${sh_operTimeS3}</span> --%>
+  	  	  <div class="summary-info"><span>24시간 운영</span></div>
+  	  	  <div class="summary-info"><span>${shop.sh_hash}</span></div>
   	  	</div>
   	  	<div class="service-type">
   	  	  <div class="vertical-line_L">
@@ -188,12 +188,78 @@
   	  	  		<img class="menu-img" src="menuPic/upload/${menu.it_img3}" width="118" height="118" alt="대표메뉴1">
   	  	  	<img class="menu-img" src="menuPic/upload/${menu.it_img2}" width="118" height="118" alt="대표메뉴2">
   	  	  	<img class="menu-img" src="menuPic/upload/${menu.it_img1}" width="118" height="118" alt="대표메뉴3">
+  	  	  	<div class="wrapper">
   	  	  	  <p>대표 메뉴</p>
   	  	  	  <img src="${path}/resources/img/icon/top3.png" width="50" height="50">
   	  	  	  <p>top3</p>
   	  	  	</div>
   	  	  </div>
-  			<div	class="menu-list">
+  	  	  
+  	  	    	  <div	class="menu-list"> <!-- 메뉴리스트 -->
+  	  	  	<div class="tab-container">
+  	  	  	  <div class="wrapper">  	  	  	  
+  	  	  	<c:if test="${empty mlist1}">
+  	  	  	<div class="wrapper">
+				데이터가 없습니다
+				</div>
+			</c:if>
+  	  	  	  
+  	  	  	 <c:if test="${not empty mlist1}">
+  	  	  	 
+				<c:forEach var="menu" items="${mlist1}">
+				<div class="wrapper">
+  	  	  	  	<span class="menu-name">${menu.it_name}</span>
+  	  	  	  	<span class="price">${menu.it_price}원</span>  	  	  	  
+  	  	  	  	</div>
+  	  	  	  </c:forEach>
+  	  	  	  </c:if>	 	
+
+  	  	  	  </div>
+  	  	  	</div>
+  	  	  	<div>
+ 			  <div class="wrapper">  	  	  	  
+  	  	  	<c:if test="${empty mlist2}">
+  	  	  	<div class="wrapper">
+				데이터가 없습니다
+				</div>
+			</c:if>
+  	  	  	  
+  	  	  	 <c:if test="${not empty mlist2}">
+  	  	  	 
+				<c:forEach var="menu" items="${mlist2}">
+				<div class="wrapper">
+  	  	  	  	<span class="menu-name">${menu.it_name}</span>
+  	  	  	  	<span class="price">${menu.it_price}원</span>  	  	  	  
+  	  	  	  	</div>
+  	  	  	  </c:forEach>
+  	  	  	  </c:if>	 	
+
+  	  	  	  </div>
+				</div>
+  	  	  	<div>
+  	  	  		  <div class="wrapper">  	  	  	  
+  	  	  	<c:if test="${empty mlist3}">
+  	  	  	<div class="wrapper">
+				데이터가 없습니다
+				</div>
+			</c:if>
+  	  	  	  
+  	  	  	 <c:if test="${not empty mlist3}">
+  	  	  	 
+				<c:forEach var="menu" items="${mlist3}">
+				<div class="wrapper">
+  	  	  	  	<span class="menu-name">${menu.it_name}</span>
+  	  	  	  	<span class="price">${menu.it_price}원</span>  	  	  	  
+  	  	  	  	</div>
+  	  	  	  </c:forEach>
+  	  	  	  </c:if>	 	
+
+  	  	  	  </div>
+  	  	  	</div>
+  	  	  </div>
+  	  	  
+  	  	  
+  		<%-- 	<div	class="menu-list">
   	  	  	<div class="tab-container">
   	  	  	  <div class="wrapper">
   	  	  	    <table>
@@ -208,13 +274,7 @@
 				</tr>				
 				</c:forEach></c:if>
 				</table>
-  	  	  	  <!-- 	<span class="menu-name">메뉴이름</span>
-  	  	  	  	<span class="price">가격</span>
-  	  	  	  </div>
-  	  	  	  <div class="space"></div>
-  	  	  	  <div class="wrapper">
-  	  	  	  	<span class="menu-name">메뉴이름</span>
-  	  	  	  	<span class="price">가격</span> -->
+  	  	  	 
   	  	  	  </div>
   	  	  	  <button class="view-btn" type="button"><span class="view-img"></span></button>  	  	  	
   	  	  	  
@@ -244,7 +304,7 @@
 				</c:forEach></c:if>
 				</table></div>
   	  	  </div>
-  	  	</div>
+  	  	</div> --%>
   	
   	
   	<%-- <div class="contents" role="main">
@@ -292,7 +352,7 @@
   	  	  	  <li></li>
   	  	  	  <li></li>
   	  	  	</ul> --%>
-  	  	  	<table class="table table-striped">
+  	  	  <%-- 	<table class="table table-striped">
 			<!-- <tr><td>메뉴</td><td>가격</td><td>소개</td><td>분류</td></tr> -->			
 			<c:if test="${empty mlist}">
 			<tr><td colspan="3">데이터가 없습니다</td>
@@ -307,13 +367,15 @@
 				</c:forEach></c:if>
 				</table>
   	  	  </div>
-  	  	</div>
+  	  	</div> --%>
   	  	<%-- <div> 
   	  			<span> ${menu.it_name}</span>
   	  	  	  <span> <img src="menuPic/upload/${menu.it_img1}"></span>
   	  	  	  <span> ${menu.it_price}</span>
   	  	</div> --%>
-  	  	<div class="location">
+  	  	
+  	  	  </div>
+  	  	  <div class="location">
   	  	  <p class="loc-txt" id="sample6_address">${shop.sh_addr1}</p>
   	  	  <p class="loc-txt">${shop.sh_addr2}</p>
   	  	  <!-- <div class="loc-img"> -->
@@ -365,8 +427,8 @@
 					
 					</script>	
 				</div> 
-  	  	  </div>
-  	  	</div>
+
+</div>
 	<div class="review">
 		<h4 class="title">리뷰</h4>
 		<form name="frm" id="frm">
@@ -377,8 +439,8 @@
 			<input type="button" value="평가하기" onclick="score()">			  
 			</form>			
 	</div>
-
-	<aside class="support" role="complementary">
+	</div>
+		<aside class="support" role="complementary">
 		<div class="hits">
 			<div>
 				조회수: <span></span>
@@ -394,25 +456,24 @@
   	  	<a class="linked instagram" href="" target="_blank" rel="external"></a>
   	  	<a class="linked twitter" href="" target="_blank" rel="external"></a>
   	  </div>
-  	  <div class="photo">
+  	   <div class="photo">
   	  	<div class="main-photo">
-  	  	  <img src="${shop.sh_img1}" width="255" height="180" alt="메인">
+  	  	  <img src="shopPic/upload/${shop.sh_img1}" width="255" height="180" alt="메인">
   	  	</div>
-  	  </div>
   	  	<div class="sub-photo">
   	  	  <ul>
-  	  	  	<li><img src="${shop.sh_img2}" alt="사진1"></li>
-  	  	  	<li><img src="${shop.sh_img3}" alt="사진2"></li>
-  	  	  	<li><img src="${shop.sh_img4}" alt="사진3"></li>
-  	  	  	<li><img src="${shop.sh_img5}" alt="사진4"></li>
-  	  	  	<li><img src="${shop.sh_img6}" alt="사진5"></li>
+  	  	  	<li><img src="shopPic/upload/${shop.sh_img2}" alt="사진1"></li>
+  	  	  	<li><img src="shopPic/upload/${shop.sh_img3}" alt="사진2"></li>
+  	  	  	<li><img src="shopPic/upload/${shop.sh_img4}" alt="사진3"></li>
+  	  	  	<li><img src="shopPic/upload/${shop.sh_img5}" alt="사진4"></li>
+  	  	  	<li><img src="shopPic/upload/${shop.sh_img6}" alt="사진5"></li>
   	  	  </ul>
   	  	</div>
   	  	<div>
   	  	  <a class="slide-btn pre" href="" onclick="prevPhoto()"><span class="hide">이전</span></a>
   	  	  <a class="slide-btn next" href="" onclick="nextPhoto()"><span class="hide">다음</span></a>
   	  	</div>
-  	  	
+  	  </div>
 		<%-- <div class="photo">
 			<div class="main-photo">
 				<img src="shopPic/upload/${shop.sh_img1}" height="180">
@@ -422,42 +483,42 @@
 			</div>
 		</div> --%>
 		 <div class="shop-info">
-			<h4>기본 정보</h4>
+			<h4 class="title">기본 정보</h4>
 			<div class="ad-info">
 				<span> <c:if test="${shopDetail.smoking =='y'}">
-						<img src="${path}/resources/img/smoking-area.png" width="30"
+						<img src="${path}/resources/img/ico/service-icon/smoking.png" width="30"
 							height="30">
 					</c:if> 
 				</span> <span> <c:if test="${shopDetail.freeWifi =='y'}">
-						<img src="${path}/resources/img/wifi.png" width="30" height="30">
+						<img src="${path}/resources/img/ico/service-icon/wifi.png" width="30" height="30">
 					</c:if> 
 				</span> <span> <c:if test="${shopDetail.toilet =='y'}">
-						<img src="${path}/resources/img/toilet.png" width="30" height="30">
+						<img src="${path}/resources/img/ico/service-icon/toilet.png" width="30" height="30">
 					</c:if> 
 				</span> <span> <c:if test="${shopDetail.parking =='y'}">
-						<img src="${path}/resources/img/parking.png" width="30"
+						<img src="${path}/resources/img/ico/service-icon/parking.png" width="30"
 							height="30">
 					</c:if> 
 				</span> <span> <c:if test="${shopDetail.blanket =='y'}">
-						<img src="${path}/resources/img/blanket.png" width="30"
+						<img src="${path}/resources/img/ico/service-icon/blanket.png" width="30"
 							height="30">
 					</c:if>
 				</span> <span> <c:if test="${shopDetail.mobileCharge =='y'}">
-						<img src="${path}/resources/img/charging-phone.png" width="30"
+						<img src="${path}/resources/img/ico/service-icon/charging.png" width="30"
 							height="30">
 					</c:if> 
 				</span>
 			</div>
 			<div class="description">
-				<pre>${shop.sh_content}</pre>
+				${shop.sh_content}
 			</div>
 		</div>
 		<div class="employment">
-			<h4>채용 정보</h4>
+			<h4 class="title">채용 정보</h4>
 			<pre class="publish">※ 채용 정보 없음</pre>
 		</div>
 	</aside>
-	
+	</div>
     
   
    <!--  <div class="review">
@@ -512,7 +573,7 @@
 
 	<script type="text/javascript">//댓글 계산
 	/* $('.gpa').css('width','${ap.aver}'/5*100); */
-	var a = (${ap.aver})/5*100;
+	 var a = (${ap.aver})/5*100;
 	$('.gpa-img').css('width', a);  	
 	</script>
 
@@ -557,7 +618,7 @@
 	var overflag = false;
 	$('.slide-btn').mouseover( function() { overflag=true; } );
 	$('.slide-btn').mouseout( function() { overflag=false; } );
-	$(document).ready( function() { autoNext(); });
+	$(document).ready( function() { autoNext(); })
 </script>
 </body>
 </html>
