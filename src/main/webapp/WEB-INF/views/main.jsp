@@ -23,11 +23,14 @@
 		.logo {
 			font-size:25px;
 		}
-	.user-nav2 {
+	.user-nav {
 		float:right;
 		position:relative;
 	}
-		.user-nav2 .nav-list:hover {
+		.user-nav .nav-list {
+			line-height:45px;
+		}
+		.user-nav .nav-list:hover {
 			color:black;
 			border-radius:25px;
 			background-color:#FFFBE2;
@@ -121,10 +124,7 @@
   	  </nav>
   	</div>
   	  
-  	
-  	  
-  	  	<a href="commonLogin.go">로그인</a>
-  	  	<a href="commonJoin.go">회원가입</a>
+  
   	  	  	
   	<div class="search">
   	  <h2 class="hide">검색</h2>

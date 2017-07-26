@@ -148,6 +148,7 @@ public class MenuController {
 		model.addAttribute("shop", shop);
 		
 		System.out.println("메뉴확인에서 입력된 메뉴 아이디는"+menu.getIt_id());
+		/*return "shop/restaurantDetail";*/
 		return "shop/restaurantDetail";
 	}
 	

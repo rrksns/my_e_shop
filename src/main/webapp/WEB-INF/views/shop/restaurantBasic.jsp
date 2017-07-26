@@ -280,12 +280,12 @@
 <script>
 function updateChar(length_limit) {
 	var form = document.bbsForm;
-	var length = calculate_msglen(register.comment.value);
+	var length = calculate_msglen(register.sh_content.value);
 	textlimit.innerText = length;
 	if (length > length_limit) {
 		alert("글자수는 최대 " + length_limit + "자입니다.");
-		register.comment.value = register.comment.value.replace(/\r\n$/, "");
-		register.comment.value = assert_msglen(register.comment.value, length_limit);
+		register.sh_content.value = register.sh_content.value.replace(/\r\n$/, "");
+		register.sh_content.value = assert_msglen(register.sh_content.value, length_limit);
 	}
 }
 

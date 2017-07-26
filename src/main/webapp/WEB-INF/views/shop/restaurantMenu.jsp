@@ -126,41 +126,54 @@
   	  	  	  	</c:if>	 --%>
   	  	  	  	
   	  	  	  	
-  	  	  	  	<div class="menu-list"> 
+  	  	  <%-- 	  	<div class="menu-list"> 
   	  	  	  	
-  	  	  	  	<ul> 
+   	  	  	  	<ul> 
   	  	  	  	<c:if test="${empty mlist}">
   	  	  	  	<c:forEach var="menu" items="${mlist}"> 	  	  	  	
   	  	  	  	  <li><span>${menu.it_name}</span><span>${menu.it_price}</span><span>${menu.it_groupId}</span></li>
   	  	  	  	</c:forEach>
   	  	  		</c:if>	  	  	  	  	
-  	  	  	  	</ul>
+  	  	  	  	</ul> 
   	  	  	  
-  	  	  	  	</div>
+  	  	  	  	</div> --%>
   	  	  	  		  	   	  				      
+			 <table >
 				
+			<c:if test="${empty mlist}">
+			<tr><td colspan="3">데이터가 없습니다</td>
+			</c:if>
+
+			 <c:if test="${not empty mlist}">
+				<c:forEach var="menu" items="${mlist}">
+					<tr>				
+					<td>${menu.it_name}</td><td>${menu.it_price}</td>
+					<td>${menu.it_img1}</td><td>${menu.it_groupId}</td>
+				</tr>				
+				</c:forEach></c:if>
+				</table> 
 			 
   	  	  	  	
   	  	  	  </div>
   	  	  	  <div class="">
   	  	  	  </div>
   	  	  	</div>
-  	  	  </div>
+  	  	  
   	  	  <div class="btn-box">
   	  	  	<button class="prev-btn" type="button" onclick="window.history.go(-1)">이전으로</button>
   	  	  	<button class="next-btn" onclick="location.href='restaurantMenuResult.go?sh_id=${sh_id}'" >다음</button>
   	  	  </div>
-  	  	</fieldset>
+  	  </fieldset>
   	  </form>
   	</div>
   </div>
-</div>
+  </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $('aside').css({height:$(window).height()});
 
 var sel_files = new Array();
-$('#file').on('change',preview);
+$('#it_pic1').on('change',preview);
 function preview(input) {
 	var files = input.target.files;
 	var fileArr = Array.prototype.slice.call(files);

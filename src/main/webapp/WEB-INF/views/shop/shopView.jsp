@@ -63,7 +63,7 @@
   	  <div class="head-line"><h2 class="hide">샵 정보</h2>
   	  	<div class="entry">
   	  	  <div class="shop-name">
-  	  	  	<span id="">${shop.sh_name}</span>
+  	  	  	<span>${shop.sh_name}</span>
   	  	  </div>
   	  	  <div class="gpa">
   	  	  	<span class="gpa-img"> </span>
@@ -355,7 +355,7 @@ function autoNext() {
 		seq = 0;
 	}
 }
-var timerid = setInterval( autoNext, 1000*5 );
+var timerid = setInterval( autoNext, 1000*3 );
 var photolist=$('.sub-photo li');
 var seq=0;
 var overflag = false;

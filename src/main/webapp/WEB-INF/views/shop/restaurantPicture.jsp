@@ -217,7 +217,7 @@ input#file {
   	  	  	</a>
   	  	  </li>
   	  	  <li class="nav-list">
-  	  	  	<a class="dropdown-btn" href=""><span>"${seller.s_name}"</span>님 <span class="dropdown-img"></span></a>
+  	  	  	<a class="dropdown-btn" href=""><span>${seller.s_name}</span>님 <span class="dropdown-img"></span></a>
   	  	  	<ul class="dropdown">
   	  	  	  <li><a href="s_page.go">My Page</a></li>
   	  	  	  <li><a href="shopManagement.go"></a>My eShop</li>
@@ -237,7 +237,7 @@ input#file {
   <div class="page-body">
   	<aside class="support" role="complementary">
   	  <div class="shop-name">
-  	  	<p><span class="name-txt">"{seller.s_name}"</span>님의</p>
+  	  	<p><span class="name-txt">${seller.s_name}</span>님의</p>
   	  	<p style="padding:5px 0; border-bottom:2px solid #DEBB3D;">e-Shop</p>
   	  </div>
   	  <div class="input-steb"><h2 class="hide">샵 정보 등록 단계</h2>
