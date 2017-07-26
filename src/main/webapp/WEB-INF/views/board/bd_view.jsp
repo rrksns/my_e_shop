@@ -5,6 +5,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="${path}/resources/css/bootstrap.min.css" rel="stylesheet">
+<script src="${path}/js/jquery.js"></script>
+<script src="${path}/js/bootstrap.min..js"></script>
 <title>Insert title here</title>
 <script type="text/javascript">
 	$(function(){

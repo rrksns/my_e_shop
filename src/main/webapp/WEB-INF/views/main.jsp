@@ -124,6 +124,7 @@
   	
   	  
   	  	<a href="commonLogin.go">로그인</a>
+  	  	<a href="commonJoin.go">회원가입</a>
   	  	  	
   	<div class="search">
   	  <h2 class="hide">검색</h2>

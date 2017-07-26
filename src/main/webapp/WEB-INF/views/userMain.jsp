@@ -107,7 +107,7 @@
   	  	  	</a>
   	  	  </li>
   	  	  <li class="nav-list">
-  	  	  	<a class="dropdown-btn" href=""><span>"사용자"</span>님 <span class="dropdown-img"></span></a>
+  	  	  	<a class="dropdown-btn" href=""><span>${user.u_name}</span>님 <span class="dropdown-img"></span></a>
   	  	  	<ul class="dropdown">
   	  	  	  <li><a href="u_page.go">마이페이지</a></li>
   	  	  	  <li><a href="u_shopMain.go">my e-shop</a></li> 

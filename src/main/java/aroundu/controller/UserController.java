@@ -44,7 +44,11 @@ public class UserController {
 	
 	/*유저메인호출*/
 	@RequestMapping("userMain")
-	public String userMain(){
+	public String userMain(Model model, HttpSession session){
+		String u_id = (String)session.getAttribute("id");
+		System.out.println("유저아이디를 알고싶다!!!!!!!"+u_id);
+		User user = us.select(u_id);
+		model.addAttribute("user",user);
 		return "userMain";
 	}
 	
@@ -67,7 +71,9 @@ public class UserController {
 	public String userLogin(String u_id, String u_pw,Model model,HttpSession session){	
 		int result=us.loginChk(u_id,u_pw);
 		if(result>0){
-			session.setAttribute("id",u_id);
+			session.setAttribute("id",u_id);			
+			User user = us.select(u_id);
+			model.addAttribute("user",user);
 			return "userMain";
 		}else if(result==0){model.addAttribute("msg","암호가 일치하지 않습니다");
 		}else model.addAttribute("msg","ID가 존재하지 않습니다");

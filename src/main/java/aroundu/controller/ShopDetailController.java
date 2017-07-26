@@ -70,9 +70,18 @@ public class ShopDetailController {
 		shop = sv.select(s_id);
 		model.addAttribute("shop", shop);
 		Menu menu = ms.select(sh_id);	
-		model.addAttribute("menu", menu);
+		/*model.addAttribute("menu", menu);
 		List<Menu> mlist = ms.mlist(sh_id);	
-		model.addAttribute("mlist",mlist);
+		model.addAttribute("mlist",mlist);*/
+		
+		/*menu 가져오기*/
+			
+		List<Menu> mlist1 = ms.list11(menu);
+		List<Menu> mlist2 = ms.list12(menu);
+		List<Menu> mlist3 = ms.list13(menu);
+		model.addAttribute("mlist1",mlist1);
+		model.addAttribute("mlist2",mlist2);
+		model.addAttribute("mlist3",mlist3);
 		
 /*		List<Menu> mmlist = ms.mmlist(menu);//top3 메뉴를 불러오기
 		model.addAttribute("mmlist",mmlist);*/

@@ -109,7 +109,7 @@
   	  	  	</a>
   	  	  </li>
   	  	  <li class="nav-list">
-  	  	  	<a class="dropdown-btn" href=""><span>"사용자"</span>님 <span class="dropdown-img"></span></a>
+  	  	  	<a class="dropdown-btn" href=""><span>${seller.s_name}</span>님 <span class="dropdown-img"></span></a>
   	  	  	<ul class="dropdown">
   	  	  	  <li><a href ="s_page.go">my page</a></li>
   	  	  	  <li><a href ="shopManagement.go">my e-shop</a></li> 

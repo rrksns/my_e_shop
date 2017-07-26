@@ -5,6 +5,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="${path}/resources/css/bootstrap.min.css" rel="stylesheet">
+<script src="${path}/js/jquery.js"></script>
+<script src="${path}/js/bootstrap.min..js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -37,11 +40,11 @@
 							<td><a
 								href="bd_view.go?bd_num=${board.bd_num}&pageNum=${pp.currentPage}">
 									<c:if test="${board.re_level >0 }">
-										<img alt="" src="resources/img/level.gif" height="2"
+										<img alt="" src="${path}/resources/img/level.gif" height="2"
 											width="${board.re_level *5 }">
-										<img alt="" src="resources/img/re.gif">
+										<img alt="" src="${path}/resources/img/re.gif">
 									</c:if> ${board.bd_subject} <c:if test="${board.bd_count > 30 }">
-										<img alt="" src="resources/img/hot.gif">
+										<img alt="" src="${path}/resources/img/hot.gif">
 									</c:if>
 							</a></td>
 							<td>${board.s_id}</td>

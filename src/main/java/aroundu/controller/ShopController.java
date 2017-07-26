@@ -20,12 +20,14 @@ import aroundu.model.Menu;
 import aroundu.model.Seller;
 import aroundu.model.Shop;
 import aroundu.model.ShopDetail;
+import aroundu.model.User;
 import aroundu.service.AverPgm;
 import aroundu.service.GradeService;
 import aroundu.service.MenuService;
 import aroundu.service.SellerService;
 import aroundu.service.ShopDetailService;
 import aroundu.service.ShopService;
+import aroundu.service.UserService;
  
 @Controller
 public class ShopController {
@@ -44,6 +46,9 @@ public class ShopController {
 	@Autowired
 	GradeService gs;
 	
+	@Autowired
+	UserService us;
+	
 
 	/*my eshop 실행*/
 	@RequestMapping("shopManagement")
@@ -60,7 +65,7 @@ public class ShopController {
 
 	/*해당샵 조회후 호출*/
 	@RequestMapping("shopView1")
-	public String shopView1(int sh_id, Model model){	
+	public String shopView1(int sh_id, Model model,HttpSession session){	
 		Shop shop = sv.select2(sh_id);
 		model.addAttribute("shop",shop);
 		model.addAttribute("sh_id",sh_id);
@@ -70,15 +75,16 @@ public class ShopController {
 		List<Menu> mlist1 = ms.list11(menu);
 		List<Menu> mlist2 = ms.list12(menu);
 		List<Menu> mlist3 = ms.list13(menu);
+		model.addAttribute("mlist1",mlist1);
+		model.addAttribute("mlist2",mlist2);
+		model.addAttribute("mlist3",mlist3);
 			
 		/*shopDetail 가져오기*/
 		ShopDetail shopDetail = sd.select(sh_id);
 		model.addAttribute(shopDetail);
 		int sh_detailId=shopDetail.getSh_detailId();		
 		model.addAttribute("sh_detailId",sh_detailId);
-		model.addAttribute("mlist1",mlist1);
-		model.addAttribute("mlist2",mlist2);
-		model.addAttribute("mlist3",mlist3);
+		
 		
 		/*평점계산하기*/
 		int count = gs.count(sh_id); /*평가인원*/
@@ -88,6 +94,10 @@ public class ShopController {
 		AverPgm ap = new AverPgm(count,glist,glist1,glist2);		
 		model.addAttribute("ap",ap);
 		model.addAttribute("count",count);		
+		
+		String u_id = (String)session.getAttribute("id");		
+		User user = us.select(u_id);
+		model.addAttribute("user",user);
 		return "shop/shopView1";
 
 	}

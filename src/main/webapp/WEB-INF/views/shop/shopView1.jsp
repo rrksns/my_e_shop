@@ -36,14 +36,12 @@
   	  	  	</a>
   	  	  </li>
   	  	  <li class="nav-list">
-  	  	  	<a class="dropdown-btn" href=""><span>"사용자"</span>님 <span class="dropdown-img"></span></a>
-  	  	  	<ul class="dropdown">
-  	  	  	  <li><a href="">마이페이지</a></li>
-  	  	  	  <li><a href="">1</a></li>
-  	  	  	  <li><a href="">2</a></li>
-  	  	  	  <li><a href="">3</a></li>
-  	  	  	  <li><a href="">4</a></li>
-  	  	  	  <li class="log-out"><a href="">로그아웃</a></li>
+  	  	  	<a class="dropdown-btn" href=""><span>${user.u_name}</span>님 <span class="dropdown-img"></span></a>
+  	  	  	<ul class="dropdown">  	  	  	 
+  	  	  	  <li><a href="u_page.go">마이페이지</a></li>
+  	  	  	  <li><a href="u_shopMain.go">my e-shop</a></li> 
+  	  	  	  <li><a href="boardList.go">Q&A</a></li>
+  	  	  	  <li class="log-out"><a href="u_logout.go">로그아웃</a></li>
   	  	  	</ul>
   	  	  </li>
   	  	</ul>
@@ -185,9 +183,9 @@
   	  	  	</ul>
   	  	  </div>
   	  	  <div class="top-menu">
-  	  	  		<img class="menu-img" src="menuPic/upload/${menu.it_img3}" width="118" height="118" alt="대표메뉴1">
-  	  	  	<%-- <img class="menu-img" src="menuPic/upload/${menu.it_img2}" width="118" height="118" alt="대표메뉴2">
-  	  	  	<img class="menu-img" src="menuPic/upload/${menu.it_img1}" width="118" height="118" alt="대표메뉴3"> --%>
+  	  	  	<img class="menu-img" src="menuPic/upload/img3.jpg" width="118" height="118" alt="대표메뉴1">
+  	  	  	<img class="menu-img" src="menuPic/upload/img2.jpg" width="118" height="118" alt="대표메뉴2">
+  	  	  	<img class="menu-img" src="menuPic/upload/img1.jpg" width="118" height="118" alt="대표메뉴3">
   	  	  	<div class="wrapper">
   	  	  	  <p>대표 메뉴</p>
   	  	  	  <img src="${path}/resources/img/icon/top3.png" width="50" height="50">
@@ -486,25 +484,25 @@
 			<h4 class="title">기본 정보</h4>
 			<div class="ad-info">
 				<span> <c:if test="${shopDetail.smoking =='y'}">
-						<img src="${path}/resources/img/ico/service-icon/smoking.png" width="30"
+						<img src="${path}/resources/img/icon/service-icon/smoke.png" width="30"
 							height="30">
 					</c:if> 
 				</span> <span> <c:if test="${shopDetail.freeWifi =='y'}">
-						<img src="${path}/resources/img/ico/service-icon/wifi.png" width="30" height="30">
+						<img src="${path}/resources/img/icon/service-icon/wifi.png" width="30" height="30">
 					</c:if> 
 				</span> <span> <c:if test="${shopDetail.toilet =='y'}">
-						<img src="${path}/resources/img/ico/service-icon/toilet.png" width="30" height="30">
+						<img src="${path}/resources/img/icon/service-icon/toilet.png" width="30" height="30">
 					</c:if> 
 				</span> <span> <c:if test="${shopDetail.parking =='y'}">
-						<img src="${path}/resources/img/ico/service-icon/parking.png" width="30"
+						<img src="${path}/resources/img/icon/service-icon/parking.png" width="30"
 							height="30">
 					</c:if> 
 				</span> <span> <c:if test="${shopDetail.blanket =='y'}">
-						<img src="${path}/resources/img/ico/service-icon/blanket.png" width="30"
+						<img src="${path}/resources/img/icon/service-icon/blanket.png" width="30"
 							height="30">
 					</c:if>
 				</span> <span> <c:if test="${shopDetail.mobileCharge =='y'}">
-						<img src="${path}/resources/img/ico/service-icon/charging.png" width="30"
+						<img src="${path}/resources/img/icon/service-icon/charge.png" width="30"
 							height="30">
 					</c:if> 
 				</span>

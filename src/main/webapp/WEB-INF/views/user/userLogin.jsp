@@ -6,6 +6,6 @@
 <title>Insert title here</title></head>
 <body>
 <h2 class="text-primary">환영합니다</h2>
-<a href="sellerMain.go" class="button button-success">메인으로 가기</a>
+<a href="userMain.go" class="button button-success">메인으로 가기</a>
 </body>
 </html>

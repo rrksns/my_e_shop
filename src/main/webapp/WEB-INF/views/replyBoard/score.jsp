@@ -146,7 +146,7 @@ star-input2>.input2.focus{outline:1px dotted #ddd;}
     	<input type="radio" name="flavor" value="5" id="p5">
     	<label for="p5">5</label>
   	</span>
-  	<output for="star-input"><b>0</b>점</output>						
+  	<!-- <output for="star-input"><b>0</b>점</output>		 -->				
 </span>
 
 
@@ -164,7 +164,7 @@ star-input2>.input2.focus{outline:1px dotted #ddd;}
     	<input type="radio" name="service" value="5" id="q5">
     	<label for="q5">5</label>
   	</span>
-  	<output for="star-input1"><b>0</b>점</output>						
+  	<!-- <output for="star-input1"><b>0</b>점</output>	 -->					
 </span>
 
 
@@ -183,7 +183,7 @@ star-input2>.input2.focus{outline:1px dotted #ddd;}
     	<input type="radio" name="price" value="5" id="a5">
     	<label for="a5">5</label>
   	</span>
-  	<output for="star-input2"><b>0</b>점</output>						
+  	<!-- <output for="star-input2"><b>0</b>점</output>	 -->					
 </span> 
 
 <input type="submit" value="입력하기" id="sub">
